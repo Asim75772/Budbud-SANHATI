@@ -21,30 +21,31 @@ content="Budbud SANHATI - একটি সংস্কৃতি, একটি �
 ========================= */
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  background:#050000;
-  color:white;
-  font-family:"Noto Serif Bengali",serif;
-  overflow-x:hidden;
+    margin:0;
+    background:#050000;
+    color:white;
+    font-family:"Noto Serif Bengali",serif;
+    overflow-x:hidden;
 }
 
 a{
-  text-decoration:none;
-  color:inherit;
+    text-decoration:none;
+    color:inherit;
 }
 
 img{
-  max-width:100%;
-  display:block;
+    max-width:100%;
+    display:block;
 }
 
 
@@ -53,60 +54,82 @@ img{
 ========================= */
 
 .navbar{
-  position:sticky;
-  top:0;
-  z-index:9999;
-  width:100%;
-  height:72px;
-  background:#050505;
-  border-bottom:3px solid #e00000;
-  display:flex;
-  align-items:center;
+    position:sticky;
+    top:0;
+    z-index:9999;
+
+    width:100%;
+    height:70px;
+
+    background:#050505;
+
+    border-bottom:3px solid #e00000;
+
+    display:flex;
+    align-items:center;
 }
 
 .nav-container{
-  width:100%;
-  max-width:1200px;
-  margin:auto;
+    width:100%;
+    max-width:1200px;
+    margin:auto;
 }
 
 .nav-menu{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:55px;
-  list-style:none;
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:50px;
+
+    list-style:none;
+
+    overflow-x:auto;
 }
 
 .nav-menu a{
-  position:relative;
-  color:#f3d49a;
-  font-size:19px;
-  font-weight:600;
-  padding:23px 0;
-  white-space:nowrap;
-  transition:.3s;
+    position:relative;
+
+    display:block;
+
+    color:#f3d49a;
+
+    font-size:18px;
+    font-weight:600;
+
+    padding:20px 0;
+
+    white-space:nowrap;
+
+    transition:.3s;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active{
-  color:#ff1515;
+    color:#ff1515;
 }
 
 .nav-menu a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:5px;
-  width:0;
-  height:4px;
-  background:#ff0000;
-  transition:.3s;
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:5px;
+
+    width:0;
+    height:4px;
+
+    background:#ff0000;
+
+    transition:.3s;
 }
 
 .nav-menu a:hover::after,
 .nav-menu a.active::after{
-  width:100%;
+    width:100%;
 }
 
 
@@ -115,88 +138,104 @@ img{
 ========================= */
 
 .hero{
-  position:relative;
-  width:100%;
-  background:#050000;
-  border-bottom:3px solid #e00000;
-  overflow:hidden;
+    position:relative;
+
+    width:100%;
+
+    background:#050000;
+
+    border-bottom:3px solid #e00000;
+
+    overflow:hidden;
 }
 
 .hero-image{
-  width:100%;
-  height:auto;
-  display:block;
+    width:100%;
+    height:auto;
+
+    display:block;
 }
 
 .hero-content{
-  position:absolute;
-  left:50%;
-  bottom:38px;
-  transform:translateX(-50%);
-  z-index:5;
-  text-align:center;
+    position:absolute;
+
+    left:50%;
+    bottom:35px;
+
+    transform:translateX(-50%);
+
+    z-index:5;
+
+    text-align:center;
 }
 
 .welcome-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+    display:flex;
 
-  min-width:220px;
-  height:58px;
+    align-items:center;
+    justify-content:center;
 
-  padding:0 45px;
+    min-width:220px;
+    height:58px;
 
-  border-radius:15px;
+    padding:0 40px;
 
-  background:linear-gradient(
-    180deg,
-    #ff1919,
-    #d60000
-  );
+    border-radius:15px;
 
-  border:3px solid #ffc400;
+    background:linear-gradient(
+        180deg,
+        #ff1919,
+        #d60000
+    );
 
-  box-shadow:
-    0 0 12px #ffb300,
-    0 0 30px rgba(255,180,0,.55);
+    border:3px solid #ffc400;
 
-  color:#ffe8a0;
+    box-shadow:
+        0 0 12px #ffb300,
+        0 0 30px rgba(255,180,0,.55);
 
-  font-size:25px;
-  font-weight:800;
+    color:#ffe8a0;
 
-  cursor:pointer;
-  transition:.3s;
+    font-size:25px;
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.3s;
 }
 
 .welcome-btn:hover{
-  transform:scale(1.05);
+    transform:scale(1.05);
 }
 
 .down-arrow{
-  display:block;
-  margin-top:5px;
-  font-size:27px;
-  color:#ffd000;
-  animation:arrowMove 1.4s infinite;
+    display:block;
+
+    margin-top:4px;
+
+    font-size:28px;
+
+    color:#ffd000;
+
+    animation:arrowMove 1.4s infinite;
 }
 
 @keyframes arrowMove{
-  0%{
-    transform:translateY(0);
-    opacity:.6;
-  }
 
-  50%{
-    transform:translateY(8px);
-    opacity:1;
-  }
+    0%{
+        transform:translateY(0);
+        opacity:.6;
+    }
 
-  100%{
-    transform:translateY(0);
-    opacity:.6;
-  }
+    50%{
+        transform:translateY(8px);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(0);
+        opacity:.6;
+    }
 }
 
 
@@ -205,91 +244,125 @@ img{
 ========================= */
 
 .quick-section{
-  width:100%;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  background:#080000;
-  border-bottom:1px solid #5b2100;
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    background:#080000;
+
+    border-bottom:1px solid #5b2100;
 }
 
 .quick-card{
-  min-height:235px;
-  padding:30px 20px;
-  text-align:center;
-  border-right:1px solid #4b1800;
-  transition:.3s;
+    min-height:235px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    border-right:1px solid #4b1800;
+
+    transition:.3s;
 }
 
 .quick-card:last-child{
-  border-right:none;
+    border-right:none;
 }
 
 .quick-card:hover{
-  background:#140000;
+    background:#140000;
 }
 
 .quick-icon{
-  width:62px;
-  height:62px;
-  margin:0 auto 15px;
+    width:62px;
+    height:62px;
 
-  border:2px solid #ffc400;
-  border-radius:50%;
+    margin:0 auto 15px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    border:2px solid #ffc400;
 
-  font-size:29px;
-  color:#ffc400;
+    border-radius:50%;
 
-  box-shadow:0 0 12px rgba(255,190,0,.25);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:29px;
+
+    color:#ffc400;
+
+    box-shadow:
+    0 0 12px rgba(255,190,0,.25);
 }
 
 .quick-card h3{
-  color:#ffc400;
-  font-size:21px;
-  margin-bottom:12px;
+    color:#ffc400;
+
+    font-size:21px;
+
+    margin-bottom:12px;
 }
 
 .quick-card p{
-  color:#ddd;
-  font-size:14px;
-  line-height:1.8;
+    color:#ddd;
+
+    font-size:14px;
+
+    line-height:1.8;
 }
 
 
 /* =========================
-   SECTIONS
+   COMMON SECTION
 ========================= */
 
 .section{
-  width:100%;
-  padding:80px 20px;
-  background:#070000;
-  border-bottom:1px solid #401500;
+    width:100%;
+
+    padding:75px 20px;
+
+    background:#070000;
+
+    border-bottom:1px solid #401500;
+
+    display:block;
+
+    position:relative;
+
+    clear:both;
 }
 
 .section-container{
-  width:100%;
-  max-width:1050px;
-  margin:auto;
+    width:100%;
+    max-width:1050px;
+
+    margin:0 auto;
 }
 
 .section-title{
-  text-align:center;
-  color:#ffc400;
-  font-size:38px;
-  margin-bottom:45px;
-  font-weight:800;
+    text-align:center;
+
+    color:#ffc400;
+
+    font-size:38px;
+
+    margin-bottom:45px;
+
+    font-weight:800;
 }
 
 .section-title::after{
-  content:"✦";
-  display:block;
-  color:#b87900;
-  font-size:20px;
-  margin-top:8px;
+    content:"✦";
+
+    display:block;
+
+    color:#b87900;
+
+    font-size:20px;
+
+    margin-top:8px;
 }
 
 
@@ -298,33 +371,41 @@ img{
 ========================= */
 
 .about-content{
-  text-align:center;
-  max-width:850px;
-  margin:auto;
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
 }
 
 .big-icon{
-  width:125px;
-  height:125px;
-  margin:0 auto 35px;
+    width:125px;
+    height:125px;
 
-  border:4px solid #ffc400;
-  border-radius:50%;
+    margin:0 auto 35px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    border:4px solid #ffc400;
 
-  font-size:60px;
+    border-radius:50%;
 
-  box-shadow:0 0 18px rgba(255,190,0,.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:60px;
+
+    box-shadow:
+    0 0 18px rgba(255,190,0,.2);
 }
 
 .about-content p{
-  color:#eee;
-  font-size:20px;
-  line-height:2.1;
-  margin-bottom:15px;
+    color:#eee;
+
+    font-size:20px;
+
+    line-height:2.1;
+
+    margin-bottom:15px;
 }
 
 
@@ -333,40 +414,56 @@ img{
 ========================= */
 
 .event-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
 }
 
 .event-card{
-  background:#110000;
-  border:1px solid #6b2300;
-  border-radius:12px;
-  padding:30px 20px;
-  text-align:center;
-  transition:.3s;
+    background:#110000;
+
+    border:1px solid #6b2300;
+
+    border-radius:12px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    transition:.3s;
 }
 
 .event-card:hover{
-  transform:translateY(-5px);
-  border-color:#ffc400;
+    transform:translateY(-5px);
+
+    border-color:#ffc400;
+
+    box-shadow:
+    0 0 20px rgba(255,180,0,.15);
 }
 
 .event-icon{
-  font-size:48px;
-  margin-bottom:15px;
+    font-size:48px;
+
+    margin-bottom:15px;
 }
 
 .event-card h3{
-  color:#ffc400;
-  font-size:23px;
-  margin-bottom:12px;
+    color:#ffc400;
+
+    font-size:23px;
+
+    margin-bottom:12px;
 }
 
 .event-card p{
-  color:#ddd;
-  font-size:15px;
-  line-height:1.8;
+    color:#ddd;
+
+    font-size:15px;
+
+    line-height:1.8;
 }
 
 
@@ -375,37 +472,44 @@ img{
 ========================= */
 
 .gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
 }
 
 .gallery-item{
-  height:220px;
+    height:220px;
 
-  background:#180000;
+    background:#180000;
 
-  border:1px solid #682000;
-  border-radius:10px;
+    border:1px solid #682000;
 
-  overflow:hidden;
+    border-radius:10px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    overflow:hidden;
 
-  transition:.3s;
-}
-
-.gallery-item:hover{
-  transform:scale(1.02);
-  border-color:#ffc400;
+    transition:.3s;
 }
 
 .gallery-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.4s;
+}
+
+.gallery-item:hover{
+    transform:scale(1.02);
+
+    border-color:#ffc400;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
 }
 
 
@@ -414,41 +518,54 @@ img{
 ========================= */
 
 .contact-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:25px;
-  max-width:900px;
-  margin:auto;
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    max-width:900px;
+
+    margin:auto;
 }
 
 .contact-card{
-  background:#100000;
-  border:1px solid #6a2300;
-  border-radius:12px;
-  padding:30px 20px;
-  text-align:center;
+    background:#100000;
+
+    border:1px solid #6a2300;
+
+    border-radius:12px;
+
+    padding:30px 20px;
+
+    text-align:center;
 }
 
 .contact-card .icon{
-  font-size:40px;
-  margin-bottom:12px;
+    font-size:40px;
+
+    margin-bottom:12px;
 }
 
 .contact-card h3{
-  color:#ffc400;
-  font-size:22px;
-  margin-bottom:12px;
+    color:#ffc400;
+
+    font-size:22px;
+
+    margin-bottom:12px;
 }
 
 .contact-card a,
 .contact-card p{
-  color:#eee;
-  font-size:17px;
-  line-height:1.8;
+    color:#eee;
+
+    font-size:17px;
+
+    line-height:1.8;
 }
 
 .contact-card a:hover{
-  color:#ffc400;
+    color:#ffc400;
 }
 
 
@@ -457,43 +574,55 @@ img{
 ========================= */
 
 .durga-banner{
-  width:100%;
-  min-height:180px;
+    position:relative;
 
-  background:
+    width:100%;
+
+    min-height:180px;
+
+    background:
     radial-gradient(
-      circle at center,
-      #380b00 0%,
-      #150000 45%,
-      #030000 100%
+        circle at center,
+        #380b00 0%,
+        #150000 45%,
+        #030000 100%
     );
 
-  border-top:2px solid #8c0000;
-  border-bottom:2px solid #8c0000;
+    border-top:2px solid #8c0000;
+    border-bottom:2px solid #8c0000;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    display:flex;
 
-  text-align:center;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
 }
 
 .durga-banner-inner{
-  padding:30px 20px;
+    padding:30px 20px;
 }
 
 .trident{
-  color:#ffc400;
-  font-size:50px;
-  line-height:1;
-  text-shadow:0 0 15px #ff9d00;
+    color:#ffc400;
+
+    font-size:50px;
+
+    line-height:1;
+
+    text-shadow:
+    0 0 15px #ff9d00;
 }
 
 .durga-banner h2{
-  color:#ffc400;
-  font-size:43px;
-  margin-top:5px;
-  text-shadow:0 0 15px rgba(255,180,0,.35);
+    color:#ffc400;
+
+    font-size:43px;
+
+    margin-top:5px;
+
+    text-shadow:
+    0 0 15px rgba(255,180,0,.35);
 }
 
 
@@ -502,49 +631,65 @@ img{
 ========================= */
 
 footer{
-  background:#030303;
-  border-top:2px solid #ff0000;
+    background:#030303;
+
+    border-top:2px solid #ff0000;
+
+    width:100%;
+
+    display:block;
 }
 
 .footer-info{
-  max-width:1100px;
-  margin:auto;
+    max-width:1100px;
 
-  padding:22px 20px;
+    margin:auto;
 
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
+    padding:22px 20px;
 
-  gap:20px;
+    display:grid;
 
-  text-align:center;
-  align-items:center;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    text-align:center;
+
+    align-items:center;
 }
 
 .footer-item{
-  color:#ddd;
-  font-size:14px;
-  line-height:1.7;
+    color:#ddd;
+
+    font-size:14px;
+
+    line-height:1.7;
 }
 
 .footer-item strong{
-  color:#ffc400;
+    color:#ffc400;
 }
 
 .footer-item a{
-  color:#ddd;
+    color:#ddd;
+
+    transition:.3s;
 }
 
 .footer-item a:hover{
-  color:#ffc400;
+    color:#ffc400;
 }
 
 .copyright{
-  text-align:center;
-  color:#999;
-  font-size:13px;
-  padding:15px;
-  border-top:1px solid #331000;
+    text-align:center;
+
+    color:#999;
+
+    font-size:13px;
+
+    padding:15px;
+
+    border-top:1px solid #331000;
 }
 
 
@@ -554,122 +699,169 @@ footer{
 
 @media(max-width:768px){
 
-  .navbar{
-    height:62px;
-    overflow-x:auto;
-    justify-content:flex-start;
-  }
+    .navbar{
+        height:62px;
 
-  .nav-container{
-    min-width:max-content;
-  }
+        overflow-x:auto;
 
-  .nav-menu{
-    gap:28px;
-    justify-content:flex-start;
-    padding:0 18px;
-  }
+        justify-content:flex-start;
+    }
 
-  .nav-menu a{
-    font-size:16px;
-    padding:20px 0;
-  }
+    .nav-container{
+        min-width:max-content;
+    }
 
-  .hero-content{
-    bottom:20px;
-  }
+    .nav-menu{
+        gap:28px;
 
-  .welcome-btn{
-    min-width:175px;
-    height:50px;
-    padding:0 28px;
-    font-size:21px;
-    border-radius:13px;
-  }
+        justify-content:flex-start;
 
-  .down-arrow{
-    font-size:22px;
-  }
+        padding:0 18px;
+    }
 
-  .quick-section{
-    grid-template-columns:repeat(2,1fr);
-  }
+    .nav-menu a{
+        font-size:16px;
 
-  .quick-card{
-    min-height:220px;
-    padding:25px 14px;
-    border-bottom:1px solid #4b1800;
-  }
+        padding:20px 0;
+    }
 
-  .quick-card:nth-child(2),
-  .quick-card:nth-child(4){
-    border-right:none;
-  }
 
-  .quick-card h3{
-    font-size:18px;
-  }
+    /* HERO */
 
-  .quick-card p{
-    font-size:13px;
-  }
+    .hero-image{
+        width:100%;
+        height:auto;
+    }
 
-  .section{
-    padding:60px 16px;
-  }
+    .hero-content{
+        bottom:20px;
+    }
 
-  .section-title{
-    font-size:30px;
-    margin-bottom:35px;
-  }
+    .welcome-btn{
+        min-width:175px;
 
-  .big-icon{
-    width:105px;
-    height:105px;
-    font-size:48px;
-  }
+        height:50px;
 
-  .about-content p{
-    font-size:17px;
-    line-height:2;
-  }
+        padding:0 28px;
 
-  .event-grid{
-    grid-template-columns:1fr;
-    gap:18px;
-  }
+        font-size:21px;
 
-  .gallery-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-  }
+        border-radius:13px;
+    }
 
-  .gallery-item{
-    height:150px;
-  }
+    .down-arrow{
+        font-size:22px;
+    }
 
-  .contact-grid{
-    grid-template-columns:1fr;
-    gap:15px;
-  }
 
-  .footer-info{
-    grid-template-columns:1fr;
-    gap:12px;
-    padding:20px 15px;
-  }
+    /* QUICK */
 
-  .durga-banner{
-    min-height:150px;
-  }
+    .quick-section{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .trident{
-    font-size:42px;
-  }
+    .quick-card{
+        min-height:220px;
 
-  .durga-banner h2{
-    font-size:32px;
-  }
+        padding:25px 14px;
+
+        border-bottom:1px solid #4b1800;
+    }
+
+    .quick-card:nth-child(2n){
+        border-right:none;
+    }
+
+    .quick-card h3{
+        font-size:18px;
+    }
+
+    .quick-card p{
+        font-size:13px;
+    }
+
+
+    /* SECTIONS */
+
+    .section{
+        padding:60px 16px;
+    }
+
+    .section-title{
+        font-size:30px;
+
+        margin-bottom:35px;
+    }
+
+
+    /* ABOUT */
+
+    .big-icon{
+        width:105px;
+        height:105px;
+
+        font-size:48px;
+    }
+
+    .about-content p{
+        font-size:17px;
+
+        line-height:2;
+    }
+
+
+    /* EVENTS */
+
+    .event-grid{
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+
+        gap:12px;
+    }
+
+    .gallery-item{
+        height:160px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-grid{
+        grid-template-columns:1fr;
+
+        gap:15px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-info{
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+        padding:20px 15px;
+    }
+
+    .durga-banner{
+        min-height:150px;
+    }
+
+    .trident{
+        font-size:42px;
+    }
+
+    .durga-banner h2{
+        font-size:32px;
+    }
 }
 
 
@@ -679,37 +871,42 @@ footer{
 
 @media(max-width:420px){
 
-  .nav-menu{
-    gap:24px;
-  }
+    .nav-menu{
+        gap:24px;
+    }
 
-  .nav-menu a{
-    font-size:15px;
-  }
+    .nav-menu a{
+        font-size:15px;
+    }
 
-  .quick-card{
-    min-height:235px;
-    padding:22px 10px;
-  }
+    .quick-card{
+        min-height:235px;
 
-  .quick-card h3{
-    font-size:17px;
-  }
+        padding:22px 10px;
+    }
 
-  .quick-card p{
-    font-size:12px;
-    line-height:1.7;
-  }
+    .quick-card h3{
+        font-size:17px;
+    }
 
-  .welcome-btn{
-    min-width:160px;
-    height:48px;
-    font-size:20px;
-  }
+    .quick-card p{
+        font-size:12px;
 
-  .gallery-item{
-    height:130px;
-  }
+        line-height:1.7;
+    }
+
+    .welcome-btn{
+        min-width:160px;
+
+        height:48px;
+
+        font-size:20px;
+    }
+
+    .gallery-item{
+        height:135px;
+    }
+
 }
 
 </style>
@@ -725,63 +922,68 @@ footer{
 
 <header class="navbar">
 
-  <div class="nav-container">
+<div class="nav-container">
 
-    <ul class="nav-menu">
+<ul class="nav-menu">
 
-      <li>
-        <a href="#home" class="active">HOME</a>
-      </li>
+<li>
+<a href="#home" class="active">HOME</a>
+</li>
 
-      <li>
-        <a href="#about">ABOUT US</a>
-      </li>
+<li>
+<a href="#about">ABOUT US</a>
+</li>
 
-      <li>
-        <a href="#events">EVENTS</a>
-      </li>
+<li>
+<a href="#events">EVENTS</a>
+</li>
 
-      <li>
-        <a href="#gallery">GALLERY</a>
-      </li>
+<li>
+<a href="#gallery">GALLERY</a>
+</li>
 
-      <li>
-        <a href="#contact">CONTACT</a>
-      </li>
+<li>
+<a href="#contact">CONTACT</a>
+</li>
 
-    </ul>
+</ul>
 
-  </div>
+</div>
 
 </header>
 
 
 
 <!-- =========================
-     HOME
+     MAIN
 ========================= -->
 
 <main>
 
+
+<!-- =========================
+     HOME
+========================= -->
+
 <section id="home" class="hero">
 
-  <img
-    src="home-banner.png"
-    alt="Budbud SANHATI"
-    class="hero-image"
-  >
+<img
+src="home-banner.png"
+alt="Budbud SANHATI"
+class="hero-image"
+>
 
-  <!-- শুধু একটাই স্বাগতম -->
+<div class="hero-content">
 
-  <div class="hero-content">
+<a href="#about" class="welcome-btn">
+স্বাগতম
+</a>
 
-    <a href="#about" class="welcome-btn">
-      স্বাগতম
-    </a>
+<span class="down-arrow">
+↓
+</span>
 
-    <span class="down-arrow">↓</span>
-
-  </div>
+</div>
 
 </section>
 
@@ -793,60 +995,65 @@ footer{
 
 <section class="quick-section">
 
-  <a href="#about" class="quick-card">
 
-    <div class="quick-icon">👥</div>
+<a href="#about" class="quick-card">
 
-    <h3>আমাদের পরিচয়</h3>
+<div class="quick-icon">👥</div>
 
-    <p>
-      বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
-      আমরা একসাথে কাজ করি সমাজ ও মানুষের জন্য।
-    </p>
+<h3>আমাদের পরিচয়</h3>
 
-  </a>
+<p>
+বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
+আমরা একসাথে কাজ করি সমাজ ও মানুষের জন্য।
+</p>
 
-
-  <a href="#events" class="quick-card">
-
-    <div class="quick-icon">📅</div>
-
-    <h3>আমাদের কার্যক্রম</h3>
-
-    <p>
-      দুর্গা পূজা, রক্তদান, শিক্ষা সহায়তা,
-      খেলাধুলা এবং বিভিন্ন সামাজিক অনুষ্ঠান।
-    </p>
-
-  </a>
+</a>
 
 
-  <a href="#gallery" class="quick-card">
 
-    <div class="quick-icon">🖼️</div>
+<a href="#events" class="quick-card">
 
-    <h3>গ্যালারি</h3>
+<div class="quick-icon">📅</div>
 
-    <p>
-      আমাদের বিভিন্ন অনুষ্ঠান ও সাংস্কৃতিক
-      মুহূর্তের ছবি দেখতে গ্যালারিতে আসুন।
-    </p>
+<h3>আমাদের কার্যক্রম</h3>
 
-  </a>
+<p>
+দুর্গা পূজা, রক্তদান, শিক্ষা সহায়তা,
+খেলাধুলা এবং বিভিন্ন সামাজিক অনুষ্ঠান।
+</p>
+
+</a>
 
 
-  <a href="#contact" class="quick-card">
 
-    <div class="quick-icon">🤝</div>
+<a href="#gallery" class="quick-card">
 
-    <h3>যোগাযোগ করুন</h3>
+<div class="quick-icon">🖼️</div>
 
-    <p>
-      আমাদের সাথে যুক্ত হতে অথবা সহযোগিতার
-      জন্য যোগাযোগ করুন।
-    </p>
+<h3>গ্যালারি</h3>
 
-  </a>
+<p>
+আমাদের বিভিন্ন অনুষ্ঠান ও সাংস্কৃতিক
+মুহূর্তের ছবি দেখতে গ্যালারিতে আসুন।
+</p>
+
+</a>
+
+
+
+<a href="#contact" class="quick-card">
+
+<div class="quick-icon">🤝</div>
+
+<h3>যোগাযোগ করুন</h3>
+
+<p>
+আমাদের সাথে যুক্ত হতে অথবা সহযোগিতার
+জন্য যোগাযোগ করুন।
+</p>
+
+</a>
+
 
 </section>
 
@@ -858,7 +1065,512 @@ footer{
 
 <section id="about" class="section">
 
-  <div class="section-container">
+<div class="section-container">
 
-    <h2 class="section-title">
-      আমাদের
+<h2 class="section-title">
+আমাদের পরিচয়
+</h2>
+
+<div class="about-content">
+
+<div class="big-icon">
+👥
+</div>
+
+<p>
+বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
+</p>
+
+<p>
+আমরা একসাথে কাজ করি সমাজ ও মানুষের জন্য।
+</p>
+
+<p>
+সমাজের উন্নয়ন, সংস্কৃতি এবং মানুষের পাশে থাকাই
+আমাদের প্রধান লক্ষ্য।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     EVENTS
+========================= -->
+
+<section id="events" class="section">
+
+<div class="section-container">
+
+<h2 class="section-title">
+আমাদের কার্যক্রম
+</h2>
+
+<div class="event-grid">
+
+
+<div class="event-card">
+
+<div class="event-icon">🪔</div>
+
+<h3>দুর্গা পূজা</h3>
+
+<p>
+প্রতি বছর সুন্দর ও সুশৃঙ্খলভাবে
+দুর্গা পূজার আয়োজন করা হয়।
+</p>
+
+</div>
+
+
+
+<div class="event-card">
+
+<div class="event-icon">🩸</div>
+
+<h3>রক্তদান</h3>
+
+<p>
+মানুষের জীবন বাঁচাতে স্বেচ্ছায়
+রক্তদান কর্মসূচির আয়োজন করা হয়।
+</p>
+
+</div>
+
+
+
+<div class="event-card">
+
+<div class="event-icon">📚</div>
+
+<h3>শিক্ষা সহায়তা</h3>
+
+<p>
+প্রয়োজনীয় ছাত্রছাত্রীদের পাশে থেকে
+শিক্ষা সহায়তা করার চেষ্টা করা হয়।
+</p>
+
+</div>
+
+
+
+<div class="event-card">
+
+<div class="event-icon">⚽</div>
+
+<h3>খেলাধুলা</h3>
+
+<p>
+যুব সমাজকে উৎসাহিত করতে বিভিন্ন
+খেলাধুলা ও ক্রীড়া অনুষ্ঠানের আয়োজন।
+</p>
+
+</div>
+
+
+
+<div class="event-card">
+
+<div class="event-icon">🎭</div>
+
+<h3>সাংস্কৃতিক অনুষ্ঠান</h3>
+
+<p>
+গান, নাচ, নাটকসহ বিভিন্ন সাংস্কৃতিক
+অনুষ্ঠানের আয়োজন করা হয়।
+</p>
+
+</div>
+
+
+
+<div class="event-card">
+
+<div class="event-icon">❤️</div>
+
+<h3>সামাজিক সেবা</h3>
+
+<p>
+মানুষের প্রয়োজনে পাশে থাকা এবং
+সমাজের জন্য বিভিন্ন সেবামূলক কাজ করা।
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section id="gallery" class="section">
+
+<div class="section-container">
+
+<h2 class="section-title">
+গ্যালারি
+</h2>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+<img src="gallery1.jpg" alt="Budbud SANHATI Gallery 1">
+</div>
+
+
+<div class="gallery-item">
+<img src="gallery2.jpg" alt="Budbud SANHATI Gallery 2">
+</div>
+
+
+<div class="gallery-item">
+<img src="gallery3.jpg" alt="Budbud SANHATI Gallery 3">
+</div>
+
+
+<div class="gallery-item">
+<img src="gallery4.jpg" alt="Budbud SANHATI Gallery 4">
+</div>
+
+
+<div class="gallery-item">
+<img src="gallery5.jpg" alt="Budbud SANHATI Gallery 5">
+</div>
+
+
+<div class="gallery-item">
+<img src="gallery6.jpg" alt="Budbud SANHATI Gallery 6">
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="section">
+
+<div class="section-container">
+
+<h2 class="section-title">
+যোগাযোগ করুন
+</h2>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<div class="icon">📍</div>
+
+<h3>ঠিকানা</h3>
+
+<p>
+Budbud, Burdwan<br>
+West Bengal, India
+</p>
+
+</div>
+
+
+
+<div class="contact-card">
+
+<div class="icon">📞</div>
+
+<h3>ফোন করুন</h3>
+
+<p>
+
+<a href="tel:9547222144">
+9547222144
+</a>
+
+<br>
+
+<a href="tel:+919563881523">
++91 9563881523
+</a>
+
+</p>
+
+</div>
+
+
+
+<div class="contact-card">
+
+<div class="icon">✉️</div>
+
+<h3>ই-মেইল</h3>
+
+<p>
+
+<a href="mailto:budbudsanhati@gmail.com">
+budbudsanhati@gmail.com
+</a>
+
+</p>
+
+</div>
+
+
+
+<div class="contact-card">
+
+<div class="icon">🤝</div>
+
+<h3>আমাদের সাথে যুক্ত হন</h3>
+
+<p>
+সংগঠনের বিভিন্ন কার্যক্রমে
+অংশগ্রহণ করতে আমাদের সাথে যোগাযোগ করুন।
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     DURGA BANNER
+========================= -->
+
+<section class="durga-banner">
+
+<div class="durga-banner-inner">
+
+<div class="trident">
+🔱
+</div>
+
+<h2>
+জয় মা দুর্গা
+</h2>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-info">
+
+
+<div class="footer-item">
+
+📍
+
+<strong>ঠিকানা</strong>
+
+<br>
+
+Budbud, Burdwan<br>
+West Bengal, India
+
+</div>
+
+
+
+<div class="footer-item">
+
+📞
+
+<strong>ফোন</strong>
+
+<br>
+
+<a href="tel:9547222144">
+9547222144
+</a>
+
+<br>
+
+<a href="tel:+919563881523">
++91 9563881523
+</a>
+
+</div>
+
+
+
+<div class="footer-item">
+
+✉️
+
+<strong>ই-মেইল</strong>
+
+<br>
+
+<a href="mailto:budbudsanhati@gmail.com">
+budbudsanhati@gmail.com
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2024 Budbud SANHATI.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+
+    link.addEventListener("click",function(event){
+
+        const targetId=this.getAttribute("href");
+
+        const target=document.querySelector(targetId);
+
+        if(target){
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+
+        }
+
+    });
+
+});
+
+
+
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
+
+const sections=document.querySelectorAll(
+    "main section[id]"
+);
+
+const navLinks=document.querySelectorAll(
+    ".nav-menu a"
+);
+
+function updateNavigation(){
+
+    let current="home";
+
+    sections.forEach(function(section){
+
+        const sectionTop=
+            section.getBoundingClientRect().top +
+            window.scrollY -
+            150;
+
+        if(window.scrollY >= sectionTop){
+
+            current=section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(function(link){
+
+        link.classList.remove("active");
+
+        if(
+            link.getAttribute("href") ===
+            "#" + current
+        ){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener(
+    "scroll",
+    updateNavigation
+);
+
+updateNavigation();
+
+
+/* =========================
+   IMAGE ERROR HANDLING
+========================= */
+
+document.querySelectorAll(".gallery-item img")
+.forEach(function(img){
+
+    img.addEventListener("error",function(){
+
+        this.style.display="none";
+
+        this.parentElement.innerHTML=
+        '<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#ffc400;font-size:45px;">🖼️</div>';
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
