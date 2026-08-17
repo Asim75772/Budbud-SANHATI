@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#000000">
+
+<title>Budbud SANHATI | বুদবুদ সংহতি</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
 *{
     margin:0;
     padding:0;
@@ -9,287 +29,395 @@ html{
 }
 
 body{
-    font-family:"Noto Sans Bengali","Nirmala UI",Arial,sans-serif;
+    margin:0;
+    padding:0;
+
     background:#000000;
     color:#ffffff;
+
+    font-family:
+    "Noto Sans Bengali",
+    "Noto Serif Bengali",
+    Arial,
+    sans-serif;
+
     overflow-x:hidden;
 }
 
-a{
-    text-decoration:none;
-}
 
-/* HEADER */
+/* =====================================================
+   HEADER
+===================================================== */
 
 header{
     width:100%;
+
     background:#000000;
-    border-bottom:2px solid #d00000;
+
+    border-bottom:2px solid #b00000;
+
     position:sticky;
     top:0;
-    z-index:1000;
+
+    z-index:9999;
 }
 
 .navbar{
     width:100%;
     min-height:70px;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     background:#000000;
 }
 
 .nav-menu{
+    width:100%;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:48px;
+
+    gap:50px;
+
     list-style:none;
-    padding:0 20px;
+
+    padding:0 15px;
+}
+
+.nav-menu li{
+    flex-shrink:0;
 }
 
 .nav-menu a{
-    position:relative;
     display:block;
-    color:#f5df9a;
-    font-family:Arial,sans-serif;
-    font-size:18px;
-    padding:25px 0 17px;
-    transition:.3s;
+
+    color:#f4d77a;
+
+    text-decoration:none;
+
+    font-size:17px;
+    font-weight:600;
+
+    padding:23px 0 17px;
+
+    border-bottom:4px solid transparent;
+
+    transition:all .3s ease;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active{
-    color:#ff2020;
+    color:#ff1515;
 }
 
-.nav-menu a.active::after{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    height:4px;
-    background:#ff1515;
+.nav-menu a.active{
+    border-bottom-color:#ff1515;
 }
 
 
-/* HERO */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
     width:100%;
-    background-image:url("home-banner.png");
-    background-size:100% auto;
-    background-position:center top;
-    background-repeat:no-repeat;
-    aspect-ratio:16 / 9;
-    position:relative;
-    border-bottom:3px solid #d00000;
-}
-
-
-/* DURGA */
-
-.durga-section{
-    width:100%;
-    min-height:260px;
 
     background:#000000;
 
-    border-bottom:3px solid #d00000;
+    border-bottom:3px solid #b00000;
+
+    display:block;
+
+    line-height:0;
+}
+
+.hero img{
+    width:100%;
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+    background:#000000;
+}
+
+
+/* =====================================================
+   JOY MA DURGA
+===================================================== */
+
+.durga-section{
+
+    width:100%;
+
+    min-height:230px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #240000 0%,
+        #0b0000 55%,
+        #000000 100%
+    );
+
+    border-bottom:3px solid #b00000;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
     text-align:center;
+
     padding:35px 20px;
 }
 
 .durga-content{
-    width:100%;
     display:flex;
+
     flex-direction:column;
-    align-items:center;
-}
 
-.durga-symbol{
-    font-size:70px;
-    line-height:1;
-    color:#ffd000;
-
-    text-shadow:
-        0 0 8px #ff9d00,
-        0 0 20px #ff6600;
-
-    margin-bottom:10px;
-}
-
-.durga-title{
-    color:#ffd000;
-
-    font-size:52px;
-    font-weight:800;
-    line-height:1.3;
-
-    text-shadow:
-        0 2px 5px #000,
-        0 0 12px #ff6a00;
-}
-
-
-/* INFORMATION */
-
-.info-section{
-    width:100%;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-
-    background:#000000;
-
-    border-bottom:1px solid #604900;
-}
-
-.info-box{
-    min-height:410px;
-
-    padding:55px 35px;
-
-    text-align:center;
-
-    border-right:1px solid #604900;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-.info-box:last-child{
-    border-right:none;
-}
-
-
-/* ICON */
-
-.info-icon{
-    width:150px;
-    height:150px;
-
-    border:4px solid #ffd000;
-    border-radius:50%;
-
-    background:#000000;
-
-    display:flex;
     align-items:center;
     justify-content:center;
 
-    margin-bottom:28px;
-
-    box-shadow:0 0 12px rgba(255,208,0,.15);
+    gap:8px;
 }
 
-.info-icon span{
-    font-size:68px;
+.durga-icon{
+    font-size:65px;
+
     line-height:1;
+
+    filter:
+    drop-shadow(0 0 8px #ffb000)
+    drop-shadow(0 0 18px #ff7b00);
 }
 
+.durga-title{
 
-/* TITLES */
+    color:#ffb900;
 
-.info-box h2{
-    color:#ffd000;
+    font-size:42px;
 
-    font-size:31px;
     font-weight:800;
-    line-height:1.4;
 
-    margin-bottom:25px;
+    line-height:1.3;
 
-    text-shadow:0 2px 4px #000;
+    text-shadow:
+    0 0 5px #ff8500,
+    0 0 15px #ff5e00;
+
 }
 
 
-/* TEXT */
+/* =====================================================
+   COMMON SECTION
+===================================================== */
 
-.info-box p{
-    max-width:600px;
+.info-section{
+    width:100%;
 
-    color:#eeeeee;
+    background:#000000;
 
-    font-size:20px;
-    line-height:2;
+    border-bottom:1px solid #5d4300;
+}
+
+
+/* =====================================================
+   INFO BOX
+===================================================== */
+
+.info-box{
+
+    width:100%;
+
+    min-height:430px;
+
+    padding:70px 35px 75px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
 
     text-align:center;
+
+    border-bottom:1px solid #5d4300;
+
+    scroll-margin-top:75px;
+
+    background:#000000;
+}
+
+.info-box:last-child{
+    border-bottom:none;
 }
 
 
-/* GALLERY BUTTON */
+/* =====================================================
+   ICON
+===================================================== */
+
+.icon{
+
+    width:150px;
+    height:150px;
+
+    margin-bottom:40px;
+
+    border:5px solid #ffd000;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#000000;
+
+    font-size:70px;
+
+    line-height:1;
+
+    box-shadow:
+    0 0 10px rgba(255,190,0,.3),
+    0 0 25px rgba(255,150,0,.12);
+
+    flex-shrink:0;
+}
+
+
+/* =====================================================
+   HEADINGS
+===================================================== */
+
+.info-box h2{
+
+    color:#ffc400;
+
+    font-size:38px;
+
+    font-weight:800;
+
+    margin-bottom:35px;
+
+    line-height:1.4;
+
+    text-shadow:
+    0 0 5px #8b5200;
+}
+
+
+/* =====================================================
+   PARAGRAPH
+===================================================== */
+
+.info-box p{
+
+    max-width:900px;
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    line-height:2;
+
+    font-weight:400;
+
+}
+
+
+/* =====================================================
+   GALLERY BUTTON
+===================================================== */
 
 .gallery-button{
+
     display:inline-block;
 
-    margin-top:25px;
+    margin-top:30px;
 
-    padding:12px 28px;
+    padding:13px 35px;
 
-    border:2px solid #ffd000;
-    border-radius:30px;
+    border:2px solid #ffc400;
 
-    color:#ffd000;
+    border-radius:8px;
 
-    font-size:17px;
+    background:#100000;
+
+    color:#ffc400;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:700;
 
     transition:.3s;
 }
 
 .gallery-button:hover{
-    background:#ffd000;
+
+    background:#ffc400;
+
     color:#000000;
+
 }
 
 
-/* CONTACT */
+/* =====================================================
+   CONTACT FOOTER
+===================================================== */
 
-.contact-section{
+.contact-footer{
+
     width:100%;
 
     background:#000000;
 
-    border-top:2px solid #d00000;
-}
+    border-top:2px solid #8b0000;
 
-.contact-title{
-    text-align:center;
-
-    color:#ffd000;
-
-    font-size:32px;
-
-    padding:35px 20px 25px;
+    scroll-margin-top:75px;
 }
 
 .contact-container{
+
     width:100%;
 
     display:grid;
-    grid-template-columns:repeat(4,1fr);
 
-    background:#000000;
+    grid-template-columns:
+    repeat(4,1fr);
 }
 
-.contact-box{
-    min-height:130px;
 
-    padding:25px 20px;
+/* =====================================================
+   CONTACT BOX
+===================================================== */
+
+.contact-box{
+
+    min-height:150px;
+
+    padding:25px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     gap:15px;
 
-    border-right:1px solid #604900;
+    border-right:1px solid #5d4300;
 
     text-align:left;
 }
@@ -298,88 +426,142 @@ header{
     border-right:none;
 }
 
+
+/* =====================================================
+   CONTACT ICON
+===================================================== */
+
 .contact-icon{
-    font-size:38px;
-    color:#ffbf00;
+
+    width:55px;
+    height:55px;
+
+    border:2px solid #ffc400;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:#ffc400;
+
+    font-size:26px;
+
     flex-shrink:0;
+
+    background:#000000;
 }
 
+
+/* =====================================================
+   CONTACT TEXT
+===================================================== */
+
 .contact-text{
-    color:#eeeeee;
 
-    font-family:Arial,sans-serif;
+    color:#ffffff;
 
-    font-size:15px;
+    font-size:16px;
+
     line-height:1.7;
 }
 
+.contact-text strong{
+
+    color:#ffc400;
+
+    display:block;
+
+    margin-bottom:4px;
+}
+
 .contact-text a{
-    color:#eeeeee;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
 }
 
 .contact-text a:hover{
-    color:#ffd000;
+
+    color:#ffc400;
+
 }
 
 
-/* COPYRIGHT */
+/* =====================================================
+   COPYRIGHT
+===================================================== */
 
 .copyright{
+
     width:100%;
+
+    padding:20px 15px;
 
     background:#000000;
 
-    border-top:1px solid #302500;
+    border-top:1px solid #3d0000;
 
     text-align:center;
 
-    color:#c9a94d;
+    color:#c9a849;
 
     font-size:14px;
 
-    padding:18px 15px;
 }
 
 
-/* TABLET */
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media(max-width:900px){
 
-    .navbar{
-        min-height:65px;
-        overflow-x:auto;
-        justify-content:flex-start;
-        scrollbar-width:none;
-    }
-
-    .navbar::-webkit-scrollbar{
-        display:none;
-    }
-
     .nav-menu{
-        width:max-content;
-        gap:35px;
-        margin:auto;
+        gap:32px;
     }
 
     .nav-menu a{
-        font-size:17px;
-        padding:23px 0 16px;
+        font-size:16px;
     }
 
-    .info-section{
-        grid-template-columns:1fr;
+    .durga-section{
+        min-height:210px;
+    }
+
+    .durga-icon{
+        font-size:58px;
+    }
+
+    .durga-title{
+        font-size:36px;
     }
 
     .info-box{
-        min-height:auto;
-        border-right:none;
-        border-bottom:1px solid #604900;
-        padding:55px 30px;
+        min-height:400px;
+
+        padding:
+        60px 25px
+        65px;
     }
 
-    .info-box:last-child{
-        border-bottom:none;
+    .icon{
+        width:135px;
+        height:135px;
+
+        font-size:62px;
+    }
+
+    .info-box h2{
+        font-size:34px;
+    }
+
+    .info-box p{
+        font-size:20px;
     }
 
     .contact-container{
@@ -389,92 +571,197 @@ header{
     .contact-box:nth-child(2){
         border-right:none;
     }
+
+    .contact-box:nth-child(1),
+    .contact-box:nth-child(2){
+        border-bottom:1px solid #5d4300;
+    }
+
 }
 
 
-/* MOBILE */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:600px){
 
+    header{
+        position:sticky;
+        top:0;
+    }
+
     .navbar{
-        min-height:60px;
+
+        min-height:62px;
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+
+        scrollbar-width:none;
+    }
+
+    .navbar::-webkit-scrollbar{
+        display:none;
     }
 
     .nav-menu{
-        gap:28px;
-        padding:0 18px;
+
+        width:max-content;
+
+        justify-content:flex-start;
+
+        gap:30px;
+
+        padding:
+        0 20px;
     }
 
     .nav-menu a{
+
         font-size:15px;
-        padding:21px 0 14px;
+
+        padding:
+        21px 0
+        14px;
     }
 
-    .hero{
-        aspect-ratio:16 / 9;
-        background-size:100% auto;
-        background-position:center top;
+
+    /* HERO */
+
+    .hero img{
+
+        width:100%;
+
+        height:auto;
+
+        object-fit:contain;
     }
+
+
+    /* DURGA */
 
     .durga-section{
-        min-height:210px;
-        padding:30px 15px;
+
+        min-height:190px;
+
+        padding:
+        30px 15px;
     }
 
-    .durga-symbol{
-        font-size:58px;
+    .durga-icon{
+        font-size:52px;
     }
 
     .durga-title{
-        font-size:38px;
+
+        font-size:31px;
+
+        white-space:nowrap;
     }
+
+
+    /* INFO */
 
     .info-box{
-        padding:55px 22px;
+
+        min-height:auto;
+
+        padding:
+        65px 22px
+        70px;
+
+        scroll-margin-top:65px;
     }
 
-    .info-icon{
-        width:150px;
-        height:150px;
+    .icon{
+
+        width:125px;
+        height:125px;
+
+        border-width:4px;
+
+        font-size:58px;
+
+        margin-bottom:35px;
     }
 
     .info-box h2{
-        font-size:29px;
+
+        font-size:30px;
+
+        margin-bottom:28px;
     }
 
     .info-box p{
+
+        max-width:100%;
+
         font-size:18px;
+
         line-height:2;
+
+        padding:
+        0 5px;
     }
 
-    .contact-title{
-        font-size:27px;
-    }
+
+    /* CONTACT */
 
     .contact-container{
+
         grid-template-columns:1fr;
     }
 
     .contact-box{
-        min-height:105px;
+
+        min-height:115px;
+
         justify-content:flex-start;
-        padding:20px 30px;
-        border-right:none !important;
-        border-bottom:1px solid #604900;
+
+        padding:
+        20px 25px;
+
+        border-right:none;
+
+        border-bottom:1px solid #5d4300;
     }
 
     .contact-box:last-child{
         border-bottom:none;
     }
+
+    .contact-icon{
+
+        width:48px;
+        height:48px;
+
+        font-size:23px;
+    }
+
+    .contact-text{
+        font-size:14px;
+    }
+
+    .copyright{
+        font-size:13px;
+
+        padding:
+        17px 10px;
+    }
+
 }
 
 
-/* SMALL MOBILE */
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
 
-@media(max-width:400px){
+@media(max-width:380px){
 
     .nav-menu{
-        gap:24px;
+        gap:25px;
     }
 
     .nav-menu a{
@@ -482,23 +769,493 @@ header{
     }
 
     .durga-title{
-        font-size:33px;
+        font-size:27px;
     }
 
     .info-box{
-        padding:45px 18px;
-    }
-
-    .info-icon{
-        width:135px;
-        height:135px;
+        padding-left:17px;
+        padding-right:17px;
     }
 
     .info-box h2{
-        font-size:26px;
+        font-size:27px;
     }
 
     .info-box p{
-        font-size:16px;
+        font-size:17px;
     }
+
 }
+
+
+/* =====================================================
+   DARK BLACK SAFETY
+===================================================== */
+
+section,
+footer,
+.info-box,
+.contact-footer{
+    background-color:#000000;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+<ul class="nav-menu">
+
+<li>
+<a href="#home" class="active">
+HOME
+</a>
+</li>
+
+<li>
+<a href="#about">
+ABOUT US
+</a>
+</li>
+
+<li>
+<a href="#events">
+EVENTS
+</a>
+</li>
+
+<li>
+<a href="#gallery">
+GALLERY
+</a>
+</li>
+
+<li>
+<a href="#contact">
+CONTACT
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HOME / HERO
+===================================================== -->
+
+<section
+class="hero"
+id="home"
+>
+
+<img
+src="home-banner.png"
+alt="Budbud SANHATI"
+>
+
+</section>
+
+
+
+<!-- =====================================================
+     JOY MA DURGA
+===================================================== -->
+
+<section class="durga-section">
+
+<div class="durga-content">
+
+<div class="durga-icon">
+🔱
+</div>
+
+<div class="durga-title">
+জয় মা দুর্গা
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INFORMATION
+===================================================== -->
+
+<section class="info-section">
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<div
+class="info-box"
+id="about"
+>
+
+<div class="icon">
+👥
+</div>
+
+<h2>
+আমাদের পরিচয়
+</h2>
+
+<p>
+বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
+<br>
+আমরা একসাথে কাজ করি সমাজ ও মানুষের জন্য।
+</p>
+
+</div>
+
+
+
+<!-- =====================================================
+     EVENTS
+===================================================== -->
+
+<div
+class="info-box"
+id="events"
+>
+
+<div class="icon">
+📅
+</div>
+
+<h2>
+আমাদের কার্যক্রম
+</h2>
+
+<p>
+দুর্গা পূজা, রক্তদান, শিক্ষা সহায়তা,
+<br>
+খেলাধুলা এবং বিভিন্ন সামাজিক অনুষ্ঠান
+<br>
+আমাদের নিয়মিত কার্যক্রম।
+</p>
+
+</div>
+
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<div
+class="info-box"
+id="gallery"
+>
+
+<div class="icon">
+🖼️
+</div>
+
+<h2>
+গ্যালারি
+</h2>
+
+<p>
+আমাদের বিভিন্ন অনুষ্ঠান ও স্মরণীয় মুহূর্তের
+<br>
+কিছু ছবি দেখুন আমাদের গ্যালারিতে।
+</p>
+
+<a
+href="#gallery"
+class="gallery-button"
+>
+গ্যালারি দেখুন
+</a>
+
+</div>
+
+
+
+<!-- =====================================================
+     CONTACT INTRO
+===================================================== -->
+
+<div class="info-box">
+
+<div class="icon">
+🤝
+</div>
+
+<h2>
+যোগাযোগ করুন
+</h2>
+
+<p>
+আমাদের সাথে যুক্ত হতে অথবা যেকোনো
+<br>
+সহযোগিতার জন্য যোগাযোগ করুন।
+</p>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<footer
+id="contact"
+class="contact-footer"
+>
+
+
+<div class="contact-container">
+
+
+<!-- ADDRESS -->
+
+<div class="contact-box">
+
+<div class="contact-icon">
+📍
+</div>
+
+<div class="contact-text">
+
+<strong>
+ঠিকানা
+</strong>
+
+Budbud, Burdwan<br>
+West Bengal, India
+
+</div>
+
+</div>
+
+
+
+<!-- FACEBOOK -->
+
+<div class="contact-box">
+
+<div class="contact-icon">
+ⓕ
+</div>
+
+<div class="contact-text">
+
+<strong>
+Facebook
+</strong>
+
+Budbud SANHATI<br>
+Official
+
+</div>
+
+</div>
+
+
+
+<!-- PHONE -->
+
+<div class="contact-box">
+
+<div class="contact-icon">
+📞
+</div>
+
+<div class="contact-text">
+
+<strong>
+Phone
+</strong>
+
+<a href="tel:9547222144">
+9547222144
+</a>
+
+<br>
+
+<a href="tel:+919563881523">
++91 9563881523
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- EMAIL -->
+
+<div class="contact-box">
+
+<div class="contact-icon">
+✉
+</div>
+
+<div class="contact-text">
+
+<strong>
+Email
+</strong>
+
+<a href="mailto:budbud.sanhati@gmail.com">
+budbud.sanhati@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     COPYRIGHT
+===================================================== -->
+
+<div class="copyright">
+
+© 2024 Budbud SANHATI. All Rights Reserved.
+
+</div>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   ACTIVE NAVIGATION
+===================================================== */
+
+const sections =
+document.querySelectorAll(
+    "section[id], footer[id]"
+);
+
+const navLinks =
+document.querySelectorAll(
+    ".nav-menu a"
+);
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        let current = "home";
+
+        sections.forEach(
+            section => {
+
+                const sectionTop =
+                section.offsetTop - 120;
+
+                if(
+                    window.scrollY >=
+                    sectionTop
+                ){
+
+                    current =
+                    section.getAttribute("id");
+
+                }
+
+            }
+        );
+
+        navLinks.forEach(
+            link => {
+
+                link.classList.remove(
+                    "active"
+                );
+
+                if(
+                    link.getAttribute("href")
+                    === "#" + current
+                ){
+
+                    link.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   SMOOTH NAVIGATION
+===================================================== */
+
+navLinks.forEach(
+    link => {
+
+        link.addEventListener(
+            "click",
+            function(e){
+
+                const target =
+                document.querySelector(
+                    this.getAttribute("href")
+                );
+
+                if(target){
+
+                    e.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior:"smooth",
+                        block:"start"
+                    });
+
+                }
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
