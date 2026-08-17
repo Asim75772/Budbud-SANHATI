@@ -2,8 +2,11 @@
 <html lang="bn">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Budbud SANHATI | বুদবুদ সংহতি</title>
 
@@ -29,29 +32,28 @@ body {
     color: white;
 }
 
+
 /* =========================
    HEADER
 ========================= */
 
 header {
+    width: 100%;
+    background: #050505;
+    border-bottom: 2px solid #9b0000;
+
     position: sticky;
     top: 0;
     z-index: 1000;
-
-    width: 100%;
-    background: #050505;
-
-    border-bottom: 2px solid #a00000;
 }
 
 .navbar {
-    min-height: 70px;
+    width: 100%;
+    min-height: 78px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    overflow-x: auto;
 }
 
 .nav-menu {
@@ -59,36 +61,34 @@ header {
     align-items: center;
     justify-content: center;
 
-    gap: 48px;
+    gap: 55px;
 
     list-style: none;
-    white-space: nowrap;
-
-    padding: 0 20px;
 }
 
 .nav-menu a {
-    display: block;
-
-    padding: 24px 0 17px;
-
     color: #f5df9a;
     text-decoration: none;
 
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
+
+    padding: 28px 0 20px;
+
+    display: block;
 
     transition: 0.3s;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a.active {
     color: #ff1b1b;
 }
 
 .nav-menu a.active {
-    color: #ff1b1b;
     border-bottom: 4px solid #ff1b1b;
 }
+
 
 /* =========================
    HERO
@@ -96,71 +96,90 @@ header {
 
 .hero {
     width: 100%;
-    min-height: 620px;
+
+    min-height: 820px;
 
     background-image: url("home-banner.png");
-    background-size: cover;
+
+    background-size: 100% 100%;
+
     background-position: center;
+
     background-repeat: no-repeat;
 
+    position: relative;
+
     display: flex;
+
     align-items: flex-end;
+
     justify-content: center;
 
-    padding-bottom: 35px;
+    padding-bottom: 45px;
 }
+
+
+/* HERO BUTTON */
 
 .hero-button {
     display: inline-block;
 
-    padding: 13px 75px;
+    padding: 14px 80px;
 
     background: linear-gradient(
-        180deg,
-        #c00000,
-        #520000
+        #a40000,
+        #4d0000
     );
 
     border: 2px solid #ffd21a;
-    border-radius: 30px;
+
+    border-radius: 25px;
 
     color: #ffe7a0;
+
     text-decoration: none;
 
-    font-size: 23px;
+    font-size: 25px;
+
     font-weight: bold;
 
-    box-shadow: 0 0 15px rgba(255,210,26,0.35);
-
     transition: 0.3s;
+
+    box-shadow:
+        0 0 10px rgba(255,210,26,.25);
 }
 
 .hero-button:hover {
     background: #ff1744;
     color: white;
-    transform: scale(1.04);
 }
 
+
 /* =========================
-   INFORMATION CARDS
+   INFORMATION
 ========================= */
 
 .info-section {
+
     width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
 
     background: #120000;
 
     border-top: 2px solid #9b0000;
+
     border-bottom: 2px solid #9b0000;
 }
 
 .info-box {
-    min-height: 300px;
 
-    padding: 30px 22px;
+    min-height: 320px;
+
+    padding: 28px 22px;
 
     text-align: center;
 
@@ -171,115 +190,146 @@ header {
     border-right: none;
 }
 
+
+/* ICON */
+
 .icon {
-    width: 78px;
-    height: 78px;
+
+    width: 82px;
+
+    height: 82px;
 
     margin: 0 auto 18px;
 
     border: 2px solid #ffd21a;
+
     border-radius: 50%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    font-size: 38px;
+    font-size: 40px;
 
     color: #ffd21a;
 
     background: #170000;
-
-    box-shadow: 0 0 12px rgba(255,210,26,0.15);
 }
 
+
+/* TITLE */
+
 .info-box h2 {
+
     color: #ffd21a;
 
-    font-size: 23px;
+    font-size: 24px;
 
     margin-bottom: 15px;
 }
 
-.info-box p {
-    color: #eeeeee;
 
-    font-size: 16px;
+/* TEXT */
+
+.info-box p {
+
+    color: #eee;
+
+    font-size: 17px;
 
     line-height: 1.9;
 }
 
 
-
-   
-
-
-    
-          
-
-
 /* =========================
-   CONTACT
+   CONTACT FOOTER
 ========================= */
 
 .contact-footer {
+
     background: #030303;
 
     border-bottom: 1px solid #7a0000;
 }
 
 .contact-container {
-    width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    width: 100%;
 }
 
 .contact-box {
-    min-height: 115px;
 
-    padding: 18px;
+    min-height: 105px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 12px;
 
+    padding: 15px;
+
     border-right: 1px solid #5a3000;
+
+    text-align: left;
 }
 
 .contact-box:last-child {
     border-right: none;
 }
 
+
+/* CONTACT ICON */
+
 .contact-icon {
-    font-size: 32px;
+
+    font-size: 35px;
 
     color: #f1b700;
 
     flex-shrink: 0;
 }
 
-.contact-text {
-    color: #eeeeee;
 
-    font-size: 15px;
+/* CONTACT TEXT */
+
+.contact-text {
+
+    color: #eee;
+
+    font-size: 16px;
 
     line-height: 1.6;
 }
 
 .contact-text a {
-    color: #eeeeee;
+
+    color: #eee;
 
     text-decoration: none;
 }
 
 .contact-text a:hover {
+
     color: #ffd21a;
 }
 
+
+/* =========================
+   COPYRIGHT
+========================= */
+
 .copyright {
+
     background: #050505;
 
     text-align: center;
@@ -288,8 +338,9 @@ header {
 
     color: #d7b85a;
 
-    font-size: 14px;
+    font-size: 15px;
 }
+
 
 /* =========================
    MOBILE
@@ -298,87 +349,110 @@ header {
 @media (max-width: 800px) {
 
     .navbar {
-        min-height: 62px;
+
+        min-height: 65px;
+
+        overflow-x: auto;
 
         justify-content: flex-start;
     }
 
     .nav-menu {
-        gap: 27px;
+
+        gap: 28px;
+
+        padding: 0 20px;
+
+        white-space: nowrap;
     }
 
     .nav-menu a {
+
         font-size: 15px;
 
-        padding: 21px 0 14px;
+        padding: 23px 0 15px;
     }
 
+
+    /* HERO */
+
     .hero {
-        min-height: 500px;
+
+        min-height: 560px;
 
         padding-bottom: 25px;
-
-        background-position: center;
     }
 
     .hero-button {
-        padding: 11px 55px;
+
+        padding: 12px 55px;
 
         font-size: 21px;
     }
 
+
+    /* INFORMATION */
+
     .info-section {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .info-box {
-        min-height: 285px;
+
+        min-height: 300px;
 
         border-bottom: 1px solid #5c4200;
     }
 
-    .info-box:nth-child(2),
-    .info-box:nth-child(4) {
+    .info-box:nth-child(2) {
+
         border-right: none;
     }
 
     .info-box h2 {
+
         font-size: 21px;
     }
 
     .info-box p {
+
         font-size: 15px;
     }
 
-    .durga-section {
-        min-height: 160px;
-    }
 
-    .durga-title {
-        font-size: 38px;
-    }
+    /* CONTACT */
 
     .contact-container {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .contact-box {
+
         min-height: 95px;
+
+        font-size: 14px;
     }
 
-    .contact-box:nth-child(2),
-    .contact-box:nth-child(4) {
+    .contact-box:nth-child(2) {
+
         border-right: none;
     }
 
     .contact-icon {
+
         font-size: 28px;
     }
 
     .contact-text {
+
         font-size: 13px;
     }
 }
+
 
 /* =========================
    SMALL MOBILE
@@ -387,63 +461,77 @@ header {
 @media (max-width: 500px) {
 
     .nav-menu {
+
         gap: 22px;
     }
 
     .nav-menu a {
+
         font-size: 14px;
     }
 
+
+    /* HERO */
+
     .hero {
-        min-height: 430px;
+
+        min-height: 470px;
+
+        background-size: 100% 100%;
     }
 
     .hero-button {
+
         padding: 10px 45px;
 
         font-size: 19px;
     }
 
+
+    /* INFORMATION */
+
     .info-section {
+
         grid-template-columns: 1fr;
     }
 
     .info-box {
+
+        border-right: none;
+
         min-height: auto;
 
-        padding: 30px 25px;
-
-        border-right: none !important;
+        padding: 28px 25px;
     }
 
-    .durga-section {
-        min-height: 130px;
-    }
 
-    .durga-title {
-        font-size: 30px;
-    }
+    /* CONTACT */
 
     .contact-container {
+
         grid-template-columns: 1fr;
     }
 
     .contact-box {
+
+        border-right: none;
+
+        border-bottom: 1px solid #5a3000;
+
         justify-content: flex-start;
 
         padding-left: 30px;
-
-        border-right: none !important;
-
-        border-bottom: 1px solid #5a3000;
     }
 
     .contact-box:last-child {
+
         border-bottom: none;
     }
+
 }
 
 </style>
+
 </head>
 
 
@@ -461,23 +549,33 @@ header {
 <ul class="nav-menu">
 
 <li>
-<a href="#home" class="active">HOME</a>
+<a href="#home" class="active">
+HOME
+</a>
 </li>
 
 <li>
-<a href="#about">ABOUT US</a>
+<a href="#about">
+ABOUT US
+</a>
 </li>
 
 <li>
-<a href="#events">EVENTS</a>
+<a href="#events">
+EVENTS
+</a>
 </li>
 
 <li>
-<a href="#gallery">GALLERY</a>
+<a href="#gallery">
+GALLERY
+</a>
 </li>
 
 <li>
-<a href="#contact">CONTACT</a>
+<a href="#contact">
+CONTACT
+</a>
 </li>
 
 </ul>
@@ -487,18 +585,19 @@ header {
 </header>
 
 
+
 <!-- =========================
      HERO
 ========================= -->
 
+<section class="hero" id="home">
 
-  
-
-
-
-  
+<a href="#about" class="hero-button">
+স্বাগতম
+</a>
 
 </section>
+
 
 
 <!-- =========================
@@ -507,6 +606,8 @@ header {
 
 <section class="info-section">
 
+
+<!-- ABOUT -->
 
 <div class="info-box" id="about">
 
@@ -521,13 +622,15 @@ header {
 <p>
 বুদবুদ সংহতি একটি সামাজিক
 ও সাংস্কৃতিক সংগঠন।
-আমরা একসাথে কাজ করি
-সমাজ ও মানুষের জন্য।
+আমরা একসাথে কাজ করি সমাজ
+ও মানুষের জন্য।
 </p>
 
 </div>
 
 
+
+<!-- EVENTS -->
 
 <div class="info-box" id="events">
 
@@ -540,15 +643,17 @@ header {
 </h2>
 
 <p>
-দুর্গা পূজা, রক্তদান,
-শিক্ষা সহায়তা, খেলাধুলা
-এবং বিভিন্ন সামাজিক অনুষ্ঠান
+দুর্গা পূজা, রক্তদান, শিক্ষা
+সহায়তা, খেলাধুলা এবং
+বিভিন্ন সামাজিক অনুষ্ঠান
 আমাদের নিয়মিত কার্যক্রম।
 </p>
 
 </div>
 
 
+
+<!-- GALLERY -->
 
 <div class="info-box" id="gallery">
 
@@ -561,14 +666,16 @@ header {
 </h2>
 
 <p>
-আমাদের বিভিন্ন অনুষ্ঠান
-ও কার্যক্রমের কিছু ছবি
-দেখুন আমাদের গ্যালারিতে।
+আমাদের বিভিন্ন অনুষ্ঠান ও
+কার্যক্রমের কিছু ছবি দেখুন
+আমাদের গ্যালারিতে।
 </p>
 
 </div>
 
 
+
+<!-- CONTACT -->
 
 <div class="info-box">
 
@@ -592,31 +699,18 @@ header {
 </section>
 
 
-<!-- =========================
-     DURGA
-========================= -->
-
-<section class="durga-section">
-
-<div class="durga-title">
-🔱 জয় মা দুর্গা 🔱
-</div>
-
-</section>
-
 
 <!-- =========================
-     CONTACT FOOTER
+     CONTACT
 ========================= -->
 
-<footer
-id="contact"
-class="contact-footer"
->
+<footer id="contact" class="contact-footer">
 
 
 <div class="contact-container">
 
+
+<!-- ADDRESS -->
 
 <div class="contact-box">
 
@@ -635,6 +729,8 @@ West Bengal, India
 
 
 
+<!-- FACEBOOK -->
+
 <div class="contact-box">
 
 <div class="contact-icon">
@@ -651,6 +747,8 @@ Official
 </div>
 
 
+
+<!-- PHONE -->
 
 <div class="contact-box">
 
@@ -676,6 +774,8 @@ Official
 
 
 
+<!-- EMAIL -->
+
 <div class="contact-box">
 
 <div class="contact-icon">
@@ -698,9 +798,12 @@ budbud.sanhati@gmail.com
 </div>
 
 
+
+<!-- COPYRIGHT -->
+
 <div class="copyright">
 
-© 2026 Budbud SANHATI. All Rights Reserved.
+© 2024 Budbud SANHATI. All Rights Reserved.
 
 </div>
 
