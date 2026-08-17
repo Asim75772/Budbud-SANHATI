@@ -1,3 +1,5 @@
+:::writing{variant="document" id="58321" title="Budbud SANHATI — index.html"}
+```html
 <!DOCTYPE html>
 <html lang="bn">
 
@@ -42,7 +44,7 @@ html{
 
 body{
     background:#050000;
-    color:#ffffff;
+    color:#fff;
     font-family:"Noto Serif Bengali",serif;
     overflow-x:hidden;
 }
@@ -82,10 +84,6 @@ img{
 .nav-container{
     width:100%;
     max-width:1200px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
 }
 
 .nav-menu{
@@ -106,9 +104,9 @@ img{
     color:#f3d49a;
 
     font-size:19px;
-    font-weight:600;
+    font-weight:700;
 
-    padding:23px 0;
+    padding:22px 0;
 
     white-space:nowrap;
 
@@ -148,10 +146,9 @@ img{
 
 .hero{
     position:relative;
-
     width:100%;
 
-    background:#120000;
+    background:#050000;
 
     border-bottom:3px solid #e00000;
 
@@ -161,10 +158,7 @@ img{
 .hero-image{
     width:100%;
     height:auto;
-
     display:block;
-
-    object-fit:cover;
 }
 
 .hero-content{
@@ -175,20 +169,12 @@ img{
 
     transform:translateX(-50%);
 
-    z-index:5;
-
     text-align:center;
 
-    width:auto;
+    z-index:5;
 }
 
-
-/* =====================================================
-   WELCOME BUTTON
-===================================================== */
-
-.hero .welcome-btn{
-
+.welcome-btn{
     display:inline-flex;
 
     align-items:center;
@@ -218,32 +204,18 @@ img{
     font-size:25px;
     font-weight:800;
 
-    cursor:pointer;
-
     transition:.3s;
 }
 
-.hero .welcome-btn:hover{
+.welcome-btn:hover{
     transform:scale(1.05);
 }
 
-body .welcome-btn:not(.hero .welcome-btn){
-    display:none !important;
-}
-
-
-/* =====================================================
-   DOWN ARROW
-===================================================== */
-
 .down-arrow{
-
     display:block;
-
     margin-top:5px;
 
     font-size:27px;
-
     color:#ffd000;
 
     animation:arrowMove 1.4s infinite;
@@ -273,27 +245,24 @@ body .welcome-btn:not(.hero .welcome-btn){
 ===================================================== */
 
 .quick-section{
-
     width:100%;
 
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
 
-    background:#100000;
+    background:#080000;
 
-    border-bottom:1px solid #7a2b00;
+    border-bottom:1px solid #5b2100;
 }
 
 .quick-card{
-
     min-height:235px;
 
     padding:30px 20px;
 
     text-align:center;
 
-    border-right:1px solid #5b2100;
+    border-right:1px solid #4b1800;
 
     transition:.3s;
 }
@@ -303,66 +272,59 @@ body .welcome-btn:not(.hero .welcome-btn){
 }
 
 .quick-card:hover{
-    background:#1d0000;
+    background:#140000;
 }
 
 .quick-icon{
-
     width:62px;
     height:62px;
 
     margin:0 auto 15px;
 
     border:2px solid #ffc400;
-
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
     font-size:29px;
-
-    color:#ffc400;
 }
 
 .quick-card h3{
-
     color:#ffc400;
-
     font-size:21px;
-
     margin-bottom:12px;
 }
 
 .quick-card p{
-
-    color:#eee;
-
+    color:#ddd;
     font-size:14px;
-
     line-height:1.8;
 }
 
 
 /* =====================================================
-   GENERAL SECTION
+   SECTION
 ===================================================== */
 
 .section{
-
     width:100%;
 
     padding:80px 20px;
 
-    background:#100000;
+    background:#070000;
 
-    border-bottom:1px solid #5b2100;
+    border-bottom:1px solid #401500;
+}
+
+.section-container{
+    width:100%;
+    max-width:1050px;
+    margin:auto;
 }
 
 .section-title{
-
     text-align:center;
 
     color:#ffc400;
@@ -375,7 +337,6 @@ body .welcome-btn:not(.hero .welcome-btn){
 }
 
 .section-title::after{
-
     content:"✦";
 
     display:block;
@@ -387,22 +348,12 @@ body .welcome-btn:not(.hero .welcome-btn){
     margin-top:8px;
 }
 
-.section-container{
-
-    width:100%;
-
-    max-width:1050px;
-
-    margin:auto;
-}
-
 
 /* =====================================================
    ABOUT
 ===================================================== */
 
 .about-content{
-
     text-align:center;
 
     max-width:850px;
@@ -411,18 +362,15 @@ body .welcome-btn:not(.hero .welcome-btn){
 }
 
 .big-icon{
-
     width:125px;
     height:125px;
 
     margin:0 auto 35px;
 
     border:4px solid #ffc400;
-
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -430,7 +378,6 @@ body .welcome-btn:not(.hero .welcome-btn){
 }
 
 .about-content p{
-
     color:#eee;
 
     font-size:20px;
@@ -446,7 +393,6 @@ body .welcome-btn:not(.hero .welcome-btn){
 ===================================================== */
 
 .event-grid{
-
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
@@ -455,10 +401,11 @@ body .welcome-btn:not(.hero .welcome-btn){
 }
 
 .event-card{
+    height:100%;
 
-    background:#180000;
+    background:#110000;
 
-    border:1px solid #762800;
+    border:1px solid #6b2300;
 
     border-radius:12px;
 
@@ -470,7 +417,6 @@ body .welcome-btn:not(.hero .welcome-btn){
 }
 
 .event-card:hover{
-
     transform:translateY(-5px);
 
     border-color:#ffc400;
@@ -480,43 +426,23 @@ body .welcome-btn:not(.hero .welcome-btn){
 }
 
 .event-link{
-
     display:block;
-
-    text-decoration:none;
-
-    color:inherit;
-}
-
-.event-link .event-card{
-
-    height:100%;
-
-    cursor:pointer;
 }
 
 .event-icon{
-
     font-size:48px;
-
     margin-bottom:15px;
 }
 
 .event-card h3{
-
     color:#ffc400;
-
     font-size:23px;
-
     margin-bottom:12px;
 }
 
 .event-card p{
-
-    color:#eee;
-
+    color:#ddd;
     font-size:15px;
-
     line-height:1.8;
 }
 
@@ -526,27 +452,22 @@ body .welcome-btn:not(.hero .welcome-btn){
 ===================================================== */
 
 .gallery-grid{
-
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:22px;
-
-    width:100%;
+    gap:25px;
 }
 
 .gallery-item{
-
     position:relative;
 
     width:100%;
+    height:360px;
 
-    height:330px;
+    background:#110000;
 
-    background:#180000;
-
-    border:2px solid #7b2900;
+    border:2px solid #6b2300;
 
     border-radius:14px;
 
@@ -554,64 +475,48 @@ body .welcome-btn:not(.hero .welcome-btn){
 
     cursor:pointer;
 
-    box-shadow:
-        0 0 15px rgba(255,170,0,.08);
-
-    transition:.35s;
+    transition:.3s;
 }
 
 .gallery-item:hover{
-
     transform:translateY(-5px);
 
     border-color:#ffc400;
 
     box-shadow:
-        0 0 25px rgba(255,190,0,.25);
+        0 0 25px rgba(255,180,0,.25);
 }
 
 .gallery-item img{
-
     width:100%;
-
     height:100%;
 
     object-fit:cover;
-
-    display:block;
 
     transition:.4s;
 }
 
 .gallery-item:hover img{
-
     transform:scale(1.04);
 }
 
-
-/* =====================================================
-   GALLERY IMAGE NUMBER
-===================================================== */
-
-.gallery-number{
-
+.gallery-label{
     position:absolute;
 
-    left:12px;
+    left:15px;
+    bottom:15px;
 
-    bottom:12px;
+    padding:7px 15px;
 
     background:rgba(0,0,0,.75);
 
-    color:#ffc400;
-
     border:1px solid #ffc400;
-
-    padding:5px 12px;
 
     border-radius:20px;
 
-    font-size:14px;
+    color:#ffc400;
+
+    font-size:15px;
 
     z-index:2;
 }
@@ -622,70 +527,70 @@ body .welcome-btn:not(.hero .welcome-btn){
 ===================================================== */
 
 .image-modal{
+    display:none;
 
     position:fixed;
 
     inset:0;
 
-    z-index:99999;
+    z-index:100000;
 
     background:rgba(0,0,0,.94);
 
-    display:none;
-
     align-items:center;
-
     justify-content:center;
 
     padding:20px;
 }
 
 .image-modal.show{
-
     display:flex;
 }
 
-.image-modal img{
-
-    max-width:95vw;
-
+.modal-image{
+    max-width:95%;
     max-height:90vh;
+
+    width:auto;
+    height:auto;
 
     object-fit:contain;
 
-    border:2px solid #ffc400;
+    border:3px solid #ffc400;
 
     border-radius:10px;
 
     box-shadow:
-        0 0 35px rgba(255,190,0,.3);
+        0 0 35px rgba(255,190,0,.35);
 }
 
 .close-modal{
-
     position:absolute;
 
-    top:20px;
-
+    top:18px;
     right:25px;
 
-    width:50px;
-
-    height:50px;
+    width:48px;
+    height:48px;
 
     border-radius:50%;
 
     border:2px solid #ffc400;
 
-    background:#b00000;
+    background:#100000;
 
-    color:#fff;
+    color:#ffc400;
 
-    font-size:30px;
+    font-size:32px;
 
     cursor:pointer;
 
-    z-index:100000;
+    z-index:100001;
+}
+
+.close-modal:hover{
+    background:#ff0000;
+    color:#fff;
 }
 
 
@@ -694,7 +599,6 @@ body .welcome-btn:not(.hero .welcome-btn){
 ===================================================== */
 
 .contact-grid{
-
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
@@ -707,10 +611,9 @@ body .welcome-btn:not(.hero .welcome-btn){
 }
 
 .contact-card{
+    background:#100000;
 
-    background:#180000;
-
-    border:1px solid #762800;
+    border:1px solid #6a2300;
 
     border-radius:12px;
 
@@ -720,14 +623,11 @@ body .welcome-btn:not(.hero .welcome-btn){
 }
 
 .contact-card .icon{
-
     font-size:40px;
-
     margin-bottom:12px;
 }
 
 .contact-card h3{
-
     color:#ffc400;
 
     font-size:22px;
@@ -737,7 +637,6 @@ body .welcome-btn:not(.hero .welcome-btn){
 
 .contact-card a,
 .contact-card p{
-
     color:#eee;
 
     font-size:17px;
@@ -755,9 +654,6 @@ body .welcome-btn:not(.hero .welcome-btn){
 ===================================================== */
 
 .durga-banner{
-
-    position:relative;
-
     width:100%;
 
     min-height:180px;
@@ -765,33 +661,27 @@ body .welcome-btn:not(.hero .welcome-btn){
     background:
         radial-gradient(
             circle at center,
-            #4a1000 0%,
-            #190000 45%,
-            #080000 100%
+            #380b00 0%,
+            #150000 45%,
+            #030000 100%
         );
 
     border-top:2px solid #8c0000;
-
     border-bottom:2px solid #8c0000;
 
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
-
-    overflow:hidden;
 }
 
 .durga-banner-inner{
-
     padding:30px 20px;
 }
 
 .trident{
-
     color:#ffc400;
 
     font-size:50px;
@@ -803,15 +693,11 @@ body .welcome-btn:not(.hero .welcome-btn){
 }
 
 .durga-banner h2{
-
     color:#ffc400;
 
     font-size:43px;
 
     margin-top:5px;
-
-    text-shadow:
-        0 0 15px rgba(255,180,0,.35);
 }
 
 
@@ -820,14 +706,11 @@ body .welcome-btn:not(.hero .welcome-btn){
 ===================================================== */
 
 footer{
-
-    background:#080808;
-
+    background:#030303;
     border-top:2px solid #ff0000;
 }
 
 .footer-info{
-
     max-width:1100px;
 
     margin:auto;
@@ -841,12 +724,9 @@ footer{
     gap:20px;
 
     text-align:center;
-
-    align-items:center;
 }
 
 .footer-item{
-
     color:#ddd;
 
     font-size:14px;
@@ -855,33 +735,23 @@ footer{
 }
 
 .footer-item strong{
-
     color:#ffc400;
 }
 
-.footer-item a{
-
-    color:#ddd;
-
-    transition:.3s;
-}
-
 .footer-item a:hover{
-
     color:#ffc400;
 }
 
 .copyright{
-
     text-align:center;
 
-    color:#aaa;
+    color:#999;
 
     font-size:13px;
 
     padding:15px;
 
-    border-top:1px solid #4a1800;
+    border-top:1px solid #331000;
 }
 
 
@@ -892,7 +762,6 @@ footer{
 @media(max-width:768px){
 
     .navbar{
-
         height:62px;
 
         overflow-x:auto;
@@ -901,12 +770,10 @@ footer{
     }
 
     .nav-container{
-
         min-width:max-content;
     }
 
     .nav-menu{
-
         gap:28px;
 
         justify-content:flex-start;
@@ -915,28 +782,15 @@ footer{
     }
 
     .nav-menu a{
-
         font-size:16px;
-
         padding:20px 0;
     }
 
-    .hero-image{
-
-        width:100%;
-
-        height:auto;
-
-        object-fit:cover;
-    }
-
     .hero-content{
-
         bottom:20px;
     }
 
-    .hero .welcome-btn{
-
+    .welcome-btn{
         min-width:175px;
 
         height:50px;
@@ -949,19 +803,15 @@ footer{
     }
 
     .down-arrow{
-
         font-size:22px;
     }
 
     .quick-section{
-
         grid-template-columns:repeat(2,1fr);
     }
 
     .quick-card{
-
         min-height:220px;
-
         padding:25px 14px;
 
         border-bottom:1px solid #4b1800;
@@ -969,96 +819,71 @@ footer{
 
     .quick-card:nth-child(2),
     .quick-card:nth-child(4){
-
         border-right:none;
     }
 
     .quick-card h3{
-
         font-size:18px;
     }
 
     .quick-card p{
-
         font-size:13px;
     }
 
     .section{
-
         padding:60px 16px;
     }
 
     .section-title{
-
         font-size:30px;
-
         margin-bottom:35px;
     }
 
     .big-icon{
-
         width:105px;
         height:105px;
-
         font-size:48px;
     }
 
     .about-content p{
-
         font-size:17px;
-
         line-height:2;
     }
 
     .event-grid{
-
         grid-template-columns:1fr;
-
         gap:18px;
     }
 
     .gallery-grid{
-
         grid-template-columns:1fr;
-
-        gap:15px;
+        gap:18px;
     }
 
     .gallery-item{
-
         height:390px;
-
-        border-radius:12px;
     }
 
     .contact-grid{
-
         grid-template-columns:1fr;
-
         gap:15px;
     }
 
     .footer-info{
-
         grid-template-columns:1fr;
-
         gap:12px;
-
         padding:20px 15px;
     }
 
     .durga-banner{
-
         min-height:150px;
     }
 
     .trident{
-
         font-size:42px;
     }
 
     .durga-banner h2{
-
         font-size:32px;
     }
 
@@ -1072,48 +897,46 @@ footer{
 @media(max-width:420px){
 
     .nav-menu{
-
         gap:24px;
     }
 
     .nav-menu a{
-
         font-size:15px;
     }
 
     .quick-card{
-
         min-height:235px;
-
         padding:22px 10px;
     }
 
     .quick-card h3{
-
         font-size:17px;
     }
 
     .quick-card p{
-
         font-size:12px;
-
         line-height:1.7;
     }
 
-    .hero .welcome-btn{
-
+    .welcome-btn{
         min-width:160px;
-
         height:48px;
-
         font-size:20px;
     }
 
     .gallery-item{
-
-        height:360px;
+        height:340px;
     }
 
+}
+
+
+/* =====================================================
+   IMAGE ERROR MESSAGE
+===================================================== */
+
+.gallery-item img{
+    background:#180000;
 }
 
 </style>
@@ -1216,7 +1039,6 @@ footer{
 
 <section class="quick-section">
 
-
     <a href="#about" class="quick-card">
 
         <div class="quick-icon">
@@ -1233,7 +1055,6 @@ footer{
         </p>
 
     </a>
-
 
 
     <a href="#events" class="quick-card">
@@ -1254,7 +1075,6 @@ footer{
     </a>
 
 
-
     <a href="#gallery" class="quick-card">
 
         <div class="quick-icon">
@@ -1273,7 +1093,6 @@ footer{
     </a>
 
 
-
     <a href="#contact" class="quick-card">
 
         <div class="quick-icon">
@@ -1290,7 +1109,6 @@ footer{
         </p>
 
     </a>
-
 
 </section>
 
@@ -1346,7 +1164,6 @@ footer{
         <h2 class="section-title">
             আমাদের কার্যক্রম
         </h2>
-
 
         <div class="event-grid">
 
@@ -1495,73 +1312,77 @@ footer{
         <div class="gallery-grid">
 
 
-            <!-- PHOTO 1 -->
-
-            <div class="gallery-item">
+            <div
+                class="gallery-item"
+                onclick="openImage('durga1.jpg')"
+            >
 
                 <img
-                    src="1000075978.jpg"
+                    src="durga1.jpg"
                     alt="দুর্গা পূজা ছবি ১"
                     loading="lazy"
                 >
 
-                <span class="gallery-number">
-                    ছবি ১
-                </span>
+                <div class="gallery-label">
+                    দুর্গা পূজা ছবি ১
+                </div>
 
             </div>
 
 
 
-            <!-- PHOTO 2 -->
-
-            <div class="gallery-item">
+            <div
+                class="gallery-item"
+                onclick="openImage('durga2.jpg')"
+            >
 
                 <img
-                    src="1000075970.jpg"
+                    src="durga2.jpg"
                     alt="দুর্গা পূজা ছবি ২"
                     loading="lazy"
                 >
 
-                <span class="gallery-number">
-                    ছবি ২
-                </span>
+                <div class="gallery-label">
+                    দুর্গা পূজা ছবি ২
+                </div>
 
             </div>
 
 
 
-            <!-- PHOTO 3 -->
-
-            <div class="gallery-item">
+            <div
+                class="gallery-item"
+                onclick="openImage('durga3.jpg')"
+            >
 
                 <img
-                    src="1000075975.jpg"
+                    src="durga3.jpg"
                     alt="দুর্গা পূজা ছবি ৩"
                     loading="lazy"
                 >
 
-                <span class="gallery-number">
-                    ছবি ৩
-                </span>
+                <div class="gallery-label">
+                    দুর্গা পূজা ছবি ৩
+                </div>
 
             </div>
 
 
 
-            <!-- PHOTO 4 -->
-
-            <div class="gallery-item">
+            <div
+                class="gallery-item"
+                onclick="openImage('durga4.jpg')"
+            >
 
                 <img
-                    src="1000075971.jpg"
+                    src="durga4.jpg"
                     alt="দুর্গা পূজা ছবি ৪"
                     loading="lazy"
                 >
 
-                <span class="gallery-number">
-                    ছবি ৪
-                </span>
+                <div class="gallery-label">
+                    দুর্গা পূজা ছবি ৪
+                </div>
 
             </div>
 
@@ -1797,18 +1618,27 @@ footer{
      IMAGE POPUP
 ===================================================== -->
 
-<div class="image-modal" id="imageModal">
+<div
+    id="imageModal"
+    class="image-modal"
+    onclick="closeImage(event)"
+>
 
     <button
         class="close-modal"
-        id="closeModal">
+        onclick="closeImage()"
+        aria-label="Close"
+    >
         ×
     </button>
 
     <img
         id="modalImage"
+        class="modal-image"
         src=""
-        alt="দুর্গা পূজা ছবি">
+        alt="দুর্গা পূজা"
+        onclick="event.stopPropagation()"
+    >
 
 </div>
 
@@ -1840,11 +1670,8 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link){
             event.preventDefault();
 
             target.scrollIntoView({
-
                 behavior:"smooth",
-
                 block:"start"
-
             });
 
         }
@@ -1870,12 +1697,10 @@ window.addEventListener("scroll",function(){
 
     let current = "home";
 
-
     sections.forEach(function(section){
 
         const sectionTop =
             section.offsetTop - 120;
-
 
         if(window.scrollY >= sectionTop){
 
@@ -1890,7 +1715,6 @@ window.addEventListener("scroll",function(){
     navLinks.forEach(function(link){
 
         link.classList.remove("active");
-
 
         if(
             link.getAttribute("href")
@@ -1909,11 +1733,8 @@ window.addEventListener("scroll",function(){
 
 
 /* =====================================================
-   GALLERY IMAGE POPUP
+   GALLERY POPUP
 ===================================================== */
-
-const galleryImages =
-    document.querySelectorAll(".gallery-item img");
 
 const imageModal =
     document.getElementById("imageModal");
@@ -1921,60 +1742,50 @@ const imageModal =
 const modalImage =
     document.getElementById("modalImage");
 
-const closeModal =
-    document.getElementById("closeModal");
+
+function openImage(imageSrc){
+
+    modalImage.src = imageSrc;
+
+    imageModal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+
+}
 
 
-galleryImages.forEach(function(image){
+function closeImage(event){
 
-    image.addEventListener("click",function(){
+    if(
+        event &&
+        event.target === modalImage
+    ){
 
-        modalImage.src =
-            this.src;
+        return;
 
-        modalImage.alt =
-            this.alt;
-
-        imageModal.classList.add("show");
-
-    });
-
-});
-
-
-closeModal.addEventListener("click",function(){
+    }
 
     imageModal.classList.remove("show");
 
     modalImage.src = "";
 
-});
+    document.body.style.overflow = "";
+
+}
 
 
-imageModal.addEventListener("click",function(event){
+document.addEventListener(
+    "keydown",
+    function(event){
 
-    if(event.target === imageModal){
+        if(event.key === "Escape"){
 
-        imageModal.classList.remove("show");
+            closeImage();
 
-        modalImage.src = "";
-
-    }
-
-});
-
-
-document.addEventListener("keydown",function(event){
-
-    if(event.key === "Escape"){
-
-        imageModal.classList.remove("show");
-
-        modalImage.src = "";
+        }
 
     }
-
-});
+);
 
 
 </script>
