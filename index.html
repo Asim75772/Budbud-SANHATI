@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Budbud SANHATI</title>
 
-  <meta
-    name="description"
-    content="Budbud SANHATI - একটি সংস্কৃতি, একটি পরিবার, একটি অঙ্গীকার"
-  >
+  <meta name="description" content="Budbud SANHATI - একটি সংস্কৃতি, একটি পরিবার, একটি অঙ্গীকার">
 
-  <!-- Bengali Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 
   <style>
 
-    /* =========================================
+    /* =========================
        BASIC RESET
-    ========================================= */
+    ========================= */
 
     * {
       margin: 0;
@@ -36,6 +28,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 72px;
     }
 
     body {
@@ -57,9 +50,9 @@
     }
 
 
-    /* =========================================
-       NAVBAR
-    ========================================= */
+    /* =========================
+       TOP NAVIGATION
+    ========================= */
 
     .navbar {
       position: sticky;
@@ -141,12 +134,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        HERO
-       IMPORTANT:
-       এখানে কোনো আলাদা Welcome button নেই।
-       home-banner.png-এর নিজের Welcome থাকবে।
-    ========================================= */
+    ========================= */
 
     .hero {
       position: relative;
@@ -169,10 +159,118 @@
       object-fit: cover;
     }
 
+    /*
+      IMPORTANT:
+      Welcome button stays inside HERO.
+    */
 
-    /* =========================================
+    .hero-content {
+      position: absolute;
+
+      left: 50%;
+      bottom: 38px;
+
+      transform: translateX(-50%);
+
+      z-index: 10;
+
+      text-align: center;
+
+      width: auto;
+    }
+
+
+    /* =========================
+       WELCOME BUTTON
+    ========================= */
+
+    .welcome-btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-width: 220px;
+      height: 58px;
+
+      padding: 0 45px;
+
+      border-radius: 15px;
+
+      background: linear-gradient(
+        180deg,
+        #ff1919,
+        #d60000
+      );
+
+      border: 3px solid #ffc400;
+
+      box-shadow:
+        0 0 12px #ffb300,
+        0 0 30px rgba(255, 180, 0, 0.55);
+
+      color: #ffe8a0;
+
+      font-size: 25px;
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+
+      position: relative;
+      z-index: 20;
+
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .welcome-btn:hover {
+      transform: scale(1.05);
+
+      box-shadow:
+        0 0 20px #ffc400,
+        0 0 45px rgba(255, 180, 0, 0.7);
+    }
+
+    .welcome-btn:active {
+      transform: scale(0.97);
+    }
+
+    .down-arrow {
+      display: block;
+
+      margin-top: 5px;
+
+      font-size: 27px;
+
+      color: #ffd000;
+
+      animation: arrowMove 1.4s infinite;
+    }
+
+    @keyframes arrowMove {
+
+      0% {
+        transform: translateY(0);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: translateY(8px);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 0.6;
+      }
+
+    }
+
+
+    /* =========================
        QUICK MENU
-    ========================================= */
+    ========================= */
 
     .quick-section {
       width: 100%;
@@ -207,12 +305,12 @@
     }
 
     .quick-icon {
-      width: 72px;
-      height: 72px;
+      width: 62px;
+      height: 62px;
 
       margin: 0 auto 15px;
 
-      border: 3px solid #ffc400;
+      border: 2px solid #ffc400;
 
       border-radius: 50%;
 
@@ -221,7 +319,7 @@
       align-items: center;
       justify-content: center;
 
-      font-size: 34px;
+      font-size: 29px;
 
       color: #ffc400;
 
@@ -232,25 +330,23 @@
     .quick-card h3 {
       color: #ffc400;
 
-      font-size: 23px;
+      font-size: 21px;
 
       margin-bottom: 12px;
-
-      font-weight: 800;
     }
 
     .quick-card p {
       color: #ddd;
 
-      font-size: 15px;
+      font-size: 14px;
 
-      line-height: 1.9;
+      line-height: 1.8;
     }
 
 
-    /* =========================================
+    /* =========================
        GENERAL SECTION
-    ========================================= */
+    ========================= */
 
     .section {
       width: 100%;
@@ -295,9 +391,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        ABOUT
-    ========================================= */
+    ========================= */
 
     .about-content {
       text-align: center;
@@ -339,9 +435,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        EVENTS
-    ========================================= */
+    ========================= */
 
     .event-grid {
       display: grid;
@@ -397,9 +493,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        GALLERY
-    ========================================= */
+    ========================= */
 
     .gallery-grid {
       display: grid;
@@ -410,15 +506,27 @@
     }
 
     .gallery-item {
-      position: relative;
-
       height: 220px;
 
-      background: #180000;
+      background:
+        linear-gradient(
+          rgba(50,0,0,0.25),
+          rgba(50,0,0,0.25)
+        ),
+        #180000;
 
       border: 1px solid #682000;
 
       border-radius: 10px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 55px;
+
+      color: #ffc400;
 
       overflow: hidden;
 
@@ -429,28 +537,12 @@
       transform: scale(1.02);
 
       border-color: #ffc400;
-
-      box-shadow:
-        0 0 18px rgba(255, 190, 0, 0.2);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-
-      transition: 0.4s;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
     }
 
 
-    /* =========================================
+    /* =========================
        CONTACT
-    ========================================= */
+    ========================= */
 
     .contact-grid {
       display: grid;
@@ -474,15 +566,6 @@
       padding: 30px 20px;
 
       text-align: center;
-
-      transition: 0.3s;
-    }
-
-    .contact-card:hover {
-      border-color: #ffc400;
-
-      box-shadow:
-        0 0 18px rgba(255, 190, 0, 0.12);
     }
 
     .contact-card .icon {
@@ -513,9 +596,9 @@
     }
 
 
-    /* =========================================
-       DURGA BANNER
-    ========================================= */
+    /* =========================
+       DURGA FOOTER BANNER
+    ========================= */
 
     .durga-banner {
       position: relative;
@@ -533,6 +616,7 @@
         );
 
       border-top: 2px solid #8c0000;
+
       border-bottom: 2px solid #8c0000;
 
       display: flex;
@@ -563,16 +647,16 @@
 
       font-size: 43px;
 
-      margin-top: 8px;
+      margin-top: 5px;
 
       text-shadow:
         0 0 15px rgba(255, 180, 0, 0.35);
     }
 
 
-    /* =========================================
+    /* =========================
        FOOTER
-    ========================================= */
+    ========================= */
 
     footer {
       background: #030303;
@@ -585,7 +669,7 @@
 
       margin: auto;
 
-      padding: 25px 20px;
+      padding: 22px 20px;
 
       display: grid;
 
@@ -603,7 +687,7 @@
 
       font-size: 14px;
 
-      line-height: 1.8;
+      line-height: 1.7;
     }
 
     .footer-item strong {
@@ -633,9 +717,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        MOBILE
-    ========================================= */
+    ========================= */
 
     @media (max-width: 768px) {
 
@@ -676,23 +760,48 @@
         object-fit: cover;
       }
 
+      .hero-content {
+        bottom: 20px;
 
-      /* QUICK MENU */
+        width: 100%;
+
+        pointer-events: none;
+      }
+
+      .welcome-btn {
+        min-width: 175px;
+
+        height: 50px;
+
+        padding: 0 28px;
+
+        font-size: 21px;
+
+        border-radius: 13px;
+
+        pointer-events: auto;
+      }
+
+      .down-arrow {
+        font-size: 22px;
+      }
+
+
+      /* QUICK CARDS */
 
       .quick-section {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .quick-card {
-        min-height: 230px;
+        min-height: 220px;
 
         padding: 25px 14px;
 
         border-bottom: 1px solid #4b1800;
       }
 
-      .quick-card:nth-child(2),
-      .quick-card:nth-child(4) {
+      .quick-card:nth-child(2) {
         border-right: none;
       }
 
@@ -702,15 +811,6 @@
 
       .quick-card p {
         font-size: 13px;
-
-        line-height: 1.8;
-      }
-
-      .quick-icon {
-        width: 68px;
-        height: 68px;
-
-        font-size: 30px;
       }
 
 
@@ -761,7 +861,9 @@
       }
 
       .gallery-item {
-        height: 160px;
+        height: 150px;
+
+        font-size: 42px;
       }
 
 
@@ -774,7 +876,15 @@
       }
 
 
-      /* DURGA */
+      /* FOOTER */
+
+      .footer-info {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 20px 15px;
+      }
 
       .durga-banner {
         min-height: 150px;
@@ -788,23 +898,12 @@
         font-size: 32px;
       }
 
-
-      /* FOOTER */
-
-      .footer-info {
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-
-        padding: 22px 15px;
-      }
-
     }
 
 
-    /* =========================================
+    /* =========================
        SMALL PHONE
-    ========================================= */
+    ========================= */
 
     @media (max-width: 420px) {
 
@@ -832,27 +931,30 @@
         line-height: 1.7;
       }
 
-      .gallery-item {
-        height: 135px;
+      .welcome-btn {
+        min-width: 160px;
+
+        height: 48px;
+
+        font-size: 20px;
       }
 
-      .section-title {
-        font-size: 28px;
+      .gallery-item {
+        height: 130px;
       }
 
     }
 
   </style>
-
 </head>
 
 
 <body>
 
 
-  <!-- =========================================
+  <!-- =========================
        NAVBAR
-  ========================================= -->
+  ========================= -->
 
   <header class="navbar">
 
@@ -898,11 +1000,9 @@
 
 
 
-  <!-- =========================================
+  <!-- =========================
        HOME / HERO
-       শুধু home-banner.png
-       কোনো extra welcome button নেই
-  ========================================= -->
+  ========================= -->
 
   <main>
 
@@ -914,13 +1014,32 @@
         class="hero-image"
       >
 
+
+      <!-- FIXED WELCOME BUTTON -->
+
+      <div class="hero-content">
+
+        <a
+          href="#about"
+          class="welcome-btn"
+          id="welcomeButton"
+        >
+          স্বাগতম
+        </a>
+
+        <span class="down-arrow">
+          ↓
+        </span>
+
+      </div>
+
     </section>
 
 
 
-    <!-- =========================================
+    <!-- =========================
          QUICK MENU
-    ========================================= -->
+    ========================= -->
 
     <section class="quick-section">
 
@@ -1004,9 +1123,9 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================
          ABOUT US
-    ========================================= -->
+    ========================= -->
 
     <section id="about" class="section">
 
@@ -1043,9 +1162,9 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================
          EVENTS
-    ========================================= -->
+    ========================= -->
 
     <section id="events" class="section">
 
@@ -1180,17 +1299,9 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================
          GALLERY
-         
-         এখানে নিজের ছবি বসাবে:
-         gallery1.jpg
-         gallery2.jpg
-         gallery3.jpg
-         gallery4.jpg
-         gallery5.jpg
-         gallery6.jpg
-    ========================================= -->
+    ========================= -->
 
     <section id="gallery" class="section">
 
@@ -1203,77 +1314,29 @@
 
         <div class="gallery-grid">
 
-
           <div class="gallery-item">
-
-            <img
-              src="gallery1.jpg"
-              alt="Budbud SANHATI Gallery Photo 1"
-              loading="lazy"
-            >
-
+            🖼️
           </div>
 
-
-
           <div class="gallery-item">
-
-            <img
-              src="gallery2.jpg"
-              alt="Budbud SANHATI Gallery Photo 2"
-              loading="lazy"
-            >
-
+            🪔
           </div>
 
-
-
           <div class="gallery-item">
-
-            <img
-              src="gallery3.jpg"
-              alt="Budbud SANHATI Gallery Photo 3"
-              loading="lazy"
-            >
-
+            🎉
           </div>
 
-
-
           <div class="gallery-item">
-
-            <img
-              src="gallery4.jpg"
-              alt="Budbud SANHATI Gallery Photo 4"
-              loading="lazy"
-            >
-
+            👥
           </div>
 
-
-
           <div class="gallery-item">
-
-            <img
-              src="gallery5.jpg"
-              alt="Budbud SANHATI Gallery Photo 5"
-              loading="lazy"
-            >
-
+            🎭
           </div>
 
-
-
           <div class="gallery-item">
-
-            <img
-              src="gallery6.jpg"
-              alt="Budbud SANHATI Gallery Photo 6"
-              loading="lazy"
-            >
-
+            ❤️
           </div>
-
 
         </div>
 
@@ -1283,9 +1346,9 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================
          CONTACT
-    ========================================= -->
+    ========================= -->
 
     <section id="contact" class="section">
 
@@ -1397,11 +1460,9 @@
 
 
 
-  <!-- =========================================
+  <!-- =========================
        DURGA BANNER
-       Footer-এর ঠিক আগে।
-       এর পরে কোনো পুরনো card/section নেই।
-  ========================================= -->
+  ========================= -->
 
   <section class="durga-banner">
 
@@ -1421,12 +1482,11 @@
 
 
 
-  <!-- =========================================
+  <!-- =========================
        FOOTER
-  ========================================= -->
+  ========================= -->
 
   <footer>
-
 
     <div class="footer-info">
 
@@ -1504,61 +1564,94 @@
 
 
 
-  <!-- =========================================
+  <!-- =========================
        JAVASCRIPT
-    ========================================= -->
+  ========================= -->
 
   <script>
 
-
-    /* =========================================
+    /* =========================
        SMOOTH SCROLL
-    ========================================= */
+    ========================= */
 
-    document
-      .querySelectorAll('a[href^="#"]')
-      .forEach(function(link) {
+    function goToSection(id) {
 
-        link.addEventListener("click", function(event) {
+      const target = document.getElementById(id);
 
-          const targetId =
-            this.getAttribute("href");
+      if (!target) {
+        return;
+      }
 
-          const target =
-            document.querySelector(targetId);
+      const navbarHeight =
+        document.querySelector(".navbar").offsetHeight;
 
-          if (target) {
+      const targetPosition =
+        target.getBoundingClientRect().top +
+        window.pageYOffset -
+        navbarHeight;
 
-            event.preventDefault();
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
 
-            const navbarHeight =
-              document.querySelector(".navbar")
-              .offsetHeight;
+    }
 
-            const targetPosition =
-              target.getBoundingClientRect().top +
-              window.pageYOffset -
-              navbarHeight;
 
-            window.scrollTo({
+    /* =========================
+       WELCOME BUTTON FIX
+    ========================= */
 
-              top: targetPosition,
+    const welcomeButton =
+      document.getElementById("welcomeButton");
 
-              behavior: "smooth"
+    if (welcomeButton) {
 
-            });
+      welcomeButton.addEventListener("click", function(event) {
 
-          }
+        event.preventDefault();
 
-        });
+        goToSection("about");
 
       });
 
+    }
 
 
-    /* =========================================
+    /* =========================
+       ALL INTERNAL LINKS
+    ========================= */
+
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+
+      link.addEventListener("click", function(event) {
+
+        const targetId =
+          this.getAttribute("href").substring(1);
+
+        if (!targetId) {
+          return;
+        }
+
+        const target =
+          document.getElementById(targetId);
+
+        if (target) {
+
+          event.preventDefault();
+
+          goToSection(targetId);
+
+        }
+
+      });
+
+    });
+
+
+    /* =========================
        ACTIVE NAVIGATION
-    ========================================= */
+    ========================= */
 
     const sections =
       document.querySelectorAll("section[id]");
@@ -1567,14 +1660,14 @@
       document.querySelectorAll(".nav-menu a");
 
 
-    function updateActiveNav() {
+    function updateActiveNavigation() {
 
       let current = "home";
 
       const scrollPosition =
         window.scrollY +
         document.querySelector(".navbar").offsetHeight +
-        50;
+        80;
 
 
       sections.forEach(function(section) {
@@ -1582,12 +1675,13 @@
         const sectionTop =
           section.offsetTop;
 
-        const sectionHeight =
-          section.offsetHeight;
+        const sectionBottom =
+          sectionTop + section.offsetHeight;
+
 
         if (
           scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionHeight
+          scrollPosition < sectionBottom
         ) {
 
           current =
@@ -1601,6 +1695,7 @@
       navLinks.forEach(function(link) {
 
         link.classList.remove("active");
+
 
         if (
           link.getAttribute("href") ===
@@ -1618,15 +1713,14 @@
 
     window.addEventListener(
       "scroll",
-      updateActiveNav
+      updateActiveNavigation
     );
 
 
     window.addEventListener(
       "load",
-      updateActiveNav
+      updateActiveNavigation
     );
-
 
   </script>
 
