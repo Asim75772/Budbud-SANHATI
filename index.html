@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Budbud SANHATI</title>
 
 <meta name="description"
-content="Budbud SANHATI - একটি সংস্কৃতি, একটি পরিবার, একটি অঙ্গীকার">
+      content="Budbud SANHATI - একটি সংস্কৃতি, একটি পরিবার, একটি অঙ্গীকার">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
-rel="stylesheet">
+      rel="stylesheet">
+
 
 <style>
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 *{
     margin:0;
@@ -33,7 +42,7 @@ html{
 
 body{
     background:#050000;
-    color:#fff;
+    color:#ffffff;
     font-family:"Noto Serif Bengali",serif;
     overflow-x:hidden;
 }
@@ -49,9 +58,9 @@ img{
 }
 
 
-/* =========================
+/* =====================================================
    NAVBAR
-========================= */
+===================================================== */
 
 .navbar{
     position:sticky;
@@ -62,6 +71,7 @@ img{
     height:72px;
 
     background:#050505;
+
     border-bottom:3px solid #e00000;
 
     display:flex;
@@ -114,6 +124,7 @@ img{
     content:"";
 
     position:absolute;
+
     left:0;
     bottom:5px;
 
@@ -131,9 +142,9 @@ img{
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
     position:relative;
@@ -150,7 +161,9 @@ img{
 .hero-image{
     width:100%;
     height:auto;
+
     display:block;
+
     object-fit:cover;
 }
 
@@ -158,20 +171,24 @@ img{
     position:absolute;
 
     left:50%;
-    bottom:20px;
+    bottom:38px;
 
     transform:translateX(-50%);
 
-    z-index:50;
-
-    width:auto;
+    z-index:5;
 
     text-align:center;
 
-    pointer-events:none;
+    width:auto;
 }
 
-.welcome-btn{
+
+/* =====================================================
+   ONLY HOME WELCOME BUTTON
+===================================================== */
+
+.hero .welcome-btn{
+
     display:inline-flex;
 
     align-items:center;
@@ -203,25 +220,66 @@ img{
 
     cursor:pointer;
 
-    position:relative;
-
-    z-index:100;
-
-    pointer-events:auto;
-
     transition:.3s;
 }
 
-.welcome-btn:hover{
+.hero .welcome-btn:hover{
     transform:scale(1.05);
 }
 
 
-/* =========================
+/*
+   যদি কোনো পুরোনো/ভুল জায়গায় welcome-btn থেকে যায়,
+   তাহলে Hero-এর বাইরে সেটি দেখা যাবে না।
+*/
+
+body .welcome-btn:not(.hero .welcome-btn){
+    display:none !important;
+}
+
+
+/* =====================================================
+   DOWN ARROW
+===================================================== */
+
+.down-arrow{
+
+    display:block;
+
+    margin-top:5px;
+
+    font-size:27px;
+
+    color:#ffd000;
+
+    animation:arrowMove 1.4s infinite;
+}
+
+@keyframes arrowMove{
+
+    0%{
+        transform:translateY(0);
+        opacity:.6;
+    }
+
+    50%{
+        transform:translateY(8px);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(0);
+        opacity:.6;
+    }
+}
+
+
+/* =====================================================
    QUICK MENU
-========================= */
+===================================================== */
 
 .quick-section{
+
     width:100%;
 
     display:grid;
@@ -234,6 +292,7 @@ img{
 }
 
 .quick-card{
+
     min-height:235px;
 
     padding:30px 20px;
@@ -254,15 +313,18 @@ img{
 }
 
 .quick-icon{
+
     width:62px;
     height:62px;
 
     margin:0 auto 15px;
 
     border:2px solid #ffc400;
+
     border-radius:50%;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -272,23 +334,30 @@ img{
 }
 
 .quick-card h3{
+
     color:#ffc400;
+
     font-size:21px;
+
     margin-bottom:12px;
 }
 
 .quick-card p{
+
     color:#ddd;
+
     font-size:14px;
+
     line-height:1.8;
 }
 
 
-/* =========================
+/* =====================================================
    GENERAL SECTION
-========================= */
+===================================================== */
 
 .section{
+
     width:100%;
 
     padding:80px 20px;
@@ -299,6 +368,7 @@ img{
 }
 
 .section-title{
+
     text-align:center;
 
     color:#ffc400;
@@ -311,6 +381,7 @@ img{
 }
 
 .section-title::after{
+
     content:"✦";
 
     display:block;
@@ -323,17 +394,21 @@ img{
 }
 
 .section-container{
+
     width:100%;
+
     max-width:1050px;
+
     margin:auto;
 }
 
 
-/* =========================
+/* =====================================================
    ABOUT
-========================= */
+===================================================== */
 
 .about-content{
+
     text-align:center;
 
     max-width:850px;
@@ -342,15 +417,18 @@ img{
 }
 
 .big-icon{
+
     width:125px;
     height:125px;
 
     margin:0 auto 35px;
 
     border:4px solid #ffc400;
+
     border-radius:50%;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -358,6 +436,7 @@ img{
 }
 
 .about-content p{
+
     color:#eee;
 
     font-size:20px;
@@ -368,11 +447,12 @@ img{
 }
 
 
-/* =========================
+/* =====================================================
    EVENTS
-========================= */
+===================================================== */
 
 .event-grid{
+
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
@@ -381,6 +461,7 @@ img{
 }
 
 .event-card{
+
     background:#110000;
 
     border:1px solid #6b2300;
@@ -395,6 +476,7 @@ img{
 }
 
 .event-card:hover{
+
     transform:translateY(-5px);
 
     border-color:#ffc400;
@@ -404,6 +486,7 @@ img{
 }
 
 .event-link{
+
     display:block;
 
     text-decoration:none;
@@ -412,17 +495,21 @@ img{
 }
 
 .event-link .event-card{
+
     height:100%;
+
     cursor:pointer;
 }
 
 .event-icon{
+
     font-size:48px;
 
     margin-bottom:15px;
 }
 
 .event-card h3{
+
     color:#ffc400;
 
     font-size:23px;
@@ -431,6 +518,7 @@ img{
 }
 
 .event-card p{
+
     color:#ddd;
 
     font-size:15px;
@@ -439,11 +527,12 @@ img{
 }
 
 
-/* =========================
+/* =====================================================
    GALLERY
-========================= */
+===================================================== */
 
 .gallery-grid{
+
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
@@ -452,6 +541,7 @@ img{
 }
 
 .gallery-item{
+
     height:220px;
 
     background:
@@ -480,17 +570,19 @@ img{
 }
 
 .gallery-item:hover{
+
     transform:scale(1.02);
 
     border-color:#ffc400;
 }
 
 
-/* =========================
+/* =====================================================
    CONTACT
-========================= */
+===================================================== */
 
 .contact-grid{
+
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
@@ -503,6 +595,7 @@ img{
 }
 
 .contact-card{
+
     background:#100000;
 
     border:1px solid #6a2300;
@@ -515,11 +608,14 @@ img{
 }
 
 .contact-card .icon{
+
     font-size:40px;
+
     margin-bottom:12px;
 }
 
 .contact-card h3{
+
     color:#ffc400;
 
     font-size:22px;
@@ -529,6 +625,7 @@ img{
 
 .contact-card a,
 .contact-card p{
+
     color:#eee;
 
     font-size:17px;
@@ -541,11 +638,12 @@ img{
 }
 
 
-/* =========================
+/* =====================================================
    DURGA BANNER
-========================= */
+===================================================== */
 
 .durga-banner{
+
     position:relative;
 
     width:100%;
@@ -561,21 +659,27 @@ img{
         );
 
     border-top:2px solid #8c0000;
+
     border-bottom:2px solid #8c0000;
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
+
+    overflow:hidden;
 }
 
 .durga-banner-inner{
+
     padding:30px 20px;
 }
 
 .trident{
+
     color:#ffc400;
 
     font-size:50px;
@@ -587,6 +691,7 @@ img{
 }
 
 .durga-banner h2{
+
     color:#ffc400;
 
     font-size:43px;
@@ -598,17 +703,19 @@ img{
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
+
     background:#030303;
 
     border-top:2px solid #ff0000;
 }
 
 .footer-info{
+
     max-width:1100px;
 
     margin:auto;
@@ -627,6 +734,7 @@ footer{
 }
 
 .footer-item{
+
     color:#ddd;
 
     font-size:14px;
@@ -635,20 +743,24 @@ footer{
 }
 
 .footer-item strong{
+
     color:#ffc400;
 }
 
 .footer-item a{
+
     color:#ddd;
 
     transition:.3s;
 }
 
 .footer-item a:hover{
+
     color:#ffc400;
 }
 
 .copyright{
+
     text-align:center;
 
     color:#999;
@@ -661,13 +773,14 @@ footer{
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media(max-width:768px){
 
     .navbar{
+
         height:62px;
 
         overflow-x:auto;
@@ -676,10 +789,12 @@ footer{
     }
 
     .nav-container{
+
         min-width:max-content;
     }
 
     .nav-menu{
+
         gap:28px;
 
         justify-content:flex-start;
@@ -688,24 +803,28 @@ footer{
     }
 
     .nav-menu a{
+
         font-size:16px;
 
         padding:20px 0;
     }
 
     .hero-image{
+
         width:100%;
+
         height:auto;
+
         object-fit:cover;
     }
 
     .hero-content{
-        bottom:20px;
 
-        z-index:50;
+        bottom:20px;
     }
 
-    .welcome-btn{
+    .hero .welcome-btn{
+
         min-width:175px;
 
         height:50px;
@@ -715,15 +834,20 @@ footer{
         font-size:21px;
 
         border-radius:13px;
+    }
 
-        z-index:100;
+    .down-arrow{
+
+        font-size:22px;
     }
 
     .quick-section{
+
         grid-template-columns:repeat(2,1fr);
     }
 
     .quick-card{
+
         min-height:220px;
 
         padding:25px 14px;
@@ -733,28 +857,34 @@ footer{
 
     .quick-card:nth-child(2),
     .quick-card:nth-child(4){
+
         border-right:none;
     }
 
     .quick-card h3{
+
         font-size:18px;
     }
 
     .quick-card p{
+
         font-size:13px;
     }
 
     .section{
+
         padding:60px 16px;
     }
 
     .section-title{
+
         font-size:30px;
 
         margin-bottom:35px;
     }
 
     .big-icon{
+
         width:105px;
         height:105px;
 
@@ -762,36 +892,42 @@ footer{
     }
 
     .about-content p{
+
         font-size:17px;
 
         line-height:2;
     }
 
     .event-grid{
+
         grid-template-columns:1fr;
 
         gap:18px;
     }
 
     .gallery-grid{
+
         grid-template-columns:repeat(2,1fr);
 
         gap:12px;
     }
 
     .gallery-item{
+
         height:150px;
 
         font-size:42px;
     }
 
     .contact-grid{
+
         grid-template-columns:1fr;
 
         gap:15px;
     }
 
     .footer-info{
+
         grid-template-columns:1fr;
 
         gap:12px;
@@ -800,50 +936,59 @@ footer{
     }
 
     .durga-banner{
+
         min-height:150px;
     }
 
     .trident{
+
         font-size:42px;
     }
 
     .durga-banner h2{
+
         font-size:32px;
     }
 }
 
 
-/* =========================
+/* =====================================================
    SMALL PHONE
-========================= */
+===================================================== */
 
 @media(max-width:420px){
 
     .nav-menu{
+
         gap:24px;
     }
 
     .nav-menu a{
+
         font-size:15px;
     }
 
     .quick-card{
+
         min-height:235px;
 
         padding:22px 10px;
     }
 
     .quick-card h3{
+
         font-size:17px;
     }
 
     .quick-card p{
+
         font-size:12px;
 
         line-height:1.7;
     }
 
-    .welcome-btn{
+    .hero .welcome-btn{
+
         min-width:160px;
 
         height:48px;
@@ -852,20 +997,22 @@ footer{
     }
 
     .gallery-item{
+
         height:130px;
     }
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVBAR
-========================= -->
+===================================================== -->
 
 <header class="navbar">
 
@@ -910,11 +1057,17 @@ footer{
 </header>
 
 
-<!-- =========================
-     HOME
-========================= -->
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
 <main>
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
 
 <section id="home" class="hero">
 
@@ -923,6 +1076,11 @@ footer{
         alt="Budbud SANHATI"
         class="hero-image"
     >
+
+    <!--
+        IMPORTANT:
+        একমাত্র স্বাগতম button এখানেই থাকবে।
+    -->
 
     <div class="hero-content">
 
@@ -933,16 +1091,22 @@ footer{
             স্বাগতম
         </a>
 
+        <span class="down-arrow">
+            ↓
+        </span>
+
     </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      QUICK MENU
-========================= -->
+===================================================== -->
 
 <section class="quick-section">
+
 
     <a href="#about" class="quick-card">
 
@@ -960,6 +1124,7 @@ footer{
         </p>
 
     </a>
+
 
 
     <a href="#events" class="quick-card">
@@ -980,6 +1145,7 @@ footer{
     </a>
 
 
+
     <a href="#gallery" class="quick-card">
 
         <div class="quick-icon">
@@ -996,6 +1162,7 @@ footer{
         </p>
 
     </a>
+
 
 
     <a href="#contact" class="quick-card">
@@ -1015,12 +1182,14 @@ footer{
 
     </a>
 
+
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
 <section id="about" class="section">
 
@@ -1056,9 +1225,10 @@ footer{
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      EVENTS
-========================= -->
+===================================================== -->
 
 <section id="events" class="section">
 
@@ -1068,7 +1238,11 @@ footer{
             আমাদের কার্যক্রম
         </h2>
 
+
         <div class="event-grid">
+
+
+            <!-- দুর্গা পূজা -->
 
             <div class="event-card">
 
@@ -1087,6 +1261,9 @@ footer{
 
             </div>
 
+
+
+            <!-- রক্তদান -->
 
             <a
                 href="roktodan.html"
@@ -1113,6 +1290,9 @@ footer{
             </a>
 
 
+
+            <!-- শিক্ষা সহায়তা -->
+
             <div class="event-card">
 
                 <div class="event-icon">
@@ -1130,6 +1310,9 @@ footer{
 
             </div>
 
+
+
+            <!-- খেলাধুলা -->
 
             <div class="event-card">
 
@@ -1149,6 +1332,9 @@ footer{
             </div>
 
 
+
+            <!-- সাংস্কৃতিক অনুষ্ঠান -->
+
             <div class="event-card">
 
                 <div class="event-icon">
@@ -1167,6 +1353,9 @@ footer{
             </div>
 
 
+
+            <!-- সামাজিক সেবা -->
+
             <div class="event-card">
 
                 <div class="event-icon">
@@ -1184,6 +1373,7 @@ footer{
 
             </div>
 
+
         </div>
 
     </div>
@@ -1191,9 +1381,10 @@ footer{
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      GALLERY
-========================= -->
+===================================================== -->
 
 <section id="gallery" class="section">
 
@@ -1204,6 +1395,7 @@ footer{
         </h2>
 
         <div class="gallery-grid">
+
 
             <div class="gallery-item">
                 🖼️
@@ -1229,6 +1421,7 @@ footer{
                 ❤️
             </div>
 
+
         </div>
 
     </div>
@@ -1236,9 +1429,10 @@ footer{
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      CONTACT
-========================= -->
+===================================================== -->
 
 <section id="contact" class="section">
 
@@ -1249,6 +1443,9 @@ footer{
         </h2>
 
         <div class="contact-grid">
+
+
+            <!-- ঠিকানা -->
 
             <div class="contact-card">
 
@@ -1267,6 +1464,9 @@ footer{
 
             </div>
 
+
+
+            <!-- ফোন -->
 
             <div class="contact-card">
 
@@ -1295,6 +1495,9 @@ footer{
             </div>
 
 
+
+            <!-- Email -->
+
             <div class="contact-card">
 
                 <div class="icon">
@@ -1316,6 +1519,9 @@ footer{
             </div>
 
 
+
+            <!-- যুক্ত হন -->
+
             <div class="contact-card">
 
                 <div class="icon">
@@ -1333,18 +1539,21 @@ footer{
 
             </div>
 
+
         </div>
 
     </div>
 
 </section>
 
+
 </main>
 
 
-<!-- =========================
+
+<!-- =====================================================
      DURGA BANNER
-========================= -->
+===================================================== -->
 
 <section class="durga-banner">
 
@@ -1363,13 +1572,17 @@ footer{
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
     <div class="footer-info">
+
+
+        <!-- ঠিকানা -->
 
         <div class="footer-item">
 
@@ -1381,11 +1594,17 @@ footer{
 
             <br>
 
-            Budbud, Burdwan<br>
+            Budbud, Burdwan
+
+            <br>
+
             West Bengal, India
 
         </div>
 
+
+
+        <!-- ফোন -->
 
         <div class="footer-item">
 
@@ -1410,6 +1629,9 @@ footer{
         </div>
 
 
+
+        <!-- Email -->
+
         <div class="footer-item">
 
             ✉️
@@ -1426,6 +1648,7 @@ footer{
 
         </div>
 
+
     </div>
 
 
@@ -1439,27 +1662,36 @@ footer{
 </footer>
 
 
-<!-- =========================
+
+<!-- =====================================================
      JAVASCRIPT
-========================= -->
+===================================================== -->
 
 <script>
+
+
+/* =====================================================
+   SMOOTH SCROLL
+===================================================== */
 
 document.querySelectorAll('a[href^="#"]').forEach(function(link){
 
     link.addEventListener("click",function(event){
 
-        const targetId=this.getAttribute("href");
+        const targetId = this.getAttribute("href");
 
-        const target=document.querySelector(targetId);
+        const target = document.querySelector(targetId);
 
         if(target){
 
             event.preventDefault();
 
             target.scrollIntoView({
+
                 behavior:"smooth",
+
                 block:"start"
+
             });
 
         }
@@ -1469,21 +1701,33 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link){
 });
 
 
-const sections=document.querySelectorAll("section[id]");
 
-const navLinks=document.querySelectorAll(".nav-menu a");
+/* =====================================================
+   ACTIVE NAVIGATION
+===================================================== */
+
+const sections =
+    document.querySelectorAll("section[id]");
+
+const navLinks =
+    document.querySelectorAll(".nav-menu a");
+
 
 window.addEventListener("scroll",function(){
 
-    let current="home";
+    let current = "home";
+
 
     sections.forEach(function(section){
 
-        const sectionTop=section.offsetTop-120;
+        const sectionTop =
+            section.offsetTop - 120;
 
-        if(window.scrollY>=sectionTop){
 
-            current=section.getAttribute("id");
+        if(window.scrollY >= sectionTop){
+
+            current =
+                section.getAttribute("id");
 
         }
 
@@ -1494,8 +1738,11 @@ window.addEventListener("scroll",function(){
 
         link.classList.remove("active");
 
+
         if(
-            link.getAttribute("href")==="#"+current
+            link.getAttribute("href")
+            ===
+            "#"+current
         ){
 
             link.classList.add("active");
@@ -1506,8 +1753,10 @@ window.addEventListener("scroll",function(){
 
 });
 
+
 </script>
 
 
 </body>
+
 </html>
