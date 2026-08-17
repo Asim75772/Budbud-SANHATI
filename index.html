@@ -158,13 +158,17 @@ img{
     position:absolute;
 
     left:50%;
-    bottom:38px;
+    bottom:20px;
 
     transform:translateX(-50%);
 
-    z-index:5;
+    z-index:50;
+
+    width:auto;
 
     text-align:center;
+
+    pointer-events:none;
 }
 
 .welcome-btn{
@@ -199,41 +203,17 @@ img{
 
     cursor:pointer;
 
+    position:relative;
+
+    z-index:100;
+
+    pointer-events:auto;
+
     transition:.3s;
 }
 
 .welcome-btn:hover{
     transform:scale(1.05);
-}
-
-.down-arrow{
-    display:block;
-
-    margin-top:5px;
-
-    font-size:27px;
-
-    color:#ffd000;
-
-    animation:arrowMove 1.4s infinite;
-}
-
-@keyframes arrowMove{
-
-    0%{
-        transform:translateY(0);
-        opacity:.6;
-    }
-
-    50%{
-        transform:translateY(8px);
-        opacity:1;
-    }
-
-    100%{
-        transform:translateY(0);
-        opacity:.6;
-    }
 }
 
 
@@ -422,9 +402,6 @@ img{
     box-shadow:
         0 0 20px rgba(255,180,0,.15);
 }
-
-
-/* রক্তদান লিংকের design */
 
 .event-link{
     display:block;
@@ -724,6 +701,8 @@ footer{
 
     .hero-content{
         bottom:20px;
+
+        z-index:50;
     }
 
     .welcome-btn{
@@ -736,10 +715,8 @@ footer{
         font-size:21px;
 
         border-radius:13px;
-    }
 
-    .down-arrow{
-        font-size:22px;
+        z-index:100;
     }
 
     .quick-section{
@@ -956,10 +933,6 @@ footer{
             স্বাগতম
         </a>
 
-        <span class="down-arrow">
-            ↓
-        </span>
-
     </div>
 
 </section>
@@ -1095,11 +1068,7 @@ footer{
             আমাদের কার্যক্রম
         </h2>
 
-
         <div class="event-grid">
-
-
-            <!-- DURGA PUJA -->
 
             <div class="event-card">
 
@@ -1118,9 +1087,6 @@ footer{
 
             </div>
 
-
-            <!-- BLOOD DONATION
-                 CLICK HERE TO OPEN roktodan.html -->
 
             <a
                 href="roktodan.html"
@@ -1147,8 +1113,6 @@ footer{
             </a>
 
 
-            <!-- EDUCATION -->
-
             <div class="event-card">
 
                 <div class="event-icon">
@@ -1166,8 +1130,6 @@ footer{
 
             </div>
 
-
-            <!-- SPORTS -->
 
             <div class="event-card">
 
@@ -1187,8 +1149,6 @@ footer{
             </div>
 
 
-            <!-- CULTURAL -->
-
             <div class="event-card">
 
                 <div class="event-icon">
@@ -1207,8 +1167,6 @@ footer{
             </div>
 
 
-            <!-- SOCIAL SERVICE -->
-
             <div class="event-card">
 
                 <div class="event-icon">
@@ -1225,7 +1183,6 @@ footer{
                 </p>
 
             </div>
-
 
         </div>
 
@@ -1292,7 +1249,6 @@ footer{
         </h2>
 
         <div class="contact-grid">
-
 
             <div class="contact-card">
 
@@ -1377,7 +1333,6 @@ footer{
 
             </div>
 
-
         </div>
 
     </div>
@@ -1415,7 +1370,6 @@ footer{
 <footer>
 
     <div class="footer-info">
-
 
         <div class="footer-item">
 
@@ -1471,7 +1425,6 @@ footer{
             </a>
 
         </div>
-
 
     </div>
 
