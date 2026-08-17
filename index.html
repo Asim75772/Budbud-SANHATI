@@ -2,21 +2,16 @@
 <html lang="bn">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<meta name="theme-color" content="#050000">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Budbud SANHATI | বুদবুদ সংহতি</title>
 
 <style>
 
-/* =========================================================
-   RESET
-========================================================= */
+/* =========================
+   BASIC
+========================= */
 
 *{
     margin:0;
@@ -29,52 +24,31 @@ html{
 }
 
 body{
-    width:100%;
-    min-height:100vh;
-
+    margin:0;
     background:#080000;
     color:#fff;
-
-    font-family:
-        "Noto Sans Bengali",
-        "Nirmala UI",
-        Arial,
-        sans-serif;
-
+    font-family:"Noto Sans Bengali","Noto Serif Bengali",Arial,sans-serif;
     overflow-x:hidden;
 }
 
-img{
-    display:block;
-    max-width:100%;
-}
 
-a{
-    text-decoration:none;
-}
-
-
-/* =========================================================
-   HEADER / NAVIGATION
-========================================================= */
+/* =========================
+   HEADER
+========================= */
 
 header{
     width:100%;
-
+    height:68px;
     background:#050505;
-
-    border-bottom:2px solid #a40000;
-
+    border-bottom:3px solid #a90000;
     position:sticky;
     top:0;
-
     z-index:9999;
 }
 
 .navbar{
     width:100%;
-    min-height:72px;
-
+    height:100%;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -82,165 +56,167 @@ header{
 
 .nav-menu{
     width:100%;
-
+    height:100%;
     display:flex;
     align-items:center;
     justify-content:center;
-
-    gap:52px;
-
+    gap:55px;
     list-style:none;
-
-    padding:0 20px;
 }
 
 .nav-menu li{
-    flex-shrink:0;
+    height:100%;
 }
 
 .nav-menu a{
-    position:relative;
-
-    display:block;
-
-    padding:25px 0 18px;
-
-    color:#f4df9a;
-
+    height:100%;
+    display:flex;
+    align-items:center;
+    color:#f5dda0;
+    text-decoration:none;
     font-family:Arial,sans-serif;
-
-    font-size:18px;
-    font-weight:500;
-
-    transition:all .3s ease;
+    font-size:19px;
+    padding:0 4px;
+    position:relative;
+    white-space:nowrap;
+    transition:.3s;
 }
 
 .nav-menu a:hover{
-    color:#ff1515;
+    color:#ff1b1b;
 }
 
 .nav-menu a.active{
-    color:#ff1515;
+    color:#ff1b1b;
 }
 
 .nav-menu a.active::after{
     content:"";
-
     position:absolute;
-
     left:0;
     right:0;
     bottom:0;
-
-    height:4px;
-
-    background:#ff1717;
-
-    border-radius:3px 3px 0 0;
+    height:5px;
+    background:#ff1b1b;
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-   IMPORTANT:
-   IMG ব্যবহার করা হয়েছে যাতে পুরো home-banner.png
-   মোবাইলেও crop না হয়।
-========================================================= */
+========================= */
 
 .hero{
     width:100%;
 
-    background:#100000;
+    /*
+       ছবির আসল অনুপাত ধরে রাখা হচ্ছে।
+       home-banner.png অবশ্যই repository-তে থাকতে হবে।
+    */
 
-    border-bottom:2px solid #a40000;
+    aspect-ratio:16 / 9;
 
-    position:relative;
+    background-image:url("home-banner.png");
+    background-size:100% auto;
+    background-position:center top;
+    background-repeat:no-repeat;
+
+    background-color:#080000;
+
+    border-bottom:3px solid #b00000;
 }
 
-.hero img{
-    width:100%;
-    height:auto;
 
-    display:block;
+/* =========================
+   JOY MA DURGA
+========================= */
 
-    object-fit:contain;
-}
-
-
-/* =========================================================
-   WELCOME / JOY MA DURGA
-========================================================= */
-
-.joy-section{
+.durga-banner{
     width:100%;
 
-    min-height:170px;
+    min-height:190px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(120,20,0,.45),
+            rgba(15,0,0,.98) 70%
+        );
+
+    border-bottom:2px solid #a00000;
 
     display:flex;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
 
     text-align:center;
 
-    background:
-        radial-gradient(
-            circle at center,
-            #320000 0%,
-            #140000 45%,
-            #080000 100%
-        );
-
-    border-bottom:2px solid #650000;
-
     padding:25px 15px;
 }
 
-.joy-title{
-    color:#f4b900;
+.durga-symbol{
+    font-size:58px;
+    line-height:1;
 
-    font-size:clamp(42px,8vw,82px);
+    color:#ffbd00;
 
-    font-weight:900;
+    margin-bottom:5px;
+
+    text-shadow:
+        0 0 10px #ff9d00,
+        0 0 25px rgba(255,80,0,.5);
+}
+
+.durga-title{
+    color:#ffb900;
+
+    font-family:
+        "Noto Serif Bengali",
+        "Noto Sans Bengali",
+        serif;
+
+    font-size:55px;
+    font-weight:800;
 
     line-height:1.2;
 
     text-shadow:
-        0 0 8px #7b4d00,
-        0 0 20px #3b1700;
-
-    letter-spacing:2px;
+        2px 2px 0 #7b3900,
+        0 0 15px rgba(255,150,0,.35);
 }
 
 
-/* =========================================================
+/* =========================
    INFORMATION SECTION
-========================================================= */
+========================= */
 
 .info-section{
     width:100%;
 
+    background:#130000;
+
     display:grid;
 
-    grid-template-columns:
-        repeat(4,minmax(0,1fr));
+    grid-template-columns:repeat(3,1fr);
 
-    background:#100000;
-
-    border-bottom:2px solid #650000;
+    border-bottom:2px solid #7b5600;
 }
 
-.info-box{
-    min-height:390px;
 
-    padding:55px 28px 45px;
+/* =========================
+   INFO BOX
+========================= */
+
+.info-box{
+    min-height:470px;
+
+    padding:55px 35px 50px;
 
     text-align:center;
 
-    border-right:1px solid #553900;
+    border-right:1px solid #6a4a00;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    scroll-margin-top:85px;
 }
 
 .info-box:last-child{
@@ -248,143 +224,183 @@ header{
 }
 
 
-/* =========================================================
-   ROUND ICON
-========================================================= */
+/* =========================
+   ICON
+========================= */
 
 .icon{
-    width:100px;
-    height:100px;
+    width:150px;
+    height:150px;
 
-    margin:0 auto 28px;
+    margin:0 auto 35px;
 
-    border:3px solid #ffd000;
+    border:4px solid #ffd000;
 
     border-radius:50%;
 
-    background:#170000;
+    background:#180000;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    font-size:48px;
-
-    flex-shrink:0;
-
-    box-shadow:
-        0 0 8px rgba(255,190,0,.25);
+    font-size:65px;
 }
 
 
-/* =========================================================
-   INFO TEXT
-========================================================= */
+/* =========================
+   INFO TITLE
+========================= */
 
 .info-box h2{
     color:#ffd000;
 
-    font-size:28px;
+    font-family:
+        "Noto Serif Bengali",
+        "Noto Sans Bengali",
+        serif;
 
-    font-weight:700;
+    font-size:32px;
 
-    line-height:1.5;
+    line-height:1.4;
 
-    margin-bottom:22px;
+    margin-bottom:28px;
+
+    text-shadow:
+        1px 2px 2px #5b2d00;
 }
+
+
+/* =========================
+   INFO TEXT
+========================= */
 
 .info-box p{
-    max-width:340px;
+    color:#eeeeee;
 
-    color:#eee;
-
-    font-size:18px;
+    font-size:20px;
 
     line-height:2;
 
-    text-align:center;
+    max-width:620px;
+
+    margin:0 auto;
 }
 
 
-/* =========================================================
-   CONTACT BOX INSIDE INFO
-========================================================= */
-
-.contact-info-box{
-    min-height:390px;
-
-    padding:55px 28px 45px;
-
-    text-align:center;
-
-    border-right:none;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-.contact-info-box p{
-    max-width:340px;
-
-    color:#eee;
-
-    font-size:18px;
-
-    line-height:2;
-}
-
-
-/* =========================================================
-   CONTACT FOOTER
-========================================================= */
+/* =========================
+   CONTACT SECTION
+========================= */
 
 .contact-footer{
     width:100%;
 
-    background:#030303;
+    background:#050505;
 
-    border-bottom:1px solid #700000;
+    border-top:2px solid #920000;
 }
+
+
+/* =========================
+   CONTACT HEADING
+========================= */
+
+.contact-heading{
+    text-align:center;
+
+    padding:45px 20px 30px;
+}
+
+.contact-heading h2{
+    color:#ffd000;
+
+    font-family:
+        "Noto Serif Bengali",
+        "Noto Sans Bengali",
+        serif;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+}
+
+.contact-heading p{
+    color:#ccc;
+
+    font-size:17px;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+   CONTACT CONTAINER
+========================= */
 
 .contact-container{
     width:100%;
 
     display:grid;
 
-    grid-template-columns:
-        repeat(4,minmax(0,1fr));
+    grid-template-columns:repeat(4,1fr);
+
+    border-top:1px solid #4d3500;
 }
 
-.contact-box{
-    min-height:125px;
 
-    padding:22px;
+/* =========================
+   CONTACT BOX
+========================= */
+
+.contact-box{
+    min-height:150px;
+
+    padding:25px 20px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     gap:15px;
 
-    border-right:1px solid #4d3000;
+    border-right:1px solid #4d3500;
 }
 
 .contact-box:last-child{
     border-right:none;
 }
 
+
+/* =========================
+   CONTACT ICON
+========================= */
+
 .contact-icon{
-    width:48px;
-
-    color:#f1b700;
-
-    font-size:34px;
-
-    text-align:center;
+    width:55px;
+    height:55px;
 
     flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:2px solid #ffd000;
+
+    border-radius:50%;
+
+    color:#ffd000;
+
+    font-size:27px;
 }
+
+
+/* =========================
+   CONTACT TEXT
+========================= */
 
 .contact-text{
     color:#eee;
@@ -392,14 +408,12 @@ header{
     font-size:16px;
 
     line-height:1.7;
-
-    word-break:break-word;
 }
 
 .contact-text a{
     color:#eee;
 
-    transition:.3s;
+    text-decoration:none;
 }
 
 .contact-text a:hover{
@@ -407,38 +421,40 @@ header{
 }
 
 
-/* =========================================================
+/* =========================
    COPYRIGHT
-========================================================= */
+========================= */
 
 .copyright{
     width:100%;
 
-    background:#050505;
+    background:#020202;
 
-    color:#c8a84f;
+    border-top:1px solid #4d0000;
 
     text-align:center;
 
-    padding:18px 12px;
+    padding:20px 15px;
+
+    color:#c9a84e;
 
     font-family:Arial,sans-serif;
 
     font-size:14px;
-
-    border-top:1px solid #250000;
 }
 
 
-/* =========================================================
+/* =========================
    TABLET
-========================================================= */
+========================= */
 
-@media(max-width:900px){
+@media(max-width:800px){
+
+    header{
+        height:65px;
+    }
 
     .navbar{
-        min-height:68px;
-
         overflow-x:auto;
 
         justify-content:flex-start;
@@ -455,254 +471,243 @@ header{
 
         min-width:100%;
 
-        justify-content:center;
-
-        gap:38px;
-
-        padding:0 25px;
-    }
-
-    .nav-menu a{
-        font-size:17px;
-
-        padding:24px 0 16px;
-    }
-
-
-    .info-section{
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-    }
-
-    .info-box{
-        min-height:360px;
-
-        border-bottom:1px solid #553900;
-    }
-
-    .info-box:nth-child(2){
-        border-right:none;
-    }
-
-    .info-box:nth-child(4){
-        border-right:none;
-        border-bottom:none;
-    }
-
-    .info-box:nth-child(3){
-        border-bottom:none;
-    }
-
-
-    .contact-container{
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-    }
-
-    .contact-box:nth-child(2){
-        border-right:none;
-    }
-
-    .contact-box:nth-child(3){
-        border-top:1px solid #4d3000;
-    }
-
-    .contact-box:nth-child(4){
-        border-right:none;
-        border-top:1px solid #4d3000;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:600px){
-
-    .navbar{
-        min-height:64px;
-    }
-
-    .nav-menu{
         justify-content:flex-start;
 
-        gap:30px;
+        gap:34px;
 
         padding:0 28px;
     }
 
     .nav-menu a{
-        font-size:15px;
-
-        padding:22px 0 14px;
+        font-size:16px;
     }
 
 
-    /* HERO:
-       কোনো fixed height নেই।
-       তাই পুরো image দেখা যাবে।
-    */
+    /* HERO */
 
     .hero{
-        min-height:0;
+        aspect-ratio:16 / 9;
+
+        background-size:100% auto;
+
+        background-position:center top;
     }
 
-    .hero img{
-        width:100%;
-        height:auto;
+
+    /* DURGA */
+
+    .durga-banner{
+        min-height:160px;
+
+        padding:20px 10px;
     }
 
-
-    .joy-section{
-        min-height:130px;
-
-        padding:25px 12px;
+    .durga-symbol{
+        font-size:45px;
     }
 
-    .joy-title{
+    .durga-title{
         font-size:42px;
     }
 
+
+    /* INFO */
 
     .info-section{
         grid-template-columns:1fr;
     }
 
-    .info-box,
-    .contact-info-box{
+    .info-box{
         min-height:auto;
 
-        padding:55px 25px;
+        padding:55px 28px 60px;
 
-        border-right:none !important;
+        border-right:none;
 
-        border-bottom:1px solid #553900;
+        border-bottom:1px solid #6a4a00;
     }
 
     .info-box:last-child{
         border-bottom:none;
     }
 
-    .info-box h2{
-        font-size:27px;
-
-        margin-bottom:20px;
-    }
-
-    .info-box p,
-    .contact-info-box p{
-        max-width:100%;
-
-        font-size:17px;
-
-        line-height:2;
-    }
-
     .icon{
-        width:100px;
-        height:100px;
+        width:145px;
+        height:145px;
 
-        font-size:46px;
+        margin-bottom:30px;
+
+        font-size:62px;
+    }
+
+    .info-box h2{
+        font-size:31px;
 
         margin-bottom:25px;
     }
 
+    .info-box p{
+        font-size:19px;
+
+        line-height:2;
+    }
+
+
+    /* CONTACT */
+
+    .contact-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-box{
+        min-height:125px;
+
+        border-bottom:1px solid #4d3500;
+    }
+
+    .contact-box:nth-child(2),
+    .contact-box:nth-child(4){
+        border-right:none;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:500px){
+
+    header{
+        height:62px;
+    }
+
+    .nav-menu{
+        gap:28px;
+
+        padding:0 25px;
+    }
+
+    .nav-menu a{
+        font-size:15px;
+    }
+
+
+    /* HERO */
+
+    .hero{
+        aspect-ratio:16 / 9;
+
+        background-size:100% auto;
+
+        background-position:center top;
+    }
+
+
+    /* DURGA */
+
+    .durga-banner{
+        min-height:145px;
+    }
+
+    .durga-symbol{
+        font-size:38px;
+    }
+
+    .durga-title{
+        font-size:34px;
+    }
+
+
+    /* INFO */
+
+    .info-box{
+        padding:50px 22px 55px;
+    }
+
+    .icon{
+        width:140px;
+        height:140px;
+
+        font-size:58px;
+    }
+
+    .info-box h2{
+        font-size:29px;
+    }
+
+    .info-box p{
+        font-size:18px;
+
+        line-height:2;
+    }
+
+
+    /* CONTACT */
+
+    .contact-heading{
+        padding:35px 15px 25px;
+    }
+
+    .contact-heading h2{
+        font-size:29px;
+    }
+
+    .contact-heading p{
+        font-size:15px;
+    }
 
     .contact-container{
         grid-template-columns:1fr;
     }
 
     .contact-box{
-        min-height:100px;
+        min-height:105px;
 
         justify-content:flex-start;
 
-        padding:22px 28px;
+        padding:20px 30px;
 
         border-right:none !important;
 
-        border-bottom:1px solid #4d3000;
-
-        border-top:none !important;
+        border-bottom:1px solid #4d3500 !important;
     }
 
     .contact-box:last-child{
-        border-bottom:none;
-    }
-
-    .contact-icon{
-        font-size:30px;
-
-        width:42px;
+        border-bottom:none !important;
     }
 
     .contact-text{
-        font-size:14px;
+        font-size:15px;
     }
 
-}
+    .contact-icon{
+        width:50px;
+        height:50px;
 
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media(max-width:380px){
-
-    .nav-menu{
-        gap:25px;
-
-        padding:0 22px;
-    }
-
-    .nav-menu a{
-        font-size:14px;
-    }
-
-    .joy-title{
-        font-size:35px;
-    }
-
-    .info-box,
-    .contact-info-box{
-        padding-left:20px;
-        padding-right:20px;
-    }
-
-    .info-box h2{
         font-size:24px;
     }
 
-    .info-box p,
-    .contact-info-box p{
-        font-size:16px;
+
+    /* COPYRIGHT */
+
+    .copyright{
+        font-size:13px;
     }
 
 }
 
-
-/* =========================================================
-   ACCESSIBILITY / SELECTION
-========================================================= */
-
-::selection{
-    background:#b00000;
-    color:#fff;
-}
-
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =======================================================
+<!-- =========================
      HEADER
-======================================================= -->
+========================= -->
 
 <header>
 
@@ -711,23 +716,33 @@ header{
 <ul class="nav-menu">
 
 <li>
-<a href="#home" class="active">HOME</a>
+<a href="#home" class="active">
+HOME
+</a>
 </li>
 
 <li>
-<a href="#about">ABOUT US</a>
+<a href="#about">
+ABOUT US
+</a>
 </li>
 
 <li>
-<a href="#events">EVENTS</a>
+<a href="#events">
+EVENTS
+</a>
 </li>
 
 <li>
-<a href="#gallery">GALLERY</a>
+<a href="#gallery">
+GALLERY
+</a>
 </li>
 
 <li>
-<a href="#contact">CONTACT</a>
+<a href="#contact">
+CONTACT
+</a>
 </li>
 
 </ul>
@@ -737,48 +752,47 @@ header{
 </header>
 
 
-
-<!-- =======================================================
+<!-- =========================
      HERO
-======================================================= -->
+========================= -->
 
-<section class="hero" id="home">
-
-<img
-    src="home-banner.png"
-    alt="Budbud SANHATI Banner"
->
-
+<section
+    class="hero"
+    id="home">
 </section>
 
 
-
-<!-- =======================================================
+<!-- =========================
      JOY MA DURGA
-======================================================= -->
+========================= -->
 
-<section class="joy-section">
+<section class="durga-banner">
 
-<h1 class="joy-title">
+<div class="durga-symbol">
+🔱
+</div>
+
+<div class="durga-title">
 জয় মা দুর্গা
-</h1>
+</div>
 
 </section>
 
 
-
-<!-- =======================================================
+<!-- =========================
      INFORMATION
-======================================================= -->
+========================= -->
 
 <section class="info-section">
 
 
-<!-- =====================================================
+<!-- =========================
      ABOUT
-===================================================== -->
+========================= -->
 
-<div class="info-box" id="about">
+<div
+    class="info-box"
+    id="about">
 
 <div class="icon">
 👥
@@ -789,22 +803,21 @@ header{
 </h2>
 
 <p>
-বুদবুদ সংহতি একটি সামাজিক ও
-সাংস্কৃতিক সংগঠন।
+বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
 <br><br>
-আমরা একসাথে কাজ করি সমাজ
-ও মানুষের জন্য।
+আমরা একসাথে কাজ করি সমাজ ও মানুষের জন্য।
 </p>
 
 </div>
 
 
-
-<!-- =====================================================
+<!-- =========================
      EVENTS
-===================================================== -->
+========================= -->
 
-<div class="info-box" id="events">
+<div
+    class="info-box"
+    id="events">
 
 <div class="icon">
 📅
@@ -815,21 +828,21 @@ header{
 </h2>
 
 <p>
-দুর্গা পূজা, রক্তদান, শিক্ষা
-সহায়তা, খেলাধুলা এবং বিভিন্ন
-সামাজিক অনুষ্ঠান আমাদের
-নিয়মিত কার্যক্রম।
+দুর্গা পূজা, রক্তদান, শিক্ষা সহায়তা,
+খেলাধুলা এবং বিভিন্ন সামাজিক অনুষ্ঠান
+আমাদের নিয়মিত কার্যক্রম।
 </p>
 
 </div>
 
 
-
-<!-- =====================================================
+<!-- =========================
      GALLERY
-===================================================== -->
+========================= -->
 
-<div class="info-box" id="gallery">
+<div
+    class="info-box"
+    id="gallery">
 
 <div class="icon">
 🖼️
@@ -840,34 +853,9 @@ header{
 </h2>
 
 <p>
-আমাদের বিভিন্ন অনুষ্ঠান ও
-স্মরণীয় মুহূর্তগুলোর কিছু
-ছবি দেখুন আমাদের
-গ্যালারিতে।
-</p>
-
-</div>
-
-
-
-<!-- =====================================================
-     CONTACT INFO
-===================================================== -->
-
-<div class="contact-info-box">
-
-<div class="icon">
-🤝
-</div>
-
-<h2>
-যোগাযোগ করুন
-</h2>
-
-<p>
-আমাদের সাথে যুক্ত হতে
-অথবা যেকোনো সহযোগিতার
-জন্য যোগাযোগ করুন।
+আমাদের বিভিন্ন অনুষ্ঠান ও স্মরণীয়
+মুহূর্তগুলোর কিছু ছবি দেখুন
+আমাদের গ্যালারিতে।
 </p>
 
 </div>
@@ -876,23 +864,36 @@ header{
 </section>
 
 
-
-<!-- =======================================================
+<!-- =========================
      CONTACT FOOTER
-======================================================= -->
+========================= -->
 
 <footer
     id="contact"
-    class="contact-footer"
->
+    class="contact-footer">
 
+
+<!-- CONTACT TITLE -->
+
+<div class="contact-heading">
+
+<h2>
+যোগাযোগ করুন
+</h2>
+
+<p>
+আমাদের সাথে যুক্ত হতে অথবা যেকোনো সহযোগিতার জন্য যোগাযোগ করুন।
+</p>
+
+</div>
+
+
+<!-- CONTACT INFORMATION -->
 
 <div class="contact-container">
 
 
-<!-- =====================================================
-     ADDRESS
-===================================================== -->
+<!-- ADDRESS -->
 
 <div class="contact-box">
 
@@ -902,12 +903,8 @@ header{
 
 <div class="contact-text">
 
-<strong>ঠিকানা</strong>
-<br>
-
 Budbud, Burdwan
 <br>
-
 West Bengal, India
 
 </div>
@@ -915,10 +912,7 @@ West Bengal, India
 </div>
 
 
-
-<!-- =====================================================
-     FACEBOOK
-===================================================== -->
+<!-- FACEBOOK -->
 
 <div class="contact-box">
 
@@ -928,12 +922,8 @@ West Bengal, India
 
 <div class="contact-text">
 
-<strong>Facebook</strong>
-<br>
-
 Budbud SANHATI
 <br>
-
 Official
 
 </div>
@@ -941,10 +931,7 @@ Official
 </div>
 
 
-
-<!-- =====================================================
-     PHONE
-===================================================== -->
+<!-- PHONE -->
 
 <div class="contact-box">
 
@@ -953,9 +940,6 @@ Official
 </div>
 
 <div class="contact-text">
-
-<strong>ফোন</strong>
-<br>
 
 <a href="tel:9547222144">
 9547222144
@@ -972,10 +956,7 @@ Official
 </div>
 
 
-
-<!-- =====================================================
-     EMAIL
-===================================================== -->
+<!-- EMAIL -->
 
 <div class="contact-box">
 
@@ -984,9 +965,6 @@ Official
 </div>
 
 <div class="contact-text">
-
-<strong>Email</strong>
-<br>
 
 <a href="mailto:budbud.sanhati@gmail.com">
 budbud.sanhati@gmail.com
@@ -1000,72 +978,16 @@ budbud.sanhati@gmail.com
 </div>
 
 
-
-<!-- =====================================================
-     COPYRIGHT
-===================================================== -->
+<!-- COPYRIGHT -->
 
 <div class="copyright">
 
-© 2024 Budbud SANHATI.
-All Rights Reserved.
+© 2024 Budbud SANHATI. All Rights Reserved.
 
 </div>
 
 
 </footer>
-
-
-
-<!-- =======================================================
-     ACTIVE MENU SCRIPT
-======================================================= -->
-
-<script>
-
-const sections = document.querySelectorAll(
-    "#home, #about, #events, #gallery, #contact"
-);
-
-const navLinks = document.querySelectorAll(
-    ".nav-menu a"
-);
-
-window.addEventListener("scroll", () => {
-
-    let current = "home";
-
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop - 120;
-
-        if(window.scrollY >= sectionTop){
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if(
-            link.getAttribute("href") ===
-            "#" + current
-        ){
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
-
-</script>
 
 
 </body>
