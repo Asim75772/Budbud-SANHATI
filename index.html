@@ -10,7 +10,7 @@
 <style>
 
 /* =========================
-   BASIC
+   RESET
 ========================= */
 
 *{
@@ -24,11 +24,24 @@ html{
 }
 
 body{
-    margin:0;
-    background:#080000;
+    font-family:
+        "Noto Sans Bengali",
+        "Nirmala UI",
+        Arial,
+        sans-serif;
+
+    background:#120000;
     color:#fff;
-    font-family:"Noto Sans Bengali","Noto Serif Bengali",Arial,sans-serif;
     overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
 }
 
 
@@ -38,66 +51,77 @@ body{
 
 header{
     width:100%;
-    height:68px;
     background:#050505;
-    border-bottom:3px solid #a90000;
+
+    border-bottom:2px solid #a40000;
+
     position:sticky;
     top:0;
-    z-index:9999;
+    z-index:1000;
 }
 
 .navbar{
     width:100%;
-    height:100%;
+    min-height:72px;
+
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
 .nav-menu{
-    width:100%;
-    height:100%;
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:55px;
+
+    gap:48px;
+
     list-style:none;
+
+    padding:0 20px;
 }
 
 .nav-menu li{
-    height:100%;
+    flex-shrink:0;
 }
 
 .nav-menu a{
-    height:100%;
-    display:flex;
-    align-items:center;
-    color:#f5dda0;
-    text-decoration:none;
-    font-family:Arial,sans-serif;
-    font-size:19px;
-    padding:0 4px;
     position:relative;
-    white-space:nowrap;
-    transition:.3s;
+
+    display:block;
+
+    color:#f5df9a;
+
+    font-family:Arial,sans-serif;
+
+    font-size:18px;
+    font-weight:500;
+
+    padding:25px 0 18px;
+
+    transition:0.3s;
 }
 
 .nav-menu a:hover{
-    color:#ff1b1b;
+    color:#ff2020;
 }
 
 .nav-menu a.active{
-    color:#ff1b1b;
+    color:#ff2020;
 }
 
 .nav-menu a.active::after{
     content:"";
+
     position:absolute;
+
     left:0;
     right:0;
     bottom:0;
-    height:5px;
-    background:#ff1b1b;
+
+    height:4px;
+
+    background:#ff1515;
 }
 
 
@@ -108,81 +132,91 @@ header{
 .hero{
     width:100%;
 
-    /*
-       ছবির আসল অনুপাত ধরে রাখা হচ্ছে।
-       home-banner.png অবশ্যই repository-তে থাকতে হবে।
-    */
-
-    aspect-ratio:16 / 9;
-
     background-image:url("home-banner.png");
+
     background-size:100% auto;
     background-position:center top;
     background-repeat:no-repeat;
 
-    background-color:#080000;
+    aspect-ratio:16 / 9;
 
-    border-bottom:3px solid #b00000;
+    position:relative;
+
+    border-bottom:3px solid #a40000;
 }
 
 
 /* =========================
-   JOY MA DURGA
+   DURGA SECTION
 ========================= */
 
-.durga-banner{
+.durga-section{
     width:100%;
 
-    min-height:190px;
+    min-height:260px;
 
     background:
         radial-gradient(
             circle at center,
-            rgba(120,20,0,.45),
-            rgba(15,0,0,.98) 70%
+            #420000 0%,
+            #230000 35%,
+            #120000 75%
         );
 
-    border-bottom:2px solid #a00000;
+    border-bottom:3px solid #a40000;
 
     display:flex;
-    flex-direction:column;
     align-items:center;
     justify-content:center;
 
     text-align:center;
 
-    padding:25px 15px;
+    padding:35px 20px;
+}
+
+.durga-content{
+    width:100%;
+    max-width:800px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
 .durga-symbol{
-    font-size:58px;
+    font-size:70px;
+
     line-height:1;
 
-    color:#ffbd00;
-
-    margin-bottom:5px;
+    color:#ffbf00;
 
     text-shadow:
-        0 0 10px #ff9d00,
-        0 0 25px rgba(255,80,0,.5);
+        0 0 8px #ff9d00,
+        0 0 20px #ff6600,
+        0 0 35px #ff2200;
+
+    margin-bottom:10px;
 }
 
 .durga-title{
-    color:#ffb900;
+    color:#ffb300;
 
     font-family:
-        "Noto Serif Bengali",
         "Noto Sans Bengali",
-        serif;
+        "Nirmala UI",
+        Arial,
+        sans-serif;
 
-    font-size:55px;
+    font-size:52px;
+
     font-weight:800;
 
-    line-height:1.2;
+    line-height:1.3;
 
     text-shadow:
-        2px 2px 0 #7b3900,
-        0 0 15px rgba(255,150,0,.35);
+        0 2px 5px #000,
+        0 0 12px #ff6a00;
 }
 
 
@@ -193,13 +227,13 @@ header{
 .info-section{
     width:100%;
 
-    background:#130000;
-
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
 
-    border-bottom:2px solid #7b5600;
+    background:#170000;
+
+    border-bottom:2px solid #624500;
 }
 
 
@@ -208,15 +242,17 @@ header{
 ========================= */
 
 .info-box{
-    min-height:470px;
+    min-height:410px;
 
-    padding:55px 35px 50px;
+    padding:55px 35px;
 
     text-align:center;
 
-    border-right:1px solid #6a4a00;
+    border-right:1px solid #624500;
 
-    scroll-margin-top:85px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .info-box:last-child{
@@ -228,768 +264,34 @@ header{
    ICON
 ========================= */
 
-.icon{
+.info-icon{
     width:150px;
     height:150px;
-
-    margin:0 auto 35px;
 
     border:4px solid #ffd000;
 
     border-radius:50%;
 
-    background:#180000;
+    background:#190000;
 
     display:flex;
     align-items:center;
     justify-content:center;
-
-    font-size:65px;
-}
-
-
-/* =========================
-   INFO TITLE
-========================= */
-
-.info-box h2{
-    color:#ffd000;
-
-    font-family:
-        "Noto Serif Bengali",
-        "Noto Sans Bengali",
-        serif;
-
-    font-size:32px;
-
-    line-height:1.4;
 
     margin-bottom:28px;
 
-    text-shadow:
-        1px 2px 2px #5b2d00;
-}
-
-
-/* =========================
-   INFO TEXT
-========================= */
-
-.info-box p{
-    color:#eeeeee;
-
-    font-size:20px;
-
-    line-height:2;
-
-    max-width:620px;
-
-    margin:0 auto;
-}
-
-
-/* =========================
-   CONTACT SECTION
-========================= */
-
-.contact-footer{
-    width:100%;
-
-    background:#050505;
-
-    border-top:2px solid #920000;
-}
-
-
-/* =========================
-   CONTACT HEADING
-========================= */
-
-.contact-heading{
-    text-align:center;
-
-    padding:45px 20px 30px;
-}
-
-.contact-heading h2{
-    color:#ffd000;
-
-    font-family:
-        "Noto Serif Bengali",
-        "Noto Sans Bengali",
-        serif;
-
-    font-size:34px;
-
-    margin-bottom:10px;
-}
-
-.contact-heading p{
-    color:#ccc;
-
-    font-size:17px;
-
-    line-height:1.8;
-}
-
-
-/* =========================
-   CONTACT CONTAINER
-========================= */
-
-.contact-container{
-    width:100%;
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    border-top:1px solid #4d3500;
-}
-
-
-/* =========================
-   CONTACT BOX
-========================= */
-
-.contact-box{
-    min-height:150px;
-
-    padding:25px 20px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:15px;
-
-    border-right:1px solid #4d3500;
-}
-
-.contact-box:last-child{
-    border-right:none;
-}
-
-
-/* =========================
-   CONTACT ICON
-========================= */
-
-.contact-icon{
-    width:55px;
-    height:55px;
-
     flex-shrink:0;
 
-    display:flex;
+    box-shadow:
+        0 0 10px rgba(255,190,0,.15);
+}
 
-    align-items:center;
-    justify-content:center;
+.info-icon span{
+    font-size:68px;
 
-    border:2px solid #ffd000;
-
-    border-radius:50%;
-
-    color:#ffd000;
-
-    font-size:27px;
+    line-height:1;
 }
 
 
 /* =========================
-   CONTACT TEXT
-========================= */
-
-.contact-text{
-    color:#eee;
-
-    font-size:16px;
-
-    line-height:1.7;
-}
-
-.contact-text a{
-    color:#eee;
-
-    text-decoration:none;
-}
-
-.contact-text a:hover{
-    color:#ffd000;
-}
-
-
-/* =========================
-   COPYRIGHT
-========================= */
-
-.copyright{
-    width:100%;
-
-    background:#020202;
-
-    border-top:1px solid #4d0000;
-
-    text-align:center;
-
-    padding:20px 15px;
-
-    color:#c9a84e;
-
-    font-family:Arial,sans-serif;
-
-    font-size:14px;
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media(max-width:800px){
-
-    header{
-        height:65px;
-    }
-
-    .navbar{
-        overflow-x:auto;
-
-        justify-content:flex-start;
-
-        scrollbar-width:none;
-    }
-
-    .navbar::-webkit-scrollbar{
-        display:none;
-    }
-
-    .nav-menu{
-        width:max-content;
-
-        min-width:100%;
-
-        justify-content:flex-start;
-
-        gap:34px;
-
-        padding:0 28px;
-    }
-
-    .nav-menu a{
-        font-size:16px;
-    }
-
-
-    /* HERO */
-
-    .hero{
-        aspect-ratio:16 / 9;
-
-        background-size:100% auto;
-
-        background-position:center top;
-    }
-
-
-    /* DURGA */
-
-    .durga-banner{
-        min-height:160px;
-
-        padding:20px 10px;
-    }
-
-    .durga-symbol{
-        font-size:45px;
-    }
-
-    .durga-title{
-        font-size:42px;
-    }
-
-
-    /* INFO */
-
-    .info-section{
-        grid-template-columns:1fr;
-    }
-
-    .info-box{
-        min-height:auto;
-
-        padding:55px 28px 60px;
-
-        border-right:none;
-
-        border-bottom:1px solid #6a4a00;
-    }
-
-    .info-box:last-child{
-        border-bottom:none;
-    }
-
-    .icon{
-        width:145px;
-        height:145px;
-
-        margin-bottom:30px;
-
-        font-size:62px;
-    }
-
-    .info-box h2{
-        font-size:31px;
-
-        margin-bottom:25px;
-    }
-
-    .info-box p{
-        font-size:19px;
-
-        line-height:2;
-    }
-
-
-    /* CONTACT */
-
-    .contact-container{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .contact-box{
-        min-height:125px;
-
-        border-bottom:1px solid #4d3500;
-    }
-
-    .contact-box:nth-child(2),
-    .contact-box:nth-child(4){
-        border-right:none;
-    }
-
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media(max-width:500px){
-
-    header{
-        height:62px;
-    }
-
-    .nav-menu{
-        gap:28px;
-
-        padding:0 25px;
-    }
-
-    .nav-menu a{
-        font-size:15px;
-    }
-
-
-    /* HERO */
-
-    .hero{
-        aspect-ratio:16 / 9;
-
-        background-size:100% auto;
-
-        background-position:center top;
-    }
-
-
-    /* DURGA */
-
-    .durga-banner{
-        min-height:145px;
-    }
-
-    .durga-symbol{
-        font-size:38px;
-    }
-
-    .durga-title{
-        font-size:34px;
-    }
-
-
-    /* INFO */
-
-    .info-box{
-        padding:50px 22px 55px;
-    }
-
-    .icon{
-        width:140px;
-        height:140px;
-
-        font-size:58px;
-    }
-
-    .info-box h2{
-        font-size:29px;
-    }
-
-    .info-box p{
-        font-size:18px;
-
-        line-height:2;
-    }
-
-
-    /* CONTACT */
-
-    .contact-heading{
-        padding:35px 15px 25px;
-    }
-
-    .contact-heading h2{
-        font-size:29px;
-    }
-
-    .contact-heading p{
-        font-size:15px;
-    }
-
-    .contact-container{
-        grid-template-columns:1fr;
-    }
-
-    .contact-box{
-        min-height:105px;
-
-        justify-content:flex-start;
-
-        padding:20px 30px;
-
-        border-right:none !important;
-
-        border-bottom:1px solid #4d3500 !important;
-    }
-
-    .contact-box:last-child{
-        border-bottom:none !important;
-    }
-
-    .contact-text{
-        font-size:15px;
-    }
-
-    .contact-icon{
-        width:50px;
-        height:50px;
-
-        font-size:24px;
-    }
-
-
-    /* COPYRIGHT */
-
-    .copyright{
-        font-size:13px;
-    }
-
-}
-
-</style>
-</head>
-
-
-<body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-<nav class="navbar">
-
-<ul class="nav-menu">
-
-<li>
-<a href="#home" class="active">
-HOME
-</a>
-</li>
-
-<li>
-<a href="#about">
-ABOUT US
-</a>
-</li>
-
-<li>
-<a href="#events">
-EVENTS
-</a>
-</li>
-
-<li>
-<a href="#gallery">
-GALLERY
-</a>
-</li>
-
-<li>
-<a href="#contact">
-CONTACT
-</a>
-</li>
-
-</ul>
-
-</nav>
-
-</header>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section
-    class="hero"
-    id="home">
-</section>
-
-
-<!-- =========================
-     JOY MA DURGA
-========================= -->
-
-<section class="durga-banner">
-
-<div class="durga-symbol">
-🔱
-</div>
-
-<div class="durga-title">
-জয় মা দুর্গা
-</div>
-
-</section>
-
-
-<!-- =========================
-     INFORMATION
-========================= -->
-
-<section class="info-section">
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<div
-    class="info-box"
-    id="about">
-
-<div class="icon">
-👥
-</div>
-
-<h2>
-আমাদের পরিচয়
-</h2>
-
-<p>
-বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
-<br><br>
-আমরা একসাথে কাজ করি সমাজ ও মানুষের জন্য।
-</p>
-
-</div>
-
-
-<!-- =========================
-     EVENTS
-========================= -->
-
-<div
-    class="info-box"
-    id="events">
-
-<div class="icon">
-📅
-</div>
-
-<h2>
-আমাদের কার্যক্রম
-</h2>
-
-<p>
-দুর্গা পূজা, রক্তদান, শিক্ষা সহায়তা,
-খেলাধুলা এবং বিভিন্ন সামাজিক অনুষ্ঠান
-আমাদের নিয়মিত কার্যক্রম।
-</p>
-
-</div>
-
-
-<!-- =========================
-     GALLERY
-========================= -->
-
-<div
-    class="info-box"
-    id="gallery">
-
-<div class="icon">
-🖼️
-</div>
-
-<h2>
-গ্যালারি
-</h2>
-
-<p>
-আমাদের বিভিন্ন অনুষ্ঠান ও স্মরণীয়
-মুহূর্তগুলোর কিছু ছবি দেখুন
-আমাদের গ্যালারিতে।
-</p>
-
-</div>
-
-
-</section>
-
-
-<!-- =========================
-     CONTACT FOOTER
-========================= -->
-
-<footer
-    id="contact"
-    class="contact-footer">
-
-
-<!-- CONTACT TITLE -->
-
-<div class="contact-heading">
-
-<h2>
-যোগাযোগ করুন
-</h2>
-
-<p>
-আমাদের সাথে যুক্ত হতে অথবা যেকোনো সহযোগিতার জন্য যোগাযোগ করুন।
-</p>
-
-</div>
-
-
-<!-- CONTACT INFORMATION -->
-
-<div class="contact-container">
-
-
-<!-- ADDRESS -->
-
-<div class="contact-box">
-
-<div class="contact-icon">
-📍
-</div>
-
-<div class="contact-text">
-
-Budbud, Burdwan
-<br>
-West Bengal, India
-
-</div>
-
-</div>
-
-
-<!-- FACEBOOK -->
-
-<div class="contact-box">
-
-<div class="contact-icon">
-ⓕ
-</div>
-
-<div class="contact-text">
-
-Budbud SANHATI
-<br>
-Official
-
-</div>
-
-</div>
-
-
-<!-- PHONE -->
-
-<div class="contact-box">
-
-<div class="contact-icon">
-📞
-</div>
-
-<div class="contact-text">
-
-<a href="tel:9547222144">
-9547222144
-</a>
-
-<br>
-
-<a href="tel:+919563881523">
-+91 9563881523
-</a>
-
-</div>
-
-</div>
-
-
-<!-- EMAIL -->
-
-<div class="contact-box">
-
-<div class="contact-icon">
-✉
-</div>
-
-<div class="contact-text">
-
-<a href="mailto:budbud.sanhati@gmail.com">
-budbud.sanhati@gmail.com
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-<!-- COPYRIGHT -->
-
-<div class="copyright">
-
-© 2024 Budbud SANHATI. All Rights Reserved.
-
-</div>
-
-
-</footer>
-
-
-</body>
-
-</html>
+  
