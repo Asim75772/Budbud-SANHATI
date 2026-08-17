@@ -2,12 +2,20 @@
 <html lang="bn">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Budbud SANHATI | বুদবুদ সংহতি</title>
 
+
 <style>
+
+/* =====================================
+   RESET
+===================================== */
 
 *{
     margin:0;
@@ -20,352 +28,750 @@ html{
 }
 
 body{
-    font-family:Arial,"Noto Sans Bengali",sans-serif;
-    background:#050505;
-    color:white;
+    margin:0;
+    padding:0;
+
+    font-family:
+        Arial,
+        "Noto Sans Bengali",
+        "Noto Sans",
+        sans-serif;
+
+    background:#050000;
+    color:#ffffff;
+
+    overflow-x:hidden;
 }
 
 
-/* =========================
+/* =====================================
    HEADER
-========================= */
+===================================== */
 
 header{
     width:100%;
+
     background:#050505;
+
     border-bottom:2px solid #9b0000;
+
     position:sticky;
     top:0;
+
     z-index:1000;
 }
 
+
 .navbar{
     width:100%;
+
     min-height:78px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
 }
+
 
 .nav-menu{
+    width:100%;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     gap:55px;
+
     list-style:none;
+
+    margin:0;
+    padding:0;
 }
+
+
+.nav-menu li{
+    margin:0;
+    padding:0;
+}
+
 
 .nav-menu a{
-    color:#f5df9a;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:500;
-    padding:28px 0 20px;
+
     display:block;
-    transition:.3s;
+
+    color:#f5df9a;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    padding:28px 0 20px;
+
+    transition:0.3s;
+
+    white-space:nowrap;
 }
 
-.nav-menu a:hover,
-.nav-menu a.active{
+
+.nav-menu a:hover{
     color:#ff1b1b;
 }
 
+
 .nav-menu a.active{
+
+    color:#ff1b1b;
+
     border-bottom:4px solid #ff1b1b;
 }
 
 
-/* =========================
+/* =====================================
    HERO
-========================= */
+===================================== */
+
+/*
+   IMPORTANT:
+   home-banner.png-এর মধ্যে যদি banner-এর
+   নিজের পুরোনো navbar থাকে, তাহলে সেটি
+   ছবির অংশ হিসেবেই থাকবে।
+
+   এখানে cover ব্যবহার করা হয়নি।
+*/
 
 .hero{
-    width:100%;
 
-    background-image:url("home-banner.png");
-    background-size:100% auto;
-    background-position:center top;
-    background-repeat:no-repeat;
+    width:100%;
 
     position:relative;
 
-    min-height:0;
-    aspect-ratio:16 / 9;
-
     display:block;
+
+    background-image:url("home-banner.png");
+
+    background-repeat:no-repeat;
+
+    background-position:center top;
+
+    background-size:100% auto;
+
+    /*
+       ছবির স্বাভাবিক ratio বজায় রাখার জন্য
+       min-height রাখা হয়েছে।
+    */
+
+    min-height:560px;
 }
 
 
-/* =========================
-   INFORMATION
-========================= */
+/* =====================================
+   INFORMATION SECTION
+===================================== */
 
 .info-section{
+
     width:100%;
 
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
 
     background:#120000;
 
     border-top:2px solid #9b0000;
+
     border-bottom:2px solid #9b0000;
 }
 
-.info-box{
-    min-height:320px;
 
-    padding:28px 22px;
+/* =====================================
+   INFO BOX
+===================================== */
+
+.info-box{
+
+    min-height:360px;
+
+    padding:45px 30px;
 
     text-align:center;
 
     border-right:1px solid #5c4200;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
 }
+
 
 .info-box:last-child{
     border-right:none;
 }
 
+
+/* =====================================
+   ICON
+===================================== */
+
 .icon{
-    width:82px;
-    height:82px;
 
-    margin:0 auto 18px;
+    width:110px;
+    height:110px;
 
-    border:2px solid #ffd21a;
+    margin:0 auto 25px;
+
+    border:3px solid #ffd21a;
+
     border-radius:50%;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
-    font-size:40px;
+    font-size:52px;
+
     color:#ffd21a;
 
     background:#170000;
+
+    flex-shrink:0;
 }
+
+
+/* =====================================
+   INFO HEADING
+===================================== */
 
 .info-box h2{
+
     color:#ffd21a;
-    font-size:24px;
-    margin-bottom:15px;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    line-height:1.4;
 }
+
+
+/* =====================================
+   INFO TEXT
+===================================== */
 
 .info-box p{
-    color:#eee;
-    font-size:17px;
-    line-height:1.9;
+
+    color:#eeeeee;
+
+    font-size:18px;
+
+    line-height:2;
+
+    max-width:500px;
+
+    margin:0 auto;
 }
 
 
-/* =========================
+/* =====================================
    CONTACT FOOTER
-========================= */
+===================================== */
 
 .contact-footer{
+
+    width:100%;
+
     background:#030303;
+
+    border-top:2px solid #9b0000;
+
     border-bottom:1px solid #7a0000;
 }
 
+
+/* =====================================
+   CONTACT CONTAINER
+===================================== */
+
 .contact-container{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
+
     width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
 }
 
+
+/* =====================================
+   CONTACT BOX
+===================================== */
+
 .contact-box{
-    min-height:105px;
+
+    min-height:125px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    gap:12px;
-    padding:15px;
+    gap:15px;
+
+    padding:20px;
 
     border-right:1px solid #5a3000;
 
     text-align:left;
 }
 
+
 .contact-box:last-child{
     border-right:none;
 }
 
+
+/* =====================================
+   CONTACT ICON
+===================================== */
+
 .contact-icon{
+
     font-size:35px;
+
     color:#f1b700;
+
     flex-shrink:0;
 }
 
+
+/* =====================================
+   CONTACT TEXT
+===================================== */
+
 .contact-text{
-    color:#eee;
+
+    color:#eeeeee;
+
     font-size:16px;
-    line-height:1.6;
+
+    line-height:1.7;
+
+    word-break:break-word;
 }
+
 
 .contact-text a{
-    color:#eee;
+
+    color:#eeeeee;
+
     text-decoration:none;
+
+    transition:0.3s;
 }
+
 
 .contact-text a:hover{
+
     color:#ffd21a;
+
 }
 
 
-/* =========================
+/* =====================================
    COPYRIGHT
-========================= */
+===================================== */
 
 .copyright{
+
     background:#050505;
 
     text-align:center;
 
-    padding:16px;
+    padding:18px 15px;
 
     color:#d7b85a;
 
     font-size:15px;
+
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =====================================
+   TABLET
+===================================== */
 
-@media(max-width:800px){
+@media(max-width:900px){
 
     .navbar{
-        min-height:65px;
+
+        min-height:68px;
+
         overflow-x:auto;
+
+        justify-content:flex-start;
+
+        -webkit-overflow-scrolling:touch;
+    }
+
+
+    .nav-menu{
+
+        width:max-content;
+
+        gap:32px;
+
+        padding:0 25px;
+
         justify-content:flex-start;
     }
 
-    .nav-menu{
-        gap:28px;
-        padding:0 20px;
-        white-space:nowrap;
-    }
 
     .nav-menu a{
-        font-size:15px;
-        padding:23px 0 15px;
+
+        font-size:16px;
+
+        padding:24px 0 16px;
     }
+
 
     .hero{
-        min-height:560px;
-        padding-bottom:25px;
+
+        min-height:500px;
+
+        background-size:100% auto;
+
+        background-position:center top;
     }
+
 
     .info-section{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
+
     .info-box{
-        min-height:300px;
+
+        min-height:330px;
+
+        padding:40px 25px;
+    }
+
+
+    .info-box:nth-child(2){
+
+        border-right:none;
+    }
+
+
+    .info-box:nth-child(1),
+    .info-box:nth-child(2){
+
         border-bottom:1px solid #5c4200;
     }
 
-    .info-box:nth-child(2),
-    .info-box:nth-child(4){
-        border-right:none;
-    }
 
     .info-box h2{
-        font-size:21px;
+
+        font-size:24px;
     }
+
 
     .info-box p{
-        font-size:15px;
+
+        font-size:16px;
+
+        line-height:1.9;
     }
+
 
     .contact-container{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+            repeat(2,1fr);
     }
+
 
     .contact-box{
-        min-height:95px;
-        font-size:14px;
+
+        min-height:110px;
     }
 
-    .contact-box:nth-child(2),
-    .contact-box:nth-child(4){
+
+    .contact-box:nth-child(2){
+
         border-right:none;
     }
 
-    .contact-icon{
-        font-size:28px;
+
+    .contact-box:nth-child(1),
+    .contact-box:nth-child(2){
+
+        border-bottom:1px solid #5a3000;
     }
 
-    .contact-text{
-        font-size:13px;
-    }
 }
 
 
-/* =========================
-   SMALL MOBILE
-========================= */
+/* =====================================
+   MOBILE
+===================================== */
 
-@media(max-width:500px){
+@media(max-width:600px){
+
+    body{
+        width:100%;
+    }
+
+
+    /* NAVIGATION */
+
+    .navbar{
+
+        min-height:62px;
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+    }
+
 
     .nav-menu{
-        gap:22px;
+
+        gap:28px;
+
+        padding:0 20px;
+
+        width:max-content;
     }
+
 
     .nav-menu a{
-        font-size:14px;
+
+        font-size:15px;
+
+        padding:22px 0 14px;
     }
 
-   .hero{
-    min-height:0;
-    aspect-ratio:16 / 9;
 
-    background-size:100% auto;
-    background-position:center top;
-    background-repeat:no-repeat;
-}
+    /* HERO */
+
+    .hero{
+
+        width:100%;
+
+        min-height:360px;
+
+        background-size:100% auto;
+
+        background-position:center top;
+
+        background-repeat:no-repeat;
+    }
+
+
+    /* INFO */
 
     .info-section{
+
         grid-template-columns:1fr;
     }
+
 
     .info-box{
-        border-right:none !important;
+
+        width:100%;
+
         min-height:auto;
-        padding:28px 25px;
+
+        padding:55px 25px;
+
+        border-right:none !important;
+
+        border-bottom:1px solid #5c4200;
     }
 
+
+    .info-box:last-child{
+
+        border-bottom:none;
+    }
+
+
+    .icon{
+
+        width:105px;
+        height:105px;
+
+        font-size:48px;
+
+        margin-bottom:25px;
+    }
+
+
+    .info-box h2{
+
+        font-size:26px;
+
+        margin-bottom:20px;
+    }
+
+
+    .info-box p{
+
+        font-size:17px;
+
+        line-height:2;
+
+        width:100%;
+
+        max-width:500px;
+    }
+
+
+    /* CONTACT */
+
     .contact-container{
+
         grid-template-columns:1fr;
     }
 
+
     .contact-box{
-        border-right:none !important;
-        border-bottom:1px solid #5a3000;
+
+        width:100%;
+
+        min-height:105px;
 
         justify-content:flex-start;
 
-        padding-left:30px;
+        padding:20px 30px;
+
+        border-right:none !important;
+
+        border-bottom:1px solid #5a3000;
     }
 
+
     .contact-box:last-child{
+
         border-bottom:none;
     }
+
+
+    .contact-icon{
+
+        font-size:30px;
+    }
+
+
+    .contact-text{
+
+        font-size:14px;
+
+        line-height:1.6;
+    }
+
+
+    /* COPYRIGHT */
+
+    .copyright{
+
+        font-size:13px;
+
+        padding:16px 10px;
+    }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media(max-width:400px){
+
+    .nav-menu{
+
+        gap:22px;
+
+        padding:0 16px;
+    }
+
+
+    .nav-menu a{
+
+        font-size:14px;
+    }
+
+
+    .hero{
+
+        min-height:300px;
+    }
+
+
+    .info-box{
+
+        padding:45px 20px;
+    }
+
+
+    .info-box h2{
+
+        font-size:23px;
+    }
+
+
+    .info-box p{
+
+        font-size:16px;
+
+        line-height:1.9;
+    }
+
+
+    .icon{
+
+        width:95px;
+        height:95px;
+
+        font-size:43px;
+    }
+
+
+    .contact-box{
+
+        padding-left:22px;
+        padding-right:22px;
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =====================================
      HEADER
-========================= -->
+===================================== -->
 
 <header>
 
@@ -373,25 +779,41 @@ header{
 
 <ul class="nav-menu">
 
-<li>
-<a href="#home" class="active">HOME</a>
-</li>
 
 <li>
-<a href="#about">ABOUT US</a>
+<a href="#home" class="active">
+HOME
+</a>
 </li>
 
-<li>
-<a href="#events">EVENTS</a>
-</li>
 
 <li>
-<a href="#gallery">GALLERY</a>
+<a href="#about">
+ABOUT US
+</a>
 </li>
 
+
 <li>
-<a href="#contact">CONTACT</a>
+<a href="#events">
+EVENTS
+</a>
 </li>
+
+
+<li>
+<a href="#gallery">
+GALLERY
+</a>
+</li>
+
+
+<li>
+<a href="#contact">
+CONTACT
+</a>
+</li>
+
 
 </ul>
 
@@ -400,111 +822,110 @@ header{
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
 
-<section class="hero" id="home">
+<!-- =====================================
+     HERO
+===================================== -->
+
+<section
+    class="hero"
+    id="home">
 </section>
 
 
-<!-- =========================
-     INFORMATION
-========================= -->
+
+<!-- =====================================
+     INFORMATION SECTION
+===================================== -->
 
 <section class="info-section">
 
 
-<!-- =========================
+<!-- =====================================
      ABOUT
-========================= -->
+===================================== -->
 
-<div class="info-box" id="about">
+<div
+    class="info-box"
+    id="about">
+
 
 <div class="icon">
 👥
 </div>
 
+
 <h2>
 আমাদের পরিচয়
 </h2>
 
+
 <p>
-বুদবুদ সংহতি একটি সামাজিক
-ও সাংস্কৃতিক সংগঠন।
-আমরা একসাথে কাজ করি সমাজ
-ও মানুষের জন্য।
+বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক
+সংগঠন। আমরা একসাথে কাজ করি সমাজ ও
+মানুষের জন্য।
 </p>
+
 
 </div>
 
 
-<!-- =========================
-     EVENTS
-========================= -->
 
-<div class="info-box" id="events">
+<!-- =====================================
+     EVENTS
+===================================== -->
+
+<div
+    class="info-box"
+    id="events">
+
 
 <div class="icon">
 📅
 </div>
 
+
 <h2>
 আমাদের কার্যক্রম
 </h2>
 
+
 <p>
-দুর্গা পূজা, রক্তদান, শিক্ষা
-সহায়তা, খেলাধুলা এবং
-বিভিন্ন সামাজিক অনুষ্ঠান
+দুর্গা পূজা, রক্তদান, শিক্ষা সহায়তা,
+খেলাধুলা এবং বিভিন্ন সামাজিক অনুষ্ঠান
 আমাদের নিয়মিত কার্যক্রম।
 </p>
+
 
 </div>
 
 
-<!-- =========================
-     GALLERY
-========================= -->
 
-<div class="info-box" id="gallery">
+<!-- =====================================
+     GALLERY
+===================================== -->
+
+<div
+    class="info-box"
+    id="gallery">
+
 
 <div class="icon">
 🖼️
 </div>
 
+
 <h2>
 গ্যালারি
 </h2>
 
-<p>
-আমাদের বিভিন্ন অনুষ্ঠান ও
-কার্যক্রমের কিছু ছবি দেখুন
-আমাদের গ্যালারিতে।
-</p>
-
-</div>
-
-
-<!-- =========================
-     CONTACT INFO
-========================= -->
-
-<div class="info-box">
-
-<div class="icon">
-🤝
-</div>
-
-<h2>
-যোগাযোগ করুন
-</h2>
 
 <p>
-আমাদের সাথে যুক্ত হতে
-অথবা যেকোনো সহযোগিতার
-জন্য যোগাযোগ করুন।
+আমাদের বিভিন্ন অনুষ্ঠান ও স্মরণীয়
+মুহূর্তগুলোর কিছু ছবি দেখুন আমাদের
+গ্যালারিতে।
 </p>
+
 
 </div>
 
@@ -512,11 +933,14 @@ header{
 </section>
 
 
-<!-- =========================
-     CONTACT FOOTER
-========================= -->
 
-<footer id="contact" class="contact-footer">
+<!-- =====================================
+     CONTACT FOOTER
+===================================== -->
+
+<footer
+    id="contact"
+    class="contact-footer">
 
 
 <div class="contact-container">
@@ -526,78 +950,100 @@ header{
 
 <div class="contact-box">
 
+
 <div class="contact-icon">
 📍
 </div>
 
+
 <div class="contact-text">
 
 Budbud, Burdwan<br>
+
 West Bengal, India
 
 </div>
 
+
 </div>
+
 
 
 <!-- FACEBOOK -->
 
 <div class="contact-box">
 
+
 <div class="contact-icon">
 ⓕ
 </div>
 
+
 <div class="contact-text">
 
 Budbud SANHATI<br>
+
 Official
 
 </div>
 
+
 </div>
+
 
 
 <!-- PHONE -->
 
 <div class="contact-box">
 
+
 <div class="contact-icon">
 📞
 </div>
 
+
 <div class="contact-text">
+
 
 <a href="tel:9547222144">
 9547222144
 </a>
 
+
 <br>
+
 
 <a href="tel:+919563881523">
 +91 9563881523
 </a>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 
 <!-- EMAIL -->
 
 <div class="contact-box">
 
+
 <div class="contact-icon">
 ✉
 </div>
 
+
 <div class="contact-text">
 
+
 <a href="mailto:budbud.sanhati@gmail.com">
+
 budbud.sanhati@gmail.com
+
 </a>
 
-</div>
 
 </div>
 
@@ -605,9 +1051,13 @@ budbud.sanhati@gmail.com
 </div>
 
 
-<!-- =========================
+</div>
+
+
+
+<!-- =====================================
      COPYRIGHT
-========================= -->
+===================================== -->
 
 <div class="copyright">
 
@@ -620,4 +1070,5 @@ budbud.sanhati@gmail.com
 
 
 </body>
+
 </html>
