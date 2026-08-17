@@ -41,14 +41,9 @@ html{
 }
 
 body{
-    width:100%;
-    min-height:100vh;
-
     background:#050000;
     color:#ffffff;
-
     font-family:"Noto Serif Bengali",serif;
-
     overflow-x:hidden;
 }
 
@@ -59,7 +54,6 @@ a{
 
 img{
     max-width:100%;
-    height:auto;
     display:block;
 }
 
@@ -76,7 +70,7 @@ img{
     width:100%;
     height:72px;
 
-    background:#080000;
+    background:#050505;
 
     border-bottom:3px solid #e00000;
 
@@ -88,8 +82,6 @@ img{
 .nav-container{
     width:100%;
     max-width:1200px;
-
-    margin:auto;
 
     display:flex;
     align-items:center;
@@ -108,14 +100,8 @@ img{
     list-style:none;
 }
 
-.nav-menu li{
-    flex-shrink:0;
-}
-
 .nav-menu a{
     position:relative;
-
-    display:block;
 
     color:#f3d49a;
 
@@ -165,13 +151,7 @@ img{
 
     width:100%;
 
-    background:
-        radial-gradient(
-            circle at center,
-            #350800 0%,
-            #120000 55%,
-            #050000 100%
-        );
+    background:#120000;
 
     border-bottom:3px solid #e00000;
 
@@ -181,8 +161,6 @@ img{
 .hero-image{
     width:100%;
     height:auto;
-
-    min-height:250px;
 
     display:block;
 
@@ -199,9 +177,9 @@ img{
 
     z-index:5;
 
-    width:auto;
-
     text-align:center;
+
+    width:auto;
 }
 
 
@@ -223,12 +201,11 @@ img{
 
     border-radius:15px;
 
-    background:
-        linear-gradient(
-            180deg,
-            #ff1a1a,
-            #d40000
-        );
+    background:linear-gradient(
+        180deg,
+        #ff1919,
+        #d60000
+    );
 
     border:3px solid #ffc400;
 
@@ -248,6 +225,10 @@ img{
 
 .hero .welcome-btn:hover{
     transform:scale(1.05);
+}
+
+body .welcome-btn:not(.hero .welcome-btn){
+    display:none !important;
 }
 
 
@@ -294,29 +275,17 @@ img{
 .quick-section{
 
     width:100%;
-    max-width:100%;
 
     display:grid;
 
-    grid-template-columns:
-        repeat(4,minmax(0,1fr));
+    grid-template-columns:repeat(4,1fr);
 
-    background:
-        linear-gradient(
-            135deg,
-            #180000,
-            #080000
-        );
+    background:#100000;
 
-    border-bottom:2px solid #6b2100;
-
-    overflow:hidden;
+    border-bottom:1px solid #7a2b00;
 }
 
 .quick-card{
-
-    width:100%;
-    min-width:0;
 
     min-height:235px;
 
@@ -324,7 +293,7 @@ img{
 
     text-align:center;
 
-    border-right:1px solid #572000;
+    border-right:1px solid #5b2100;
 
     transition:.3s;
 }
@@ -356,8 +325,6 @@ img{
     font-size:29px;
 
     color:#ffc400;
-
-    flex-shrink:0;
 }
 
 .quick-card h3{
@@ -367,19 +334,15 @@ img{
     font-size:21px;
 
     margin-bottom:12px;
-
-    line-height:1.4;
 }
 
 .quick-card p{
 
-    color:#eeeeee;
+    color:#eee;
 
     font-size:14px;
 
     line-height:1.8;
-
-    overflow-wrap:anywhere;
 }
 
 
@@ -393,24 +356,9 @@ img{
 
     padding:80px 20px;
 
-    background:
-        linear-gradient(
-            180deg,
-            #0b0000,
-            #070000
-        );
+    background:#100000;
 
-    border-bottom:1px solid #401500;
-
-    overflow:hidden;
-}
-
-.section-container{
-
-    width:100%;
-    max-width:1050px;
-
-    margin:auto;
+    border-bottom:1px solid #5b2100;
 }
 
 .section-title{
@@ -424,8 +372,6 @@ img{
     margin-bottom:45px;
 
     font-weight:800;
-
-    line-height:1.4;
 }
 
 .section-title::after{
@@ -441,6 +387,15 @@ img{
     margin-top:8px;
 }
 
+.section-container{
+
+    width:100%;
+
+    max-width:1050px;
+
+    margin:auto;
+}
+
 
 /* =====================================================
    ABOUT
@@ -448,12 +403,11 @@ img{
 
 .about-content{
 
-    width:100%;
+    text-align:center;
+
     max-width:850px;
 
     margin:auto;
-
-    text-align:center;
 }
 
 .big-icon{
@@ -473,13 +427,11 @@ img{
     justify-content:center;
 
     font-size:60px;
-
-    background:#150000;
 }
 
 .about-content p{
 
-    color:#eeeeee;
+    color:#eee;
 
     font-size:20px;
 
@@ -495,42 +447,18 @@ img{
 
 .event-grid{
 
-    width:100%;
-
     display:grid;
 
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
+    grid-template-columns:repeat(3,1fr);
 
     gap:25px;
 }
 
-.event-link{
-
-    display:block;
-
-    width:100%;
-
-    min-width:0;
-
-    color:inherit;
-}
-
 .event-card{
 
-    width:100%;
-    min-width:0;
+    background:#180000;
 
-    height:100%;
-
-    background:
-        linear-gradient(
-            145deg,
-            #180000,
-            #0d0000
-        );
-
-    border:1px solid #6b2300;
+    border:1px solid #762800;
 
     border-radius:12px;
 
@@ -551,6 +479,22 @@ img{
         0 0 20px rgba(255,180,0,.15);
 }
 
+.event-link{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:inherit;
+}
+
+.event-link .event-card{
+
+    height:100%;
+
+    cursor:pointer;
+}
+
 .event-icon{
 
     font-size:48px;
@@ -565,19 +509,15 @@ img{
     font-size:23px;
 
     margin-bottom:12px;
-
-    line-height:1.4;
 }
 
 .event-card p{
 
-    color:#dddddd;
+    color:#eee;
 
     font-size:15px;
 
     line-height:1.8;
-
-    overflow-wrap:anywhere;
 }
 
 
@@ -587,57 +527,165 @@ img{
 
 .gallery-grid{
 
-    width:100%;
-
     display:grid;
 
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
+    grid-template-columns:repeat(2,1fr);
 
-    gap:18px;
+    gap:22px;
+
+    width:100%;
 }
 
 .gallery-item{
 
+    position:relative;
+
     width:100%;
-    min-width:0;
 
-    height:220px;
+    height:330px;
 
-    background:
-        radial-gradient(
-            circle at center,
-            #3a0a00,
-            #160000 60%,
-            #090000
-        );
+    background:#180000;
 
-    border:1px solid #682000;
+    border:2px solid #7b2900;
 
-    border-radius:10px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    font-size:55px;
-
-    color:#ffc400;
+    border-radius:14px;
 
     overflow:hidden;
 
-    transition:.3s;
+    cursor:pointer;
+
+    box-shadow:
+        0 0 15px rgba(255,170,0,.08);
+
+    transition:.35s;
 }
 
 .gallery-item:hover{
 
-    transform:scale(1.02);
+    transform:translateY(-5px);
 
     border-color:#ffc400;
 
     box-shadow:
-        0 0 18px rgba(255,190,0,.2);
+        0 0 25px rgba(255,190,0,.25);
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.04);
+}
+
+
+/* =====================================================
+   GALLERY IMAGE NUMBER
+===================================================== */
+
+.gallery-number{
+
+    position:absolute;
+
+    left:12px;
+
+    bottom:12px;
+
+    background:rgba(0,0,0,.75);
+
+    color:#ffc400;
+
+    border:1px solid #ffc400;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    z-index:2;
+}
+
+
+/* =====================================================
+   IMAGE POPUP
+===================================================== */
+
+.image-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:99999;
+
+    background:rgba(0,0,0,.94);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+}
+
+.image-modal.show{
+
+    display:flex;
+}
+
+.image-modal img{
+
+    max-width:95vw;
+
+    max-height:90vh;
+
+    object-fit:contain;
+
+    border:2px solid #ffc400;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 0 35px rgba(255,190,0,.3);
+}
+
+.close-modal{
+
+    position:absolute;
+
+    top:20px;
+
+    right:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    border:2px solid #ffc400;
+
+    background:#b00000;
+
+    color:#fff;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    z-index:100000;
 }
 
 
@@ -647,12 +695,9 @@ img{
 
 .contact-grid{
 
-    width:100%;
-
     display:grid;
 
-    grid-template-columns:
-        repeat(2,minmax(0,1fr));
+    grid-template-columns:repeat(2,1fr);
 
     gap:25px;
 
@@ -663,17 +708,9 @@ img{
 
 .contact-card{
 
-    width:100%;
-    min-width:0;
+    background:#180000;
 
-    background:
-        linear-gradient(
-            145deg,
-            #180000,
-            #0d0000
-        );
-
-    border:1px solid #6a2300;
+    border:1px solid #762800;
 
     border-radius:12px;
 
@@ -696,20 +733,16 @@ img{
     font-size:22px;
 
     margin-bottom:12px;
-
-    line-height:1.4;
 }
 
 .contact-card a,
 .contact-card p{
 
-    color:#eeeeee;
+    color:#eee;
 
     font-size:17px;
 
     line-height:1.8;
-
-    overflow-wrap:anywhere;
 }
 
 .contact-card a:hover{
@@ -733,8 +766,8 @@ img{
         radial-gradient(
             circle at center,
             #4a1000 0%,
-            #180000 45%,
-            #050000 100%
+            #190000 45%,
+            #080000 100%
         );
 
     border-top:2px solid #8c0000;
@@ -744,6 +777,7 @@ img{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
@@ -778,8 +812,6 @@ img{
 
     text-shadow:
         0 0 15px rgba(255,180,0,.35);
-
-    line-height:1.4;
 }
 
 
@@ -789,23 +821,13 @@ img{
 
 footer{
 
-    width:100%;
+    background:#080808;
 
-    background:
-        linear-gradient(
-            180deg,
-            #080808,
-            #020202
-        );
-
-    border-top:3px solid #ff0000;
-
-    overflow:hidden;
+    border-top:2px solid #ff0000;
 }
 
 .footer-info{
 
-    width:100%;
     max-width:1100px;
 
     margin:auto;
@@ -814,8 +836,7 @@ footer{
 
     display:grid;
 
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
+    grid-template-columns:repeat(3,1fr);
 
     gap:20px;
 
@@ -826,15 +847,11 @@ footer{
 
 .footer-item{
 
-    min-width:0;
-
-    color:#dddddd;
+    color:#ddd;
 
     font-size:14px;
 
     line-height:1.7;
-
-    overflow-wrap:anywhere;
 }
 
 .footer-item strong{
@@ -844,11 +861,9 @@ footer{
 
 .footer-item a{
 
-    color:#dddddd;
+    color:#ddd;
 
     transition:.3s;
-
-    overflow-wrap:anywhere;
 }
 
 .footer-item a:hover{
@@ -858,75 +873,15 @@ footer{
 
 .copyright{
 
-    width:100%;
-
     text-align:center;
 
-    color:#aaaaaa;
+    color:#aaa;
 
     font-size:13px;
 
     padding:15px;
 
-    border-top:1px solid #331000;
-
-    line-height:1.6;
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media(max-width:900px){
-
-    .nav-menu{
-        gap:35px;
-    }
-
-    .nav-menu a{
-        font-size:17px;
-    }
-
-    .quick-section{
-
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-    }
-
-    .quick-card{
-
-        min-height:230px;
-
-        padding:28px 18px;
-
-        border-right:1px solid #572000;
-        border-bottom:1px solid #572000;
-    }
-
-    .quick-card:nth-child(2),
-    .quick-card:nth-child(4){
-
-        border-right:none;
-    }
-
-    .event-grid{
-
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-    }
-
-    .gallery-grid{
-
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-    }
-
-    .footer-info{
-
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-    }
+    border-top:1px solid #4a1800;
 }
 
 
@@ -934,7 +889,7 @@ footer{
    MOBILE
 ===================================================== */
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .navbar{
 
@@ -942,27 +897,15 @@ footer{
 
         overflow-x:auto;
 
-        overflow-y:hidden;
-
         justify-content:flex-start;
-
-        -webkit-overflow-scrolling:touch;
     }
 
     .nav-container{
 
-        width:max-content;
-
         min-width:max-content;
-
-        margin:0;
     }
 
     .nav-menu{
-
-        width:max-content;
-
-        min-width:max-content;
 
         gap:28px;
 
@@ -973,37 +916,28 @@ footer{
 
     .nav-menu a{
 
-        font-size:15px;
+        font-size:16px;
 
         padding:20px 0;
     }
-
-
-    /* HERO */
 
     .hero-image{
 
         width:100%;
 
-        min-height:220px;
+        height:auto;
 
         object-fit:cover;
     }
 
     .hero-content{
 
-        bottom:18px;
-
-        width:100%;
-
-        padding:0 15px;
+        bottom:20px;
     }
 
     .hero .welcome-btn{
 
-        min-width:160px;
-
-        width:auto;
+        min-width:175px;
 
         height:50px;
 
@@ -1019,31 +953,18 @@ footer{
         font-size:22px;
     }
 
-
-    /* QUICK MENU */
-
     .quick-section{
 
-        width:100%;
-
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-
-        overflow:hidden;
+        grid-template-columns:repeat(2,1fr);
     }
 
     .quick-card{
 
-        width:100%;
-        min-width:0;
-
         min-height:220px;
 
-        padding:25px 12px;
+        padding:25px 14px;
 
-        border-right:1px solid #572000;
-
-        border-bottom:1px solid #572000;
+        border-bottom:1px solid #4b1800;
     }
 
     .quick-card:nth-child(2),
@@ -1052,45 +973,27 @@ footer{
         border-right:none;
     }
 
-    .quick-icon{
-
-        width:58px;
-        height:58px;
-
-        font-size:26px;
-    }
-
     .quick-card h3{
 
         font-size:18px;
-
-        line-height:1.5;
     }
 
     .quick-card p{
 
         font-size:13px;
-
-        line-height:1.8;
     }
-
-
-    /* SECTION */
 
     .section{
 
-        padding:60px 14px;
+        padding:60px 16px;
     }
 
     .section-title{
 
-        font-size:29px;
+        font-size:30px;
 
         margin-bottom:35px;
     }
-
-
-    /* ABOUT */
 
     .big-icon{
 
@@ -1098,8 +1001,6 @@ footer{
         height:105px;
 
         font-size:48px;
-
-        margin-bottom:28px;
     }
 
     .about-content p{
@@ -1109,81 +1010,42 @@ footer{
         line-height:2;
     }
 
-
-    /* EVENTS */
-
     .event-grid{
 
-        grid-template-columns:
-            repeat(1,minmax(0,1fr));
+        grid-template-columns:1fr;
 
         gap:18px;
     }
 
-    .event-card{
-
-        padding:28px 18px;
-    }
-
-    .event-card h3{
-
-        font-size:21px;
-    }
-
-    .event-card p{
-
-        font-size:14px;
-    }
-
-
-    /* GALLERY */
-
     .gallery-grid{
 
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-
-        gap:12px;
-    }
-
-    .gallery-item{
-
-        width:100%;
-
-        height:150px;
-
-        font-size:42px;
-    }
-
-
-    /* CONTACT */
-
-    .contact-grid{
-
-        grid-template-columns:
-            repeat(1,minmax(0,1fr));
+        grid-template-columns:1fr;
 
         gap:15px;
     }
 
-    .contact-card{
+    .gallery-item{
 
-        padding:27px 15px;
+        height:390px;
+
+        border-radius:12px;
     }
 
-    .contact-card h3{
+    .contact-grid{
 
-        font-size:20px;
+        grid-template-columns:1fr;
+
+        gap:15px;
     }
 
-    .contact-card a,
-    .contact-card p{
+    .footer-info{
 
-        font-size:15px;
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+        padding:20px 15px;
     }
-
-
-    /* DURGA */
 
     .durga-banner{
 
@@ -1197,33 +1059,9 @@ footer{
 
     .durga-banner h2{
 
-        font-size:31px;
+        font-size:32px;
     }
 
-
-    /* FOOTER */
-
-    .footer-info{
-
-        grid-template-columns:
-            repeat(1,minmax(0,1fr));
-
-        gap:14px;
-
-        padding:22px 15px;
-    }
-
-    .footer-item{
-
-        font-size:14px;
-    }
-
-    .copyright{
-
-        font-size:12px;
-
-        padding:14px 10px;
-    }
 }
 
 
@@ -1236,52 +1074,23 @@ footer{
     .nav-menu{
 
         gap:24px;
-
-        padding-left:15px;
-        padding-right:15px;
     }
 
     .nav-menu a{
 
-        font-size:14px;
+        font-size:15px;
     }
-
-
-    .hero-image{
-
-        min-height:200px;
-    }
-
-    .hero .welcome-btn{
-
-        min-width:150px;
-
-        height:48px;
-
-        font-size:20px;
-    }
-
 
     .quick-card{
 
         min-height:235px;
 
-        padding:22px 8px;
-    }
-
-    .quick-icon{
-
-        width:55px;
-        height:55px;
-
-        font-size:24px;
-
-        margin-bottom:12px;
+        padding:22px 10px;
     }
 
     .quick-card h3{
 
-        font-size:16px;
+        font-size:17px;
     }
 
     .quick-card p{
@@ -1291,67 +1100,20 @@ footer{
         line-height:1.7;
     }
 
+    .hero .welcome-btn{
 
-    .section{
+        min-width:160px;
 
-        padding:55px 12px;
+        height:48px;
+
+        font-size:20px;
     }
-
-    .section-title{
-
-        font-size:27px;
-    }
-
 
     .gallery-item{
 
-        height:130px;
-
-        font-size:38px;
+        height:360px;
     }
 
-
-    .contact-card{
-
-        padding:24px 12px;
-    }
-
-}
-
-
-/* =====================================================
-   EXTRA SAFETY
-   HORIZONTAL OVERFLOW PREVENTION
-===================================================== */
-
-html,
-body,
-main,
-section,
-footer,
-header,
-div,
-a{
-    max-width:100%;
-}
-
-.quick-section *,
-.event-grid *,
-.gallery-grid *,
-.contact-grid *{
-    min-width:0;
-}
-
-
-/* =====================================================
-   JAVASCRIPT FALLBACK / OLD BUTTON HIDE
-===================================================== */
-
-body > .welcome-btn,
-main > .welcome-btn,
-section:not(.hero) .welcome-btn,
-footer .welcome-btn{
-    display:none !important;
 }
 
 </style>
@@ -1455,10 +1217,7 @@ footer .welcome-btn{
 <section class="quick-section">
 
 
-    <a
-        href="#about"
-        class="quick-card"
-    >
+    <a href="#about" class="quick-card">
 
         <div class="quick-icon">
             👥
@@ -1477,10 +1236,7 @@ footer .welcome-btn{
 
 
 
-    <a
-        href="#events"
-        class="quick-card"
-    >
+    <a href="#events" class="quick-card">
 
         <div class="quick-icon">
             📅
@@ -1499,10 +1255,7 @@ footer .welcome-btn{
 
 
 
-    <a
-        href="#gallery"
-        class="quick-card"
-    >
+    <a href="#gallery" class="quick-card">
 
         <div class="quick-icon">
             🖼️
@@ -1521,10 +1274,7 @@ footer .welcome-btn{
 
 
 
-    <a
-        href="#contact"
-        class="quick-card"
-    >
+    <a href="#contact" class="quick-card">
 
         <div class="quick-icon">
             🤝
@@ -1550,10 +1300,7 @@ footer .welcome-btn{
      ABOUT
 ===================================================== -->
 
-<section
-    id="about"
-    class="section"
->
+<section id="about" class="section">
 
     <div class="section-container">
 
@@ -1592,10 +1339,7 @@ footer .welcome-btn{
      EVENTS
 ===================================================== -->
 
-<section
-    id="events"
-    class="section"
->
+<section id="events" class="section">
 
     <div class="section-container">
 
@@ -1606,8 +1350,6 @@ footer .welcome-btn{
 
         <div class="event-grid">
 
-
-            <!-- DURGA PUJA -->
 
             <div class="event-card">
 
@@ -1627,8 +1369,6 @@ footer .welcome-btn{
             </div>
 
 
-
-            <!-- BLOOD DONATION -->
 
             <a
                 href="roktodan.html"
@@ -1656,8 +1396,6 @@ footer .welcome-btn{
 
 
 
-            <!-- EDUCATION -->
-
             <div class="event-card">
 
                 <div class="event-icon">
@@ -1676,8 +1414,6 @@ footer .welcome-btn{
             </div>
 
 
-
-            <!-- SPORTS -->
 
             <div class="event-card">
 
@@ -1698,8 +1434,6 @@ footer .welcome-btn{
 
 
 
-            <!-- CULTURAL -->
-
             <div class="event-card">
 
                 <div class="event-icon">
@@ -1718,8 +1452,6 @@ footer .welcome-btn{
             </div>
 
 
-
-            <!-- SOCIAL SERVICE -->
 
             <div class="event-card">
 
@@ -1751,42 +1483,86 @@ footer .welcome-btn{
      GALLERY
 ===================================================== -->
 
-<section
-    id="gallery"
-    class="section"
->
+<section id="gallery" class="section">
 
     <div class="section-container">
 
         <h2 class="section-title">
-            গ্যালারি
+            দুর্গা পূজা গ্যালারি
         </h2>
+
 
         <div class="gallery-grid">
 
 
-            <div class="gallery-item">
-                🖼️
-            </div>
+            <!-- PHOTO 1 -->
 
             <div class="gallery-item">
-                🪔
+
+                <img
+                    src="1000075978.jpg"
+                    alt="দুর্গা পূজা ছবি ১"
+                    loading="lazy"
+                >
+
+                <span class="gallery-number">
+                    ছবি ১
+                </span>
+
             </div>
 
-            <div class="gallery-item">
-                🎉
-            </div>
+
+
+            <!-- PHOTO 2 -->
 
             <div class="gallery-item">
-                👥
+
+                <img
+                    src="1000075970.jpg"
+                    alt="দুর্গা পূজা ছবি ২"
+                    loading="lazy"
+                >
+
+                <span class="gallery-number">
+                    ছবি ২
+                </span>
+
             </div>
 
-            <div class="gallery-item">
-                🎭
-            </div>
+
+
+            <!-- PHOTO 3 -->
 
             <div class="gallery-item">
-                ❤️
+
+                <img
+                    src="1000075975.jpg"
+                    alt="দুর্গা পূজা ছবি ৩"
+                    loading="lazy"
+                >
+
+                <span class="gallery-number">
+                    ছবি ৩
+                </span>
+
+            </div>
+
+
+
+            <!-- PHOTO 4 -->
+
+            <div class="gallery-item">
+
+                <img
+                    src="1000075971.jpg"
+                    alt="দুর্গা পূজা ছবি ৪"
+                    loading="lazy"
+                >
+
+                <span class="gallery-number">
+                    ছবি ৪
+                </span>
+
             </div>
 
 
@@ -1802,10 +1578,7 @@ footer .welcome-btn{
      CONTACT
 ===================================================== -->
 
-<section
-    id="contact"
-    class="section"
->
+<section id="contact" class="section">
 
     <div class="section-container">
 
@@ -1815,8 +1588,6 @@ footer .welcome-btn{
 
         <div class="contact-grid">
 
-
-            <!-- ADDRESS -->
 
             <div class="contact-card">
 
@@ -1829,16 +1600,13 @@ footer .welcome-btn{
                 </h3>
 
                 <p>
-                    Budbud, Burdwan
-                    <br>
+                    Budbud, Burdwan<br>
                     West Bengal, India
                 </p>
 
             </div>
 
 
-
-            <!-- PHONE -->
 
             <div class="contact-card">
 
@@ -1868,8 +1636,6 @@ footer .welcome-btn{
 
 
 
-            <!-- EMAIL -->
-
             <div class="contact-card">
 
                 <div class="icon">
@@ -1891,8 +1657,6 @@ footer .welcome-btn{
             </div>
 
 
-
-            <!-- JOIN -->
 
             <div class="contact-card">
 
@@ -1954,8 +1718,6 @@ footer .welcome-btn{
     <div class="footer-info">
 
 
-        <!-- ADDRESS -->
-
         <div class="footer-item">
 
             📍
@@ -1975,8 +1737,6 @@ footer .welcome-btn{
         </div>
 
 
-
-        <!-- PHONE -->
 
         <div class="footer-item">
 
@@ -2001,8 +1761,6 @@ footer .welcome-btn{
         </div>
 
 
-
-        <!-- EMAIL -->
 
         <div class="footer-item">
 
@@ -2036,6 +1794,27 @@ footer .welcome-btn{
 
 
 <!-- =====================================================
+     IMAGE POPUP
+===================================================== -->
+
+<div class="image-modal" id="imageModal">
+
+    <button
+        class="close-modal"
+        id="closeModal">
+        ×
+    </button>
+
+    <img
+        id="modalImage"
+        src=""
+        alt="দুর্গা পূজা ছবি">
+
+</div>
+
+
+
+<!-- =====================================================
      JAVASCRIPT
 ===================================================== -->
 
@@ -2046,36 +1825,31 @@ footer .welcome-btn{
    SMOOTH SCROLL
 ===================================================== */
 
-document
-.querySelectorAll('a[href^="#"]')
-.forEach(function(link){
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
 
-    link.addEventListener(
-        "click",
-        function(event){
+    link.addEventListener("click",function(event){
 
-            const targetId =
-                this.getAttribute("href");
+        const targetId =
+            this.getAttribute("href");
 
-            const target =
-                document.querySelector(targetId);
+        const target =
+            document.querySelector(targetId);
 
-            if(target){
+        if(target){
 
-                event.preventDefault();
+            event.preventDefault();
 
-                target.scrollIntoView({
+            target.scrollIntoView({
 
-                    behavior:"smooth",
+                behavior:"smooth",
 
-                    block:"start"
+                block:"start"
 
-                });
-
-            }
+            });
 
         }
-    );
+
+    });
 
 });
 
@@ -2086,73 +1860,121 @@ document
 ===================================================== */
 
 const sections =
-    document.querySelectorAll(
-        "section[id]"
-    );
+    document.querySelectorAll("section[id]");
 
 const navLinks =
-    document.querySelectorAll(
-        ".nav-menu a"
-    );
+    document.querySelectorAll(".nav-menu a");
 
 
-window.addEventListener(
-    "scroll",
-    function(){
+window.addEventListener("scroll",function(){
 
-        let current = "home";
+    let current = "home";
 
 
-        sections.forEach(
-            function(section){
+    sections.forEach(function(section){
 
-                const sectionTop =
-                    section.offsetTop - 120;
-
-
-                if(
-                    window.scrollY >=
-                    sectionTop
-                ){
-
-                    current =
-                        section.getAttribute(
-                            "id"
-                        );
-
-                }
-
-            }
-        );
+        const sectionTop =
+            section.offsetTop - 120;
 
 
-        navLinks.forEach(
-            function(link){
+        if(window.scrollY >= sectionTop){
 
-                link.classList.remove(
-                    "active"
-                );
+            current =
+                section.getAttribute("id");
+
+        }
+
+    });
 
 
-                if(
-                    link.getAttribute(
-                        "href"
-                    )
-                    ===
-                    "#"+current
-                ){
+    navLinks.forEach(function(link){
 
-                    link.classList.add(
-                        "active"
-                    );
+        link.classList.remove("active");
 
-                }
 
-            }
-        );
+        if(
+            link.getAttribute("href")
+            ===
+            "#"+current
+        ){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+
+/* =====================================================
+   GALLERY IMAGE POPUP
+===================================================== */
+
+const galleryImages =
+    document.querySelectorAll(".gallery-item img");
+
+const imageModal =
+    document.getElementById("imageModal");
+
+const modalImage =
+    document.getElementById("modalImage");
+
+const closeModal =
+    document.getElementById("closeModal");
+
+
+galleryImages.forEach(function(image){
+
+    image.addEventListener("click",function(){
+
+        modalImage.src =
+            this.src;
+
+        modalImage.alt =
+            this.alt;
+
+        imageModal.classList.add("show");
+
+    });
+
+});
+
+
+closeModal.addEventListener("click",function(){
+
+    imageModal.classList.remove("show");
+
+    modalImage.src = "";
+
+});
+
+
+imageModal.addEventListener("click",function(event){
+
+    if(event.target === imageModal){
+
+        imageModal.classList.remove("show");
+
+        modalImage.src = "";
 
     }
-);
+
+});
+
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key === "Escape"){
+
+        imageModal.classList.remove("show");
+
+        modalImage.src = "";
+
+    }
+
+});
 
 
 </script>
