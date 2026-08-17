@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Budbud SANHATI</title>
 
-  <meta name="description"
-        content="Budbud SANHATI - একটি সংস্কৃতি, একটি পরিবার, একটি অঙ্গীকার">
+  <meta
+    name="description"
+    content="Budbud SANHATI - একটি সংস্কৃতি, একটি পরিবার, একটি অঙ্গীকার"
+  >
 
+  <!-- Bengali Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
 
   <style>
+
+    /* =========================================
+       BASIC RESET
+    ========================================= */
 
     * {
       margin: 0;
@@ -28,8 +39,9 @@
     }
 
     body {
+      margin: 0;
       background: #050000;
-      color: white;
+      color: #ffffff;
       font-family: "Noto Serif Bengali", serif;
       overflow-x: hidden;
     }
@@ -45,9 +57,9 @@
     }
 
 
-    /* =========================
+    /* =========================================
        NAVBAR
-    ========================= */
+    ========================================= */
 
     .navbar {
       position: sticky;
@@ -55,9 +67,10 @@
       z-index: 9999;
 
       width: 100%;
-      height: 70px;
+      height: 72px;
 
       background: #050505;
+
       border-bottom: 3px solid #e00000;
 
       display: flex;
@@ -68,14 +81,21 @@
     .nav-container {
       width: 100%;
       max-width: 1200px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .nav-menu {
+      width: 100%;
+
       display: flex;
       align-items: center;
       justify-content: center;
 
-      gap: 50px;
+      gap: 55px;
+
       list-style: none;
     }
 
@@ -83,13 +103,15 @@
       position: relative;
 
       color: #f3d49a;
-      font-size: 18px;
+
+      font-size: 19px;
       font-weight: 600;
 
-      padding: 22px 0;
-      white-space: nowrap;
+      padding: 23px 0;
 
       transition: 0.3s;
+
+      white-space: nowrap;
     }
 
     .nav-menu a:hover,
@@ -101,6 +123,7 @@
       content: "";
 
       position: absolute;
+
       left: 0;
       bottom: 5px;
 
@@ -118,9 +141,12 @@
     }
 
 
-    /* =========================
+    /* =========================================
        HERO
-    ========================= */
+       IMPORTANT:
+       এখানে কোনো আলাদা Welcome button নেই।
+       home-banner.png-এর নিজের Welcome থাকবে।
+    ========================================= */
 
     .hero {
       position: relative;
@@ -128,6 +154,7 @@
       width: 100%;
 
       background: #050000;
+
       border-bottom: 3px solid #e00000;
 
       overflow: hidden;
@@ -136,98 +163,22 @@
     .hero-image {
       width: 100%;
       height: auto;
-      display: block;
-    }
 
-    .hero-content {
-      position: absolute;
-
-      left: 50%;
-      bottom: 35px;
-
-      transform: translateX(-50%);
-
-      z-index: 5;
-
-      text-align: center;
-    }
-
-    .welcome-btn {
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      min-width: 220px;
-      height: 58px;
-
-      padding: 0 45px;
-
-      border-radius: 15px;
-
-      background: linear-gradient(
-        180deg,
-        #ff1919,
-        #d60000
-      );
-
-      border: 3px solid #ffc400;
-
-      box-shadow:
-        0 0 12px #ffb300,
-        0 0 30px rgba(255,180,0,0.55);
-
-      color: #ffe8a0;
-
-      font-size: 25px;
-      font-weight: 800;
-
-      transition: 0.3s;
-    }
-
-    .welcome-btn:hover {
-      transform: scale(1.05);
-    }
-
-    .down-arrow {
       display: block;
 
-      margin-top: 5px;
-
-      color: #ffd000;
-      font-size: 27px;
-
-      animation: arrowMove 1.4s infinite;
-    }
-
-    @keyframes arrowMove {
-
-      0% {
-        transform: translateY(0);
-        opacity: .6;
-      }
-
-      50% {
-        transform: translateY(8px);
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateY(0);
-        opacity: .6;
-      }
-
+      object-fit: cover;
     }
 
 
-    /* =========================
+    /* =========================================
        QUICK MENU
-    ========================= */
+    ========================================= */
 
     .quick-section {
       width: 100%;
 
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
 
       background: #080000;
@@ -244,7 +195,7 @@
 
       border-right: 1px solid #4b1800;
 
-      transition: .3s;
+      transition: 0.3s;
     }
 
     .quick-card:last-child {
@@ -256,57 +207,59 @@
     }
 
     .quick-icon {
-      width: 62px;
-      height: 62px;
+      width: 72px;
+      height: 72px;
 
       margin: 0 auto 15px;
 
-      border: 2px solid #ffc400;
+      border: 3px solid #ffc400;
+
       border-radius: 50%;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
-      font-size: 29px;
+      font-size: 34px;
 
-      box-shadow: 0 0 12px rgba(255,190,0,.25);
+      color: #ffc400;
+
+      box-shadow:
+        0 0 12px rgba(255, 190, 0, 0.25);
     }
 
     .quick-card h3 {
       color: #ffc400;
-      font-size: 21px;
+
+      font-size: 23px;
 
       margin-bottom: 12px;
+
+      font-weight: 800;
     }
 
     .quick-card p {
       color: #ddd;
 
-      font-size: 14px;
-      line-height: 1.8;
+      font-size: 15px;
+
+      line-height: 1.9;
     }
 
 
-    /* =========================
+    /* =========================================
        GENERAL SECTION
-    ========================= */
+    ========================================= */
 
     .section {
       width: 100%;
 
-      padding: 75px 20px;
+      padding: 80px 20px;
 
       background: #070000;
 
       border-bottom: 1px solid #401500;
-    }
-
-    .section-container {
-      width: 100%;
-      max-width: 1050px;
-
-      margin: auto;
     }
 
     .section-title {
@@ -333,10 +286,18 @@
       margin-top: 8px;
     }
 
+    .section-container {
+      width: 100%;
 
-    /* =========================
+      max-width: 1050px;
+
+      margin: auto;
+    }
+
+
+    /* =========================================
        ABOUT
-    ========================= */
+    ========================================= */
 
     .about-content {
       text-align: center;
@@ -353,30 +314,34 @@
       margin: 0 auto 35px;
 
       border: 4px solid #ffc400;
+
       border-radius: 50%;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
       font-size: 60px;
 
-      box-shadow: 0 0 18px rgba(255,190,0,.2);
+      box-shadow:
+        0 0 18px rgba(255, 190, 0, 0.2);
     }
 
     .about-content p {
       color: #eee;
 
       font-size: 20px;
+
       line-height: 2.1;
 
       margin-bottom: 15px;
     }
 
 
-    /* =========================
+    /* =========================================
        EVENTS
-    ========================= */
+    ========================================= */
 
     .event-grid {
       display: grid;
@@ -390,13 +355,14 @@
       background: #110000;
 
       border: 1px solid #6b2300;
+
       border-radius: 12px;
 
       padding: 30px 20px;
 
       text-align: center;
 
-      transition: .3s;
+      transition: 0.3s;
     }
 
     .event-card:hover {
@@ -404,11 +370,13 @@
 
       border-color: #ffc400;
 
-      box-shadow: 0 0 20px rgba(255,180,0,.15);
+      box-shadow:
+        0 0 20px rgba(255, 180, 0, 0.15);
     }
 
     .event-icon {
       font-size: 48px;
+
       margin-bottom: 15px;
     }
 
@@ -424,13 +392,14 @@
       color: #ddd;
 
       font-size: 15px;
+
       line-height: 1.8;
     }
 
 
-    /* =========================
+    /* =========================================
        GALLERY
-    ========================= */
+    ========================================= */
 
     .gallery-grid {
       display: grid;
@@ -441,22 +410,28 @@
     }
 
     .gallery-item {
+      position: relative;
+
       height: 220px;
 
       background: #180000;
 
       border: 1px solid #682000;
+
       border-radius: 10px;
 
       overflow: hidden;
 
-      transition: .3s;
+      transition: 0.3s;
     }
 
     .gallery-item:hover {
       transform: scale(1.02);
 
       border-color: #ffc400;
+
+      box-shadow:
+        0 0 18px rgba(255, 190, 0, 0.2);
     }
 
     .gallery-item img {
@@ -464,12 +439,18 @@
       height: 100%;
 
       object-fit: cover;
+
+      transition: 0.4s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
     }
 
 
-    /* =========================
+    /* =========================================
        CONTACT
-    ========================= */
+    ========================================= */
 
     .contact-grid {
       display: grid;
@@ -487,15 +468,26 @@
       background: #100000;
 
       border: 1px solid #6a2300;
+
       border-radius: 12px;
 
       padding: 30px 20px;
 
       text-align: center;
+
+      transition: 0.3s;
+    }
+
+    .contact-card:hover {
+      border-color: #ffc400;
+
+      box-shadow:
+        0 0 18px rgba(255, 190, 0, 0.12);
     }
 
     .contact-card .icon {
       font-size: 40px;
+
       margin-bottom: 12px;
     }
 
@@ -512,6 +504,7 @@
       color: #eee;
 
       font-size: 17px;
+
       line-height: 1.8;
     }
 
@@ -520,11 +513,13 @@
     }
 
 
-    /* =========================
+    /* =========================================
        DURGA BANNER
-    ========================= */
+    ========================================= */
 
     .durga-banner {
+      position: relative;
+
       width: 100%;
 
       min-height: 180px;
@@ -559,7 +554,8 @@
 
       line-height: 1;
 
-      text-shadow: 0 0 15px #ff9d00;
+      text-shadow:
+        0 0 15px #ff9d00;
     }
 
     .durga-banner h2 {
@@ -567,15 +563,16 @@
 
       font-size: 43px;
 
-      margin-top: 5px;
+      margin-top: 8px;
 
-      text-shadow: 0 0 15px rgba(255,180,0,.35);
+      text-shadow:
+        0 0 15px rgba(255, 180, 0, 0.35);
     }
 
 
-    /* =========================
+    /* =========================================
        FOOTER
-    ========================= */
+    ========================================= */
 
     footer {
       background: #030303;
@@ -588,7 +585,7 @@
 
       margin: auto;
 
-      padding: 22px 20px;
+      padding: 25px 20px;
 
       display: grid;
 
@@ -597,6 +594,8 @@
       gap: 20px;
 
       text-align: center;
+
+      align-items: center;
     }
 
     .footer-item {
@@ -604,7 +603,7 @@
 
       font-size: 14px;
 
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .footer-item strong {
@@ -613,6 +612,8 @@
 
     .footer-item a {
       color: #ddd;
+
+      transition: 0.3s;
     }
 
     .footer-item a:hover {
@@ -632,9 +633,9 @@
     }
 
 
-    /* =========================
+    /* =========================================
        MOBILE
-    ========================= */
+    ========================================= */
 
     @media (max-width: 768px) {
 
@@ -660,42 +661,38 @@
 
       .nav-menu a {
         font-size: 16px;
+
         padding: 20px 0;
       }
 
 
-      .hero-content {
-        bottom: 20px;
+      /* HERO */
+
+      .hero-image {
+        width: 100%;
+
+        height: auto;
+
+        object-fit: cover;
       }
 
-      .welcome-btn {
-        min-width: 175px;
 
-        height: 50px;
-
-        padding: 0 28px;
-
-        font-size: 21px;
-      }
-
-      .down-arrow {
-        font-size: 22px;
-      }
-
+      /* QUICK MENU */
 
       .quick-section {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .quick-card {
-        min-height: 220px;
+        min-height: 230px;
 
         padding: 25px 14px;
 
         border-bottom: 1px solid #4b1800;
       }
 
-      .quick-card:nth-child(2) {
+      .quick-card:nth-child(2),
+      .quick-card:nth-child(4) {
         border-right: none;
       }
 
@@ -705,8 +702,19 @@
 
       .quick-card p {
         font-size: 13px;
+
+        line-height: 1.8;
       }
 
+      .quick-icon {
+        width: 68px;
+        height: 68px;
+
+        font-size: 30px;
+      }
+
+
+      /* SECTION */
 
       .section {
         padding: 60px 16px;
@@ -719,6 +727,8 @@
       }
 
 
+      /* ABOUT */
+
       .big-icon {
         width: 105px;
         height: 105px;
@@ -728,15 +738,21 @@
 
       .about-content p {
         font-size: 17px;
+
         line-height: 2;
       }
 
 
+      /* EVENTS */
+
       .event-grid {
         grid-template-columns: 1fr;
+
         gap: 18px;
       }
 
+
+      /* GALLERY */
 
       .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -745,23 +761,20 @@
       }
 
       .gallery-item {
-        height: 150px;
+        height: 160px;
       }
 
 
+      /* CONTACT */
+
       .contact-grid {
         grid-template-columns: 1fr;
+
         gap: 15px;
       }
 
 
-      .footer-info {
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-
-        padding: 20px 15px;
-      }
+      /* DURGA */
 
       .durga-banner {
         min-height: 150px;
@@ -775,12 +788,23 @@
         font-size: 32px;
       }
 
+
+      /* FOOTER */
+
+      .footer-info {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 22px 15px;
+      }
+
     }
 
 
-    /* =========================
+    /* =========================================
        SMALL PHONE
-    ========================= */
+    ========================================= */
 
     @media (max-width: 420px) {
 
@@ -804,33 +828,31 @@
 
       .quick-card p {
         font-size: 12px;
+
         line-height: 1.7;
       }
 
-      .welcome-btn {
-        min-width: 160px;
-
-        height: 48px;
-
-        font-size: 20px;
+      .gallery-item {
+        height: 135px;
       }
 
-      .gallery-item {
-        height: 130px;
+      .section-title {
+        font-size: 28px;
       }
 
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-  <!-- =========================
+  <!-- =========================================
        NAVBAR
-  ========================= -->
+  ========================================= -->
 
   <header class="navbar">
 
@@ -839,23 +861,33 @@
       <ul class="nav-menu">
 
         <li>
-          <a href="#home" class="active">HOME</a>
+          <a href="#home" class="active">
+            HOME
+          </a>
         </li>
 
         <li>
-          <a href="#about">ABOUT US</a>
+          <a href="#about">
+            ABOUT US
+          </a>
         </li>
 
         <li>
-          <a href="#events">EVENTS</a>
+          <a href="#events">
+            EVENTS
+          </a>
         </li>
 
         <li>
-          <a href="#gallery">GALLERY</a>
+          <a href="#gallery">
+            GALLERY
+          </a>
         </li>
 
         <li>
-          <a href="#contact">CONTACT</a>
+          <a href="#contact">
+            CONTACT
+          </a>
         </li>
 
       </ul>
@@ -866,9 +898,11 @@
 
 
 
-  <!-- =========================
-       HOME
-  ========================= -->
+  <!-- =========================================
+       HOME / HERO
+       শুধু home-banner.png
+       কোনো extra welcome button নেই
+  ========================================= -->
 
   <main>
 
@@ -880,33 +914,26 @@
         class="hero-image"
       >
 
-      <div class="hero-content">
-
-        <a href="#about" class="welcome-btn">
-          স্বাগতম
-        </a>
-
-        <span class="down-arrow">
-          ↓
-        </span>
-
-      </div>
-
     </section>
 
 
 
-    <!-- =========================
+    <!-- =========================================
          QUICK MENU
-    ========================= -->
+    ========================================= -->
 
     <section class="quick-section">
 
+
       <a href="#about" class="quick-card">
 
-        <div class="quick-icon">👥</div>
+        <div class="quick-icon">
+          👥
+        </div>
 
-        <h3>আমাদের পরিচয়</h3>
+        <h3>
+          আমাদের পরিচয়
+        </h3>
 
         <p>
           বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
@@ -916,11 +943,16 @@
       </a>
 
 
+
       <a href="#events" class="quick-card">
 
-        <div class="quick-icon">📅</div>
+        <div class="quick-icon">
+          📅
+        </div>
 
-        <h3>আমাদের কার্যক্রম</h3>
+        <h3>
+          আমাদের কার্যক্রম
+        </h3>
 
         <p>
           দুর্গা পূজা, রক্তদান, শিক্ষা সহায়তা,
@@ -930,11 +962,16 @@
       </a>
 
 
+
       <a href="#gallery" class="quick-card">
 
-        <div class="quick-icon">🖼️</div>
+        <div class="quick-icon">
+          🖼️
+        </div>
 
-        <h3>গ্যালারি</h3>
+        <h3>
+          গ্যালারি
+        </h3>
 
         <p>
           আমাদের বিভিন্ন অনুষ্ঠান ও সাংস্কৃতিক
@@ -944,11 +981,16 @@
       </a>
 
 
+
       <a href="#contact" class="quick-card">
 
-        <div class="quick-icon">🤝</div>
+        <div class="quick-icon">
+          🤝
+        </div>
 
-        <h3>যোগাযোগ করুন</h3>
+        <h3>
+          যোগাযোগ করুন
+        </h3>
 
         <p>
           আমাদের সাথে যুক্ত হতে অথবা সহযোগিতার
@@ -957,13 +999,14 @@
 
       </a>
 
+
     </section>
 
 
 
-    <!-- =========================
-         ABOUT
-    ========================= -->
+    <!-- =========================================
+         ABOUT US
+    ========================================= -->
 
     <section id="about" class="section">
 
@@ -1000,9 +1043,9 @@
 
 
 
-    <!-- =========================
+    <!-- =========================================
          EVENTS
-    ========================= -->
+    ========================================= -->
 
     <section id="events" class="section">
 
@@ -1012,14 +1055,19 @@
           আমাদের কার্যক্রম
         </h2>
 
+
         <div class="event-grid">
 
 
           <div class="event-card">
 
-            <div class="event-icon">🪔</div>
+            <div class="event-icon">
+              🪔
+            </div>
 
-            <h3>দুর্গা পূজা</h3>
+            <h3>
+              দুর্গা পূজা
+            </h3>
 
             <p>
               প্রতি বছর সুন্দর ও সুশৃঙ্খলভাবে
@@ -1029,11 +1077,16 @@
           </div>
 
 
+
           <div class="event-card">
 
-            <div class="event-icon">🩸</div>
+            <div class="event-icon">
+              🩸
+            </div>
 
-            <h3>রক্তদান</h3>
+            <h3>
+              রক্তদান
+            </h3>
 
             <p>
               মানুষের জীবন বাঁচাতে স্বেচ্ছায়
@@ -1043,11 +1096,16 @@
           </div>
 
 
+
           <div class="event-card">
 
-            <div class="event-icon">📚</div>
+            <div class="event-icon">
+              📚
+            </div>
 
-            <h3>শিক্ষা সহায়তা</h3>
+            <h3>
+              শিক্ষা সহায়তা
+            </h3>
 
             <p>
               প্রয়োজনীয় ছাত্রছাত্রীদের পাশে থেকে
@@ -1057,11 +1115,16 @@
           </div>
 
 
+
           <div class="event-card">
 
-            <div class="event-icon">⚽</div>
+            <div class="event-icon">
+              ⚽
+            </div>
 
-            <h3>খেলাধুলা</h3>
+            <h3>
+              খেলাধুলা
+            </h3>
 
             <p>
               যুব সমাজকে উৎসাহিত করতে বিভিন্ন
@@ -1071,11 +1134,16 @@
           </div>
 
 
+
           <div class="event-card">
 
-            <div class="event-icon">🎭</div>
+            <div class="event-icon">
+              🎭
+            </div>
 
-            <h3>সাংস্কৃতিক অনুষ্ঠান</h3>
+            <h3>
+              সাংস্কৃতিক অনুষ্ঠান
+            </h3>
 
             <p>
               গান, নাচ, নাটকসহ বিভিন্ন সাংস্কৃতিক
@@ -1085,11 +1153,16 @@
           </div>
 
 
+
           <div class="event-card">
 
-            <div class="event-icon">❤️</div>
+            <div class="event-icon">
+              ❤️
+            </div>
 
-            <h3>সামাজিক সেবা</h3>
+            <h3>
+              সামাজিক সেবা
+            </h3>
 
             <p>
               মানুষের প্রয়োজনে পাশে থাকা এবং
@@ -1107,9 +1180,17 @@
 
 
 
-    <!-- =========================
+    <!-- =========================================
          GALLERY
-    ========================= -->
+         
+         এখানে নিজের ছবি বসাবে:
+         gallery1.jpg
+         gallery2.jpg
+         gallery3.jpg
+         gallery4.jpg
+         gallery5.jpg
+         gallery6.jpg
+    ========================================= -->
 
     <section id="gallery" class="section">
 
@@ -1119,37 +1200,78 @@
           গ্যালারি
         </h2>
 
+
         <div class="gallery-grid">
 
 
-          <!--
-            GitHub-এ ছবি আপলোড করার পর
-            নামগুলো gallery1.jpg, gallery2.jpg
-            ইত্যাদি রাখবে।
-          -->
-
           <div class="gallery-item">
-            <img src="gallery1.jpg" alt="Budbud SANHATI Gallery 1">
+
+            <img
+              src="gallery1.jpg"
+              alt="Budbud SANHATI Gallery Photo 1"
+              loading="lazy"
+            >
+
           </div>
 
-          <div class="gallery-item">
-            <img src="gallery2.jpg" alt="Budbud SANHATI Gallery 2">
-          </div>
+
 
           <div class="gallery-item">
-            <img src="gallery3.jpg" alt="Budbud SANHATI Gallery 3">
+
+            <img
+              src="gallery2.jpg"
+              alt="Budbud SANHATI Gallery Photo 2"
+              loading="lazy"
+            >
+
           </div>
 
-          <div class="gallery-item">
-            <img src="gallery4.jpg" alt="Budbud SANHATI Gallery 4">
-          </div>
+
 
           <div class="gallery-item">
-            <img src="gallery5.jpg" alt="Budbud SANHATI Gallery 5">
+
+            <img
+              src="gallery3.jpg"
+              alt="Budbud SANHATI Gallery Photo 3"
+              loading="lazy"
+            >
+
           </div>
 
+
+
           <div class="gallery-item">
-            <img src="gallery6.jpg" alt="Budbud SANHATI Gallery 6">
+
+            <img
+              src="gallery4.jpg"
+              alt="Budbud SANHATI Gallery Photo 4"
+              loading="lazy"
+            >
+
+          </div>
+
+
+
+          <div class="gallery-item">
+
+            <img
+              src="gallery5.jpg"
+              alt="Budbud SANHATI Gallery Photo 5"
+              loading="lazy"
+            >
+
+          </div>
+
+
+
+          <div class="gallery-item">
+
+            <img
+              src="gallery6.jpg"
+              alt="Budbud SANHATI Gallery Photo 6"
+              loading="lazy"
+            >
+
           </div>
 
 
@@ -1161,9 +1283,9 @@
 
 
 
-    <!-- =========================
+    <!-- =========================================
          CONTACT
-    ========================= -->
+    ========================================= -->
 
     <section id="contact" class="section">
 
@@ -1173,14 +1295,19 @@
           যোগাযোগ করুন
         </h2>
 
+
         <div class="contact-grid">
 
 
           <div class="contact-card">
 
-            <div class="icon">📍</div>
+            <div class="icon">
+              📍
+            </div>
 
-            <h3>ঠিকানা</h3>
+            <h3>
+              ঠিকানা
+            </h3>
 
             <p>
               Budbud, Burdwan<br>
@@ -1190,11 +1317,16 @@
           </div>
 
 
+
           <div class="contact-card">
 
-            <div class="icon">📞</div>
+            <div class="icon">
+              📞
+            </div>
 
-            <h3>ফোন করুন</h3>
+            <h3>
+              ফোন করুন
+            </h3>
 
             <p>
 
@@ -1213,11 +1345,16 @@
           </div>
 
 
+
           <div class="contact-card">
 
-            <div class="icon">✉️</div>
+            <div class="icon">
+              ✉️
+            </div>
 
-            <h3>ই-মেইল</h3>
+            <h3>
+              ই-মেইল
+            </h3>
 
             <p>
 
@@ -1230,11 +1367,16 @@
           </div>
 
 
+
           <div class="contact-card">
 
-            <div class="icon">🤝</div>
+            <div class="icon">
+              🤝
+            </div>
 
-            <h3>আমাদের সাথে যুক্ত হন</h3>
+            <h3>
+              আমাদের সাথে যুক্ত হন
+            </h3>
 
             <p>
               সংগঠনের বিভিন্ন কার্যক্রমে
@@ -1250,13 +1392,16 @@
 
     </section>
 
+
   </main>
 
 
 
-  <!-- =========================
+  <!-- =========================================
        DURGA BANNER
-  ========================= -->
+       Footer-এর ঠিক আগে।
+       এর পরে কোনো পুরনো card/section নেই।
+  ========================================= -->
 
   <section class="durga-banner">
 
@@ -1276,12 +1421,12 @@
 
 
 
-  <!-- =========================
-       CLEAN FOOTER
-       পুরোনো 98765 43210 এখানে নেই
-  ========================= -->
+  <!-- =========================================
+       FOOTER
+  ========================================= -->
 
   <footer>
+
 
     <div class="footer-info">
 
@@ -1290,7 +1435,9 @@
 
         📍
 
-        <strong>ঠিকানা</strong>
+        <strong>
+          ঠিকানা
+        </strong>
 
         <br>
 
@@ -1300,11 +1447,14 @@
       </div>
 
 
+
       <div class="footer-item">
 
         📞
 
-        <strong>ফোন</strong>
+        <strong>
+          ফোন
+        </strong>
 
         <br>
 
@@ -1321,11 +1471,14 @@
       </div>
 
 
+
       <div class="footer-item">
 
         ✉️
 
-        <strong>ই-মেইল</strong>
+        <strong>
+          ই-মেইল
+        </strong>
 
         <br>
 
@@ -1346,43 +1499,66 @@
 
     </div>
 
+
   </footer>
 
 
 
-  <!-- =========================
+  <!-- =========================================
        JAVASCRIPT
-  ========================= -->
+    ========================================= -->
 
   <script>
 
-    /* Smooth scrolling */
 
-    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    /* =========================================
+       SMOOTH SCROLL
+    ========================================= */
 
-      link.addEventListener("click", function(event) {
+    document
+      .querySelectorAll('a[href^="#"]')
+      .forEach(function(link) {
 
-        const targetId = this.getAttribute("href");
+        link.addEventListener("click", function(event) {
 
-        const target = document.querySelector(targetId);
+          const targetId =
+            this.getAttribute("href");
 
-        if (target) {
+          const target =
+            document.querySelector(targetId);
 
-          event.preventDefault();
+          if (target) {
 
-          target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
+            event.preventDefault();
 
-        }
+            const navbarHeight =
+              document.querySelector(".navbar")
+              .offsetHeight;
+
+            const targetPosition =
+              target.getBoundingClientRect().top +
+              window.pageYOffset -
+              navbarHeight;
+
+            window.scrollTo({
+
+              top: targetPosition,
+
+              behavior: "smooth"
+
+            });
+
+          }
+
+        });
 
       });
 
-    });
 
 
-    /* Active navigation */
+    /* =========================================
+       ACTIVE NAVIGATION
+    ========================================= */
 
     const sections =
       document.querySelectorAll("section[id]");
@@ -1391,16 +1567,28 @@
       document.querySelectorAll(".nav-menu a");
 
 
-    window.addEventListener("scroll", function() {
+    function updateActiveNav() {
 
       let current = "home";
+
+      const scrollPosition =
+        window.scrollY +
+        document.querySelector(".navbar").offsetHeight +
+        50;
+
 
       sections.forEach(function(section) {
 
         const sectionTop =
-          section.offsetTop - 120;
+          section.offsetTop;
 
-        if (window.scrollY >= sectionTop) {
+        const sectionHeight =
+          section.offsetHeight;
+
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
 
           current =
             section.getAttribute("id");
@@ -1425,23 +1613,23 @@
 
       });
 
-    });
+    }
+
+
+    window.addEventListener(
+      "scroll",
+      updateActiveNav
+    );
+
+
+    window.addEventListener(
+      "load",
+      updateActiveNav
+    );
+
 
   </script>
 
 
 </body>
 </html>
-
-এবার গুরুত্বপূর্ণ: GitHub-এর "index.html" পুরোটা মুছে এই কোডটা বসাবে। পুরোনো "</html>"-এর পরে যদি কোনো কোড পড়ে থাকে, সেটাও রাখবে না।
-
-Gallery-র জন্য একই GitHub folder-এ পরে এই ৬টা ছবি রাখবে:
-
-- "gallery1.jpg"
-- "gallery2.jpg"
-- "gallery3.jpg"
-- "gallery4.jpg"
-- "gallery5.jpg"
-- "gallery6.jpg"
-
-তারপর Commit changes → GitHub Pages refresh করলেই হবে। ❤️
