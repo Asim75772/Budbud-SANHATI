@@ -6,18 +6,23 @@
 
   <title>Budbud SANHATI</title>
 
-  <meta name="description" content="Budbud SANHATI - একটি সংস্কৃতি, একটি পরিবার, একটি অঙ্গীকার">
+  <meta
+    name="description"
+    content="Budbud SANHATI - একটি সংস্কৃতি, একটি পরিবার, একটি অঙ্গীকার"
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
 
     /* =========================
-       BASIC RESET
+       RESET
     ========================= */
 
     * {
@@ -28,7 +33,6 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 72px;
     }
 
     body {
@@ -51,7 +55,7 @@
 
 
     /* =========================
-       TOP NAVIGATION
+       NAVBAR
     ========================= */
 
     .navbar {
@@ -97,6 +101,8 @@
 
       color: #f3d49a;
 
+      font-family: Arial, sans-serif;
+
       font-size: 19px;
       font-weight: 600;
 
@@ -136,12 +142,24 @@
 
     /* =========================
        HERO
+       IMPORTANT:
+       home-banner.png-এর ভেতরে
+       পুরোনো navbar + quick section আছে।
+       তাই শুধু HERO অংশ crop করা হচ্ছে।
     ========================= */
 
     .hero {
       position: relative;
 
       width: 100%;
+
+      /*
+        Image-এর আসল hero অংশের অনুপাত।
+      */
+      height: 64.3vw;
+
+      max-height: 700px;
+      min-height: 320px;
 
       background: #050000;
 
@@ -151,120 +169,53 @@
     }
 
     .hero-image {
+      position: absolute;
+
+      top: -7.55vw;
+      left: 0;
+
       width: 100%;
       height: auto;
 
-      display: block;
+      max-width: none;
 
-      object-fit: cover;
+      display: block;
     }
+
 
     /*
-      IMPORTANT:
-      Welcome button stays inside HERO.
+      ছবির ভেতরের আসল "স্বাগতম" button-এর
+      ওপর invisible clickable link।
+
+      এতে duplicate button হবে না।
     */
 
-    .hero-content {
+    .welcome-click {
       position: absolute;
 
-      left: 50%;
-      bottom: 38px;
-
-      transform: translateX(-50%);
-
-      z-index: 10;
-
-      text-align: center;
-
-      width: auto;
-    }
-
-
-    /* =========================
-       WELCOME BUTTON
-    ========================= */
-
-    .welcome-btn {
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      min-width: 220px;
-      height: 58px;
-
-      padding: 0 45px;
-
-      border-radius: 15px;
-
-      background: linear-gradient(
-        180deg,
-        #ff1919,
-        #d60000
-      );
-
-      border: 3px solid #ffc400;
-
-      box-shadow:
-        0 0 12px #ffb300,
-        0 0 30px rgba(255, 180, 0, 0.55);
-
-      color: #ffe8a0;
-
-      font-size: 25px;
-      font-weight: 800;
-
-      cursor: pointer;
-
-      transition: 0.3s;
-
-      position: relative;
       z-index: 20;
 
-      -webkit-tap-highlight-color: transparent;
-    }
+      left: 50%;
 
-    .welcome-btn:hover {
-      transform: scale(1.05);
+      /*
+        Original image-এর Welcome button
+        hero-এর নিচের দিকে আছে।
+      */
 
-      box-shadow:
-        0 0 20px #ffc400,
-        0 0 45px rgba(255, 180, 0, 0.7);
-    }
+      top: 82%;
 
-    .welcome-btn:active {
-      transform: scale(0.97);
-    }
+      transform: translate(-50%, -50%);
 
-    .down-arrow {
+      width: 31%;
+      height: 10%;
+
       display: block;
 
-      margin-top: 5px;
+      background: transparent;
 
-      font-size: 27px;
+      border: none;
 
-      color: #ffd000;
-
-      animation: arrowMove 1.4s infinite;
-    }
-
-    @keyframes arrowMove {
-
-      0% {
-        transform: translateY(0);
-        opacity: 0.6;
-      }
-
-      50% {
-        transform: translateY(8px);
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateY(0);
-        opacity: 0.6;
-      }
-
+      cursor: pointer;
     }
 
 
@@ -315,7 +266,6 @@
       border-radius: 50%;
 
       display: flex;
-
       align-items: center;
       justify-content: center;
 
@@ -414,7 +364,6 @@
       border-radius: 50%;
 
       display: flex;
-
       align-items: center;
       justify-content: center;
 
@@ -597,7 +546,7 @@
 
 
     /* =========================
-       DURGA FOOTER BANNER
+       DURGA BANNER
     ========================= */
 
     .durga-banner {
@@ -616,7 +565,6 @@
         );
 
       border-top: 2px solid #8c0000;
-
       border-bottom: 2px solid #8c0000;
 
       display: flex;
@@ -752,42 +700,30 @@
 
       /* HERO */
 
+      .hero {
+        height: 64.3vw;
+
+        min-height: 300px;
+
+        max-height: none;
+      }
+
       .hero-image {
-        width: 100%;
-
-        height: auto;
-
-        object-fit: cover;
-      }
-
-      .hero-content {
-        bottom: 20px;
+        top: -7.55vw;
 
         width: 100%;
-
-        pointer-events: none;
       }
 
-      .welcome-btn {
-        min-width: 175px;
+      .welcome-click {
+        top: 82%;
 
-        height: 50px;
+        width: 34%;
 
-        padding: 0 28px;
-
-        font-size: 21px;
-
-        border-radius: 13px;
-
-        pointer-events: auto;
-      }
-
-      .down-arrow {
-        font-size: 22px;
+        height: 12%;
       }
 
 
-      /* QUICK CARDS */
+      /* QUICK */
 
       .quick-section {
         grid-template-columns: repeat(2, 1fr);
@@ -801,7 +737,8 @@
         border-bottom: 1px solid #4b1800;
       }
 
-      .quick-card:nth-child(2) {
+      .quick-card:nth-child(2),
+      .quick-card:nth-child(4) {
         border-right: none;
       }
 
@@ -931,14 +868,6 @@
         line-height: 1.7;
       }
 
-      .welcome-btn {
-        min-width: 160px;
-
-        height: 48px;
-
-        font-size: 20px;
-      }
-
       .gallery-item {
         height: 130px;
       }
@@ -1008,6 +937,12 @@
 
     <section id="home" class="hero">
 
+      <!--
+        home-banner.png-এর ভেতরের
+        পুরোনো navbar এবং নিচের অংশ
+        CSS crop করে লুকানো হচ্ছে।
+      -->
+
       <img
         src="home-banner.png"
         alt="Budbud SANHATI"
@@ -1015,23 +950,16 @@
       >
 
 
-      <!-- FIXED WELCOME BUTTON -->
+      <!--
+        ছবির আসল স্বাগতম button-এর
+        ওপর clickable invisible link।
+      -->
 
-      <div class="hero-content">
-
-        <a
-          href="#about"
-          class="welcome-btn"
-          id="welcomeButton"
-        >
-          স্বাগতম
-        </a>
-
-        <span class="down-arrow">
-          ↓
-        </span>
-
-      </div>
+      <a
+        href="#about"
+        class="welcome-click"
+        aria-label="স্বাগতম - আমাদের পরিচয়"
+      ></a>
 
     </section>
 
@@ -1488,6 +1416,7 @@
 
   <footer>
 
+
     <div class="footer-info">
 
 
@@ -1574,79 +1503,37 @@
        SMOOTH SCROLL
     ========================= */
 
-    function goToSection(id) {
-
-      const target = document.getElementById(id);
-
-      if (!target) {
-        return;
-      }
-
-      const navbarHeight =
-        document.querySelector(".navbar").offsetHeight;
-
-      const targetPosition =
-        target.getBoundingClientRect().top +
-        window.pageYOffset -
-        navbarHeight;
-
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth"
-      });
-
-    }
-
-
-    /* =========================
-       WELCOME BUTTON FIX
-    ========================= */
-
-    const welcomeButton =
-      document.getElementById("welcomeButton");
-
-    if (welcomeButton) {
-
-      welcomeButton.addEventListener("click", function(event) {
-
-        event.preventDefault();
-
-        goToSection("about");
-
-      });
-
-    }
-
-
-    /* =========================
-       ALL INTERNAL LINKS
-    ========================= */
-
     document.querySelectorAll('a[href^="#"]').forEach(function(link) {
 
       link.addEventListener("click", function(event) {
 
-        const targetId =
-          this.getAttribute("href").substring(1);
+        const targetId = this.getAttribute("href");
 
-        if (!targetId) {
-          return;
-        }
-
-        const target =
-          document.getElementById(targetId);
+        const target = document.querySelector(targetId);
 
         if (target) {
 
           event.preventDefault();
 
-          goToSection(targetId);
+          const navbarHeight =
+            document.querySelector(".navbar").offsetHeight;
+
+          const targetPosition =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            navbarHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+          });
 
         }
 
       });
 
     });
+
 
 
     /* =========================
@@ -1660,29 +1547,16 @@
       document.querySelectorAll(".nav-menu a");
 
 
-    function updateActiveNavigation() {
+    window.addEventListener("scroll", function() {
 
       let current = "home";
-
-      const scrollPosition =
-        window.scrollY +
-        document.querySelector(".navbar").offsetHeight +
-        80;
-
 
       sections.forEach(function(section) {
 
         const sectionTop =
-          section.offsetTop;
+          section.offsetTop - 150;
 
-        const sectionBottom =
-          sectionTop + section.offsetHeight;
-
-
-        if (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionBottom
-        ) {
+        if (window.scrollY >= sectionTop) {
 
           current =
             section.getAttribute("id");
@@ -1696,7 +1570,6 @@
 
         link.classList.remove("active");
 
-
         if (
           link.getAttribute("href") ===
           "#" + current
@@ -1708,19 +1581,8 @@
 
       });
 
-    }
+    });
 
-
-    window.addEventListener(
-      "scroll",
-      updateActiveNavigation
-    );
-
-
-    window.addEventListener(
-      "load",
-      updateActiveNavigation
-    );
 
   </script>
 
