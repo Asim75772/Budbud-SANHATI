@@ -2,19 +2,17 @@
 <html lang="bn">
 
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>Budbud SANHATI</title>
+<title>দুর্গা পূজা | Budbud SANHATI</title>
 
 <meta name="description"
-      content="Budbud SANHATI - একটি সংস্কৃতি, একটি পরিবার, একটি অঙ্গীকার">
+      content="Budbud SANHATI দুর্গা পূজা - ভক্তি, সংস্কৃতি, ঐতিহ্য ও সম্প্রীতির মিলনমেলা">
 
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
       href="https://fonts.gstatic.com"
@@ -68,15 +66,17 @@ img{
     z-index:9999;
 
     width:100%;
-    height:72px;
+    height:70px;
 
-    background:#050505;
+    background:rgba(5,0,0,.97);
 
     border-bottom:3px solid #e00000;
 
     display:flex;
     align-items:center;
     justify-content:center;
+
+    backdrop-filter:blur(8px);
 }
 
 .nav-container{
@@ -91,7 +91,7 @@ img{
     align-items:center;
     justify-content:center;
 
-    gap:55px;
+    gap:50px;
 
     list-style:none;
 }
@@ -101,7 +101,7 @@ img{
 
     color:#f3d49a;
 
-    font-size:19px;
+    font-size:18px;
     font-weight:700;
 
     padding:22px 0;
@@ -113,7 +113,7 @@ img{
 
 .nav-menu a:hover,
 .nav-menu a.active{
-    color:#ff1515;
+    color:#ff1717;
 }
 
 .nav-menu a::after{
@@ -125,7 +125,7 @@ img{
     bottom:5px;
 
     width:0;
-    height:4px;
+    height:3px;
 
     background:#ff0000;
 
@@ -146,106 +146,205 @@ img{
     position:relative;
 
     width:100%;
+    min-height:620px;
 
-    background:#050000;
+    background:
+        radial-gradient(
+            circle at center,
+            #4d0b00 0%,
+            #180000 45%,
+            #030000 100%
+        );
 
     border-bottom:3px solid #e00000;
 
     overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.hero-image{
-    width:100%;
-    height:auto;
-    display:block;
+.hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,190,0,.12),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(255,0,0,.12),
+            transparent 30%
+        );
+
+    pointer-events:none;
 }
 
 .hero-content{
-    position:absolute;
-
-    left:50%;
-    bottom:38px;
-
-    transform:translateX(-50%);
-
-    text-align:center;
+    position:relative;
 
     z-index:5;
+
+    width:100%;
+    max-width:950px;
+
+    padding:80px 20px;
+
+    text-align:center;
 }
 
-.welcome-btn{
+.hero-symbol{
+    font-size:70px;
+
+    color:#ffc400;
+
+    margin-bottom:10px;
+
+    text-shadow:
+        0 0 12px #ff8c00,
+        0 0 30px rgba(255,190,0,.5);
+
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+    from{
+        transform:scale(1);
+        text-shadow:0 0 10px #ff8c00;
+    }
+
+    to{
+        transform:scale(1.05);
+        text-shadow:
+            0 0 20px #ff8c00,
+            0 0 45px #ff4d00;
+    }
+
+}
+
+.hero-small{
+    color:#f3d49a;
+
+    font-size:20px;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+}
+
+.hero h1{
+    color:#ffc400;
+
+    font-size:64px;
+
+    font-weight:800;
+
+    line-height:1.3;
+
+    text-shadow:
+        0 0 15px rgba(255,180,0,.4);
+}
+
+.hero h2{
+    color:#fff;
+
+    font-size:30px;
+
+    margin-top:10px;
+
+    font-weight:600;
+}
+
+.hero-description{
+    max-width:750px;
+
+    margin:25px auto;
+
+    color:#eee;
+
+    font-size:18px;
+
+    line-height:2;
+}
+
+.hero-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+}
+
+.hero-btn{
     display:inline-flex;
 
     align-items:center;
     justify-content:center;
 
-    min-width:240px;
-    height:60px;
+    min-width:190px;
 
-    padding:0 40px;
+    padding:14px 28px;
 
-    border-radius:15px;
+    border-radius:14px;
 
     background:linear-gradient(
         180deg,
         #ff1919,
-        #d60000
+        #c90000
     );
 
-    border:3px solid #ffc400;
-
-    box-shadow:
-        0 0 12px #ffb300,
-        0 0 30px rgba(255,180,0,.55);
+    border:2px solid #ffc400;
 
     color:#ffe8a0;
 
-    font-size:25px;
+    font-size:19px;
+
     font-weight:800;
+
+    box-shadow:
+        0 0 15px rgba(255,180,0,.35);
 
     transition:.3s;
 }
 
-.welcome-btn:hover{
-    transform:scale(1.05);
+.hero-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 0 25px rgba(255,180,0,.6);
 }
 
-.down-arrow{
-    display:block;
+.hero-btn.secondary{
+    background:#180000;
 
-    margin-top:5px;
+    border-color:#9b3500;
 
-    font-size:27px;
-
-    color:#ffd000;
-
-    animation:arrowMove 1.4s infinite;
+    color:#ffc400;
 }
 
-@keyframes arrowMove{
-
-    0%{
-        transform:translateY(0);
-        opacity:.6;
-    }
-
-    50%{
-        transform:translateY(8px);
-        opacity:1;
-    }
-
-    100%{
-        transform:translateY(0);
-        opacity:.6;
-    }
+.hero-btn.secondary:hover{
+    border-color:#ffc400;
 }
 
 
 /* =====================================================
-   QUICK MENU
+   PUJA INFO STRIP
 ===================================================== */
 
-.quick-section{
+.info-strip{
     width:100%;
 
     display:grid;
@@ -257,10 +356,8 @@ img{
     border-bottom:1px solid #5b2100;
 }
 
-.quick-card{
-    min-height:235px;
-
-    padding:30px 20px;
+.info-card{
+    padding:28px 15px;
 
     text-align:center;
 
@@ -269,51 +366,39 @@ img{
     transition:.3s;
 }
 
-.quick-card:last-child{
+.info-card:last-child{
     border-right:none;
 }
 
-.quick-card:hover{
+.info-card:hover{
     background:#140000;
 }
 
-.quick-icon{
-    width:62px;
-    height:62px;
+.info-icon{
+    font-size:38px;
 
-    margin:0 auto 15px;
-
-    border:2px solid #ffc400;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    font-size:29px;
+    margin-bottom:8px;
 }
 
-.quick-card h3{
+.info-card h3{
     color:#ffc400;
 
-    font-size:21px;
+    font-size:20px;
 
-    margin-bottom:12px;
+    margin-bottom:7px;
 }
 
-.quick-card p{
+.info-card p{
     color:#ddd;
 
     font-size:14px;
 
-    line-height:1.8;
+    line-height:1.7;
 }
 
 
 /* =====================================================
-   SECTION
+   COMMON SECTION
 ===================================================== */
 
 .section{
@@ -329,7 +414,7 @@ img{
 .section-container{
     width:100%;
 
-    max-width:1050px;
+    max-width:1100px;
 
     margin:auto;
 }
@@ -341,9 +426,23 @@ img{
 
     font-size:38px;
 
-    margin-bottom:45px;
-
     font-weight:800;
+
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    max-width:750px;
+
+    margin:0 auto 45px;
+
+    text-align:center;
+
+    color:#ccc;
+
+    font-size:16px;
+
+    line-height:1.9;
 }
 
 .section-title::after{
@@ -360,155 +459,204 @@ img{
 
 
 /* =====================================================
-   ABOUT
+   ABOUT DURGA PUJA
 ===================================================== */
 
-.about-content{
-    text-align:center;
+.puja-about{
+    display:grid;
 
-    max-width:850px;
+    grid-template-columns:1fr 1fr;
 
-    margin:auto;
-}
-
-.big-icon{
-    width:125px;
-    height:125px;
-
-    margin:0 auto 35px;
-
-    border:4px solid #ffc400;
-
-    border-radius:50%;
-
-    display:flex;
+    gap:35px;
 
     align-items:center;
-    justify-content:center;
-
-    font-size:60px;
 }
 
-.about-content p{
+.puja-about-image{
+    position:relative;
+
+    min-height:420px;
+
+    border:2px solid #6b2300;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:#110000;
+
+    box-shadow:
+        0 0 25px rgba(255,180,0,.12);
+}
+
+.puja-about-image img{
+    width:100%;
+    height:100%;
+
+    min-height:420px;
+
+    object-fit:cover;
+}
+
+.puja-about-text{
+    padding:10px;
+}
+
+.puja-about-text h3{
+    color:#ffc400;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+}
+
+.puja-about-text p{
     color:#eee;
 
-    font-size:20px;
+    font-size:17px;
 
-    line-height:2.1;
+    line-height:2;
 
     margin-bottom:15px;
 }
 
+.highlight-box{
+    margin-top:25px;
 
-/* =====================================================
-   ABOUT BUTTON
-===================================================== */
+    padding:18px;
 
-.about-button-box{
-    text-align:center;
+    background:#130000;
 
-    margin-top:35px;
-}
+    border-left:4px solid #ffc400;
 
-.about-button{
-    display:inline-flex;
+    border-radius:8px;
 
-    align-items:center;
-    justify-content:center;
+    color:#f5d98e;
 
-    min-width:240px;
-
-    padding:14px 30px;
-
-    border-radius:14px;
-
-    background:linear-gradient(
-        180deg,
-        #ff1919,
-        #d60000
-    );
-
-    border:3px solid #ffc400;
-
-    box-shadow:
-        0 0 12px #ffb300,
-        0 0 28px rgba(255,180,0,.45);
-
-    color:#ffe8a0;
-
-    font-size:21px;
-
-    font-weight:800;
-
-    transition:.3s;
-}
-
-.about-button:hover{
-    transform:scale(1.05);
+    line-height:1.9;
 }
 
 
 /* =====================================================
-   EVENTS
+   PUJA FEATURES
 ===================================================== */
 
-.event-grid{
+.feature-grid{
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:25px;
+    gap:22px;
 }
 
-.event-card{
-    height:100%;
-
+.feature-card{
     background:#110000;
 
     border:1px solid #6b2300;
 
-    border-radius:12px;
+    border-radius:14px;
 
-    padding:30px 20px;
+    padding:30px 22px;
 
     text-align:center;
 
     transition:.3s;
 }
 
-.event-card:hover{
-    transform:translateY(-5px);
+.feature-card:hover{
+    transform:translateY(-6px);
 
     border-color:#ffc400;
 
     box-shadow:
-        0 0 20px rgba(255,180,0,.15);
+        0 0 25px rgba(255,180,0,.18);
 }
 
-.event-link{
-    display:block;
-}
-
-.event-icon{
-    font-size:48px;
+.feature-icon{
+    font-size:50px;
 
     margin-bottom:15px;
 }
 
-.event-card h3{
+.feature-card h3{
     color:#ffc400;
 
-    font-size:23px;
+    font-size:22px;
 
     margin-bottom:12px;
 }
 
-.event-card p{
+.feature-card p{
     color:#ddd;
 
     font-size:15px;
 
     line-height:1.8;
+}
+
+
+/* =====================================================
+   PUJA PROGRAM
+===================================================== */
+
+.program-box{
+    max-width:850px;
+
+    margin:auto;
+
+    background:#100000;
+
+    border:1px solid #6b2300;
+
+    border-radius:16px;
+
+    overflow:hidden;
+}
+
+.program-row{
+    display:grid;
+
+    grid-template-columns:150px 1fr;
+
+    border-bottom:1px solid #4b1800;
+}
+
+.program-row:last-child{
+    border-bottom:none;
+}
+
+.program-day{
+    padding:20px;
+
+    background:#170000;
+
+    color:#ffc400;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+}
+
+.program-details{
+    padding:20px;
+
+    color:#eee;
+
+    font-size:16px;
+
+    line-height:1.8;
+}
+
+.program-details strong{
+    color:#ffc400;
 }
 
 
@@ -521,13 +669,14 @@ img{
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:25px;
+    gap:22px;
 }
 
 .gallery-item{
     position:relative;
 
     width:100%;
+
     height:360px;
 
     background:#110000;
@@ -558,13 +707,13 @@ img{
 
     object-fit:cover;
 
-    transition:.4s;
-
     background:#180000;
+
+    transition:.4s;
 }
 
 .gallery-item:hover img{
-    transform:scale(1.04);
+    transform:scale(1.05);
 }
 
 .gallery-label{
@@ -575,7 +724,7 @@ img{
 
     padding:7px 15px;
 
-    background:rgba(0,0,0,.75);
+    background:rgba(0,0,0,.78);
 
     border:1px solid #ffc400;
 
@@ -583,14 +732,14 @@ img{
 
     color:#ffc400;
 
-    font-size:15px;
+    font-size:14px;
 
     z-index:2;
 }
 
 
 /* =====================================================
-   IMAGE POPUP
+   IMAGE MODAL
 ===================================================== */
 
 .image-modal{
@@ -602,10 +751,9 @@ img{
 
     z-index:100000;
 
-    background:rgba(0,0,0,.94);
+    background:rgba(0,0,0,.95);
 
     align-items:center;
-
     justify-content:center;
 
     padding:20px;
@@ -621,7 +769,6 @@ img{
     max-height:90vh;
 
     width:auto;
-
     height:auto;
 
     object-fit:contain;
@@ -638,7 +785,7 @@ img{
     position:absolute;
 
     top:18px;
-    right:25px;
+    right:20px;
 
     width:48px;
     height:48px;
@@ -666,6 +813,59 @@ img{
 
 
 /* =====================================================
+   MESSAGE / DEVOTION
+===================================================== */
+
+.message-box{
+    max-width:850px;
+
+    margin:auto;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #310900,
+            #100000
+        );
+
+    border:2px solid #6b2300;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 0 30px rgba(255,180,0,.1);
+}
+
+.message-symbol{
+    font-size:52px;
+
+    margin-bottom:15px;
+
+    color:#ffc400;
+}
+
+.message-box h3{
+    color:#ffc400;
+
+    font-size:30px;
+
+    margin-bottom:18px;
+}
+
+.message-box p{
+    color:#eee;
+
+    font-size:18px;
+
+    line-height:2;
+}
+
+
+/* =====================================================
    CONTACT
 ===================================================== */
 
@@ -674,7 +874,7 @@ img{
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:25px;
+    gap:22px;
 
     max-width:900px;
 
@@ -686,7 +886,7 @@ img{
 
     border:1px solid #6a2300;
 
-    border-radius:12px;
+    border-radius:14px;
 
     padding:30px 20px;
 
@@ -702,16 +902,16 @@ img{
 .contact-card h3{
     color:#ffc400;
 
-    font-size:22px;
+    font-size:21px;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 .contact-card a,
 .contact-card p{
     color:#eee;
 
-    font-size:17px;
+    font-size:16px;
 
     line-height:1.8;
 }
@@ -728,13 +928,13 @@ img{
 .durga-banner{
     width:100%;
 
-    min-height:180px;
+    min-height:220px;
 
     background:
         radial-gradient(
             circle at center,
-            #380b00 0%,
-            #150000 45%,
+            #430b00 0%,
+            #180000 45%,
             #030000 100%
         );
 
@@ -745,22 +945,15 @@ img{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
 }
 
-.durga-banner-inner{
-    padding:30px 20px;
-}
-
 .trident{
+    font-size:58px;
+
     color:#ffc400;
-
-    font-size:50px;
-
-    line-height:1;
 
     text-shadow:
         0 0 15px #ff9d00;
@@ -769,7 +962,15 @@ img{
 .durga-banner h2{
     color:#ffc400;
 
-    font-size:43px;
+    font-size:44px;
+
+    margin-top:8px;
+}
+
+.durga-banner p{
+    color:#f3d49a;
+
+    font-size:16px;
 
     margin-top:5px;
 }
@@ -790,7 +991,7 @@ footer{
 
     margin:auto;
 
-    padding:22px 20px;
+    padding:25px 20px;
 
     display:grid;
 
@@ -827,204 +1028,6 @@ footer{
     padding:15px;
 
     border-top:1px solid #331000;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:768px){
-
-    .navbar{
-        height:62px;
-
-        overflow-x:auto;
-
-        justify-content:flex-start;
-    }
-
-    .nav-container{
-        min-width:max-content;
-    }
-
-    .nav-menu{
-        gap:28px;
-
-        justify-content:flex-start;
-
-        padding:0 18px;
-    }
-
-    .nav-menu a{
-        font-size:16px;
-
-        padding:20px 0;
-    }
-
-    .hero-content{
-        bottom:20px;
-    }
-
-    .welcome-btn{
-        min-width:190px;
-
-        height:50px;
-
-        padding:0 25px;
-
-        font-size:21px;
-
-        border-radius:13px;
-    }
-
-    .down-arrow{
-        font-size:22px;
-    }
-
-    .quick-section{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .quick-card{
-        min-height:220px;
-
-        padding:25px 14px;
-
-        border-bottom:1px solid #4b1800;
-    }
-
-    .quick-card:nth-child(2),
-    .quick-card:nth-child(4){
-        border-right:none;
-    }
-
-    .quick-card h3{
-        font-size:18px;
-    }
-
-    .quick-card p{
-        font-size:13px;
-    }
-
-    .section{
-        padding:60px 16px;
-    }
-
-    .section-title{
-        font-size:30px;
-
-        margin-bottom:35px;
-    }
-
-    .big-icon{
-        width:105px;
-        height:105px;
-
-        font-size:48px;
-    }
-
-    .about-content p{
-        font-size:17px;
-
-        line-height:2;
-    }
-
-    .about-button{
-        min-width:210px;
-
-        padding:12px 22px;
-
-        font-size:19px;
-    }
-
-    .event-grid{
-        grid-template-columns:1fr;
-
-        gap:18px;
-    }
-
-    .gallery-grid{
-        grid-template-columns:1fr;
-
-        gap:18px;
-    }
-
-    .gallery-item{
-        height:390px;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
-
-        gap:15px;
-    }
-
-    .footer-info{
-        grid-template-columns:1fr;
-
-        gap:12px;
-
-        padding:20px 15px;
-    }
-
-    .durga-banner{
-        min-height:150px;
-    }
-
-    .trident{
-        font-size:42px;
-    }
-
-    .durga-banner h2{
-        font-size:32px;
-    }
-
-}
-
-
-/* =====================================================
-   SMALL PHONE
-===================================================== */
-
-@media(max-width:420px){
-
-    .nav-menu{
-        gap:24px;
-    }
-
-    .nav-menu a{
-        font-size:15px;
-    }
-
-    .quick-card{
-        min-height:235px;
-
-        padding:22px 10px;
-    }
-
-    .quick-card h3{
-        font-size:17px;
-    }
-
-    .quick-card p{
-        font-size:12px;
-
-        line-height:1.7;
-    }
-
-    .welcome-btn{
-        min-width:175px;
-
-        height:48px;
-
-        font-size:19px;
-    }
-
-    .gallery-item{
-        height:340px;
-    }
-
 }
 
 
@@ -1079,6 +1082,227 @@ footer{
     transform:translateY(-3px);
 }
 
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    .navbar{
+        height:62px;
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+    }
+
+    .nav-container{
+        min-width:max-content;
+    }
+
+    .nav-menu{
+        gap:25px;
+
+        justify-content:flex-start;
+
+        padding:0 18px;
+    }
+
+    .nav-menu a{
+        font-size:15px;
+
+        padding:20px 0;
+    }
+
+    .hero{
+        min-height:570px;
+    }
+
+    .hero-content{
+        padding:60px 18px;
+    }
+
+    .hero-symbol{
+        font-size:58px;
+    }
+
+    .hero-small{
+        font-size:16px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .hero-description{
+        font-size:15px;
+
+        line-height:1.9;
+    }
+
+    .hero-btn{
+        min-width:170px;
+
+        padding:12px 20px;
+
+        font-size:17px;
+    }
+
+    .info-strip{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .info-card{
+        min-height:150px;
+
+        border-bottom:1px solid #4b1800;
+    }
+
+    .info-card:nth-child(2),
+    .info-card:nth-child(4){
+        border-right:none;
+    }
+
+    .section{
+        padding:60px 16px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .section-subtitle{
+        font-size:14px;
+    }
+
+    .puja-about{
+        grid-template-columns:1fr;
+    }
+
+    .puja-about-image{
+        min-height:350px;
+    }
+
+    .puja-about-image img{
+        min-height:350px;
+    }
+
+    .puja-about-text h3{
+        font-size:26px;
+    }
+
+    .puja-about-text p{
+        font-size:16px;
+    }
+
+    .feature-grid{
+        grid-template-columns:1fr;
+    }
+
+    .program-row{
+        grid-template-columns:100px 1fr;
+    }
+
+    .program-day{
+        font-size:16px;
+        padding:15px 8px;
+    }
+
+    .program-details{
+        font-size:14px;
+        padding:15px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item{
+        height:380px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-info{
+        grid-template-columns:1fr;
+
+        padding:20px 15px;
+    }
+
+    .durga-banner{
+        min-height:180px;
+    }
+
+    .trident{
+        font-size:48px;
+    }
+
+    .durga-banner h2{
+        font-size:34px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media(max-width:420px){
+
+    .nav-menu{
+        gap:22px;
+    }
+
+    .nav-menu a{
+        font-size:14px;
+    }
+
+    .hero{
+        min-height:540px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .hero-description{
+        font-size:14px;
+    }
+
+    .hero-btn{
+        width:100%;
+    }
+
+    .gallery-item{
+        height:330px;
+    }
+
+    .message-box{
+        padding:30px 18px;
+    }
+
+    .message-box h3{
+        font-size:25px;
+    }
+
+    .message-box p{
+        font-size:16px;
+    }
+
+}
+
 </style>
 
 </head>
@@ -1105,25 +1329,25 @@ footer{
 
             <li>
                 <a href="#about">
-                    ABOUT US
+                    পূজা সম্পর্কে
                 </a>
             </li>
 
             <li>
-                <a href="#events">
-                    EVENTS
+                <a href="#program">
+                    অনুষ্ঠান
                 </a>
             </li>
 
             <li>
                 <a href="#gallery">
-                    GALLERY
+                    গ্যালারি
                 </a>
             </li>
 
             <li>
                 <a href="#contact">
-                    CONTACT
+                    যোগাযোগ
                 </a>
             </li>
 
@@ -1136,38 +1360,45 @@ footer{
 
 
 <!-- =====================================================
-     MAIN
-===================================================== -->
-
-<main>
-
-
-<!-- =====================================================
-     HOME
+     HERO
 ===================================================== -->
 
 <section id="home" class="hero">
 
-    <img
-        src="home-banner.png"
-        alt="Budbud SANHATI"
-        class="hero-image"
-    >
-
     <div class="hero-content">
 
-        <!-- আলাদা ABOUT পেজ -->
+        <div class="hero-symbol">
+            🔱
+        </div>
 
-        <a
-            href="about-us.html"
-            class="welcome-btn"
-        >
-            বিস্তারিত পরিচয়
-        </a>
+        <div class="hero-small">
+            বুদবুদ সংহতি-এর আয়োজনে
+        </div>
 
-        <span class="down-arrow">
-            ↓
-        </span>
+        <h1>
+            শারদীয়া দুর্গোৎসব
+        </h1>
+
+        <h2>
+            শুভ বিজয়া ও শারদীয়ার আন্তরিক শুভেচ্ছা
+        </h2>
+
+        <p class="hero-description">
+            ভক্তি, আনন্দ, সংস্কৃতি ও সম্প্রীতির এক অপূর্ব মিলনমেলা।
+            মা দুর্গার আশীর্বাদে সকলের জীবন হোক সুখ, শান্তি ও সমৃদ্ধিতে ভরপুর।
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#about" class="hero-btn">
+                পূজা সম্পর্কে
+            </a>
+
+            <a href="#gallery" class="hero-btn secondary">
+                গ্যালারি দেখুন
+            </a>
+
+        </div>
 
     </div>
 
@@ -1176,106 +1407,81 @@ footer{
 
 
 <!-- =====================================================
-     QUICK MENU
+     INFO STRIP
 ===================================================== -->
 
-<section class="quick-section">
+<section class="info-strip">
 
+    <div class="info-card">
 
-    <!-- ABOUT -->
-
-    <a
-        href="about-us.html"
-        class="quick-card"
-    >
-
-        <div class="quick-icon">
-            👥
+        <div class="info-icon">
+            🪔
         </div>
 
         <h3>
-            আমাদের পরিচয়
+            দুর্গা পূজা
         </h3>
 
         <p>
-            বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
-            আমাদের সম্পর্কে বিস্তারিত জানতে এখানে আসুন।
+            ভক্তি ও নিষ্ঠার সঙ্গে
+            শারদীয়া দুর্গোৎসব।
         </p>
 
-    </a>
+    </div>
 
 
+    <div class="info-card">
 
-    <!-- EVENTS -->
-
-    <a
-        href="#events"
-        class="quick-card"
-    >
-
-        <div class="quick-icon">
-            📅
+        <div class="info-icon">
+            🌺
         </div>
 
         <h3>
-            আমাদের কার্যক্রম
+            অঞ্জলি
         </h3>
 
         <p>
-            দুর্গা পূজা, রক্তদান, শিক্ষা সহায়তা,
-            খেলাধুলা এবং বিভিন্ন সামাজিক অনুষ্ঠান।
+            মা দুর্গার চরণে
+            ভক্তির অর্ঘ্য।
         </p>
 
-    </a>
+    </div>
 
 
+    <div class="info-card">
 
-    <!-- GALLERY -->
-
-    <a
-        href="#gallery"
-        class="quick-card"
-    >
-
-        <div class="quick-icon">
-            🖼️
+        <div class="info-icon">
+            🎭
         </div>
 
         <h3>
-            গ্যালারি
+            সাংস্কৃতিক অনুষ্ঠান
         </h3>
 
         <p>
-            আমাদের বিভিন্ন অনুষ্ঠান ও সাংস্কৃতিক
-            মুহূর্তের ছবি দেখতে গ্যালারিতে আসুন।
+            গান, নাচ ও বিভিন্ন
+            সাংস্কৃতিক পরিবেশনা।
         </p>
 
-    </a>
+    </div>
 
 
+    <div class="info-card">
 
-    <!-- CONTACT -->
-
-    <a
-        href="#contact"
-        class="quick-card"
-    >
-
-        <div class="quick-icon">
+        <div class="info-icon">
             🤝
         </div>
 
         <h3>
-            যোগাযোগ করুন
+            সম্প্রীতি
         </h3>
 
         <p>
-            আমাদের সাথে যুক্ত হতে অথবা সহযোগিতার
-            জন্য যোগাযোগ করুন।
+            সকলকে নিয়ে উৎসবের
+            আনন্দ ভাগ করে নেওয়া।
         </p>
 
-    </a>
-
+    </div>
 
 </section>
 
@@ -1285,47 +1491,63 @@ footer{
      ABOUT
 ===================================================== -->
 
-<section
-    id="about"
-    class="section"
->
+<section id="about" class="section">
 
     <div class="section-container">
 
         <h2 class="section-title">
-            আমাদের পরিচয়
+            দুর্গা পূজা সম্পর্কে
         </h2>
 
-        <div class="about-content">
+        <p class="section-subtitle">
+            দুর্গাপূজা শুধু একটি ধর্মীয় উৎসব নয়,
+            এটি আমাদের ঐতিহ্য, সংস্কৃতি, আবেগ ও
+            পারস্পরিক সম্প্রীতির এক সুন্দর প্রকাশ।
+        </p>
 
-            <div class="big-icon">
-                👥
+
+        <div class="puja-about">
+
+
+            <div class="puja-about-image">
+
+                <img
+                    src="durga1.jpg"
+                    alt="দুর্গা পূজা"
+                >
+
             </div>
 
-            <p>
-                বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
-            </p>
 
-            <p>
-                আমরা একসাথে কাজ করি সমাজ ও মানুষের জন্য।
-            </p>
+            <div class="puja-about-text">
 
-            <p>
-                সমাজের উন্নয়ন, সংস্কৃতি এবং মানুষের পাশে থাকাই
-                আমাদের প্রধান লক্ষ্য।
-            </p>
+                <h3>
+                    মা দুর্গার আগমনে আনন্দের বার্তা
+                </h3>
 
+                <p>
+                    শরতের নির্মল আকাশ, কাশফুলের দোলা এবং
+                    ঢাকের বাদ্যির সঙ্গে মা দুর্গার আগমন
+                    আমাদের মনে নিয়ে আসে নতুন আনন্দ ও আশার বার্তা।
+                </p>
 
-            <!-- বিস্তারিত পরিচয় -->
+                <p>
+                    বুদবুদ সংহতির দুর্গাপূজা সকলকে সঙ্গে নিয়ে
+                    আনন্দ, ভক্তি ও সম্প্রীতির পরিবেশ তৈরি করার
+                    একটি আন্তরিক প্রয়াস।
+                </p>
 
-            <div class="about-button-box">
+                <p>
+                    পূজার প্রতিটি মুহূর্তে থাকুক মানুষের
+                    ভালোবাসা, সহযোগিতা এবং একে অপরের পাশে
+                    থাকার অঙ্গীকার।
+                </p>
 
-                <a
-                    href="about-us.html"
-                    class="about-button"
-                >
-                    বিস্তারিত পরিচয় →
-                </a>
+                <div class="highlight-box">
+                    🌺 <strong>মায়ের আশীর্বাদে</strong> সকলের
+                    জীবন সুখ, শান্তি, সুস্বাস্থ্য ও সমৃদ্ধিতে
+                    ভরে উঠুক—এই আমাদের প্রার্থনা।
+                </div>
 
             </div>
 
@@ -1338,151 +1560,233 @@ footer{
 
 
 <!-- =====================================================
-     EVENTS
+     FEATURES
 ===================================================== -->
 
-<section
-    id="events"
-    class="section"
->
+<section class="section">
 
     <div class="section-container">
 
         <h2 class="section-title">
-            আমাদের কার্যক্রম
+            পূজার বিশেষ আকর্ষণ
         </h2>
 
-        <div class="event-grid">
+        <p class="section-subtitle">
+            দুর্গোৎসবের আনন্দকে আরও সুন্দর করে তুলতে
+            থাকছে নানা আয়োজন।
+        </p>
 
 
-            <!-- DURGA PUJA -->
+        <div class="feature-grid">
 
-            <div class="event-card">
 
-                <div class="event-icon">
+            <div class="feature-card">
+
+                <div class="feature-icon">
                     🪔
                 </div>
 
                 <h3>
-                    দুর্গা পূজা
+                    পূজা ও আরতি
                 </h3>
 
                 <p>
-                    প্রতি বছর সুন্দর ও সুশৃঙ্খলভাবে
-                    দুর্গা পূজার আয়োজন করা হয়।
+                    ভক্তি ও নিষ্ঠার সঙ্গে মা দুর্গার
+                    পূজা, আরতি ও অন্যান্য ধর্মীয় আচার।
                 </p>
 
             </div>
 
 
+            <div class="feature-card">
 
-            <!-- BLOOD DONATION -->
-
-            <a
-                href="roktodan.html"
-                class="event-link"
-            >
-
-                <div class="event-card">
-
-                    <div class="event-icon">
-                        🩸
-                    </div>
-
-                    <h3>
-                        রক্তদান
-                    </h3>
-
-                    <p>
-                        স্বেচ্ছায় রক্তদান করে মানুষের
-                        জীবন বাঁচাতে আমাদের সঙ্গে যুক্ত হোন।
-                    </p>
-
-                </div>
-
-            </a>
-
-
-
-            <!-- EDUCATION -->
-
-            <div class="event-card">
-
-                <div class="event-icon">
-                    📚
+                <div class="feature-icon">
+                    🌸
                 </div>
 
                 <h3>
-                    শিক্ষা সহায়তা
+                    পুষ্পাঞ্জলি
                 </h3>
 
                 <p>
-                    প্রয়োজনীয় ছাত্রছাত্রীদের পাশে থেকে
-                    শিক্ষা সহায়তা করার চেষ্টা করা হয়।
+                    পরিবার ও প্রিয়জনদের সঙ্গে
+                    মা দুর্গার চরণে পুষ্পাঞ্জলি।
                 </p>
 
             </div>
 
 
+            <div class="feature-card">
 
-            <!-- SPORTS -->
-
-            <div class="event-card">
-
-                <div class="event-icon">
-                    ⚽
+                <div class="feature-icon">
+                    🍚
                 </div>
 
                 <h3>
-                    খেলাধুলা
+                    প্রসাদ বিতরণ
                 </h3>
 
                 <p>
-                    যুব সমাজকে উৎসাহিত করতে বিভিন্ন
-                    খেলাধুলা ও ক্রীড়া অনুষ্ঠানের আয়োজন।
+                    ভক্তদের মধ্যে প্রসাদ বিতরণের
+                    মাধ্যমে আনন্দ ভাগ করে নেওয়া।
                 </p>
 
             </div>
 
 
+            <div class="feature-card">
 
-            <!-- CULTURAL -->
-
-            <div class="event-card">
-
-                <div class="event-icon">
-                    🎭
+                <div class="feature-icon">
+                    🎶
                 </div>
 
                 <h3>
-                    সাংস্কৃতিক অনুষ্ঠান
+                    সাংস্কৃতিক সন্ধ্যা
                 </h3>
 
                 <p>
-                    গান, নাচ, নাটকসহ বিভিন্ন সাংস্কৃতিক
-                    অনুষ্ঠানের আয়োজন করা হয়।
+                    গান, নাচ, আবৃত্তি ও বিভিন্ন
+                    সাংস্কৃতিক পরিবেশনার আয়োজন।
                 </p>
 
             </div>
 
 
+            <div class="feature-card">
 
-            <!-- SOCIAL SERVICE -->
+                <div class="feature-icon">
+                    👨‍👩‍👧‍👦
+                </div>
 
-            <div class="event-card">
+                <h3>
+                    সকলের অংশগ্রহণ
+                </h3>
 
-                <div class="event-icon">
+                <p>
+                    শিশু থেকে প্রবীণ—সকলকে সঙ্গে নিয়ে
+                    উৎসবের আনন্দ উদযাপন।
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
                     ❤️
                 </div>
 
                 <h3>
-                    সামাজিক সেবা
+                    সামাজিক সম্প্রীতি
                 </h3>
 
                 <p>
-                    মানুষের প্রয়োজনে পাশে থাকা এবং
-                    সমাজের জন্য বিভিন্ন সেবামূলক কাজ করা।
+                    ভালোবাসা, সহযোগিতা ও সম্প্রীতির
+                    বন্ধনকে আরও শক্তিশালী করা।
                 </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROGRAM
+===================================================== -->
+
+<section id="program" class="section">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            পূজার অনুষ্ঠানসূচি
+        </h2>
+
+        <p class="section-subtitle">
+            নিচের সময়সূচি প্রয়োজন অনুযায়ী পরিবর্তন করা যেতে পারে।
+        </p>
+
+
+        <div class="program-box">
+
+
+            <div class="program-row">
+
+                <div class="program-day">
+                    ষষ্ঠী
+                </div>
+
+                <div class="program-details">
+                    <strong>বোধন ও আমন্ত্রণ</strong><br>
+                    সন্ধ্যায় মা দুর্গার বোধন ও
+                    পূজার শুভ সূচনা।
+                </div>
+
+            </div>
+
+
+            <div class="program-row">
+
+                <div class="program-day">
+                    সপ্তমী
+                </div>
+
+                <div class="program-details">
+                    <strong>নবপত্রিকা স্নান ও পূজা</strong><br>
+                    সকাল থেকে পূজা ও অন্যান্য
+                    ধর্মীয় অনুষ্ঠান।
+                </div>
+
+            </div>
+
+
+            <div class="program-row">
+
+                <div class="program-day">
+                    অষ্টমী
+                </div>
+
+                <div class="program-details">
+                    <strong>অষ্টমীর অঞ্জলি</strong><br>
+                    ভক্তদের জন্য বিশেষ পুষ্পাঞ্জলি
+                    ও সন্ধ্যারতি।
+                </div>
+
+            </div>
+
+
+            <div class="program-row">
+
+                <div class="program-day">
+                    নবমী
+                </div>
+
+                <div class="program-details">
+                    <strong>নবমী পূজা ও সাংস্কৃতিক অনুষ্ঠান</strong><br>
+                    পূজা, আরতি এবং সন্ধ্যায়
+                    সাংস্কৃতিক পরিবেশনা।
+                </div>
+
+            </div>
+
+
+            <div class="program-row">
+
+                <div class="program-day">
+                    দশমী
+                </div>
+
+                <div class="program-details">
+                    <strong>বিজয়া দশমী</strong><br>
+                    সিঁদুর খেলা, শুভেচ্ছা বিনিময়
+                    এবং বিসর্জনের মাধ্যমে পূজার সমাপ্তি।
+                </div>
 
             </div>
 
@@ -1499,10 +1803,7 @@ footer{
      GALLERY
 ===================================================== -->
 
-<section
-    id="gallery"
-    class="section"
->
+<section id="gallery" class="section">
 
     <div class="section-container">
 
@@ -1510,11 +1811,14 @@ footer{
             দুর্গা পূজা গ্যালারি
         </h2>
 
+        <p class="section-subtitle">
+            আমাদের দুর্গাপূজার বিভিন্ন সুন্দর মুহূর্তের
+            ছবি এখানে দেখতে পারবেন।
+        </p>
+
 
         <div class="gallery-grid">
 
-
-            <!-- IMAGE 1 -->
 
             <div
                 class="gallery-item"
@@ -1528,14 +1832,11 @@ footer{
                 >
 
                 <div class="gallery-label">
-                    দুর্গা পূজা ছবি ১
+                    পূজা ছবি ১
                 </div>
 
             </div>
 
-
-
-            <!-- IMAGE 2 -->
 
             <div
                 class="gallery-item"
@@ -1549,14 +1850,11 @@ footer{
                 >
 
                 <div class="gallery-label">
-                    দুর্গা পূজা ছবি ২
+                    পূজা ছবি ২
                 </div>
 
             </div>
 
-
-
-            <!-- IMAGE 3 -->
 
             <div
                 class="gallery-item"
@@ -1570,14 +1868,11 @@ footer{
                 >
 
                 <div class="gallery-label">
-                    দুর্গা পূজা ছবি ৩
+                    পূজা ছবি ৩
                 </div>
 
             </div>
 
-
-
-            <!-- IMAGE 4 -->
 
             <div
                 class="gallery-item"
@@ -1591,7 +1886,7 @@ footer{
                 >
 
                 <div class="gallery-label">
-                    দুর্গা পূজা ছবি ৪
+                    পূজা ছবি ৪
                 </div>
 
             </div>
@@ -1606,13 +1901,48 @@ footer{
 
 
 <!-- =====================================================
+     DEVOTION MESSAGE
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-container">
+
+        <div class="message-box">
+
+            <div class="message-symbol">
+                🌺
+            </div>
+
+            <h3>
+                শুভ শারদীয়া
+            </h3>
+
+            <p>
+                মা দুর্গার আগমনে দূর হোক সকল অশুভ,
+                জয় হোক সত্য ও ন্যায়ের।
+                সকলের ঘরে আসুক সুখ, শান্তি ও সমৃদ্ধি।
+            </p>
+
+            <p>
+                <strong>
+                    জয় মা দুর্গা 🙏
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
      CONTACT
 ===================================================== -->
 
-<section
-    id="contact"
-    class="section"
->
+<section id="contact" class="section">
 
     <div class="section-container">
 
@@ -1620,10 +1950,14 @@ footer{
             যোগাযোগ করুন
         </h2>
 
+        <p class="section-subtitle">
+            দুর্গাপূজার আয়োজন বা সংগঠনের কার্যক্রম সম্পর্কে
+            জানতে আমাদের সঙ্গে যোগাযোগ করুন।
+        </p>
+
+
         <div class="contact-grid">
 
-
-            <!-- ADDRESS -->
 
             <div class="contact-card">
 
@@ -1642,9 +1976,6 @@ footer{
 
             </div>
 
-
-
-            <!-- PHONE -->
 
             <div class="contact-card">
 
@@ -1673,9 +2004,6 @@ footer{
             </div>
 
 
-
-            <!-- EMAIL -->
-
             <div class="contact-card">
 
                 <div class="icon">
@@ -1697,9 +2025,6 @@ footer{
             </div>
 
 
-
-            <!-- JOIN -->
-
             <div class="contact-card">
 
                 <div class="icon">
@@ -1707,12 +2032,12 @@ footer{
                 </div>
 
                 <h3>
-                    আমাদের সাথে যুক্ত হন
+                    Budbud SANHATI
                 </h3>
 
                 <p>
-                    সংগঠনের বিভিন্ন কার্যক্রমে
-                    অংশগ্রহণ করতে আমাদের সাথে যোগাযোগ করুন।
+                    একসাথে উৎসব উদযাপন করি,
+                    একে অপরের পাশে থাকি।
                 </p>
 
             </div>
@@ -1725,9 +2050,6 @@ footer{
 </section>
 
 
-</main>
-
-
 
 <!-- =====================================================
      DURGA BANNER
@@ -1735,7 +2057,7 @@ footer{
 
 <section class="durga-banner">
 
-    <div class="durga-banner-inner">
+    <div>
 
         <div class="trident">
             🔱
@@ -1744,6 +2066,10 @@ footer{
         <h2>
             জয় মা দুর্গা
         </h2>
+
+        <p>
+            শুভ শারদীয়া • শুভ বিজয়া
+        </p>
 
     </div>
 
@@ -1779,7 +2105,6 @@ footer{
         </div>
 
 
-
         <div class="footer-item">
 
             📞
@@ -1801,7 +2126,6 @@ footer{
             </a>
 
         </div>
-
 
 
         <div class="footer-item">
@@ -1826,7 +2150,7 @@ footer{
 
     <div class="copyright">
 
-        © 2024 Budbud SANHATI.
+        © 2026 Budbud SANHATI.
         All Rights Reserved.
 
     </div>
@@ -1851,7 +2175,7 @@ footer{
 
 
 <!-- =====================================================
-     IMAGE POPUP
+     IMAGE MODAL
 ===================================================== -->
 
 <div
@@ -1886,7 +2210,6 @@ footer{
 
 <script>
 
-
 /* =====================================================
    SMOOTH SCROLL
 ===================================================== */
@@ -1917,9 +2240,8 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link){
 });
 
 
-
 /* =====================================================
-   ACTIVE NAVIGATION
+   ACTIVE NAV
 ===================================================== */
 
 const sections =
@@ -1967,9 +2289,8 @@ window.addEventListener("scroll",function(){
 });
 
 
-
 /* =====================================================
-   GALLERY POPUP
+   IMAGE POPUP
 ===================================================== */
 
 const imageModal =
@@ -2024,7 +2345,6 @@ document.addEventListener(
 );
 
 
-
 /* =====================================================
    BACK TO TOP
 ===================================================== */
@@ -2049,7 +2369,6 @@ window.addEventListener(
 
     }
 );
-
 
 </script>
 
