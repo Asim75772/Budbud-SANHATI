@@ -2,27 +2,19 @@
 <html lang="bn">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>শিক্ষা সহায়তা | Budbud SANHATI</title>
 
 <meta name="description"
-      content="Budbud SANHATI - শিক্ষা সহায়তা কার্যক্রম">
+content="Budbud SANHATI - শিক্ষা সহায়তা কার্যক্রম">
 
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet">
-
+rel="stylesheet">
 
 <style>
 
@@ -48,27 +40,24 @@ a{
     color:inherit;
 }
 
-
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar{
+    position:sticky;
+    top:0;
+    z-index:9999;
+
     width:100%;
-    min-height:70px;
+    height:65px;
 
     background:#050505;
-
     border-bottom:3px solid #e00000;
 
     display:flex;
     align-items:center;
     justify-content:center;
-}
 
-.nav-container{
-    width:100%;
-    max-width:1200px;
+    overflow-x:auto;
 }
 
 .nav-menu{
@@ -76,11 +65,12 @@ a{
     align-items:center;
     justify-content:center;
 
-    gap:45px;
+    gap:38px;
 
     list-style:none;
-
     padding:0 20px;
+
+    min-width:max-content;
 }
 
 .nav-menu a{
@@ -89,9 +79,9 @@ a{
     font-size:18px;
     font-weight:700;
 
-    padding:20px 0;
-
     white-space:nowrap;
+
+    padding:18px 0;
 
     transition:.3s;
 }
@@ -100,12 +90,9 @@ a{
     color:#ff1515;
 }
 
+/* HEADER */
 
-/* =========================
-   HERO
-========================= */
-
-.hero{
+.page-header{
     text-align:center;
 
     padding:65px 20px 45px;
@@ -113,47 +100,34 @@ a{
     background:
         radial-gradient(
             circle at center,
-            #260000 0%,
-            #0b0000 45%,
+            #300000 0%,
+            #100000 50%,
             #050000 100%
         );
 
-    border-bottom:1px solid #541000;
+    border-bottom:2px solid #8c0000;
 }
 
-.hero-icon{
-    font-size:75px;
+.page-icon{
+    font-size:80px;
 
     margin-bottom:20px;
 
-    filter:
-        drop-shadow(0 0 12px #ffb300);
+    filter:drop-shadow(0 0 12px #ffb300);
 }
 
-.hero h1{
+.page-header h1{
     color:#ffc400;
 
     font-size:42px;
 
-    margin-bottom:12px;
+    margin-bottom:18px;
 }
 
-.hero h1::after{
-    content:"✦";
+.page-header p{
+    color:#eee;
 
-    display:block;
-
-    color:#b87900;
-
-    font-size:20px;
-
-    margin-top:8px;
-}
-
-.hero p{
-    color:#ddd;
-
-    font-size:18px;
+    font-size:19px;
 
     line-height:2;
 
@@ -162,129 +136,158 @@ a{
     margin:auto;
 }
 
+/* MAIN */
 
-/* =========================
-   CONTENT
-========================= */
-
-.content{
-    max-width:950px;
+.container{
+    width:100%;
+    max-width:1000px;
 
     margin:auto;
 
-    padding:55px 20px 80px;
+    padding:50px 20px 80px;
 }
 
-.info-card{
+/* INTRO CARD */
+
+.intro-card{
     background:#110000;
 
-    border:1px solid #7a2600;
+    border:2px solid #7a2900;
 
-    border-radius:16px;
+    border-radius:18px;
 
-    padding:35px 28px;
-
-    margin-bottom:25px;
-
-    box-shadow:
-        0 0 20px rgba(255,150,0,.05);
-}
-
-.info-card h2{
-    color:#ffc400;
+    padding:35px 25px;
 
     text-align:center;
 
-    font-size:28px;
+    margin-bottom:30px;
 
-    margin-bottom:22px;
+    box-shadow:
+        0 0 25px rgba(255,180,0,.08);
 }
 
-.info-card p{
+.intro-card h2{
+    color:#ffc400;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+}
+
+.intro-card p{
     color:#eee;
 
     font-size:18px;
 
-    line-height:2.1;
+    line-height:2;
 
-    text-align:center;
+    margin-bottom:12px;
 }
 
+/* SUPPORT CARDS */
 
-/* =========================
-   POINTS
-========================= */
-
-.points{
+.support-grid{
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:20px;
+    gap:25px;
 
-    margin-top:25px;
+    margin-top:30px;
 }
 
-.point{
-    background:#0d0000;
+.support-card{
+    background:#100000;
 
-    border:1px solid #552000;
+    border:1px solid #6b2300;
 
-    border-radius:12px;
+    border-radius:15px;
 
-    padding:25px 20px;
+    padding:30px 22px;
 
     text-align:center;
 
     transition:.3s;
 }
 
-.point:hover{
+.support-card:hover{
+    transform:translateY(-5px);
+
     border-color:#ffc400;
 
-    transform:translateY(-4px);
+    box-shadow:
+        0 0 20px rgba(255,190,0,.15);
 }
 
-.point-icon{
-    font-size:42px;
+.support-icon{
+    font-size:55px;
 
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
-.point h3{
+.support-card h3{
     color:#ffc400;
 
-    font-size:21px;
+    font-size:24px;
 
-    margin-bottom:10px;
+    margin-bottom:14px;
 }
 
-.point p{
+.support-card p{
     color:#ddd;
 
-    font-size:15px;
+    font-size:16px;
 
-    line-height:1.8;
+    line-height:1.9;
 }
 
+/* MESSAGE */
 
-/* =========================
-   BACK BUTTON
-========================= */
+.message{
+    margin-top:35px;
 
-.back-box{
+    background:#160000;
+
+    border-left:5px solid #ffc400;
+
+    border-radius:10px;
+
+    padding:25px 22px;
+
+    text-align:center;
+}
+
+.message h2{
+    color:#ffc400;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+}
+
+.message p{
+    color:#eee;
+
+    font-size:17px;
+
+    line-height:2;
+}
+
+/* CONTACT BUTTON */
+
+.button-area{
     text-align:center;
 
     margin-top:40px;
 }
 
-.back-button{
+.contact-button{
     display:inline-flex;
 
     align-items:center;
     justify-content:center;
 
-    min-width:220px;
+    min-width:230px;
 
     padding:14px 28px;
 
@@ -298,242 +301,182 @@ a{
 
     border:3px solid #ffc400;
 
-    box-shadow:
-        0 0 12px #ffb300,
-        0 0 28px rgba(255,180,0,.4);
-
     color:#ffe8a0;
 
     font-size:20px;
 
     font-weight:800;
 
+    box-shadow:
+        0 0 12px #ffb300,
+        0 0 28px rgba(255,180,0,.4);
+
+    transition:.3s;
+}
+
+.contact-button:hover{
+    transform:scale(1.05);
+}
+
+/* BACK BUTTON */
+
+.back-area{
+    text-align:center;
+
+    margin-top:20px;
+}
+
+.back-button{
+    display:inline-block;
+
+    color:#ffc400;
+
+    font-size:17px;
+
+    padding:10px 20px;
+
+    border:1px solid #ffc400;
+
+    border-radius:10px;
+
     transition:.3s;
 }
 
 .back-button:hover{
-    transform:scale(1.05);
+    background:#ffc400;
+    color:#050000;
 }
 
-
-/* =========================
-   DURGA BANNER
-========================= */
-
-.durga-banner{
-    width:100%;
-
-    min-height:170px;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #380b00 0%,
-            #150000 45%,
-            #030000 100%
-        );
-
-    border-top:2px solid #8c0000;
-
-    border-bottom:2px solid #8c0000;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-}
-
-.trident{
-    font-size:48px;
-
-    color:#ffc400;
-
-    text-shadow:
-        0 0 15px #ff9d00;
-}
-
-.durga-banner h2{
-    color:#ffc400;
-
-    font-size:36px;
-
-    margin-top:5px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     background:#030303;
 
     border-top:2px solid #ff0000;
-}
-
-.footer-info{
-    max-width:1100px;
-
-    margin:auto;
-
-    padding:22px 20px;
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
 
     text-align:center;
 }
 
-.footer-item{
+.footer-info{
+    padding:25px 15px;
+
     color:#ddd;
 
     font-size:14px;
 
-    line-height:1.7;
+    line-height:1.8;
 }
 
-.footer-item strong{
-    color:#ffc400;
-}
-
-.footer-item a:hover{
+.footer-info strong{
     color:#ffc400;
 }
 
 .copyright{
-    text-align:center;
+    border-top:1px solid #331000;
+
+    padding:15px;
 
     color:#999;
 
     font-size:13px;
-
-    padding:15px;
-
-    border-top:1px solid #331000;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:768px){
 
     .navbar{
-        overflow-x:auto;
-
         justify-content:flex-start;
-    }
-
-    .nav-container{
-        min-width:max-content;
     }
 
     .nav-menu{
         justify-content:flex-start;
 
-        gap:28px;
-
-        padding:0 18px;
+        gap:27px;
     }
 
     .nav-menu a{
         font-size:16px;
     }
 
-    .hero{
+    .page-header{
         padding:50px 16px 35px;
     }
 
-    .hero-icon{
+    .page-icon{
         font-size:65px;
     }
 
-    .hero h1{
-        font-size:34px;
+    .page-header h1{
+        font-size:32px;
     }
 
-    .hero p{
-        font-size:16px;
+    .page-header p{
+        font-size:17px;
     }
 
-    .content{
-        padding:40px 15px 60px;
+    .container{
+        padding:35px 15px 60px;
     }
 
-    .info-card{
+    .intro-card{
         padding:28px 18px;
     }
 
-    .info-card h2{
-        font-size:25px;
+    .intro-card h2{
+        font-size:26px;
     }
 
-    .info-card p{
+    .intro-card p{
         font-size:16px;
-
-        line-height:2;
     }
 
-    .points{
+    .support-grid{
         grid-template-columns:1fr;
 
-        gap:15px;
+        gap:18px;
     }
 
-    .point{
-        padding:25px 16px;
+    .support-card{
+        padding:28px 18px;
     }
 
-    .footer-info{
-        grid-template-columns:1fr;
+    .support-card h3{
+        font-size:22px;
     }
 
-    .durga-banner{
-        min-height:145px;
+    .support-card p{
+        font-size:15px;
     }
 
-    .durga-banner h2{
-        font-size:30px;
+    .message h2{
+        font-size:24px;
+    }
+
+    .message p{
+        font-size:15px;
     }
 
 }
 
-
-/* =========================
-   SMALL PHONE
-========================= */
+/* SMALL PHONE */
 
 @media(max-width:420px){
 
     .nav-menu{
-        gap:24px;
+        gap:23px;
     }
 
     .nav-menu a{
         font-size:15px;
     }
 
-    .hero h1{
-        font-size:30px;
+    .page-header h1{
+        font-size:29px;
     }
 
-    .hero-icon{
-        font-size:58px;
-    }
-
-    .info-card h2{
-        font-size:23px;
-    }
-
-    .info-card p{
-        font-size:15px;
+    .page-header p{
+        font-size:16px;
     }
 
 }
@@ -542,358 +485,272 @@ footer{
 
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     NAVBAR
-========================= -->
+<!-- NAVBAR -->
 
 <header class="navbar">
 
-    <div class="nav-container">
+<ul class="nav-menu">
 
-        <ul class="nav-menu">
+<li>
+<a href="index.html">HOME</a>
+</li>
 
-            <li>
-                <a href="index.html">
-                    HOME
-                </a>
-            </li>
+<li>
+<a href="about-us.html">ABOUT US</a>
+</li>
 
-            <li>
-                <a href="about-us.html">
-                    ABOUT US
-                </a>
-            </li>
+<li>
+<a href="index.html#events">EVENTS</a>
+</li>
 
-            <li>
-                <a href="index.html#events">
-                    EVENTS
-                </a>
-            </li>
+<li>
+<a href="index.html#gallery">GALLERY</a>
+</li>
 
-            <li>
-                <a href="index.html#gallery">
-                    GALLERY
-                </a>
-            </li>
+<li>
+<a href="index.html#contact">CONTACT</a>
+</li>
 
-            <li>
-                <a href="index.html#contact">
-                    CONTACT
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
+</ul>
 
 </header>
 
 
+<!-- PAGE HEADER -->
 
-<!-- =========================
-     HERO
-========================= -->
+<section class="page-header">
 
-<section class="hero">
+<div class="page-icon">
+📚
+</div>
 
-    <div class="hero-icon">
-        📚
-    </div>
+<h1>
+শিক্ষা সহায়তা
+</h1>
 
-    <h1>
-        শিক্ষা সহায়তা
-    </h1>
-
-    <p>
-        শিক্ষার আলো ছড়িয়ে দেওয়া এবং
-        প্রয়োজনীয় ছাত্রছাত্রীদের পাশে থাকাই
-        আমাদের অন্যতম সামাজিক উদ্যোগ।
-    </p>
+<p>
+প্রয়োজনীয় ছাত্রছাত্রীদের পাশে থেকে
+শিক্ষার সুযোগ ও সহায়তা পৌঁছে দেওয়ার
+চেষ্টা করা হয়।
+</p>
 
 </section>
 
 
+<!-- MAIN CONTENT -->
 
-<!-- =========================
-     CONTENT
-========================= -->
-
-<main class="content">
+<main class="container">
 
 
-    <div class="info-card">
+<!-- INTRO -->
 
-        <h2>
-            শিক্ষা সহায়তা সম্পর্কে
-        </h2>
+<div class="intro-card">
 
-        <p>
-            শিক্ষা মানুষের জীবনের অন্যতম গুরুত্বপূর্ণ ভিত্তি।
-            অর্থনৈতিক বা সামাজিক কারণে কোনো ছাত্রছাত্রী যেন
-            শিক্ষার সুযোগ থেকে বঞ্চিত না হয়, সেই উদ্দেশ্যেই
-            বুদবুদ সংহতি শিক্ষা সহায়তার মাধ্যমে পাশে থাকার
-            চেষ্টা করে।
-        </p>
+<h2>
+শিক্ষাই উন্নতির পথ
+</h2>
 
-    </div>
+<p>
+একটি সুন্দর সমাজ গড়ে তুলতে শিক্ষার গুরুত্ব অপরিসীম।
+</p>
 
+<p>
+অর্থনৈতিক বা অন্য কোনো কারণে যাতে কোনো
+ছাত্রছাত্রীর পড়াশোনা থেমে না যায়,
+সেই উদ্দেশ্যে আমরা তাদের পাশে থাকার চেষ্টা করি।
+</p>
 
+<p>
+শিক্ষার্থীদের উৎসাহিত করা এবং তাদের
+ভবিষ্যতের পথে এগিয়ে যেতে সাহায্য করাই
+আমাদের অন্যতম লক্ষ্য।
+</p>
 
-    <div class="info-card">
-
-        <h2>
-            আমাদের উদ্দেশ্য
-        </h2>
-
-        <p>
-            প্রয়োজনীয় ছাত্রছাত্রীদের পাশে থেকে তাদের পড়াশোনার
-            ক্ষেত্রে যতটা সম্ভব সহযোগিতা করা এবং শিক্ষার প্রতি
-            আগ্রহ বাড়িয়ে তোলা আমাদের অন্যতম লক্ষ্য।
-        </p>
-
-    </div>
+</div>
 
 
+<!-- SUPPORT -->
 
-    <!-- =========================
-         SUPPORT POINTS
-    ========================= -->
-
-    <div class="points">
+<div class="support-grid">
 
 
-        <div class="point">
+<div class="support-card">
 
-            <div class="point-icon">
-                📖
-            </div>
+<div class="support-icon">
+📖
+</div>
 
-            <h3>
-                পড়াশোনায় উৎসাহ
-            </h3>
+<h3>
+শিক্ষা সামগ্রী
+</h3>
 
-            <p>
-                ছাত্রছাত্রীদের নিয়মিত পড়াশোনা করতে
-                উৎসাহিত করা এবং শিক্ষার গুরুত্ব
-                সম্পর্কে সচেতন করা।
-            </p>
+<p>
+প্রয়োজন অনুযায়ী ছাত্রছাত্রীদের
+খাতা, বই, কলম এবং অন্যান্য
+শিক্ষা সামগ্রী দিয়ে সাহায্য করার
+চেষ্টা করা হয়।
+</p>
 
-        </div>
-
-
-
-        <div class="point">
-
-            <div class="point-icon">
-                🎒
-            </div>
-
-            <h3>
-                প্রয়োজনীয় সহায়তা
-            </h3>
-
-            <p>
-                প্রয়োজন অনুযায়ী শিক্ষার্থীদের
-                পড়াশোনার বিভিন্ন ক্ষেত্রে সহযোগিতা
-                করার চেষ্টা করা হয়।
-            </p>
-
-        </div>
+</div>
 
 
+<div class="support-card">
 
-        <div class="point">
+<div class="support-icon">
+🎒
+</div>
 
-            <div class="point-icon">
-                🧑‍🎓
-            </div>
+<h3>
+ছাত্রছাত্রীদের পাশে
+</h3>
 
-            <h3>
-                ছাত্রছাত্রীদের পাশে
-            </h3>
+<p>
+যেসব শিক্ষার্থীর পড়াশোনার ক্ষেত্রে
+সহায়তার প্রয়োজন, তাদের পাশে
+থাকার জন্য আমরা কাজ করি।
+</p>
 
-            <p>
-                প্রতিভাবান ও প্রয়োজনীয় ছাত্রছাত্রীদের
-                উৎসাহিত করে তাদের ভবিষ্যৎ গড়ার পথে
-                পাশে থাকার চেষ্টা করা হয়।
-            </p>
-
-        </div>
-
+</div>
 
 
-        <div class="point">
+<div class="support-card">
 
-            <div class="point-icon">
-                🌱
-            </div>
+<div class="support-icon">
+🏫
+</div>
 
-            <h3>
-                ভবিষ্যৎ গড়ার লক্ষ্য
-            </h3>
+<h3>
+শিক্ষার সুযোগ
+</h3>
 
-            <p>
-                শিক্ষার মাধ্যমে একটি সুন্দর ভবিষ্যৎ
-                এবং উন্নত সমাজ গড়ার জন্য সবাইকে
-                একসাথে এগিয়ে আসার আহ্বান জানাই।
-            </p>
+<p>
+শিক্ষার্থীদের পড়াশোনার প্রতি
+আগ্রহ বাড়ানো এবং শিক্ষার
+সুযোগ তৈরি করার চেষ্টা করা হয়।
+</p>
 
-        </div>
-
-
-    </div>
+</div>
 
 
+<div class="support-card">
 
-    <!-- =========================
-         MESSAGE
-    ========================= -->
+<div class="support-icon">
+🌟
+</div>
 
-    <div class="info-card" style="margin-top:25px;">
+<h3>
+ভবিষ্যতের স্বপ্ন
+</h3>
 
-        <h2>
-            শিক্ষার আলো ছড়িয়ে দিন
-        </h2>
+<p>
+প্রতিটি শিক্ষার্থী যেন নিজের
+স্বপ্ন পূরণের জন্য এগিয়ে যেতে
+পারে, সেটাই আমাদের আশা।
+</p>
 
-        <p>
-            একজন শিক্ষার্থীর পাশে দাঁড়ানো মানে শুধু তাকে
-            সাহায্য করা নয়, তার ভবিষ্যতের পথে একটি নতুন
-            সম্ভাবনার দরজা খুলে দেওয়া।
-            আসুন, আমরা সবাই মিলে শিক্ষার আলো ছড়িয়ে দিই।
-        </p>
-
-    </div>
+</div>
 
 
+</div>
 
-    <!-- =========================
-         BACK BUTTON
-    ========================= -->
 
-    <div class="back-box">
+<!-- MESSAGE -->
 
-        <a
-            href="index.html#events"
-            class="back-button"
-        >
-            ← কার্যক্রমে ফিরে যান
-        </a>
+<div class="message">
 
-    </div>
+<h2>
+আপনিও পাশে থাকতে পারেন
+</h2>
+
+<p>
+একজন শিক্ষার্থীর পাশে দাঁড়ানো মানে
+একটি ভবিষ্যতের পাশে দাঁড়ানো।
+আপনি শিক্ষা সহায়তা কার্যক্রমে
+যুক্ত হতে চাইলে আমাদের সঙ্গে
+যোগাযোগ করতে পারেন।
+</p>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="button-area">
+
+<a
+href="index.html#contact"
+class="contact-button"
+>
+যোগাযোগ করুন →
+</a>
+
+</div>
+
+
+<!-- BACK -->
+
+<div class="back-area">
+
+<a
+href="index.html"
+class="back-button"
+>
+← হোম পেজে ফিরে যান
+</a>
+
+</div>
 
 
 </main>
 
 
-
-<!-- =========================
-     DURGA BANNER
-========================= -->
-
-<section class="durga-banner">
-
-    <div>
-
-        <div class="trident">
-            🔱
-        </div>
-
-        <h2>
-            জয় মা দুর্গা
-        </h2>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-    <div class="footer-info">
+<div class="footer-info">
 
+<strong>
+Budbud SANHATI
+</strong>
 
-        <div class="footer-item">
+<br>
 
-            📍
+📍 Budbud, Burdwan,
+West Bengal, India
 
-            <strong>
-                ঠিকানা
-            </strong>
+<br>
 
-            <br>
+📞
+<a href="tel:9547222144">
+9547222144
+</a>
 
-            Budbud, Burdwan
+&nbsp; | &nbsp;
 
-            <br>
+<a href="tel:+919563881523">
++91 9563881523
+</a>
 
-            West Bengal, India
+<br>
 
-        </div>
+✉️
+<a href="mailto:budbudsanhati@gmail.com">
+budbudsanhati@gmail.com
+</a>
 
+</div>
 
+<div class="copyright">
 
-        <div class="footer-item">
+© 2024 Budbud SANHATI.
+All Rights Reserved.
 
-            📞
-
-            <strong>
-                ফোন
-            </strong>
-
-            <br>
-
-            <a href="tel:9547222144">
-                9547222144
-            </a>
-
-            <br>
-
-            <a href="tel:+919563881523">
-                +91 9563881523
-            </a>
-
-        </div>
-
-
-
-        <div class="footer-item">
-
-            ✉️
-
-            <strong>
-                ই-মেইল
-            </strong>
-
-            <br>
-
-            <a href="mailto:budbudsanhati@gmail.com">
-                budbudsanhati@gmail.com
-            </a>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="copyright">
-
-        © 2024 Budbud SANHATI.
-        All Rights Reserved.
-
-    </div>
+</div>
 
 </footer>
-
 
 </body>
 
