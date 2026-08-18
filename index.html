@@ -41,8 +41,9 @@ html{
 }
 
 body{
+    margin:0;
     background:#050000;
-    color:#fff;
+    color:#ffffff;
     font-family:"Noto Serif Bengali",serif;
     overflow-x:hidden;
 }
@@ -86,7 +87,7 @@ img{
     align-items:center;
     justify-content:center;
 
-    gap:42px;
+    gap:40px;
 
     list-style:none;
 
@@ -131,10 +132,9 @@ img{
 
 .hero-image{
     width:100%;
-
     height:auto;
 
-    min-height:300px;
+    min-height:260px;
 
     object-fit:cover;
 }
@@ -144,28 +144,27 @@ img{
 
     inset:0;
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0,0,0,.05),
-            rgba(0,0,0,.25),
-            rgba(0,0,0,.75)
-        );
+    background:linear-gradient(
+        180deg,
+        rgba(0,0,0,.05),
+        rgba(0,0,0,.30),
+        rgba(0,0,0,.80)
+    );
 }
 
 .hero-content{
     position:absolute;
 
     left:50%;
-    bottom:35px;
+    bottom:30px;
 
     transform:translateX(-50%);
-
-    text-align:center;
 
     width:100%;
 
     padding:0 15px;
+
+    text-align:center;
 }
 
 .hero-title{
@@ -175,32 +174,27 @@ img{
 
     font-weight:800;
 
+    margin-bottom:12px;
+
     text-shadow:
         0 2px 8px #000,
         0 0 15px rgba(255,180,0,.5);
-
-    margin-bottom:18px;
 }
 
 .hero-subtitle{
-    color:#fff;
+    color:#ffffff;
 
     font-size:18px;
 
-    margin-bottom:22px;
+    margin-bottom:20px;
 
     text-shadow:0 2px 5px #000;
 }
 
-.welcome-btn{
-    display:inline-flex;
+.welcome-button{
+    display:inline-block;
 
-    align-items:center;
-    justify-content:center;
-
-    min-width:220px;
-
-    padding:14px 30px;
+    padding:13px 28px;
 
     border-radius:14px;
 
@@ -214,18 +208,18 @@ img{
 
     color:#ffe8a0;
 
-    font-size:20px;
+    font-size:19px;
 
     font-weight:800;
 
     box-shadow:
         0 0 12px #ffb300,
-        0 0 28px rgba(255,180,0,.45);
+        0 0 25px rgba(255,180,0,.40);
 
     transition:.3s;
 }
 
-.welcome-btn:hover{
+.welcome-button:hover{
     transform:scale(1.05);
 }
 
@@ -247,9 +241,9 @@ img{
 }
 
 .quick-card{
-    min-height:220px;
+    min-height:215px;
 
-    padding:30px 18px;
+    padding:28px 18px;
 
     text-align:center;
 
@@ -270,14 +264,13 @@ img{
     width:62px;
     height:62px;
 
-    margin:0 auto 15px;
+    margin:0 auto 14px;
 
     border:2px solid #ffc400;
 
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -293,7 +286,7 @@ img{
 }
 
 .quick-card p{
-    color:#ddd;
+    color:#dddddd;
 
     font-size:14px;
 
@@ -332,7 +325,7 @@ img{
 
     font-weight:800;
 
-    margin-bottom:45px;
+    margin-bottom:42px;
 }
 
 .section-title::after{
@@ -361,8 +354,8 @@ img{
 }
 
 .about-icon{
-    width:120px;
-    height:120px;
+    width:115px;
+    height:115px;
 
     margin:0 auto 30px;
 
@@ -371,18 +364,17 @@ img{
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
-    font-size:58px;
+    font-size:56px;
 
     box-shadow:
         0 0 20px rgba(255,180,0,.15);
 }
 
 .about-content p{
-    color:#eee;
+    color:#eeeeee;
 
     font-size:18px;
 
@@ -392,13 +384,13 @@ img{
 }
 
 .about-button-area{
-    text-align:center;
-
     margin-top:30px;
+
+    text-align:center;
 }
 
 .about-button{
-    display:inline-flex;
+    display:inline-block;
 
     padding:13px 28px;
 
@@ -462,7 +454,7 @@ img{
 .event-icon{
     font-size:48px;
 
-    margin-bottom:15px;
+    margin-bottom:14px;
 }
 
 .event-card h3{
@@ -474,7 +466,7 @@ img{
 }
 
 .event-card p{
-    color:#ddd;
+    color:#dddddd;
 
     font-size:15px;
 
@@ -519,7 +511,8 @@ img{
 }
 
 .gallery-item{
-    height:340px;
+    width:100%;
+    height:330px;
 
     background:#110000;
 
@@ -596,7 +589,7 @@ img{
 
 .contact-card p,
 .contact-card a{
-    color:#ddd;
+    color:#dddddd;
 
     font-size:15px;
 
@@ -632,7 +625,6 @@ img{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
@@ -683,7 +675,7 @@ footer{
 }
 
 .footer-item{
-    color:#ddd;
+    color:#dddddd;
 
     font-size:14px;
 
@@ -701,7 +693,7 @@ footer{
 .copyright{
     text-align:center;
 
-    color:#999;
+    color:#999999;
 
     font-size:13px;
 
@@ -742,7 +734,7 @@ footer{
     .hero-title{
         font-size:28px;
 
-        margin-bottom:8px;
+        margin-bottom:7px;
     }
 
     .hero-subtitle{
@@ -751,9 +743,7 @@ footer{
         margin-bottom:12px;
     }
 
-    .welcome-btn{
-        min-width:190px;
-
+    .welcome-button{
         padding:11px 22px;
 
         font-size:17px;
@@ -764,9 +754,9 @@ footer{
     }
 
     .quick-card{
-        min-height:200px;
+        min-height:195px;
 
-        padding:25px 15px;
+        padding:25px 14px;
 
         border-bottom:1px solid #4b1800;
     }
@@ -862,7 +852,7 @@ footer{
     }
 
     .quick-card{
-        min-height:190px;
+        min-height:185px;
     }
 
     .quick-card h3{
@@ -897,43 +887,43 @@ footer{
 
 <header class="navbar">
 
-    <nav>
+<nav>
 
-        <ul class="nav-menu">
+<ul class="nav-menu">
 
-            <li>
-                <a href="index.html">
-                    HOME
-                </a>
-            </li>
+<li>
+<a href="index.html">
+HOME
+</a>
+</li>
 
-            <li>
-                <a href="about-us.html">
-                    ABOUT US
-                </a>
-            </li>
+<li>
+<a href="about-us.html">
+ABOUT US
+</a>
+</li>
 
-            <li>
-                <a href="#events">
-                    EVENTS
-                </a>
-            </li>
+<li>
+<a href="#events">
+EVENTS
+</a>
+</li>
 
-            <li>
-                <a href="#gallery">
-                    GALLERY
-                </a>
-            </li>
+<li>
+<a href="#gallery">
+GALLERY
+</a>
+</li>
 
-            <li>
-                <a href="#contact">
-                    CONTACT
-                </a>
-            </li>
+<li>
+<a href="#contact">
+CONTACT
+</a>
+</li>
 
-        </ul>
+</ul>
 
-    </nav>
+</nav>
 
 </header>
 
@@ -944,32 +934,32 @@ footer{
 
 <section class="hero">
 
-    <img
-        src="home-banner.png"
-        alt="Budbud SANHATI"
-        class="hero-image"
-    >
+<img
+    src="home-banner.png"
+    alt="Budbud SANHATI"
+    class="hero-image"
+>
 
-    <div class="hero-overlay"></div>
+<div class="hero-overlay"></div>
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1 class="hero-title">
-            বুদবুদ সংহতি
-        </h1>
+<h1 class="hero-title">
+বুদবুদ সংহতি
+</h1>
 
-        <p class="hero-subtitle">
-            একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
-        </p>
+<p class="hero-subtitle">
+একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
+</p>
 
-        <a
-            href="#events"
-            class="welcome-btn"
-        >
-            আমাদের কার্যক্রম
-        </a>
+<a
+    href="#events"
+    class="welcome-button"
+>
+আমাদের কার্যক্রম
+</a>
 
-    </div>
+</div>
 
 </section>
 
@@ -981,92 +971,92 @@ footer{
 <section class="quick-section">
 
 
-    <a
-        href="durga-puja.html"
-        class="quick-card"
-    >
+<a
+    href="durga-puja.html"
+    class="quick-card"
+>
 
-        <div class="quick-icon">
-            🔱
-        </div>
+<div class="quick-icon">
+🔱
+</div>
 
-        <h3>
-            দুর্গাপূজা
-        </h3>
+<h3>
+দুর্গাপূজা
+</h3>
 
-        <p>
-            আমাদের ঐতিহ্য,
-            সংস্কৃতি ও সামাজিক
-            মিলনের অন্যতম উৎসব।
-        </p>
+<p>
+আমাদের ঐতিহ্য,
+সংস্কৃতি ও সামাজিক
+মিলনের অন্যতম উৎসব।
+</p>
 
-    </a>
-
-
-    <a
-        href="siksha-sohayota.html"
-        class="quick-card"
-    >
-
-        <div class="quick-icon">
-            📚
-        </div>
-
-        <h3>
-            শিক্ষা সহায়তা
-        </h3>
-
-        <p>
-            প্রয়োজনীয় ছাত্রছাত্রীদের
-            পাশে থেকে শিক্ষার সুযোগ
-            পৌঁছে দেওয়ার চেষ্টা।
-        </p>
-
-    </a>
+</a>
 
 
-    <a
-        href="roktodan.html"
-        class="quick-card"
-    >
+<a
+    href="siksha-sohayota.html"
+    class="quick-card"
+>
 
-        <div class="quick-icon">
-            🩸
-        </div>
+<div class="quick-icon">
+📚
+</div>
 
-        <h3>
-            রক্তদান
-        </h3>
+<h3>
+শিক্ষা সহায়তা
+</h3>
 
-        <p>
-            মানুষের প্রয়োজনে
-            রক্তদানের মাধ্যমে
-            পাশে থাকার উদ্যোগ।
-        </p>
+<p>
+প্রয়োজনীয় ছাত্রছাত্রীদের
+পাশে থেকে শিক্ষার সুযোগ
+পৌঁছে দেওয়ার চেষ্টা।
+</p>
 
-    </a>
+</a>
 
 
-    <a
-        href="about-us.html"
-        class="quick-card"
-    >
+<a
+    href="roktodan.html"
+    class="quick-card"
+>
 
-        <div class="quick-icon">
-            🤝
-        </div>
+<div class="quick-icon">
+🩸
+</div>
 
-        <h3>
-            আমাদের সম্পর্কে
-        </h3>
+<h3>
+রক্তদান
+</h3>
 
-        <p>
-            Budbud SANHATI সম্পর্কে
-            আরও জানুন এবং আমাদের
-            সঙ্গে যুক্ত থাকুন।
-        </p>
+<p>
+মানুষের প্রয়োজনে
+রক্তদানের মাধ্যমে
+পাশে থাকার উদ্যোগ।
+</p>
 
-    </a>
+</a>
+
+
+<a
+    href="about-us.html"
+    class="quick-card"
+>
+
+<div class="quick-icon">
+🤝
+</div>
+
+<h3>
+আমাদের সম্পর্কে
+</h3>
+
+<p>
+Budbud SANHATI সম্পর্কে
+আরও জানুন এবং আমাদের
+সঙ্গে যুক্ত থাকুন।
+</p>
+
+</a>
 
 
 </section>
@@ -1078,45 +1068,45 @@ footer{
 
 <section class="section">
 
-    <div class="section-container">
+<div class="section-container">
 
-        <h2 class="section-title">
-            আমাদের কথা
-        </h2>
+<h2 class="section-title">
+আমাদের কথা
+</h2>
 
-        <div class="about-content">
+<div class="about-content">
 
-            <div class="about-icon">
-                🤝
-            </div>
+<div class="about-icon">
+🤝
+</div>
 
-            <p>
-                <strong>Budbud SANHATI</strong>
-                একটি সামাজিক ও সাংস্কৃতিক উদ্যোগ,
-                যেখানে মানুষকে একসাথে নিয়ে
-                সমাজের জন্য কাজ করার চেষ্টা করা হয়।
-            </p>
+<p>
+<strong>Budbud SANHATI</strong>
+একটি সামাজিক ও সাংস্কৃতিক উদ্যোগ,
+যেখানে মানুষকে একসাথে নিয়ে
+সমাজের জন্য কাজ করার চেষ্টা করা হয়।
+</p>
 
-            <p>
-                সংস্কৃতি, শিক্ষা, রক্তদান এবং
-                বিভিন্ন সামাজিক কার্যক্রমের মাধ্যমে
-                মানুষের পাশে থাকাই আমাদের অন্যতম লক্ষ্য।
-            </p>
+<p>
+সংস্কৃতি, শিক্ষা, রক্তদান এবং
+বিভিন্ন সামাজিক কার্যক্রমের মাধ্যমে
+মানুষের পাশে থাকাই আমাদের অন্যতম লক্ষ্য।
+</p>
 
-            <div class="about-button-area">
+<div class="about-button-area">
 
-                <a
-                    href="about-us.html"
-                    class="about-button"
-                >
-                    আমাদের সম্পর্কে জানুন →
-                </a>
+<a
+    href="about-us.html"
+    class="about-button"
+>
+আমাদের সম্পর্কে জানুন →
+</a>
 
-            </div>
+</div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
@@ -1130,103 +1120,102 @@ footer{
     id="events"
 >
 
-    <div class="section-container">
+<div class="section-container">
 
-        <h2 class="section-title">
-            আমাদের কার্যক্রম
-        </h2>
+<h2 class="section-title">
+আমাদের কার্যক্রম
+</h2>
 
-
-        <div class="event-grid">
-
-
-            <!-- DURGA PUJA -->
-
-            <div class="event-card">
-
-                <div class="event-icon">
-                    🔱
-                </div>
-
-                <h3>
-                    দুর্গাপূজা
-                </h3>
-
-                <p>
-                    ভক্তি, ঐতিহ্য ও সংস্কৃতির
-                    মিলনে আমাদের দুর্গাপূজা
-                    উদযাপন।
-                </p>
-
-                <a
-                    href="durga-puja.html"
-                    class="event-button"
-                >
-                    বিস্তারিত দেখুন →
-                </a>
-
-            </div>
+<div class="event-grid">
 
 
-            <!-- EDUCATION -->
+<!-- DURGA PUJA -->
 
-            <div class="event-card">
+<div class="event-card">
 
-                <div class="event-icon">
-                    📚
-                </div>
+<div class="event-icon">
+🔱
+</div>
 
-                <h3>
-                    শিক্ষা সহায়তা
-                </h3>
+<h3>
+দুর্গাপূজা
+</h3>
 
-                <p>
-                    প্রয়োজনীয় শিক্ষার্থীদের
-                    পাশে থেকে শিক্ষা সহায়তার
-                    মাধ্যমে ভবিষ্যৎ গড়ার চেষ্টা।
-                </p>
+<p>
+ভক্তি, ঐতিহ্য ও সংস্কৃতির
+মিলনে আমাদের দুর্গাপূজা
+উদযাপন।
+</p>
 
-                <a
-                    href="siksha-sohayota.html"
-                    class="event-button"
-                >
-                    বিস্তারিত দেখুন →
-                </a>
+<a
+    href="durga-puja.html"
+    class="event-button"
+>
+বিস্তারিত দেখুন →
+</a>
 
-            </div>
-
-
-            <!-- BLOOD DONATION -->
-
-            <div class="event-card">
-
-                <div class="event-icon">
-                    🩸
-                </div>
-
-                <h3>
-                    রক্তদান
-                </h3>
-
-                <p>
-                    রক্তদানের মাধ্যমে মানুষের
-                    জীবন বাঁচাতে এবং সমাজের
-                    পাশে থাকার উদ্যোগ।
-                </p>
-
-                <a
-                    href="roktodan.html"
-                    class="event-button"
-                >
-                    বিস্তারিত দেখুন →
-                </a>
-
-            </div>
+</div>
 
 
-        </div>
+<!-- EDUCATION -->
 
-    </div>
+<div class="event-card">
+
+<div class="event-icon">
+📚
+</div>
+
+<h3>
+শিক্ষা সহায়তা
+</h3>
+
+<p>
+প্রয়োজনীয় শিক্ষার্থীদের
+পাশে থেকে শিক্ষা সহায়তার
+মাধ্যমে ভবিষ্যৎ গড়ার চেষ্টা।
+</p>
+
+<a
+    href="siksha-sohayota.html"
+    class="event-button"
+>
+বিস্তারিত দেখুন →
+</a>
+
+</div>
+
+
+<!-- BLOOD DONATION -->
+
+<div class="event-card">
+
+<div class="event-icon">
+🩸
+</div>
+
+<h3>
+রক্তদান
+</h3>
+
+<p>
+রক্তদানের মাধ্যমে মানুষের
+জীবন বাঁচাতে এবং সমাজের
+পাশে থাকার উদ্যোগ।
+</p>
+
+<a
+    href="roktodan.html"
+    class="event-button"
+>
+বিস্তারিত দেখুন →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1240,63 +1229,62 @@ footer{
     id="gallery"
 >
 
-    <div class="section-container">
+<div class="section-container">
 
-        <h2 class="section-title">
-            গ্যালারি
-        </h2>
+<h2 class="section-title">
+গ্যালারি
+</h2>
 
-
-        <div class="gallery-grid">
-
-
-            <div class="gallery-item">
-
-                <img
-                    src="durga1.jpg"
-                    alt="দুর্গাপূজা ছবি ১"
-                    loading="lazy"
-                >
-
-            </div>
+<div class="gallery-grid">
 
 
-            <div class="gallery-item">
+<div class="gallery-item">
 
-                <img
-                    src="durga2.jpg"
-                    alt="দুর্গাপূজা ছবি ২"
-                    loading="lazy"
-                >
+<img
+    src="durga1.jpg"
+    alt="দুর্গাপূজা ছবি ১"
+    loading="lazy"
+>
 
-            </div>
-
-
-            <div class="gallery-item">
-
-                <img
-                    src="durga3.jpg"
-                    alt="দুর্গাপূজা ছবি ৩"
-                    loading="lazy"
-                >
-
-            </div>
+</div>
 
 
-            <div class="gallery-item">
+<div class="gallery-item">
 
-                <img
-                    src="durga4.jpg"
-                    alt="দুর্গাপূজা ছবি ৪"
-                    loading="lazy"
-                >
+<img
+    src="durga2.jpg"
+    alt="দুর্গাপূজা ছবি ২"
+    loading="lazy"
+>
 
-            </div>
+</div>
 
 
-        </div>
+<div class="gallery-item">
 
-    </div>
+<img
+    src="durga3.jpg"
+    alt="দুর্গাপূজা ছবি ৩"
+    loading="lazy"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+    src="durga4.jpg"
+    alt="দুর্গাপূজা ছবি ৪"
+    loading="lazy"
+>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1310,88 +1298,85 @@ footer{
     id="contact"
 >
 
-    <div class="section-container">
+<div class="section-container">
 
-        <h2 class="section-title">
-            যোগাযোগ
-        </h2>
+<h2 class="section-title">
+যোগাযোগ
+</h2>
 
-
-        <div class="contact-grid">
-
-
-            <div class="contact-card">
-
-                <div class="contact-icon">
-                    📍
-                </div>
-
-                <h3>
-                    ঠিকানা
-                </h3>
-
-                <p>
-                    Budbud, Burdwan
-                    <br>
-                    West Bengal, India
-                </p>
-
-            </div>
+<div class="contact-grid">
 
 
-            <div class="contact-card">
+<div class="contact-card">
 
-                <div class="contact-icon">
-                    📞
-                </div>
+<div class="contact-icon">
+📍
+</div>
 
-                <h3>
-                    ফোন
-                </h3>
+<h3>
+ঠিকানা
+</h3>
 
-                <p>
+<p>
+Budbud, Burdwan
+<br>
+West Bengal, India
+</p>
 
-                    <a href="tel:9547222144">
-                        9547222144
-                    </a>
-
-                    <br>
-
-                    <a href="tel:+919563881523">
-                        +91 9563881523
-                    </a>
-
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="contact-card">
+<div class="contact-card">
 
-                <div class="contact-icon">
-                    ✉️
-                </div>
+<div class="contact-icon">
+📞
+</div>
 
-                <h3>
-                    ই-মেইল
-                </h3>
+<h3>
+ফোন
+</h3>
 
-                <p>
+<p>
 
-                    <a
-                        href="mailto:budbudsanhati@gmail.com"
-                    >
-                        budbudsanhati@gmail.com
-                    </a>
+<a href="tel:9547222144">
+9547222144
+</a>
 
-                </p>
+<br>
 
-            </div>
+<a href="tel:+919563881523">
++91 9563881523
+</a>
+
+</p>
+
+</div>
 
 
-        </div>
+<div class="contact-card">
 
-    </div>
+<div class="contact-icon">
+✉️
+</div>
+
+<h3>
+ই-মেইল
+</h3>
+
+<p>
+
+<a href="mailto:budbudsanhati@gmail.com">
+budbudsanhati@gmail.com
+</a>
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1402,17 +1387,17 @@ footer{
 
 <section class="durga-banner">
 
-    <div>
+<div>
 
-        <div class="trident">
-            🔱
-        </div>
+<div class="trident">
+🔱
+</div>
 
-        <h2>
-            জয় মা দুর্গা
-        </h2>
+<h2>
+জয় মা দুর্গা
+</h2>
 
-    </div>
+</div>
 
 </section>
 
@@ -1423,69 +1408,69 @@ footer{
 
 <footer>
 
-    <div class="footer-info">
+<div class="footer-info">
 
 
-        <div class="footer-item">
+<div class="footer-item">
 
-            <strong>
-                Budbud SANHATI
-            </strong>
+<strong>
+Budbud SANHATI
+</strong>
 
-            <br>
+<br>
 
-            একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
+একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
 
-        </div>
-
-
-        <div class="footer-item">
-
-            <strong>
-                ঠিকানা
-            </strong>
-
-            <br>
-
-            Budbud, Burdwan
-
-            <br>
-
-            West Bengal, India
-
-        </div>
+</div>
 
 
-        <div class="footer-item">
+<div class="footer-item">
 
-            <strong>
-                যোগাযোগ
-            </strong>
+<strong>
+ঠিকানা
+</strong>
 
-            <br>
+<br>
 
-            <a href="tel:9547222144">
-                9547222144
-            </a>
+Budbud, Burdwan
 
-            <br>
+<br>
 
-            <a href="mailto:budbudsanhati@gmail.com">
-                budbudsanhati@gmail.com
-            </a>
+West Bengal, India
 
-        </div>
+</div>
 
 
-    </div>
+<div class="footer-item">
+
+<strong>
+যোগাযোগ
+</strong>
+
+<br>
+
+<a href="tel:9547222144">
+9547222144
+</a>
+
+<br>
+
+<a href="mailto:budbudsanhati@gmail.com">
+budbudsanhati@gmail.com
+</a>
+
+</div>
 
 
-    <div class="copyright">
+</div>
 
-        © 2024 Budbud SANHATI.
-        All Rights Reserved.
 
-    </div>
+<div class="copyright">
+
+© 2024 Budbud SANHATI.
+All Rights Reserved.
+
+</div>
 
 </footer>
 
