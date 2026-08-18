@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>আমাদের পরিচয় — Budbud SANHATI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050000;
+    color:#fff;
+    font-family:"Noto Serif Bengali",serif;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    width:100%;
+    height:65px;
+    background:#050505;
+    border-bottom:3px solid #e00000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:45px;
+    list-style:none;
+}
+
+.nav-menu a{
+    position:relative;
+    color:#f3d49a;
+    font-size:18px;
+    font-weight:700;
+    padding:18px 0;
+    white-space:nowrap;
+}
+
+.nav-menu a.active,
+.nav-menu a:hover{
+    color:#ff1515;
+}
+
+.nav-menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:4px;
+    width:0;
+    height:4px;
+    background:#ff0000;
+    transition:.3s;
+}
+
+.nav-menu a.active::after,
+.nav-menu a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+
+.about-hero{
+    text-align:center;
+    padding:75px 20px 50px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #3b0b00 0%,
+        #130000 45%,
+        #050000 100%
+    );
+
+    border-bottom:2px solid #7b1800;
+}
+
+.about-hero .icon{
+    font-size:65px;
+    margin-bottom:15px;
+}
+
+.about-hero h1{
+    color:#ffc400;
+    font-size:42px;
+    font-weight:800;
+}
+
+.about-hero .star{
+    color:#d58a00;
+    font-size:25px;
+    margin-top:10px;
+}
+
+/* CONTENT */
+
+.container{
+    width:100%;
+    max-width:950px;
+    margin:auto;
+    padding:55px 20px 80px;
+}
+
+.card{
+    background:#100000;
+    border:1px solid #6b2300;
+    border-radius:15px;
+    padding:35px 28px;
+    margin-bottom:25px;
+    box-shadow:0 0 20px rgba(255,100,0,.08);
+}
+
+.card h2{
+    color:#ffc400;
+    text-align:center;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.card p{
+    color:#eee;
+    font-size:18px;
+    line-height:2;
+    text-align:center;
+}
+
+/* GRID */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.info-card{
+    background:#100000;
+    border:1px solid #6b2300;
+    border-radius:14px;
+    padding:28px 20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.info-card:hover{
+    border-color:#ffc400;
+    transform:translateY(-4px);
+}
+
+.info-card .icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.info-card h3{
+    color:#ffc400;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.info-card p{
+    color:#ddd;
+    font-size:15px;
+    line-height:1.9;
+}
+
+/* CONTACT BUTTON */
+
+.back-button{
+    display:block;
+    width:max-content;
+    margin:35px auto 0;
+
+    padding:13px 35px;
+
+    border:2px solid #ffc400;
+    border-radius:30px;
+
+    color:#ffc400;
+    font-size:18px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.back-button:hover{
+    background:#ff0000;
+    color:#fff;
+}
+
+/* FOOTER */
+
+footer{
+    background:#030303;
+    border-top:2px solid #ff0000;
+    text-align:center;
+}
+
+.footer-info{
+    padding:25px 15px;
+    color:#ddd;
+    font-size:14px;
+    line-height:2;
+}
+
+.footer-info strong{
+    color:#ffc400;
+}
+
+.copyright{
+    border-top:1px solid #331000;
+    padding:15px;
+    color:#999;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar{
+        justify-content:flex-start;
+        overflow-x:auto;
+    }
+
+    .nav-menu{
+        min-width:max-content;
+        gap:28px;
+        padding:0 18px;
+    }
+
+    .nav-menu a{
+        font-size:16px;
+    }
+
+    .about-hero{
+        padding:55px 15px 40px;
+    }
+
+    .about-hero h1{
+        font-size:32px;
+    }
+
+    .container{
+        padding:40px 15px 60px;
+    }
+
+    .card{
+        padding:28px 18px;
+    }
+
+    .card h2{
+        font-size:25px;
+    }
+
+    .card p{
+        font-size:16px;
+        line-height:1.9;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<ul class="nav-menu">
+
+<li>
+<a href="index.html">HOME</a>
+</li>
+
+<li>
+<a href="about.html" class="active">ABOUT US</a>
+</li>
+
+<li>
+<a href="index.html#events">EVENTS</a>
+</li>
+
+<li>
+<a href="index.html#gallery">GALLERY</a>
+</li>
+
+<li>
+<a href="index.html#contact">CONTACT</a>
+</li>
+
+</ul>
+
+</header>
+
+
+<!-- ABOUT HERO -->
+
+<section class="about-hero">
+
+<div class="icon">🤝</div>
+
+<h1>আমাদের পরিচয়</h1>
+
+<div class="star">✦</div>
+
+</section>
+
+
+<!-- MAIN CONTENT -->
+
+<main class="container">
+
+
+<div class="card">
+
+<h2>বুদবুদ সংহতি সম্পর্কে</h2>
+
+<p>
+বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
+মানুষের পাশে থাকা, সমাজের উন্নয়নে কাজ করা এবং
+সামাজিক ও সাংস্কৃতিক কর্মকাণ্ডের মাধ্যমে সকলকে
+একসাথে নিয়ে এগিয়ে চলাই আমাদের প্রধান উদ্দেশ্য।
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>আমাদের লক্ষ্য</h2>
+
+<p>
+ঐক্য, সহযোগিতা, মানবিকতা ও সংস্কৃতির মাধ্যমে
+একটি সুন্দর ও সুস্থ সমাজ গড়ে তোলার চেষ্টা করা।
+সমাজের মানুষের প্রয়োজনে পাশে থাকা এবং
+নতুন প্রজন্মকে ভালো কাজের সঙ্গে যুক্ত করাই
+আমাদের অন্যতম লক্ষ্য।
+</p>
+
+</div>
+
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<div class="icon">🩸</div>
+
+<h3>রক্তদান</h3>
+
+<p>
+স্বেচ্ছায় রক্তদানের মাধ্যমে
+প্রয়োজনে মানুষের পাশে দাঁড়ানো
+এবং জীবন বাঁচানোর কাজে সহযোগিতা করা।
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="icon">🪔</div>
+
+<h3>দুর্গা পূজা</h3>
+
+<p>
+ধর্মীয় ও সাংস্কৃতিক ঐতিহ্যকে
+সম্মান করে সুন্দরভাবে দুর্গা পূজা
+ও বিভিন্ন অনুষ্ঠান আয়োজন করা।
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="icon">📚</div>
+
+<h3>শিক্ষা সহায়তা</h3>
+
+<p>
+প্রয়োজনীয় ছাত্রছাত্রীদের পাশে থাকা
+এবং শিক্ষা ক্ষেত্রে সহযোগিতা করার
+চেষ্টা করা।
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="icon">⚽</div>
+
+<h3>খেলাধুলা</h3>
+
+<p>
+যুব সমাজকে উৎসাহিত করতে
+খেলাধুলা ও বিভিন্ন ক্রীড়ামূলক
+কার্যক্রমের আয়োজন করা।
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="icon">🎭</div>
+
+<h3>সাংস্কৃতিক কার্যক্রম</h3>
+
+<p>
+গান, নাচ, নাটকসহ বিভিন্ন
+সাংস্কৃতিক কার্যক্রমের মাধ্যমে
+আমাদের ঐতিহ্যকে এগিয়ে নিয়ে যাওয়া।
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="icon">❤️</div>
+
+<h3>সামাজিক সেবা</h3>
+
+<p>
+মানুষের প্রয়োজনে পাশে থাকা এবং
+সমাজের জন্য বিভিন্ন সেবামূলক
+কাজে অংশগ্রহণ করা।
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="card" style="margin-top:25px;">
+
+<h2>আমাদের সঙ্গে যুক্ত হন</h2>
+
+<p>
+সমাজের জন্য ভালো কিছু করার ইচ্ছা থাকলে
+আপনিও বুদবুদ সংহতির বিভিন্ন কার্যক্রমে
+আমাদের সঙ্গে যুক্ত হতে পারেন।
+</p>
+
+<a href="index.html#contact" class="back-button">
+যোগাযোগ করুন
+</a>
+
+</div>
+
+
+<a href="index.html" class="back-button">
+← হোম পেজে ফিরে যান
+</a>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-info">
+
+<strong>Budbud SANHATI</strong>
+
+<br>
+
+Budbud, Burdwan<br>
+West Bengal, India
+
+<br><br>
+
+📞 9547222144
+
+<br>
+
+✉️ budbudsanhati@gmail.com
+
+</div>
+
+<div class="copyright">
+
+© 2024 Budbud SANHATI. All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
