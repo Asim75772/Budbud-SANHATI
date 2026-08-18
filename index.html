@@ -23,12 +23,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
       rel="stylesheet">
 
-
 <style>
 
-/* =====================================================
-   RESET
-===================================================== */
+/* ================= RESET ================= */
 
 *{
     margin:0;
@@ -58,9 +55,7 @@ img{
 }
 
 
-/* =====================================================
-   NAVBAR
-===================================================== */
+/* ================= NAVBAR ================= */
 
 .navbar{
     position:sticky;
@@ -138,9 +133,7 @@ img{
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* ================= HERO ================= */
 
 .hero{
     position:relative;
@@ -241,9 +234,7 @@ img{
 }
 
 
-/* =====================================================
-   QUICK MENU
-===================================================== */
+/* ================= QUICK MENU ================= */
 
 .quick-section{
     width:100%;
@@ -312,9 +303,7 @@ img{
 }
 
 
-/* =====================================================
-   SECTION
-===================================================== */
+/* ================= SECTION ================= */
 
 .section{
     width:100%;
@@ -359,9 +348,7 @@ img{
 }
 
 
-/* =====================================================
-   ABOUT
-===================================================== */
+/* ================= ABOUT ================= */
 
 .about-content{
     text-align:center;
@@ -398,11 +385,6 @@ img{
 
     margin-bottom:15px;
 }
-
-
-/* =====================================================
-   ABOUT BUTTON
-===================================================== */
 
 .about-button-box{
     text-align:center;
@@ -448,9 +430,7 @@ img{
 }
 
 
-/* =====================================================
-   EVENTS
-===================================================== */
+/* ================= EVENTS ================= */
 
 .event-grid{
     display:grid;
@@ -458,6 +438,10 @@ img{
     grid-template-columns:repeat(3,1fr);
 
     gap:25px;
+}
+
+.event-link{
+    display:block;
 }
 
 .event-card{
@@ -485,10 +469,6 @@ img{
         0 0 20px rgba(255,180,0,.15);
 }
 
-.event-link{
-    display:block;
-}
-
 .event-icon{
     font-size:48px;
 
@@ -512,9 +492,7 @@ img{
 }
 
 
-/* =====================================================
-   GALLERY
-===================================================== */
+/* ================= GALLERY ================= */
 
 .gallery-grid{
     display:grid;
@@ -589,9 +567,7 @@ img{
 }
 
 
-/* =====================================================
-   IMAGE POPUP
-===================================================== */
+/* ================= IMAGE POPUP ================= */
 
 .image-modal{
     display:none;
@@ -665,9 +641,7 @@ img{
 }
 
 
-/* =====================================================
-   CONTACT
-===================================================== */
+/* ================= CONTACT ================= */
 
 .contact-grid{
     display:grid;
@@ -721,9 +695,7 @@ img{
 }
 
 
-/* =====================================================
-   DURGA BANNER
-===================================================== */
+/* ================= DURGA BANNER ================= */
 
 .durga-banner{
     width:100%;
@@ -775,9 +747,7 @@ img{
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* ================= FOOTER ================= */
 
 footer{
     background:#030303;
@@ -830,9 +800,57 @@ footer{
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* ================= BACK TOP ================= */
+
+.back-top{
+    position:fixed;
+
+    right:18px;
+    bottom:18px;
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#d60000;
+
+    border:2px solid #ffc400;
+
+    border-radius:50%;
+
+    color:#ffc400;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    z-index:9998;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+}
+
+.back-top.show{
+    opacity:1;
+
+    visibility:visible;
+}
+
+.back-top:hover{
+    background:#ff0000;
+
+    transform:translateY(-3px);
+}
+
+
+/* ================= MOBILE ================= */
 
 @media(max-width:768px){
 
@@ -979,13 +997,10 @@ footer{
     .durga-banner h2{
         font-size:32px;
     }
-
 }
 
 
-/* =====================================================
-   SMALL PHONE
-===================================================== */
+/* ================= SMALL PHONE ================= */
 
 @media(max-width:420px){
 
@@ -1024,59 +1039,6 @@ footer{
     .gallery-item{
         height:340px;
     }
-
-}
-
-
-/* =====================================================
-   BACK TO TOP
-===================================================== */
-
-.back-top{
-    position:fixed;
-
-    right:18px;
-    bottom:18px;
-
-    width:48px;
-    height:48px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    background:#d60000;
-
-    border:2px solid #ffc400;
-
-    border-radius:50%;
-
-    color:#ffc400;
-
-    font-size:24px;
-
-    font-weight:bold;
-
-    z-index:9998;
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.3s;
-}
-
-.back-top.show{
-    opacity:1;
-
-    visibility:visible;
-}
-
-.back-top:hover{
-    background:#ff0000;
-
-    transform:translateY(-3px);
 }
 
 </style>
@@ -1087,9 +1049,7 @@ footer{
 <body>
 
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
+<!-- ================= NAVBAR ================= -->
 
 <header class="navbar">
 
@@ -1134,17 +1094,12 @@ footer{
 </header>
 
 
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
+<!-- ================= MAIN ================= -->
 
 <main>
 
 
-<!-- =====================================================
-     HOME
-===================================================== -->
+<!-- ================= HOME ================= -->
 
 <section id="home" class="hero">
 
@@ -1172,15 +1127,10 @@ footer{
 </section>
 
 
-
-<!-- =====================================================
-     QUICK MENU
-===================================================== -->
+<!-- ================= QUICK MENU ================= -->
 
 <section class="quick-section">
 
-
-    <!-- ABOUT -->
 
     <a
         href="about-us.html"
@@ -1203,9 +1153,6 @@ footer{
     </a>
 
 
-
-    <!-- EVENTS -->
-
     <a
         href="#events"
         class="quick-card"
@@ -1226,9 +1173,6 @@ footer{
 
     </a>
 
-
-
-    <!-- GALLERY -->
 
     <a
         href="#gallery"
@@ -1251,9 +1195,6 @@ footer{
     </a>
 
 
-
-    <!-- CONTACT -->
-
     <a
         href="#contact"
         class="quick-card"
@@ -1274,19 +1215,12 @@ footer{
 
     </a>
 
-
 </section>
 
 
+<!-- ================= ABOUT ================= -->
 
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-
-<section
-    id="about"
-    class="section"
->
+<section id="about" class="section">
 
     <div class="section-container">
 
@@ -1331,15 +1265,9 @@ footer{
 </section>
 
 
+<!-- ================= EVENTS ================= -->
 
-<!-- =====================================================
-     EVENTS
-===================================================== -->
-
-<section
-    id="events"
-    class="section"
->
+<section id="events" class="section">
 
     <div class="section-container">
 
@@ -1378,7 +1306,6 @@ footer{
             </a>
 
 
-
             <!-- BLOOD DONATION -->
 
             <a
@@ -1405,7 +1332,6 @@ footer{
                 </div>
 
             </a>
-
 
 
             <!-- EDUCATION -->
@@ -1436,7 +1362,6 @@ footer{
             </a>
 
 
-
             <!-- SPORTS -->
 
             <div class="event-card">
@@ -1451,11 +1376,10 @@ footer{
 
                 <p>
                     যুব সমাজকে উৎসাহিত করতে বিভিন্ন
-                    খেলাধুলা ও ক্রীড়া অনুষ্ঠানের আয়োজন।
+                    খেলাধুলা ও ক্রীড়া অনুষ্ঠানের আয়োজন করা হয়।
                 </p>
 
             </div>
-
 
 
             <!-- CULTURAL -->
@@ -1478,7 +1402,6 @@ footer{
             </div>
 
 
-
             <!-- SOCIAL SERVICE -->
 
             <div class="event-card">
@@ -1498,7 +1421,6 @@ footer{
 
             </div>
 
-
         </div>
 
     </div>
@@ -1506,15 +1428,9 @@ footer{
 </section>
 
 
+<!-- ================= GALLERY ================= -->
 
-<!-- =====================================================
-     GALLERY
-===================================================== -->
-
-<section
-    id="gallery"
-    class="section"
->
+<section id="gallery" class="section">
 
     <div class="section-container">
 
@@ -1522,11 +1438,8 @@ footer{
             দুর্গা পূজা গ্যালারি
         </h2>
 
-
         <div class="gallery-grid">
 
-
-            <!-- IMAGE 1 -->
 
             <div
                 class="gallery-item"
@@ -1546,9 +1459,6 @@ footer{
             </div>
 
 
-
-            <!-- IMAGE 2 -->
-
             <div
                 class="gallery-item"
                 onclick="openImage('durga2.jpg')"
@@ -1566,9 +1476,6 @@ footer{
 
             </div>
 
-
-
-            <!-- IMAGE 3 -->
 
             <div
                 class="gallery-item"
@@ -1588,9 +1495,6 @@ footer{
             </div>
 
 
-
-            <!-- IMAGE 4 -->
-
             <div
                 class="gallery-item"
                 onclick="openImage('durga4.jpg')"
@@ -1608,7 +1512,6 @@ footer{
 
             </div>
 
-
         </div>
 
     </div>
@@ -1616,15 +1519,9 @@ footer{
 </section>
 
 
+<!-- ================= CONTACT ================= -->
 
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section
-    id="contact"
-    class="section"
->
+<section id="contact" class="section">
 
     <div class="section-container">
 
@@ -1634,8 +1531,6 @@ footer{
 
         <div class="contact-grid">
 
-
-            <!-- ADDRESS -->
 
             <div class="contact-card">
 
@@ -1654,9 +1549,6 @@ footer{
 
             </div>
 
-
-
-            <!-- PHONE -->
 
             <div class="contact-card">
 
@@ -1685,9 +1577,6 @@ footer{
             </div>
 
 
-
-            <!-- EMAIL -->
-
             <div class="contact-card">
 
                 <div class="icon">
@@ -1708,9 +1597,6 @@ footer{
 
             </div>
 
-
-
-            <!-- JOIN -->
 
             <div class="contact-card">
 
@@ -1736,14 +1622,10 @@ footer{
 
 </section>
 
-
 </main>
 
 
-
-<!-- =====================================================
-     DURGA BANNER
-===================================================== -->
+<!-- ================= DURGA BANNER ================= -->
 
 <section class="durga-banner">
 
@@ -1762,10 +1644,7 @@ footer{
 </section>
 
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1791,7 +1670,6 @@ footer{
         </div>
 
 
-
         <div class="footer-item">
 
             📞
@@ -1813,7 +1691,6 @@ footer{
             </a>
 
         </div>
-
 
 
         <div class="footer-item">
@@ -1846,10 +1723,7 @@ footer{
 </footer>
 
 
-
-<!-- =====================================================
-     BACK TO TOP
-===================================================== -->
+<!-- ================= BACK TO TOP ================= -->
 
 <a
     href="#home"
@@ -1861,10 +1735,7 @@ footer{
 </a>
 
 
-
-<!-- =====================================================
-     IMAGE POPUP
-===================================================== -->
+<!-- ================= IMAGE POPUP ================= -->
 
 <div
     id="imageModal"
@@ -1891,27 +1762,19 @@ footer{
 </div>
 
 
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
-
-/* =====================================================
-   SMOOTH SCROLL
-===================================================== */
+/* SMOOTH SCROLL */
 
 document.querySelectorAll('a[href^="#"]').forEach(function(link){
 
     link.addEventListener("click",function(event){
 
-        const targetId =
-            this.getAttribute("href");
+        const targetId = this.getAttribute("href");
 
-        const target =
-            document.querySelector(targetId);
+        const target = document.querySelector(targetId);
 
         if(target){
 
@@ -1929,10 +1792,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link){
 });
 
 
-
-/* =====================================================
-   ACTIVE NAVIGATION
-===================================================== */
+/* ACTIVE NAVIGATION */
 
 const sections =
     document.querySelectorAll("section[id]");
@@ -1979,10 +1839,7 @@ window.addEventListener("scroll",function(){
 });
 
 
-
-/* =====================================================
-   GALLERY POPUP
-===================================================== */
+/* IMAGE POPUP */
 
 const imageModal =
     document.getElementById("imageModal");
@@ -2036,10 +1893,7 @@ document.addEventListener(
 );
 
 
-
-/* =====================================================
-   BACK TO TOP
-===================================================== */
+/* BACK TO TOP */
 
 const backTop =
     document.getElementById("backTop");
@@ -2061,7 +1915,6 @@ window.addEventListener(
 
     }
 );
-
 
 </script>
 
