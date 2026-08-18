@@ -26,9 +26,9 @@
 
 <style>
 
-/* ==============================
+/* =====================================================
    RESET
-============================== */
+===================================================== */
 
 *{
     margin:0;
@@ -42,7 +42,7 @@ html{
 
 body{
     background:#050000;
-    color:#ffffff;
+    color:#fff;
     font-family:"Noto Serif Bengali",serif;
     overflow-x:hidden;
 }
@@ -58,9 +58,9 @@ img{
 }
 
 
-/* ==============================
+/* =====================================================
    NAVBAR
-============================== */
+===================================================== */
 
 .navbar{
     position:sticky;
@@ -68,7 +68,7 @@ img{
     z-index:9999;
 
     width:100%;
-    min-height:70px;
+    height:72px;
 
     background:#050505;
 
@@ -76,26 +76,24 @@ img{
 
     display:flex;
     align-items:center;
+    justify-content:center;
 }
 
 .nav-container{
     width:100%;
-    overflow-x:auto;
+    max-width:1200px;
 }
 
 .nav-menu{
-    width:max-content;
-    min-width:100%;
+    width:100%;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    gap:45px;
+    gap:55px;
 
     list-style:none;
-
-    padding:0 25px;
 }
 
 .nav-menu a{
@@ -140,9 +138,9 @@ img{
 }
 
 
-/* ==============================
+/* =====================================================
    HERO
-============================== */
+===================================================== */
 
 .hero{
     position:relative;
@@ -166,7 +164,7 @@ img{
     position:absolute;
 
     left:50%;
-    bottom:35px;
+    bottom:38px;
 
     transform:translateX(-50%);
 
@@ -182,9 +180,9 @@ img{
     justify-content:center;
 
     min-width:240px;
-    min-height:60px;
+    height:60px;
 
-    padding:0 35px;
+    padding:0 40px;
 
     border-radius:15px;
 
@@ -243,9 +241,9 @@ img{
 }
 
 
-/* ==============================
+/* =====================================================
    QUICK MENU
-============================== */
+===================================================== */
 
 .quick-section{
     width:100%;
@@ -271,6 +269,10 @@ img{
     transition:.3s;
 }
 
+.quick-card:last-child{
+    border-right:none;
+}
+
 .quick-card:hover{
     background:#140000;
 }
@@ -286,6 +288,7 @@ img{
     border-radius:50%;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -309,9 +312,9 @@ img{
 }
 
 
-/* ==============================
+/* =====================================================
    SECTION
-============================== */
+===================================================== */
 
 .section{
     width:100%;
@@ -356,9 +359,9 @@ img{
 }
 
 
-/* ==============================
+/* =====================================================
    ABOUT
-============================== */
+===================================================== */
 
 .about-content{
     text-align:center;
@@ -395,6 +398,11 @@ img{
 
     margin-bottom:15px;
 }
+
+
+/* =====================================================
+   ABOUT BUTTON
+===================================================== */
 
 .about-button-box{
     text-align:center;
@@ -435,10 +443,14 @@ img{
     transition:.3s;
 }
 
+.about-button:hover{
+    transform:scale(1.05);
+}
 
-/* ==============================
+
+/* =====================================================
    EVENTS
-============================== */
+===================================================== */
 
 .event-grid{
     display:grid;
@@ -448,16 +460,8 @@ img{
     gap:25px;
 }
 
-.event-link{
-    display:block;
-
-    height:100%;
-}
-
 .event-card{
     height:100%;
-
-    min-height:250px;
 
     background:#110000;
 
@@ -472,7 +476,6 @@ img{
     transition:.3s;
 }
 
-.event-link:hover .event-card,
 .event-card:hover{
     transform:translateY(-5px);
 
@@ -480,6 +483,10 @@ img{
 
     box-shadow:
         0 0 20px rgba(255,180,0,.15);
+}
+
+.event-link{
+    display:block;
 }
 
 .event-icon{
@@ -505,9 +512,9 @@ img{
 }
 
 
-/* ==============================
+/* =====================================================
    GALLERY
-============================== */
+===================================================== */
 
 .gallery-grid{
     display:grid;
@@ -582,9 +589,85 @@ img{
 }
 
 
-/* ==============================
+/* =====================================================
+   IMAGE POPUP
+===================================================== */
+
+.image-modal{
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:100000;
+
+    background:rgba(0,0,0,.94);
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+}
+
+.image-modal.show{
+    display:flex;
+}
+
+.modal-image{
+    max-width:95%;
+
+    max-height:90vh;
+
+    width:auto;
+
+    height:auto;
+
+    object-fit:contain;
+
+    border:3px solid #ffc400;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 0 35px rgba(255,190,0,.35);
+}
+
+.close-modal{
+    position:absolute;
+
+    top:18px;
+    right:25px;
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    border:2px solid #ffc400;
+
+    background:#100000;
+
+    color:#ffc400;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+    z-index:100001;
+}
+
+.close-modal:hover{
+    background:#ff0000;
+
+    color:#fff;
+}
+
+
+/* =====================================================
    CONTACT
-============================== */
+===================================================== */
 
 .contact-grid{
     display:grid;
@@ -638,9 +721,9 @@ img{
 }
 
 
-/* ==============================
+/* =====================================================
    DURGA BANNER
-============================== */
+===================================================== */
 
 .durga-banner{
     width:100%;
@@ -692,9 +775,9 @@ img{
 }
 
 
-/* ==============================
+/* =====================================================
    FOOTER
-============================== */
+===================================================== */
 
 footer{
     background:#030303;
@@ -747,74 +830,28 @@ footer{
 }
 
 
-/* ==============================
-   BACK TO TOP
-============================== */
-
-.back-top{
-    position:fixed;
-
-    right:18px;
-    bottom:18px;
-
-    width:48px;
-    height:48px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    background:#d60000;
-
-    border:2px solid #ffc400;
-
-    border-radius:50%;
-
-    color:#ffc400;
-
-    font-size:24px;
-
-    font-weight:bold;
-
-    z-index:9998;
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.3s;
-}
-
-.back-top.show{
-    opacity:1;
-
-    visibility:visible;
-}
-
-
-/* ==============================
+/* =====================================================
    MOBILE
-============================== */
+===================================================== */
 
 @media(max-width:768px){
 
     .navbar{
-        min-height:62px;
+        height:62px;
 
-        overflow:hidden;
+        overflow-x:auto;
+
+        justify-content:flex-start;
     }
 
     .nav-container{
-        overflow-x:auto;
+        min-width:max-content;
     }
 
     .nav-menu{
-        min-width:max-content;
+        gap:28px;
 
         justify-content:flex-start;
-
-        gap:28px;
 
         padding:0 18px;
     }
@@ -832,7 +869,7 @@ footer{
     .welcome-btn{
         min-width:190px;
 
-        min-height:50px;
+        height:50px;
 
         padding:0 25px;
 
@@ -907,10 +944,6 @@ footer{
         gap:18px;
     }
 
-    .event-card{
-        min-height:240px;
-    }
-
     .gallery-grid{
         grid-template-columns:1fr;
 
@@ -950,9 +983,9 @@ footer{
 }
 
 
-/* ==============================
+/* =====================================================
    SMALL PHONE
-============================== */
+===================================================== */
 
 @media(max-width:420px){
 
@@ -983,7 +1016,7 @@ footer{
     .welcome-btn{
         min-width:175px;
 
-        min-height:48px;
+        height:48px;
 
         font-size:19px;
     }
@@ -994,6 +1027,58 @@ footer{
 
 }
 
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.back-top{
+    position:fixed;
+
+    right:18px;
+    bottom:18px;
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#d60000;
+
+    border:2px solid #ffc400;
+
+    border-radius:50%;
+
+    color:#ffc400;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    z-index:9998;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+}
+
+.back-top.show{
+    opacity:1;
+
+    visibility:visible;
+}
+
+.back-top:hover{
+    background:#ff0000;
+
+    transform:translateY(-3px);
+}
+
 </style>
 
 </head>
@@ -1002,9 +1087,9 @@ footer{
 <body>
 
 
-<!-- ==============================
+<!-- =====================================================
      NAVBAR
-============================== -->
+===================================================== -->
 
 <header class="navbar">
 
@@ -1019,7 +1104,7 @@ footer{
             </li>
 
             <li>
-                <a href="about-us.html">
+                <a href="#about">
                     ABOUT US
                 </a>
             </li>
@@ -1049,11 +1134,17 @@ footer{
 </header>
 
 
-<!-- ==============================
-     HOME
-============================== -->
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
 <main>
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
 
 <section id="home" class="hero">
 
@@ -1081,12 +1172,15 @@ footer{
 </section>
 
 
-<!-- ==============================
+
+<!-- =====================================================
      QUICK MENU
-============================== -->
+===================================================== -->
 
 <section class="quick-section">
 
+
+    <!-- ABOUT -->
 
     <a
         href="about-us.html"
@@ -1109,6 +1203,9 @@ footer{
     </a>
 
 
+
+    <!-- EVENTS -->
+
     <a
         href="#events"
         class="quick-card"
@@ -1129,6 +1226,9 @@ footer{
 
     </a>
 
+
+
+    <!-- GALLERY -->
 
     <a
         href="#gallery"
@@ -1151,6 +1251,9 @@ footer{
     </a>
 
 
+
+    <!-- CONTACT -->
+
     <a
         href="#contact"
         class="quick-card"
@@ -1171,14 +1274,19 @@ footer{
 
     </a>
 
+
 </section>
 
 
-<!-- ==============================
-     ABOUT
-============================== -->
 
-<section id="about" class="section">
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+    id="about"
+    class="section"
+>
 
     <div class="section-container">
 
@@ -1223,11 +1331,15 @@ footer{
 </section>
 
 
-<!-- ==============================
-     EVENTS
-============================== -->
 
-<section id="events" class="section">
+<!-- =====================================================
+     EVENTS
+===================================================== -->
+
+<section
+    id="events"
+    class="section"
+>
 
     <div class="section-container">
 
@@ -1238,7 +1350,7 @@ footer{
         <div class="event-grid">
 
 
-            <!-- দুর্গা পূজা -->
+            <!-- DURGA PUJA -->
 
             <a
                 href="durga-puja-details.html"
@@ -1266,7 +1378,8 @@ footer{
             </a>
 
 
-            <!-- রক্তদান -->
+
+            <!-- BLOOD DONATION -->
 
             <a
                 href="roktodan.html"
@@ -1294,27 +1407,37 @@ footer{
             </a>
 
 
-            <!-- শিক্ষা সহায়তা -->
 
-            <div class="event-card">
+            <!-- EDUCATION -->
 
-                <div class="event-icon">
-                    📚
+            <a
+                href="shiksha-sohayota.html"
+                class="event-link"
+            >
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        শিক্ষা সহায়তা
+                    </h3>
+
+                    <p>
+                        প্রয়োজনীয় ছাত্রছাত্রীদের পাশে থেকে
+                        শিক্ষা সহায়তা করার চেষ্টা করা হয়।
+                        বিস্তারিত জানতে স্পর্শ করুন।
+                    </p>
+
                 </div>
 
-                <h3>
-                    শিক্ষা সহায়তা
-                </h3>
-
-                <p>
-                    প্রয়োজনীয় ছাত্রছাত্রীদের পাশে থেকে
-                    শিক্ষা সহায়তা করার চেষ্টা করা হয়।
-                </p>
-
-            </div>
+            </a>
 
 
-            <!-- খেলাধুলা -->
+
+            <!-- SPORTS -->
 
             <div class="event-card">
 
@@ -1334,7 +1457,8 @@ footer{
             </div>
 
 
-            <!-- সাংস্কৃতিক অনুষ্ঠান -->
+
+            <!-- CULTURAL -->
 
             <div class="event-card">
 
@@ -1354,7 +1478,8 @@ footer{
             </div>
 
 
-            <!-- সামাজিক সেবা -->
+
+            <!-- SOCIAL SERVICE -->
 
             <div class="event-card">
 
@@ -1373,6 +1498,7 @@ footer{
 
             </div>
 
+
         </div>
 
     </div>
@@ -1380,11 +1506,15 @@ footer{
 </section>
 
 
-<!-- ==============================
-     GALLERY
-============================== -->
 
-<section id="gallery" class="section">
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section
+    id="gallery"
+    class="section"
+>
 
     <div class="section-container">
 
@@ -1392,8 +1522,11 @@ footer{
             দুর্গা পূজা গ্যালারি
         </h2>
 
+
         <div class="gallery-grid">
 
+
+            <!-- IMAGE 1 -->
 
             <div
                 class="gallery-item"
@@ -1413,6 +1546,9 @@ footer{
             </div>
 
 
+
+            <!-- IMAGE 2 -->
+
             <div
                 class="gallery-item"
                 onclick="openImage('durga2.jpg')"
@@ -1431,6 +1567,9 @@ footer{
             </div>
 
 
+
+            <!-- IMAGE 3 -->
+
             <div
                 class="gallery-item"
                 onclick="openImage('durga3.jpg')"
@@ -1448,6 +1587,9 @@ footer{
 
             </div>
 
+
+
+            <!-- IMAGE 4 -->
 
             <div
                 class="gallery-item"
@@ -1474,11 +1616,15 @@ footer{
 </section>
 
 
-<!-- ==============================
-     CONTACT
-============================== -->
 
-<section id="contact" class="section">
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+    id="contact"
+    class="section"
+>
 
     <div class="section-container">
 
@@ -1488,6 +1634,8 @@ footer{
 
         <div class="contact-grid">
 
+
+            <!-- ADDRESS -->
 
             <div class="contact-card">
 
@@ -1506,6 +1654,9 @@ footer{
 
             </div>
 
+
+
+            <!-- PHONE -->
 
             <div class="contact-card">
 
@@ -1534,6 +1685,9 @@ footer{
             </div>
 
 
+
+            <!-- EMAIL -->
+
             <div class="contact-card">
 
                 <div class="icon">
@@ -1554,6 +1708,9 @@ footer{
 
             </div>
 
+
+
+            <!-- JOIN -->
 
             <div class="contact-card">
 
@@ -1579,12 +1736,14 @@ footer{
 
 </section>
 
+
 </main>
 
 
-<!-- ==============================
+
+<!-- =====================================================
      DURGA BANNER
-============================== -->
+===================================================== -->
 
 <section class="durga-banner">
 
@@ -1603,9 +1762,10 @@ footer{
 </section>
 
 
-<!-- ==============================
+
+<!-- =====================================================
      FOOTER
-============================== -->
+===================================================== -->
 
 <footer>
 
@@ -1631,6 +1791,7 @@ footer{
         </div>
 
 
+
         <div class="footer-item">
 
             📞
@@ -1652,6 +1813,7 @@ footer{
             </a>
 
         </div>
+
 
 
         <div class="footer-item">
@@ -1684,9 +1846,10 @@ footer{
 </footer>
 
 
-<!-- ==============================
+
+<!-- =====================================================
      BACK TO TOP
-============================== -->
+===================================================== -->
 
 <a
     href="#home"
@@ -1698,70 +1861,128 @@ footer{
 </a>
 
 
-<!-- ==============================
+
+<!-- =====================================================
      IMAGE POPUP
-============================== -->
+===================================================== -->
 
 <div
     id="imageModal"
     class="image-modal"
-    style="
-        display:none;
-        position:fixed;
-        inset:0;
-        z-index:100000;
-        background:rgba(0,0,0,.94);
-        align-items:center;
-        justify-content:center;
-        padding:20px;
-    "
     onclick="closeImage(event)"
 >
 
     <button
+        class="close-modal"
         onclick="closeImage()"
-        style="
-            position:absolute;
-            top:18px;
-            right:25px;
-            width:48px;
-            height:48px;
-            border-radius:50%;
-            border:2px solid #ffc400;
-            background:#100000;
-            color:#ffc400;
-            font-size:32px;
-            cursor:pointer;
-            z-index:100001;
-        "
+        aria-label="Close"
     >
         ×
     </button>
 
     <img
         id="modalImage"
+        class="modal-image"
         src=""
         alt="দুর্গা পূজা"
-        style="
-            max-width:95%;
-            max-height:90vh;
-            width:auto;
-            height:auto;
-            object-fit:contain;
-            border:3px solid #ffc400;
-            border-radius:10px;
-        "
         onclick="event.stopPropagation()"
     >
 
 </div>
 
 
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-/* ==============================
+
+/* =====================================================
+   SMOOTH SCROLL
+===================================================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+
+    link.addEventListener("click",function(event){
+
+        const targetId =
+            this.getAttribute("href");
+
+        const target =
+            document.querySelector(targetId);
+
+        if(target){
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+
+        }
+
+    });
+
+});
+
+
+
+/* =====================================================
+   ACTIVE NAVIGATION
+===================================================== */
+
+const sections =
+    document.querySelectorAll("section[id]");
+
+const navLinks =
+    document.querySelectorAll(".nav-menu a");
+
+
+window.addEventListener("scroll",function(){
+
+    let current = "home";
+
+    sections.forEach(function(section){
+
+        const sectionTop =
+            section.offsetTop - 120;
+
+        if(window.scrollY >= sectionTop){
+
+            current =
+                section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(function(link){
+
+        link.classList.remove("active");
+
+        if(
+            link.getAttribute("href")
+            ===
+            "#"+current
+        ){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+
+/* =====================================================
    GALLERY POPUP
-============================== */
+===================================================== */
 
 const imageModal =
     document.getElementById("imageModal");
@@ -1774,7 +1995,7 @@ function openImage(imageSrc){
 
     modalImage.src = imageSrc;
 
-    imageModal.style.display = "flex";
+    imageModal.classList.add("show");
 
     document.body.style.overflow = "hidden";
 
@@ -1787,14 +2008,17 @@ function closeImage(event){
         event &&
         event.target === modalImage
     ){
+
         return;
+
     }
 
-    imageModal.style.display = "none";
+    imageModal.classList.remove("show");
 
     modalImage.src = "";
 
     document.body.style.overflow = "";
+
 }
 
 
@@ -1803,16 +2027,19 @@ document.addEventListener(
     function(event){
 
         if(event.key === "Escape"){
+
             closeImage();
+
         }
 
     }
 );
 
 
-/* ==============================
+
+/* =====================================================
    BACK TO TOP
-============================== */
+===================================================== */
 
 const backTop =
     document.getElementById("backTop");
@@ -1834,6 +2061,7 @@ window.addEventListener(
 
     }
 );
+
 
 </script>
 
