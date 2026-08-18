@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>দুর্গা পূজা | Budbud SANHATI</title>
+
+<meta name="description"
+      content="Budbud SANHATI-এর দুর্গা পূজা সম্পর্কে বিস্তারিত তথ্য">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050000;
+    color:#fff;
+    font-family:"Noto Serif Bengali",serif;
+    overflow-x:hidden;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar{
+    width:100%;
+    min-height:70px;
+
+    background:#050505;
+
+    border-bottom:3px solid #e00000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.nav-container{
+    width:100%;
+    max-width:1200px;
+}
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:45px;
+
+    list-style:none;
+
+    padding:0 20px;
+}
+
+.nav-menu a{
+    color:#f3d49a;
+
+    text-decoration:none;
+
+    font-size:18px;
+    font-weight:700;
+
+    white-space:nowrap;
+
+    transition:.3s;
+}
+
+.nav-menu a:hover{
+    color:#ff1515;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero{
+    width:100%;
+
+    padding:70px 20px 55px;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #3b0b00 0%,
+            #120000 45%,
+            #050000 100%
+        );
+
+    border-bottom:1px solid #5b2100;
+}
+
+.durga-icon{
+    font-size:85px;
+
+    margin-bottom:20px;
+
+    filter:
+        drop-shadow(0 0 15px #ff9d00)
+        drop-shadow(0 0 30px #ff5e00);
+}
+
+.hero h1{
+    color:#ffc400;
+
+    font-size:45px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+
+    text-shadow:
+        0 0 12px rgba(255,180,0,.5);
+}
+
+.hero p{
+    color:#eee;
+
+    font-size:19px;
+
+    line-height:2;
+
+    max-width:750px;
+
+    margin:auto;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.container{
+    width:100%;
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:60px 20px;
+}
+
+.content-card{
+    background:#110000;
+
+    border:1px solid #8a3200;
+
+    border-radius:18px;
+
+    padding:40px 30px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+        0 0 20px rgba(255,150,0,.08);
+}
+
+.content-card h2{
+    color:#ffc400;
+
+    text-align:center;
+
+    font-size:30px;
+
+    margin-bottom:25px;
+}
+
+.content-card h2::after{
+    content:"✦";
+
+    display:block;
+
+    color:#b87900;
+
+    font-size:18px;
+
+    margin-top:7px;
+}
+
+.content-card p{
+    color:#eee;
+
+    font-size:18px;
+
+    line-height:2.1;
+
+    margin-bottom:15px;
+
+    text-align:center;
+}
+
+
+/* ================================
+   PUJA HIGHLIGHTS
+================================ */
+
+.highlight-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin-top:25px;
+}
+
+.highlight{
+    background:#080000;
+
+    border:1px solid #6b2300;
+
+    border-radius:14px;
+
+    padding:25px 18px;
+
+    text-align:center;
+}
+
+.highlight-icon{
+    font-size:45px;
+
+    margin-bottom:10px;
+}
+
+.highlight h3{
+    color:#ffc400;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+}
+
+.highlight p{
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin:0;
+}
+
+
+/* ================================
+   BACK BUTTON
+================================ */
+
+.back-box{
+    text-align:center;
+
+    margin-top:40px;
+}
+
+.back-button{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 30px;
+
+    min-width:220px;
+
+    background:linear-gradient(
+        180deg,
+        #ff1919,
+        #d60000
+    );
+
+    border:3px solid #ffc400;
+
+    border-radius:14px;
+
+    color:#ffe8a0;
+
+    font-size:19px;
+
+    font-weight:800;
+
+    text-decoration:none;
+
+    box-shadow:
+        0 0 12px #ffb300,
+        0 0 28px rgba(255,180,0,.4);
+
+    transition:.3s;
+}
+
+.back-button:hover{
+    transform:scale(1.05);
+}
+
+
+/* ================================
+   DURGA BANNER
+================================ */
+
+.durga-banner{
+    width:100%;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #380b00 0%,
+            #150000 45%,
+            #030000 100%
+        );
+
+    border-top:2px solid #8c0000;
+
+    border-bottom:2px solid #8c0000;
+}
+
+.trident{
+    font-size:50px;
+
+    color:#ffc400;
+
+    text-shadow:
+        0 0 15px #ff9d00;
+}
+
+.durga-banner h2{
+    color:#ffc400;
+
+    font-size:35px;
+
+    margin-top:8px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+    background:#030303;
+
+    border-top:2px solid #ff0000;
+
+    text-align:center;
+
+    padding:25px 15px;
+}
+
+footer p{
+    color:#999;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+    .navbar{
+        overflow-x:auto;
+
+        justify-content:flex-start;
+    }
+
+    .nav-container{
+        min-width:max-content;
+    }
+
+    .nav-menu{
+        justify-content:flex-start;
+
+        gap:28px;
+
+        padding:0 18px;
+    }
+
+    .nav-menu a{
+        font-size:16px;
+    }
+
+    .hero{
+        padding:55px 18px 45px;
+    }
+
+    .durga-icon{
+        font-size:70px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+
+        line-height:1.9;
+    }
+
+    .container{
+        padding:45px 15px;
+    }
+
+    .content-card{
+        padding:30px 18px;
+    }
+
+    .content-card h2{
+        font-size:27px;
+    }
+
+    .content-card p{
+        font-size:16px;
+
+        line-height:2;
+    }
+
+    .highlight-grid{
+        grid-template-columns:1fr;
+    }
+
+    .durga-banner h2{
+        font-size:29px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================================
+     NAVBAR
+================================ -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#about">
+                    ABOUT US
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#events">
+                    EVENTS
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#gallery">
+                    GALLERY
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contact">
+                    CONTACT
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- ================================
+     HERO
+================================ -->
+
+<section class="hero">
+
+    <div class="durga-icon">
+        🪔
+    </div>
+
+    <h1>
+        দুর্গা পূজা
+    </h1>
+
+    <p>
+        বুদবুদ সংহতির অন্যতম প্রধান
+        সামাজিক ও সাংস্কৃতিক আয়োজন
+    </p>
+
+</section>
+
+
+<!-- ================================
+     MAIN CONTENT
+================================ -->
+
+<main>
+
+<div class="container">
+
+
+    <!-- পরিচিতি -->
+
+    <div class="content-card">
+
+        <h2>
+            দুর্গা পূজা সম্পর্কে
+        </h2>
+
+        <p>
+            দুর্গা পূজা বাঙালির অন্যতম প্রধান
+            ধর্মীয় ও সাংস্কৃতিক উৎসব।
+        </p>
+
+        <p>
+            এই পবিত্র উৎসবকে কেন্দ্র করে
+            মানুষের মধ্যে আনন্দ, সম্প্রীতি,
+            ভ্রাতৃত্ব ও একতার পরিবেশ তৈরি হয়।
+        </p>
+
+        <p>
+            বুদবুদ সংহতির পক্ষ থেকে প্রতি বছর
+            সুন্দর, সুশৃঙ্খল ও আনন্দমুখর পরিবেশে
+            দুর্গা পূজার আয়োজন করার চেষ্টা করা হয়।
+        </p>
+
+    </div>
+
+
+    <!-- আমাদের আয়োজন -->
+
+    <div class="content-card">
+
+        <h2>
+            আমাদের দুর্গা পূজার আয়োজন
+        </h2>
+
+        <p>
+            পূজার দিনগুলিতে ধর্মীয় আচার-অনুষ্ঠানের
+            পাশাপাশি বিভিন্ন সামাজিক ও সাংস্কৃতিক
+            কার্যক্রমের আয়োজন করা হয়।
+        </p>
+
+
+        <div class="highlight-grid">
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🪔
+                </div>
+
+                <h3>
+                    পূজা ও আরাধনা
+                </h3>
+
+                <p>
+                    নিয়ম ও নিষ্ঠার সঙ্গে
+                    মা দুর্গার পূজা ও আরাধনা।
+                </p>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🎭
+                </div>
+
+                <h3>
+                    সাংস্কৃতিক অনুষ্ঠান
+                </h3>
+
+                <p>
+                    গান, নাচ, নাটকসহ বিভিন্ন
+                    সাংস্কৃতিক অনুষ্ঠানের আয়োজন।
+                </p>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🍲
+                </div>
+
+                <h3>
+                    প্রসাদ বিতরণ
+                </h3>
+
+                <p>
+                    পূজা উপলক্ষে ভক্তদের মধ্যে
+                    প্রসাদ বিতরণের ব্যবস্থা।
+                </p>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    সম্প্রীতি ও একতা
+                </h3>
+
+                <p>
+                    সকলকে সঙ্গে নিয়ে
+                    সম্প্রীতি ও ভ্রাতৃত্বের বন্ধন তৈরি।
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- আমাদের উদ্দেশ্য -->
+
+    <div class="content-card">
+
+        <h2>
+            আমাদের উদ্দেশ্য
+        </h2>
+
+        <p>
+            দুর্গা পূজাকে শুধুমাত্র একটি ধর্মীয় উৎসব
+            হিসেবে নয়, মানুষের মিলন ও সামাজিক
+            সম্প্রীতির একটি মাধ্যম হিসেবে গড়ে তোলাই
+            আমাদের অন্যতম উদ্দেশ্য।
+        </p>
+
+        <p>
+            সকলের সহযোগিতা ও অংশগ্রহণে একটি
+            সুন্দর, নিরাপদ এবং আনন্দময় দুর্গা পূজা
+            উদযাপন করার চেষ্টা করি আমরা।
+        </p>
+
+    </div>
+
+
+    <!-- শেষ কথা -->
+
+    <div class="content-card">
+
+        <h2>
+            সকলকে আমন্ত্রণ
+        </h2>
+
+        <p>
+            মা দুর্গার আশীর্বাদে সকলের জীবন
+            সুখ, শান্তি ও সমৃদ্ধিতে ভরে উঠুক।
+        </p>
+
+        <p>
+            আপনাদের সকলের উপস্থিতি,
+            সহযোগিতা ও ভালোবাসাই আমাদের
+            সবচেয়ে বড় শক্তি।
+        </p>
+
+        <p>
+            🙏 জয় মা দুর্গা 🙏
+        </p>
+
+    </div>
+
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-box">
+
+        <a
+            href="index.html#events"
+            class="back-button"
+        >
+            ← কার্যক্রমে ফিরে যান
+        </a>
+
+    </div>
+
+
+</div>
+
+</main>
+
+
+<!-- ================================
+     DURGA BANNER
+================================ -->
+
+<section class="durga-banner">
+
+    <div>
+
+        <div class="trident">
+            🔱
+        </div>
+
+        <h2>
+            জয় মা দুর্গা
+        </h2>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer>
+
+    <p>
+        © 2024 Budbud SANHATI.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Budbud, Burdwan, West Bengal, India
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
