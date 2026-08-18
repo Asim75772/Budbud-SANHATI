@@ -26,9 +26,9 @@
 
 <style>
 
-/* =====================================================
+/* ==============================
    RESET
-===================================================== */
+============================== */
 
 *{
     margin:0;
@@ -42,7 +42,7 @@ html{
 
 body{
     background:#050000;
-    color:#fff;
+    color:#ffffff;
     font-family:"Noto Serif Bengali",serif;
     overflow-x:hidden;
 }
@@ -58,9 +58,9 @@ img{
 }
 
 
-/* =====================================================
+/* ==============================
    NAVBAR
-===================================================== */
+============================== */
 
 .navbar{
     position:sticky;
@@ -68,7 +68,7 @@ img{
     z-index:9999;
 
     width:100%;
-    height:72px;
+    min-height:70px;
 
     background:#050505;
 
@@ -76,24 +76,26 @@ img{
 
     display:flex;
     align-items:center;
-    justify-content:center;
 }
 
 .nav-container{
     width:100%;
-    max-width:1200px;
+    overflow-x:auto;
 }
 
 .nav-menu{
-    width:100%;
+    width:max-content;
+    min-width:100%;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    gap:55px;
+    gap:45px;
 
     list-style:none;
+
+    padding:0 25px;
 }
 
 .nav-menu a{
@@ -138,9 +140,9 @@ img{
 }
 
 
-/* =====================================================
+/* ==============================
    HERO
-===================================================== */
+============================== */
 
 .hero{
     position:relative;
@@ -164,7 +166,7 @@ img{
     position:absolute;
 
     left:50%;
-    bottom:38px;
+    bottom:35px;
 
     transform:translateX(-50%);
 
@@ -180,9 +182,9 @@ img{
     justify-content:center;
 
     min-width:240px;
-    height:60px;
+    min-height:60px;
 
-    padding:0 40px;
+    padding:0 35px;
 
     border-radius:15px;
 
@@ -241,9 +243,9 @@ img{
 }
 
 
-/* =====================================================
+/* ==============================
    QUICK MENU
-===================================================== */
+============================== */
 
 .quick-section{
     width:100%;
@@ -269,10 +271,6 @@ img{
     transition:.3s;
 }
 
-.quick-card:last-child{
-    border-right:none;
-}
-
 .quick-card:hover{
     background:#140000;
 }
@@ -288,7 +286,6 @@ img{
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -312,9 +309,9 @@ img{
 }
 
 
-/* =====================================================
+/* ==============================
    SECTION
-===================================================== */
+============================== */
 
 .section{
     width:100%;
@@ -359,9 +356,9 @@ img{
 }
 
 
-/* =====================================================
+/* ==============================
    ABOUT
-===================================================== */
+============================== */
 
 .about-content{
     text-align:center;
@@ -398,11 +395,6 @@ img{
 
     margin-bottom:15px;
 }
-
-
-/* =====================================================
-   ABOUT BUTTON
-===================================================== */
 
 .about-button-box{
     text-align:center;
@@ -443,14 +435,10 @@ img{
     transition:.3s;
 }
 
-.about-button:hover{
-    transform:scale(1.05);
-}
 
-
-/* =====================================================
+/* ==============================
    EVENTS
-===================================================== */
+============================== */
 
 .event-grid{
     display:grid;
@@ -460,8 +448,16 @@ img{
     gap:25px;
 }
 
+.event-link{
+    display:block;
+
+    height:100%;
+}
+
 .event-card{
     height:100%;
+
+    min-height:250px;
 
     background:#110000;
 
@@ -476,6 +472,7 @@ img{
     transition:.3s;
 }
 
+.event-link:hover .event-card,
 .event-card:hover{
     transform:translateY(-5px);
 
@@ -483,12 +480,6 @@ img{
 
     box-shadow:
         0 0 20px rgba(255,180,0,.15);
-}
-
-.event-link{
-    display:block;
-
-    height:100%;
 }
 
 .event-icon{
@@ -514,9 +505,9 @@ img{
 }
 
 
-/* =====================================================
+/* ==============================
    GALLERY
-===================================================== */
+============================== */
 
 .gallery-grid{
     display:grid;
@@ -591,85 +582,9 @@ img{
 }
 
 
-/* =====================================================
-   IMAGE POPUP
-===================================================== */
-
-.image-modal{
-    display:none;
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:100000;
-
-    background:rgba(0,0,0,.94);
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:20px;
-}
-
-.image-modal.show{
-    display:flex;
-}
-
-.modal-image{
-    max-width:95%;
-
-    max-height:90vh;
-
-    width:auto;
-
-    height:auto;
-
-    object-fit:contain;
-
-    border:3px solid #ffc400;
-
-    border-radius:10px;
-
-    box-shadow:
-        0 0 35px rgba(255,190,0,.35);
-}
-
-.close-modal{
-    position:absolute;
-
-    top:18px;
-    right:25px;
-
-    width:48px;
-    height:48px;
-
-    border-radius:50%;
-
-    border:2px solid #ffc400;
-
-    background:#100000;
-
-    color:#ffc400;
-
-    font-size:32px;
-
-    cursor:pointer;
-
-    z-index:100001;
-}
-
-.close-modal:hover{
-    background:#ff0000;
-
-    color:#fff;
-}
-
-
-/* =====================================================
+/* ==============================
    CONTACT
-===================================================== */
+============================== */
 
 .contact-grid{
     display:grid;
@@ -723,6 +638,1206 @@ img{
 }
 
 
-/* =====================================================
+/* ==============================
    DURGA BANNER
-================================================
+============================== */
+
+.durga-banner{
+    width:100%;
+
+    min-height:180px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #380b00 0%,
+            #150000 45%,
+            #030000 100%
+        );
+
+    border-top:2px solid #8c0000;
+
+    border-bottom:2px solid #8c0000;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+}
+
+.durga-banner-inner{
+    padding:30px 20px;
+}
+
+.trident{
+    color:#ffc400;
+
+    font-size:50px;
+
+    line-height:1;
+
+    text-shadow:
+        0 0 15px #ff9d00;
+}
+
+.durga-banner h2{
+    color:#ffc400;
+
+    font-size:43px;
+
+    margin-top:5px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer{
+    background:#030303;
+
+    border-top:2px solid #ff0000;
+}
+
+.footer-info{
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:22px 20px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    text-align:center;
+}
+
+.footer-item{
+    color:#ddd;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+
+.footer-item strong{
+    color:#ffc400;
+}
+
+.footer-item a:hover{
+    color:#ffc400;
+}
+
+.copyright{
+    text-align:center;
+
+    color:#999;
+
+    font-size:13px;
+
+    padding:15px;
+
+    border-top:1px solid #331000;
+}
+
+
+/* ==============================
+   BACK TO TOP
+============================== */
+
+.back-top{
+    position:fixed;
+
+    right:18px;
+    bottom:18px;
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#d60000;
+
+    border:2px solid #ffc400;
+
+    border-radius:50%;
+
+    color:#ffc400;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    z-index:9998;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+}
+
+.back-top.show{
+    opacity:1;
+
+    visibility:visible;
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media(max-width:768px){
+
+    .navbar{
+        min-height:62px;
+
+        overflow:hidden;
+    }
+
+    .nav-container{
+        overflow-x:auto;
+    }
+
+    .nav-menu{
+        min-width:max-content;
+
+        justify-content:flex-start;
+
+        gap:28px;
+
+        padding:0 18px;
+    }
+
+    .nav-menu a{
+        font-size:16px;
+
+        padding:20px 0;
+    }
+
+    .hero-content{
+        bottom:20px;
+    }
+
+    .welcome-btn{
+        min-width:190px;
+
+        min-height:50px;
+
+        padding:0 25px;
+
+        font-size:21px;
+
+        border-radius:13px;
+    }
+
+    .down-arrow{
+        font-size:22px;
+    }
+
+    .quick-section{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .quick-card{
+        min-height:220px;
+
+        padding:25px 14px;
+
+        border-bottom:1px solid #4b1800;
+    }
+
+    .quick-card:nth-child(2),
+    .quick-card:nth-child(4){
+        border-right:none;
+    }
+
+    .quick-card h3{
+        font-size:18px;
+    }
+
+    .quick-card p{
+        font-size:13px;
+    }
+
+    .section{
+        padding:60px 16px;
+    }
+
+    .section-title{
+        font-size:30px;
+
+        margin-bottom:35px;
+    }
+
+    .big-icon{
+        width:105px;
+        height:105px;
+
+        font-size:48px;
+    }
+
+    .about-content p{
+        font-size:17px;
+
+        line-height:2;
+    }
+
+    .about-button{
+        min-width:210px;
+
+        padding:12px 22px;
+
+        font-size:19px;
+    }
+
+    .event-grid{
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+    .event-card{
+        min-height:240px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+    .gallery-item{
+        height:390px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+
+        gap:15px;
+    }
+
+    .footer-info{
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+        padding:20px 15px;
+    }
+
+    .durga-banner{
+        min-height:150px;
+    }
+
+    .trident{
+        font-size:42px;
+    }
+
+    .durga-banner h2{
+        font-size:32px;
+    }
+
+}
+
+
+/* ==============================
+   SMALL PHONE
+============================== */
+
+@media(max-width:420px){
+
+    .nav-menu{
+        gap:24px;
+    }
+
+    .nav-menu a{
+        font-size:15px;
+    }
+
+    .quick-card{
+        min-height:235px;
+
+        padding:22px 10px;
+    }
+
+    .quick-card h3{
+        font-size:17px;
+    }
+
+    .quick-card p{
+        font-size:12px;
+
+        line-height:1.7;
+    }
+
+    .welcome-btn{
+        min-width:175px;
+
+        min-height:48px;
+
+        font-size:19px;
+    }
+
+    .gallery-item{
+        height:340px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     NAVBAR
+============================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="#home" class="active">
+                    HOME
+                </a>
+            </li>
+
+            <li>
+                <a href="about-us.html">
+                    ABOUT US
+                </a>
+            </li>
+
+            <li>
+                <a href="#events">
+                    EVENTS
+                </a>
+            </li>
+
+            <li>
+                <a href="#gallery">
+                    GALLERY
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    CONTACT
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- ==============================
+     HOME
+============================== -->
+
+<main>
+
+<section id="home" class="hero">
+
+    <img
+        src="home-banner.png"
+        alt="Budbud SANHATI"
+        class="hero-image"
+    >
+
+    <div class="hero-content">
+
+        <a
+            href="about-us.html"
+            class="welcome-btn"
+        >
+            বিস্তারিত পরিচয়
+        </a>
+
+        <span class="down-arrow">
+            ↓
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     QUICK MENU
+============================== -->
+
+<section class="quick-section">
+
+
+    <a
+        href="about-us.html"
+        class="quick-card"
+    >
+
+        <div class="quick-icon">
+            👥
+        </div>
+
+        <h3>
+            আমাদের পরিচয়
+        </h3>
+
+        <p>
+            বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
+            আমাদের সম্পর্কে বিস্তারিত জানতে এখানে আসুন।
+        </p>
+
+    </a>
+
+
+    <a
+        href="#events"
+        class="quick-card"
+    >
+
+        <div class="quick-icon">
+            📅
+        </div>
+
+        <h3>
+            আমাদের কার্যক্রম
+        </h3>
+
+        <p>
+            দুর্গা পূজা, রক্তদান, শিক্ষা সহায়তা,
+            খেলাধুলা এবং বিভিন্ন সামাজিক অনুষ্ঠান।
+        </p>
+
+    </a>
+
+
+    <a
+        href="#gallery"
+        class="quick-card"
+    >
+
+        <div class="quick-icon">
+            🖼️
+        </div>
+
+        <h3>
+            গ্যালারি
+        </h3>
+
+        <p>
+            আমাদের বিভিন্ন অনুষ্ঠান ও সাংস্কৃতিক
+            মুহূর্তের ছবি দেখতে গ্যালারিতে আসুন।
+        </p>
+
+    </a>
+
+
+    <a
+        href="#contact"
+        class="quick-card"
+    >
+
+        <div class="quick-icon">
+            🤝
+        </div>
+
+        <h3>
+            যোগাযোগ করুন
+        </h3>
+
+        <p>
+            আমাদের সাথে যুক্ত হতে অথবা সহযোগিতার
+            জন্য যোগাযোগ করুন।
+        </p>
+
+    </a>
+
+</section>
+
+
+<!-- ==============================
+     ABOUT
+============================== -->
+
+<section id="about" class="section">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            আমাদের পরিচয়
+        </h2>
+
+        <div class="about-content">
+
+            <div class="big-icon">
+                👥
+            </div>
+
+            <p>
+                বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
+            </p>
+
+            <p>
+                আমরা একসাথে কাজ করি সমাজ ও মানুষের জন্য।
+            </p>
+
+            <p>
+                সমাজের উন্নয়ন, সংস্কৃতি এবং মানুষের পাশে থাকাই
+                আমাদের প্রধান লক্ষ্য।
+            </p>
+
+            <div class="about-button-box">
+
+                <a
+                    href="about-us.html"
+                    class="about-button"
+                >
+                    বিস্তারিত পরিচয় →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     EVENTS
+============================== -->
+
+<section id="events" class="section">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            আমাদের কার্যক্রম
+        </h2>
+
+        <div class="event-grid">
+
+
+            <!-- দুর্গা পূজা -->
+
+            <a
+                href="durga-puja-details.html"
+                class="event-link"
+            >
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        🪔
+                    </div>
+
+                    <h3>
+                        দুর্গা পূজা
+                    </h3>
+
+                    <p>
+                        প্রতি বছর সুন্দর ও সুশৃঙ্খলভাবে
+                        দুর্গা পূজার আয়োজন করা হয়।
+                        বিস্তারিত জানতে স্পর্শ করুন।
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- রক্তদান -->
+
+            <a
+                href="roktodan.html"
+                class="event-link"
+            >
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        🩸
+                    </div>
+
+                    <h3>
+                        রক্তদান
+                    </h3>
+
+                    <p>
+                        স্বেচ্ছায় রক্তদান করে মানুষের
+                        জীবন বাঁচাতে আমাদের সঙ্গে যুক্ত হোন।
+                        বিস্তারিত জানতে স্পর্শ করুন।
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- শিক্ষা সহায়তা -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+                    📚
+                </div>
+
+                <h3>
+                    শিক্ষা সহায়তা
+                </h3>
+
+                <p>
+                    প্রয়োজনীয় ছাত্রছাত্রীদের পাশে থেকে
+                    শিক্ষা সহায়তা করার চেষ্টা করা হয়।
+                </p>
+
+            </div>
+
+
+            <!-- খেলাধুলা -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+                    ⚽
+                </div>
+
+                <h3>
+                    খেলাধুলা
+                </h3>
+
+                <p>
+                    যুব সমাজকে উৎসাহিত করতে বিভিন্ন
+                    খেলাধুলা ও ক্রীড়া অনুষ্ঠানের আয়োজন।
+                </p>
+
+            </div>
+
+
+            <!-- সাংস্কৃতিক অনুষ্ঠান -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+                    🎭
+                </div>
+
+                <h3>
+                    সাংস্কৃতিক অনুষ্ঠান
+                </h3>
+
+                <p>
+                    গান, নাচ, নাটকসহ বিভিন্ন সাংস্কৃতিক
+                    অনুষ্ঠানের আয়োজন করা হয়।
+                </p>
+
+            </div>
+
+
+            <!-- সামাজিক সেবা -->
+
+            <div class="event-card">
+
+                <div class="event-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    সামাজিক সেবা
+                </h3>
+
+                <p>
+                    মানুষের প্রয়োজনে পাশে থাকা এবং
+                    সমাজের জন্য বিভিন্ন সেবামূলক কাজ করা।
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     GALLERY
+============================== -->
+
+<section id="gallery" class="section">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            দুর্গা পূজা গ্যালারি
+        </h2>
+
+        <div class="gallery-grid">
+
+
+            <div
+                class="gallery-item"
+                onclick="openImage('durga1.jpg')"
+            >
+
+                <img
+                    src="durga1.jpg"
+                    alt="দুর্গা পূজা ছবি ১"
+                    loading="lazy"
+                >
+
+                <div class="gallery-label">
+                    দুর্গা পূজা ছবি ১
+                </div>
+
+            </div>
+
+
+            <div
+                class="gallery-item"
+                onclick="openImage('durga2.jpg')"
+            >
+
+                <img
+                    src="durga2.jpg"
+                    alt="দুর্গা পূজা ছবি ২"
+                    loading="lazy"
+                >
+
+                <div class="gallery-label">
+                    দুর্গা পূজা ছবি ২
+                </div>
+
+            </div>
+
+
+            <div
+                class="gallery-item"
+                onclick="openImage('durga3.jpg')"
+            >
+
+                <img
+                    src="durga3.jpg"
+                    alt="দুর্গা পূজা ছবি ৩"
+                    loading="lazy"
+                >
+
+                <div class="gallery-label">
+                    দুর্গা পূজা ছবি ৩
+                </div>
+
+            </div>
+
+
+            <div
+                class="gallery-item"
+                onclick="openImage('durga4.jpg')"
+            >
+
+                <img
+                    src="durga4.jpg"
+                    alt="দুর্গা পূজা ছবি ৪"
+                    loading="lazy"
+                >
+
+                <div class="gallery-label">
+                    দুর্গা পূজা ছবি ৪
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     CONTACT
+============================== -->
+
+<section id="contact" class="section">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            যোগাযোগ করুন
+        </h2>
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📍
+                </div>
+
+                <h3>
+                    ঠিকানা
+                </h3>
+
+                <p>
+                    Budbud, Burdwan<br>
+                    West Bengal, India
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📞
+                </div>
+
+                <h3>
+                    ফোন করুন
+                </h3>
+
+                <p>
+
+                    <a href="tel:9547222144">
+                        9547222144
+                    </a>
+
+                    <br>
+
+                    <a href="tel:+919563881523">
+                        +91 9563881523
+                    </a>
+
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    ✉️
+                </div>
+
+                <h3>
+                    ই-মেইল
+                </h3>
+
+                <p>
+
+                    <a href="mailto:budbudsanhati@gmail.com">
+                        budbudsanhati@gmail.com
+                    </a>
+
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    🤝
+                </div>
+
+                <h3>
+                    আমাদের সাথে যুক্ত হন
+                </h3>
+
+                <p>
+                    সংগঠনের বিভিন্ন কার্যক্রমে
+                    অংশগ্রহণ করতে আমাদের সাথে যোগাযোগ করুন।
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ==============================
+     DURGA BANNER
+============================== -->
+
+<section class="durga-banner">
+
+    <div class="durga-banner-inner">
+
+        <div class="trident">
+            🔱
+        </div>
+
+        <h2>
+            জয় মা দুর্গা
+        </h2>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     FOOTER
+============================== -->
+
+<footer>
+
+    <div class="footer-info">
+
+
+        <div class="footer-item">
+
+            📍
+
+            <strong>
+                ঠিকানা
+            </strong>
+
+            <br>
+
+            Budbud, Burdwan
+
+            <br>
+
+            West Bengal, India
+
+        </div>
+
+
+        <div class="footer-item">
+
+            📞
+
+            <strong>
+                ফোন
+            </strong>
+
+            <br>
+
+            <a href="tel:9547222144">
+                9547222144
+            </a>
+
+            <br>
+
+            <a href="tel:+919563881523">
+                +91 9563881523
+            </a>
+
+        </div>
+
+
+        <div class="footer-item">
+
+            ✉️
+
+            <strong>
+                ই-মেইল
+            </strong>
+
+            <br>
+
+            <a href="mailto:budbudsanhati@gmail.com">
+                budbudsanhati@gmail.com
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2024 Budbud SANHATI.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- ==============================
+     BACK TO TOP
+============================== -->
+
+<a
+    href="#home"
+    class="back-top"
+    id="backTop"
+    aria-label="Back to top"
+>
+    ↑
+</a>
+
+
+<!-- ==============================
+     IMAGE POPUP
+============================== -->
+
+<div
+    id="imageModal"
+    class="image-modal"
+    style="
+        display:none;
+        position:fixed;
+        inset:0;
+        z-index:100000;
+        background:rgba(0,0,0,.94);
+        align-items:center;
+        justify-content:center;
+        padding:20px;
+    "
+    onclick="closeImage(event)"
+>
+
+    <button
+        onclick="closeImage()"
+        style="
+            position:absolute;
+            top:18px;
+            right:25px;
+            width:48px;
+            height:48px;
+            border-radius:50%;
+            border:2px solid #ffc400;
+            background:#100000;
+            color:#ffc400;
+            font-size:32px;
+            cursor:pointer;
+            z-index:100001;
+        "
+    >
+        ×
+    </button>
+
+    <img
+        id="modalImage"
+        src=""
+        alt="দুর্গা পূজা"
+        style="
+            max-width:95%;
+            max-height:90vh;
+            width:auto;
+            height:auto;
+            object-fit:contain;
+            border:3px solid #ffc400;
+            border-radius:10px;
+        "
+        onclick="event.stopPropagation()"
+    >
+
+</div>
+
+
+<script>
+
+/* ==============================
+   GALLERY POPUP
+============================== */
+
+const imageModal =
+    document.getElementById("imageModal");
+
+const modalImage =
+    document.getElementById("modalImage");
+
+
+function openImage(imageSrc){
+
+    modalImage.src = imageSrc;
+
+    imageModal.style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeImage(event){
+
+    if(
+        event &&
+        event.target === modalImage
+    ){
+        return;
+    }
+
+    imageModal.style.display = "none";
+
+    modalImage.src = "";
+
+    document.body.style.overflow = "";
+}
+
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+            closeImage();
+        }
+
+    }
+);
+
+
+/* ==============================
+   BACK TO TOP
+============================== */
+
+const backTop =
+    document.getElementById("backTop");
+
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        if(window.scrollY > 500){
+
+            backTop.classList.add("show");
+
+        }else{
+
+            backTop.classList.remove("show");
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
