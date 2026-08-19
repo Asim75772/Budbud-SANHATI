@@ -5,14 +5,16 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>বুদবুদ সংহতি | Budbud SANHATI</title>
 
 <meta name="description"
-content="বুদবুদ সংহতি (Budbud SANHATI) একটি সামাজিক ও সাংস্কৃতিক সংগঠন। শিক্ষা সহায়তা, রক্তদান, দুর্গাপূজা ও বিভিন্ন সামাজিক কার্যক্রমের মাধ্যমে মানুষের পাশে থাকাই আমাদের লক্ষ্য।">
+content="বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
 href="https://fonts.gstatic.com"
@@ -24,9 +26,9 @@ rel="stylesheet">
 
 <style>
 
-/* ================================
-   BASIC
-================================ */
+/* =================================
+   RESET
+================================= */
 
 *{
     margin:0;
@@ -36,10 +38,10 @@ rel="stylesheet">
 
 html{
     scroll-behavior:smooth;
-    scroll-padding-top:70px;
 }
 
 body{
+    margin:0;
     background:#050000;
     color:#fff;
     font-family:"Noto Serif Bengali",serif;
@@ -52,21 +54,23 @@ a{
 }
 
 img{
-    max-width:100%;
     display:block;
+    max-width:100%;
 }
 
 
-/* ================================
-   NAVBAR
-================================ */
+/* =================================
+   TOP NAVBAR
+================================= */
 
 .navbar{
+
     position:sticky;
+
     top:0;
+
     z-index:9999;
 
-    width:100%;
     height:70px;
 
     background:#050505;
@@ -74,16 +78,19 @@ img{
     border-bottom:3px solid #e00000;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     overflow-x:auto;
 }
 
 .nav-menu{
+
     display:flex;
+
     align-items:center;
-    justify-content:center;
 
     gap:45px;
 
@@ -95,6 +102,7 @@ img{
 }
 
 .nav-menu a{
+
     color:#f3d49a;
 
     font-size:18px;
@@ -103,183 +111,153 @@ img{
 
     white-space:nowrap;
 
-    transition:color .3s ease;
+    transition:.3s;
 }
 
 .nav-menu a:hover{
+
     color:#ff0000;
 }
 
 
-/* ================================
+/* =================================
    HERO
-================================ */
+================================= */
 
 .hero{
+
     position:relative;
-
-    width:100%;
-
-    border-bottom:3px solid #e00000;
 
     background:#000;
 
+    border-bottom:3px solid #e00000;
+
     overflow:hidden;
+
+    text-align:center;
 }
 
-.hero img{
+
+/*
+   home-banner.png এর মধ্যেই
+   সব লেখা/লোগো আছে।
+   তাই এখানে আর h1/p নেই।
+*/
+
+.hero-image{
+
     width:100%;
 
     height:auto;
 
-    min-height:300px;
+    display:block;
 
     object-fit:cover;
 }
 
-.hero-overlay{
+
+/* =================================
+   WELCOME AREA
+================================= */
+
+.welcome-area{
+
     position:absolute;
 
-    inset:0;
+    left:0;
 
-    background:
-    linear-gradient(
-        to bottom,
-        rgba(0,0,0,.05) 20%,
-        rgba(0,0,0,.30) 45%,
-        rgba(0,0,0,.88) 100%
-    );
+    right:0;
+
+    bottom:34px;
+
+    z-index:10;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 }
 
-.hero-content{
-    position:absolute;
-
-    left:50%;
-    bottom:28px;
-
-    transform:translateX(-50%);
-
-    width:100%;
-
-    padding:0 15px;
-
-    text-align:center;
-
-    z-index:5;
-}
-
-.hero-content h1{
-    color:#ffc400;
-
-    font-size:42px;
-
-    font-weight:800;
-
-    line-height:1.3;
-
-    margin-bottom:8px;
-
-    text-shadow:
-    0 0 10px #000,
-    0 0 20px rgba(255,180,0,.45);
-}
-
-.hero-content p{
-    color:#fff;
-
-    font-size:18px;
-
-    line-height:1.7;
-
-    margin:0 0 15px;
-}
-
-
-/* ================================
-   WELCOME BUTTON
-================================ */
 
 .main-button{
 
     display:inline-flex;
 
     align-items:center;
+
     justify-content:center;
 
-    min-width:170px;
+    min-width:220px;
 
-    min-height:56px;
-
-    padding:12px 35px;
+    padding:13px 38px;
 
     background:
     linear-gradient(
         180deg,
-        #ff1b1b,
+        #ff2020,
         #c90000
     );
 
-    border:3px solid #ffc400;
+    border:2px solid #ffc400;
 
     border-radius:14px;
 
     color:#ffe9a5;
 
-    font-size:21px;
+    font-size:22px;
 
     font-weight:800;
 
-    line-height:1;
+    /*
+       শুধু visual ভাবে সামান্য উপরে।
+       Layout নষ্ট করবে না।
+    */
+
+    transform:translateY(-12px);
 
     box-shadow:
-    0 0 10px rgba(255,190,0,.8),
-    0 0 25px rgba(255,120,0,.4);
+    0 0 10px rgba(255,190,0,.85),
+    0 0 28px rgba(255,100,0,.40);
 
-    /* স্থির থাকবে */
-    position:relative;
-
-    transform:translateY(-18px);
-
-    transition:
-    transform .25s ease,
-    box-shadow .25s ease;
+    transition:.3s;
 }
 
 .main-button:hover{
-    transform:translateY(-18px) scale(1.04);
+
+    transform:
+    translateY(-12px)
+    scale(1.04);
 
     box-shadow:
     0 0 16px #ffc400,
-    0 0 35px rgba(255,180,0,.55);
-}
-
-.main-button:active{
-    transform:translateY(-18px) scale(1.01);
+    0 0 38px rgba(255,170,0,.60);
 }
 
 
-/* ================================
-   EDITOR'S COLUMN
-================================ */
+/* =================================
+   EDITOR SECTION
+================================= */
 
 .editor-section{
 
     position:relative;
 
-    padding:48px 20px 60px;
+    padding:55px 18px 55px;
 
     background:
     linear-gradient(
         180deg,
-        #080000 0%,
-        #130000 48%,
-        #070000 100%
+        #100000,
+        #080000,
+        #120000
     );
 
-    border-bottom:2px solid #551000;
+    border-bottom:2px solid #500000;
 
     overflow:hidden;
 }
+
 
 .editor-section::before{
 
@@ -288,18 +266,21 @@ img{
     position:absolute;
 
     top:0;
+
     left:50%;
 
     transform:translateX(-50%);
 
-    width:180px;
-    height:2px;
+    width:160px;
+
+    height:3px;
 
     background:#ffc400;
 
     box-shadow:
     0 0 12px #ffc400;
 }
+
 
 .editor-container{
 
@@ -312,21 +293,21 @@ img{
     text-align:center;
 }
 
+
 .editor-title{
 
     color:#ffc400;
 
-    font-size:34px;
+    font-size:36px;
 
     font-weight:800;
 
-    line-height:1.4;
-
-    margin-bottom:10px;
+    margin-bottom:12px;
 
     text-shadow:
     0 0 12px rgba(255,190,0,.35);
 }
+
 
 .editor-line{
 
@@ -334,39 +315,42 @@ img{
 
     height:3px;
 
-    margin:0 auto 25px;
-
     background:#e00000;
 
+    margin:0 auto 28px;
+
     box-shadow:
-    0 0 8px rgba(255,0,0,.6);
+    0 0 8px rgba(255,0,0,.60);
 }
+
 
 .editor-card{
 
     background:
     linear-gradient(
         145deg,
-        rgba(60,0,0,.96),
-        rgba(12,0,0,.99)
+        rgba(55,0,0,.96),
+        rgba(10,0,0,.98)
     );
 
-    border:1px solid #702500;
+    border:1px solid #762500;
 
     border-radius:16px;
 
     padding:30px 25px;
 
     box-shadow:
-    0 0 20px rgba(255,80,0,.12);
+    0 0 25px rgba(255,70,0,.12);
 }
+
 
 .editor-icon{
 
-    font-size:42px;
+    font-size:40px;
 
     margin-bottom:10px;
 }
+
 
 .editor-card h3{
 
@@ -374,21 +358,20 @@ img{
 
     font-size:24px;
 
-    line-height:1.5;
-
     margin-bottom:15px;
 }
 
+
 .editor-card p{
 
-    color:#eee;
+    color:#eeeeee;
 
     font-size:16px;
 
     line-height:2;
 
-    white-space:pre-line;
 }
+
 
 .editor-sign{
 
@@ -402,62 +385,70 @@ img{
 }
 
 
-/* ================================
+/* =================================
    QUICK MENU
-================================ */
+================================= */
 
 .quick-section{
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:
+    repeat(4,1fr);
 
     background:#080000;
 
     border-bottom:1px solid #401500;
 }
 
+
 .quick-card{
 
-    padding:30px 20px;
+    padding:30px 18px;
 
     text-align:center;
 
     border-right:1px solid #552000;
 
-    transition:
-    background .3s ease,
-    transform .3s ease;
+    transition:.3s;
 }
 
+
 .quick-card:last-child{
+
     border-right:none;
 }
 
-.quick-card:hover{
-    background:#130000;
 
-    transform:translateY(-2px);
+.quick-card:hover{
+
+    background:#140000;
 }
+
 
 .quick-icon{
 
-    font-size:45px;
+    font-size:43px;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 
     filter:
-    drop-shadow(0 0 5px rgba(255,190,0,.35));
+    drop-shadow(
+        0 0 6px
+        rgba(255,190,0,.40)
+    );
 }
+
 
 .quick-card h3{
 
     color:#ffc400;
 
-    font-size:22px;
+    font-size:21px;
 
     margin-bottom:8px;
 }
+
 
 .quick-card p{
 
@@ -469,18 +460,19 @@ img{
 }
 
 
-/* ================================
+/* =================================
    COMMON SECTION
-================================ */
+================================= */
 
 .section{
 
-    padding:70px 20px;
+    padding:65px 18px;
 
     background:#070000;
 
     border-bottom:1px solid #401500;
 }
+
 
 .container{
 
@@ -491,104 +483,119 @@ img{
     margin:auto;
 }
 
+
 .title{
 
     text-align:center;
 
     color:#ffc400;
 
-    font-size:36px;
+    font-size:35px;
 
-    line-height:1.4;
-
-    margin-bottom:40px;
+    margin-bottom:35px;
 
     text-shadow:
-    0 0 10px rgba(255,190,0,.25);
+    0 0 10px
+    rgba(255,190,0,.30);
 }
 
 
-/* ================================
+/* =================================
    CARDS
-================================ */
+================================= */
 
 .grid{
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+    repeat(3,1fr);
 
     gap:25px;
 }
+
 
 .card{
 
     background:
     linear-gradient(
         145deg,
-        #160000,
-        #0c0000
+        #170000,
+        #0b0000
     );
 
     border:1px solid #702500;
 
     border-radius:15px;
 
-    padding:30px 20px;
+    padding:28px 20px;
 
     text-align:center;
 
-    transition:
-    transform .3s ease,
-    box-shadow .3s ease;
+    transition:.3s;
 }
+
 
 .card:hover{
 
     transform:translateY(-5px);
 
     box-shadow:
-    0 8px 25px rgba(255,60,0,.15);
+    0 8px 25px
+    rgba(255,60,0,.15);
 }
+
+
+.card-icon{
+
+    font-size:48px;
+
+    margin-bottom:14px;
+}
+
 
 .card h3{
 
     color:#ffc400;
 
-    margin-bottom:15px;
+    margin-bottom:14px;
 
     font-size:23px;
 }
+
 
 .card p{
 
     color:#ddd;
 
-    line-height:1.8;
-
     font-size:15px;
-}
 
-.card-icon{
-
-    font-size:50px;
-
-    margin-bottom:15px;
+    line-height:1.9;
 }
 
 
-/* ================================
+.card a{
+
+    color:#ffc400;
+
+    font-weight:700;
+}
+
+
+/* =================================
    GALLERY
-================================ */
+================================= */
 
 .gallery-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:
+    repeat(2,1fr);
 
     gap:20px;
 }
+
 
 .gallery-item{
 
@@ -601,10 +608,8 @@ img{
     overflow:hidden;
 
     background:#100000;
-
-    box-shadow:
-    0 0 15px rgba(255,60,0,.08);
 }
+
 
 .gallery-item img{
 
@@ -614,26 +619,30 @@ img{
 
     object-fit:cover;
 
-    transition:transform .4s ease;
+    transition:.4s;
 }
 
+
 .gallery-item:hover img{
+
     transform:scale(1.05);
 }
 
 
-/* ================================
+/* =================================
    CONTACT
-================================ */
+================================= */
 
 .contact-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+    repeat(3,1fr);
 
     gap:20px;
 }
+
 
 .contact-card{
 
@@ -648,12 +657,14 @@ img{
     text-align:center;
 }
 
+
 .contact-card h3{
 
     color:#ffc400;
 
     margin-bottom:10px;
 }
+
 
 .contact-card p{
 
@@ -662,18 +673,10 @@ img{
     line-height:1.9;
 }
 
-.contact-card a{
-    color:#ffe09a;
-}
 
-.contact-card a:hover{
-    color:#ffc400;
-}
-
-
-/* ================================
-   DURGA BANNER
-================================ */
+/* =================================
+   DURGA
+================================= */
 
 .durga-banner{
 
@@ -693,13 +696,6 @@ img{
     border-bottom:2px solid red;
 }
 
-.durga-icon{
-    font-size:55px;
-
-    line-height:1;
-
-    margin-bottom:8px;
-}
 
 .durga-banner h2{
 
@@ -707,16 +703,15 @@ img{
 
     font-size:40px;
 
-    line-height:1.3;
-
     text-shadow:
-    0 0 12px rgba(255,190,0,.35);
+    0 0 12px
+    rgba(255,190,0,.35);
 }
 
 
-/* ================================
+/* =================================
    FOOTER
-================================ */
+================================= */
 
 footer{
 
@@ -724,10 +719,11 @@ footer{
 
     border-top:2px solid red;
 
-    padding:25px 20px;
+    padding:25px 15px;
 
     text-align:center;
 }
+
 
 footer strong{
 
@@ -735,6 +731,7 @@ footer strong{
 
     font-size:20px;
 }
+
 
 footer p{
 
@@ -745,10 +742,12 @@ footer p{
     margin-top:5px;
 }
 
+
 footer a{
 
     color:#ffe09a;
 }
+
 
 footer a:hover{
 
@@ -756,9 +755,9 @@ footer a:hover{
 }
 
 
-/* ================================
+/* =================================
    MOBILE
-================================ */
+================================= */
 
 @media(max-width:768px){
 
@@ -769,12 +768,14 @@ footer a:hover{
         justify-content:flex-start;
     }
 
+
     .nav-menu{
 
         gap:32px;
 
         justify-content:flex-start;
     }
+
 
     .nav-menu a{
 
@@ -784,58 +785,42 @@ footer a:hover{
 
     /* HERO */
 
-    .hero img{
+    .hero-image{
 
-        min-height:360px;
+        width:100%;
 
-        object-fit:cover;
-    }
-
-    .hero-content{
-
-        bottom:20px;
-
-        padding:0 12px;
-    }
-
-    .hero-content h1{
-
-        font-size:30px;
-
-        margin-bottom:5px;
-    }
-
-    .hero-content p{
-
-        font-size:15px;
-
-        margin-bottom:8px;
+        height:auto;
     }
 
 
-    /* WELCOME */
+    /*
+       মোবাইলে button যেন
+       banner-এর নিচের অংশে থাকে
+    */
+
+    .welcome-area{
+
+        bottom:22px;
+    }
+
 
     .main-button{
 
-        min-width:155px;
+        min-width:210px;
 
-        min-height:53px;
-
-        padding:11px 32px;
+        padding:12px 32px;
 
         font-size:20px;
 
-        transform:translateY(-16px);
+        transform:translateY(-8px);
     }
+
 
     .main-button:hover{
 
-        transform:translateY(-16px) scale(1.03);
-    }
-
-    .main-button:active{
-
-        transform:translateY(-16px) scale(1.01);
+        transform:
+        translateY(-8px)
+        scale(1.03);
     }
 
 
@@ -843,23 +828,27 @@ footer a:hover{
 
     .editor-section{
 
-        padding:43px 15px 50px;
+        padding:45px 15px 50px;
     }
+
 
     .editor-title{
 
         font-size:30px;
     }
 
+
     .editor-card{
 
         padding:25px 18px;
     }
 
+
     .editor-card h3{
 
         font-size:21px;
     }
+
 
     .editor-card p{
 
@@ -868,18 +857,15 @@ footer a:hover{
         line-height:1.9;
     }
 
-    .editor-sign{
-
-        font-size:16px;
-    }
-
 
     /* QUICK */
 
     .quick-section{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+        repeat(2,1fr);
     }
+
 
     .quick-card{
 
@@ -888,16 +874,18 @@ footer a:hover{
         border-bottom:1px solid #552000;
     }
 
-    .quick-card:nth-child(2),
-    .quick-card:nth-child(4){
+
+    .quick-card:nth-child(2){
 
         border-right:none;
     }
+
 
     .quick-card h3{
 
         font-size:19px;
     }
+
 
     .quick-card p{
 
@@ -911,6 +899,7 @@ footer a:hover{
 
         padding:55px 15px;
     }
+
 
     .title{
 
@@ -935,6 +924,7 @@ footer a:hover{
         grid-template-columns:1fr;
     }
 
+
     .gallery-item{
 
         height:280px;
@@ -956,10 +946,6 @@ footer a:hover{
         padding:30px 15px;
     }
 
-    .durga-icon{
-
-        font-size:48px;
-    }
 
     .durga-banner h2{
 
@@ -969,9 +955,9 @@ footer a:hover{
 }
 
 
-/* ================================
+/* =================================
    SMALL MOBILE
-================================ */
+================================= */
 
 @media(max-width:420px){
 
@@ -980,71 +966,56 @@ footer a:hover{
         gap:27px;
     }
 
+
     .nav-menu a{
 
         font-size:16px;
     }
 
-    .hero img{
 
-        min-height:330px;
+    .welcome-area{
+
+        bottom:18px;
     }
 
-    .hero-content h1{
-
-        font-size:27px;
-    }
-
-    .hero-content p{
-
-        font-size:14px;
-    }
 
     .main-button{
 
+        min-width:195px;
+
         font-size:19px;
 
-        min-height:51px;
-
-        padding:11px 30px;
-
-        transform:translateY(-15px);
+        padding:11px 28px;
     }
 
-    .main-button:hover{
-
-        transform:translateY(-15px) scale(1.03);
-    }
-
-    .main-button:active{
-
-        transform:translateY(-15px) scale(1.01);
-    }
 
     .editor-title{
 
         font-size:27px;
     }
 
+
     .quick-icon{
 
-        font-size:40px;
+        font-size:38px;
     }
 
 }
 
 
-/* ================================
+/* =================================
    REDUCED MOTION
-================================ */
+================================= */
 
 @media(prefers-reduced-motion:reduce){
 
     html{
+
         scroll-behavior:auto;
     }
 
     *{
+
         transition:none !important;
     }
 }
@@ -1066,23 +1037,33 @@ footer a:hover{
 <ul class="nav-menu">
 
 <li>
-<a href="index.html">HOME</a>
+<a href="index.html">
+HOME
+</a>
 </li>
 
 <li>
-<a href="about-us.html">ABOUT US</a>
+<a href="about-us.html">
+ABOUT US
+</a>
 </li>
 
 <li>
-<a href="#events">EVENTS</a>
+<a href="#events">
+EVENTS
+</a>
 </li>
 
 <li>
-<a href="#gallery">GALLERY</a>
+<a href="#gallery">
+GALLERY
+</a>
 </li>
 
 <li>
-<a href="#contact">CONTACT</a>
+<a href="#contact">
+CONTACT
+</a>
 </li>
 
 </ul>
@@ -1097,25 +1078,22 @@ footer a:hover{
 
 <section class="hero">
 
+
+<!--
+   এখানে শুধু banner image।
+   কারণ home-banner.png-এর মধ্যেই
+   Budbud SANHATI-এর লেখা আছে।
+-->
+
 <img
+class="hero-image"
 src="home-banner.png"
 alt="Budbud SANHATI">
 
-<div class="hero-overlay"></div>
-
-
-<div class="hero-content">
-
-<h1>
-বুদবুদ সংহতি
-</h1>
-
-<p>
-একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
-</p>
-
 
 <!-- শুধু স্বাগতম -->
+
+<div class="welcome-area">
 
 <a
 href="#editor"
@@ -1126,6 +1104,7 @@ class="main-button">
 </a>
 
 </div>
+
 
 </section>
 
@@ -1152,6 +1131,7 @@ id="editor">
 
 <div class="editor-card">
 
+
 <div class="editor-icon">
 ✍️
 </div>
@@ -1162,21 +1142,35 @@ id="editor">
 </h3>
 
 
-<p>বুদবুদ সংহতি শুধু একটি সামাজিক ও সাংস্কৃতিক সংগঠনের নাম নয়,
-এটি মানুষের সঙ্গে মানুষের সম্পর্ককে আরও দৃঢ় করার একটি ছোট্ট
-প্রয়াস।
+<p>
 
-সংস্কৃতি, শিক্ষা, রক্তদান, সামাজিক সহযোগিতা এবং মানুষের
-প্রয়োজনে পাশে থাকার মধ্য দিয়ে আমরা একটি সুন্দর সমাজ গড়ে
-তোলার স্বপ্ন দেখি।
+বুদবুদ সংহতি শুধু একটি সামাজিক ও
+সাংস্কৃতিক সংগঠনের নাম নয়,
+এটি মানুষের সঙ্গে মানুষের সম্পর্ককে
+আরও দৃঢ় করার একটি ছোট্ট প্রয়াস।
 
-আমাদের এই পথচলায় আপনাদের ভালোবাসা, সহযোগিতা ও অংশগ্রহণই
-আমাদের সবচেয়ে বড় শক্তি।</p>
+<br><br>
+
+সংস্কৃতি, শিক্ষা, রক্তদান, সামাজিক
+সহযোগিতা এবং মানুষের প্রয়োজনে
+পাশে থাকার মধ্য দিয়ে আমরা একটি
+সুন্দর সমাজ গড়ে তোলার স্বপ্ন দেখি।
+
+<br><br>
+
+আমাদের এই পথচলায় আপনাদের
+ভালোবাসা, সহযোগিতা ও অংশগ্রহণই
+আমাদের সবচেয়ে বড় শক্তি।
+
+</p>
 
 
 <div class="editor-sign">
+
 — সম্পাদক, বুদবুদ সংহতি
+
 </div>
+
 
 </div>
 
@@ -1336,8 +1330,6 @@ id="events">
 <div class="grid">
 
 
-<!-- DURGA -->
-
 <div class="card">
 
 <div class="card-icon">
@@ -1355,19 +1347,13 @@ id="events">
 
 <br>
 
-<a
-href="durga-puja.html"
-style="color:#ffc400;font-weight:700;">
-
+<a href="durga-puja.html">
 বিস্তারিত দেখুন →
-
 </a>
 
 </div>
 
 
-
-<!-- EDUCATION -->
 
 <div class="card">
 
@@ -1386,19 +1372,13 @@ style="color:#ffc400;font-weight:700;">
 
 <br>
 
-<a
-href="siksha-sohayota.html"
-style="color:#ffc400;font-weight:700;">
-
+<a href="siksha-sohayota.html">
 বিস্তারিত দেখুন →
-
 </a>
 
 </div>
 
 
-
-<!-- BLOOD -->
 
 <div class="card">
 
@@ -1417,12 +1397,8 @@ style="color:#ffc400;font-weight:700;">
 
 <br>
 
-<a
-href="roktodan.html"
-style="color:#ffc400;font-weight:700;">
-
+<a href="roktodan.html">
 বিস্তারিত দেখুন →
-
 </a>
 
 </div>
@@ -1455,82 +1431,66 @@ id="gallery">
 
 
 <div class="gallery-item">
-
 <img
 src="durga1.jpg"
 alt="বুদবুদ সংহতি ছবি ১"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga2.jpg"
 alt="বুদবুদ সংহতি ছবি ২"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga3.jpg"
 alt="বুদবুদ সংহতি ছবি ৩"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga4.jpg"
 alt="বুদবুদ সংহতি ছবি ৪"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga5.jpg"
 alt="বুদবুদ সংহতি ছবি ৫"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga6.jpg"
 alt="বুদবুদ সংহতি ছবি ৬"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga7.jpg"
 alt="বুদবুদ সংহতি ছবি ৭"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga8.jpg"
 alt="বুদবুদ সংহতি ছবি ৮"
 loading="lazy">
-
 </div>
 
 
@@ -1560,8 +1520,6 @@ id="contact">
 <div class="contact-grid">
 
 
-<!-- ADDRESS -->
-
 <div class="contact-card">
 
 <div class="card-icon">
@@ -1573,20 +1531,14 @@ id="contact">
 </h3>
 
 <p>
-
 Budbud, Burdwan
-
 <br>
-
 West Bengal, India
-
 </p>
 
 </div>
 
 
-
-<!-- PHONE -->
 
 <div class="contact-card">
 
@@ -1616,8 +1568,6 @@ West Bengal, India
 
 
 
-<!-- EMAIL -->
-
 <div class="contact-card">
 
 <div class="card-icon">
@@ -1630,8 +1580,7 @@ West Bengal, India
 
 <p>
 
-<a
-href="mailto:budbudsanhati@gmail.com">
+<a href="mailto:budbudsanhati@gmail.com">
 
 budbudsanhati@gmail.com
 
@@ -1656,7 +1605,7 @@ budbudsanhati@gmail.com
 
 <section class="durga-banner">
 
-<div class="durga-icon">
+<div style="font-size:55px;">
 🔱
 </div>
 
@@ -1673,7 +1622,6 @@ budbudsanhati@gmail.com
 ================================= -->
 
 <footer>
-
 
 <strong>
 Budbud SANHATI
@@ -1692,31 +1640,23 @@ West Bengal, India
 
 <br>
 
-
 📞
-
 <a href="tel:9547222144">
 9547222144
 </a>
 
 <br>
 
-
 📞
-
 <a href="tel:+919563881523">
 +91 9563881523
 </a>
 
 <br>
 
-
 ✉️
-
 <a href="mailto:budbudsanhati@gmail.com">
-
 budbudsanhati@gmail.com
-
 </a>
 
 </p>
@@ -1728,7 +1668,6 @@ budbudsanhati@gmail.com
 All Rights Reserved.
 
 </p>
-
 
 </footer>
 
