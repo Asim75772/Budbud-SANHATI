@@ -6,29 +6,29 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+content="width=device-width, initial-scale=1.0">
 
 <title>বুদবুদ সংহতি | Budbud SANHATI</title>
 
 <meta name="description"
-content="বুদবুদ সংহতি (Budbud SANHATI) একটি সামাজিক ও সাংস্কৃতিক সংগঠন। শিক্ষা সহায়তা, রক্তদান, দুর্গাপূজা ও বিভিন্ন সামাজিক কার্যক্রমের মাধ্যমে মানুষের পাশে থাকাই আমাদের লক্ষ্য।">
+content="বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।">
 
 <link rel="preconnect"
-      href="https://fonts.googleapis.com">
+href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
-      href="https://fonts.googleapis.com"
-      crossorigin>
+href="https://fonts.gstatic.com"
+crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet">
+rel="stylesheet">
 
 
 <style>
 
-/* =================================
+/* ================================
    BASIC
-================================= */
+================================ */
 
 *{
     margin:0;
@@ -38,7 +38,6 @@ content="বুদবুদ সংহতি (Budbud SANHATI) একটি সা
 
 html{
     scroll-behavior:smooth;
-    scroll-padding-top:75px;
 }
 
 body{
@@ -49,8 +48,8 @@ body{
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
 img{
@@ -59,9 +58,9 @@ img{
 }
 
 
-/* =================================
+/* ================================
    NAVBAR
-================================= */
+================================ */
 
 .navbar{
     position:sticky;
@@ -99,7 +98,6 @@ img{
     color:#f3d49a;
 
     font-size:18px;
-
     font-weight:700;
 
     white-space:nowrap;
@@ -112,138 +110,129 @@ img{
 }
 
 
-/* =================================
+/* ================================
    HERO
-================================= */
+================================ */
 
 .hero{
     position:relative;
 
-    border-bottom:3px solid #e00000;
-
     background:#000;
+
+    border-bottom:3px solid #e00000;
 
     overflow:hidden;
 }
 
-.hero img{
+.hero-image{
     width:100%;
-
     height:auto;
-
-    min-height:300px;
+    min-height:420px;
 
     object-fit:cover;
 }
 
 .hero-overlay{
     position:absolute;
-
     inset:0;
 
     background:
     linear-gradient(
-        transparent 35%,
-        rgba(0,0,0,.78)
+        to bottom,
+        rgba(0,0,0,.05),
+        rgba(0,0,0,.15) 40%,
+        rgba(0,0,0,.85) 100%
     );
 }
 
 .hero-content{
     position:absolute;
 
-    bottom:38px;
-
     left:50%;
+    bottom:40px;
 
     transform:translateX(-50%);
 
-    text-align:center;
-
     width:100%;
+
+    text-align:center;
 
     z-index:5;
 }
-
-
-/* HERO TITLE */
 
 .hero-content h1{
     color:#ffc400;
 
     font-size:42px;
 
+    margin-bottom:8px;
+
     text-shadow:
     0 0 10px #000,
-    0 0 20px rgba(255,180,0,.25);
-
-    margin-bottom:15px;
+    0 0 20px rgba(255,190,0,.35);
 }
-
-
-/* HERO SUBTITLE */
 
 .hero-content p{
+    color:#fff;
+
     font-size:18px;
 
-    margin:10px 15px 18px;
+    margin-bottom:20px;
 
-    color:#fff;
+    text-shadow:0 2px 5px #000;
 }
 
 
-/* =================================
+/* ================================
    WELCOME BUTTON
-================================= */
+================================ */
 
 .main-button{
-
     display:inline-block;
 
-    padding:14px 38px;
+    padding:13px 42px;
+
+    border:2px solid #ffc400;
+    border-radius:13px;
 
     background:
     linear-gradient(
         180deg,
-        #ff1b1b,
-        #c90000
+        #ff2020,
+        #c80000
     );
-
-    border:2px solid #ffc400;
-
-    border-radius:13px;
 
     color:#ffe9a5;
 
     font-family:"Noto Serif Bengali",serif;
 
     font-size:22px;
-
     font-weight:800;
 
     cursor:pointer;
 
     box-shadow:
-    0 0 10px rgba(255,190,0,.75),
-    0 0 25px rgba(255,120,0,.35);
+    0 0 10px rgba(255,190,0,.8),
+    0 0 25px rgba(255,100,0,.35);
 
     transition:.3s;
 }
 
 .main-button:hover{
-
     transform:scale(1.05);
 
     box-shadow:
     0 0 15px #ffc400,
-    0 0 35px rgba(255,180,0,.55);
+    0 0 35px rgba(255,180,0,.6);
 }
 
 
-/* =================================
-   EDITOR'S COLUMN
-================================= */
+/* ================================
+   EDITOR
+================================ */
 
 .editor-section{
+    position:relative;
 
     padding:55px 20px 60px;
 
@@ -256,36 +245,24 @@ img{
     );
 
     border-bottom:2px solid #551000;
-
-    position:relative;
-
-    overflow:hidden;
 }
 
 .editor-section::before{
-
     content:"";
 
-    position:absolute;
-
-    left:50%;
-
-    top:0;
-
-    transform:translateX(-50%);
+    display:block;
 
     width:180px;
-
     height:2px;
+
+    margin:0 auto 35px;
 
     background:#ffc400;
 
-    box-shadow:
-    0 0 12px #ffc400;
+    box-shadow:0 0 12px #ffc400;
 }
 
 .editor-container{
-
     max-width:900px;
 
     margin:auto;
@@ -294,35 +271,29 @@ img{
 }
 
 .editor-title{
-
     color:#ffc400;
 
     font-size:34px;
 
-    font-weight:800;
-
-    margin-bottom:10px;
+    margin-bottom:12px;
 
     text-shadow:
     0 0 12px rgba(255,190,0,.35);
 }
 
 .editor-line{
-
     width:90px;
-
     height:3px;
 
-    background:#e00000;
-
     margin:0 auto 25px;
+
+    background:#e00000;
 
     box-shadow:
     0 0 8px rgba(255,0,0,.6);
 }
 
 .editor-card{
-
     background:
     linear-gradient(
         145deg,
@@ -341,14 +312,11 @@ img{
 }
 
 .editor-icon{
-
     font-size:42px;
-
     margin-bottom:12px;
 }
 
 .editor-card h3{
-
     color:#ffe09a;
 
     font-size:25px;
@@ -357,7 +325,6 @@ img{
 }
 
 .editor-card p{
-
     color:#eee;
 
     font-size:16px;
@@ -366,7 +333,6 @@ img{
 }
 
 .editor-sign{
-
     margin-top:18px;
 
     color:#ffc400;
@@ -377,12 +343,11 @@ img{
 }
 
 
-/* =================================
+/* ================================
    QUICK MENU
-================================= */
+================================ */
 
 .quick-section{
-
     display:grid;
 
     grid-template-columns:repeat(4,1fr);
@@ -393,7 +358,6 @@ img{
 }
 
 .quick-card{
-
     padding:30px 20px;
 
     text-align:center;
@@ -404,17 +368,14 @@ img{
 }
 
 .quick-card:last-child{
-
     border-right:none;
 }
 
 .quick-card:hover{
-
     background:#130000;
 }
 
 .quick-icon{
-
     font-size:45px;
 
     margin-bottom:12px;
@@ -424,7 +385,6 @@ img{
 }
 
 .quick-card h3{
-
     color:#ffc400;
 
     font-size:22px;
@@ -433,7 +393,6 @@ img{
 }
 
 .quick-card p{
-
     color:#ddd;
 
     font-size:14px;
@@ -442,12 +401,11 @@ img{
 }
 
 
-/* =================================
+/* ================================
    COMMON SECTION
-================================= */
+================================ */
 
 .section{
-
     padding:70px 20px;
 
     background:#070000;
@@ -456,14 +414,11 @@ img{
 }
 
 .container{
-
     max-width:1050px;
-
     margin:auto;
 }
 
 .title{
-
     text-align:center;
 
     color:#ffc400;
@@ -477,12 +432,11 @@ img{
 }
 
 
-/* =================================
+/* ================================
    CARDS
-================================= */
+================================ */
 
 .grid{
-
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
@@ -491,7 +445,6 @@ img{
 }
 
 .card{
-
     background:
     linear-gradient(
         145deg,
@@ -511,7 +464,6 @@ img{
 }
 
 .card:hover{
-
     transform:translateY(-5px);
 
     box-shadow:
@@ -519,7 +471,6 @@ img{
 }
 
 .card h3{
-
     color:#ffc400;
 
     margin-bottom:15px;
@@ -528,7 +479,6 @@ img{
 }
 
 .card p{
-
     color:#ddd;
 
     line-height:1.8;
@@ -537,19 +487,23 @@ img{
 }
 
 .card-icon{
-
     font-size:50px;
 
     margin-bottom:15px;
 }
 
+.details-link{
+    color:#ffc400;
 
-/* =================================
+    font-weight:700;
+}
+
+
+/* ================================
    GALLERY
-================================= */
+================================ */
 
 .gallery-grid{
-
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
@@ -558,8 +512,7 @@ img{
 }
 
 .gallery-item{
-
-    min-height:280px;
+    height:280px;
 
     border:2px solid #702500;
 
@@ -567,51 +520,35 @@ img{
 
     overflow:hidden;
 
-    background:#050000;
-
-    box-shadow:
-    0 0 15px rgba(255,60,0,.08);
+    background:#100000;
 
     cursor:pointer;
 
     position:relative;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:5px;
+    box-shadow:
+    0 0 15px rgba(255,60,0,.08);
 }
 
 .gallery-item img{
-
     width:100%;
+    height:100%;
 
-    height:auto;
-
-    max-height:500px;
-
-    object-fit:contain;
-
-    background:#000;
+    object-fit:cover;
 
     transition:.3s;
 }
 
 .gallery-item:hover img{
-
-    transform:scale(1.02);
+    transform:scale(1.03);
 }
 
 
-/* =================================
-   GALLERY LIGHTBOX
-================================= */
+/* ================================
+   LIGHTBOX
+================================ */
 
 .gallery-lightbox{
-
     display:none;
 
     position:fixed;
@@ -621,33 +558,27 @@ img{
     inset:0;
 
     width:100%;
-
     height:100%;
 
     background:rgba(0,0,0,.96);
 
     align-items:center;
-
     justify-content:center;
 
-    padding:20px;
+    padding:15px;
 }
 
 .gallery-lightbox.active{
-
     display:flex;
 }
 
 .gallery-lightbox img{
-
     display:block;
 
-    max-width:95vw;
-
+    max-width:96vw;
     max-height:90vh;
 
     width:auto;
-
     height:auto;
 
     object-fit:contain;
@@ -662,12 +593,12 @@ img{
 }
 
 .lightbox-close{
-
     position:absolute;
 
-    top:12px;
+    top:8px;
+    right:18px;
 
-    right:20px;
+    z-index:1000000;
 
     color:#fff;
 
@@ -678,25 +609,18 @@ img{
     line-height:1;
 
     cursor:pointer;
-
-    z-index:1000000;
-
-    text-shadow:
-    0 0 10px #000;
 }
 
 .lightbox-close:hover{
-
     color:#ffc400;
 }
 
 
-/* =================================
+/* ================================
    CONTACT
-================================= */
+================================ */
 
 .contact-grid{
-
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
@@ -705,7 +629,6 @@ img{
 }
 
 .contact-card{
-
     background:#110000;
 
     border:1px solid #702500;
@@ -718,31 +641,27 @@ img{
 }
 
 .contact-card h3{
-
     color:#ffc400;
 
     margin-bottom:10px;
 }
 
 .contact-card p{
-
     color:#ddd;
 
     line-height:1.9;
 }
 
 .contact-card a:hover{
-
     color:#ffc400;
 }
 
 
-/* =================================
+/* ================================
    DURGA BANNER
-================================= */
+================================ */
 
 .durga-banner{
-
     padding:40px;
 
     text-align:center;
@@ -759,8 +678,11 @@ img{
     border-bottom:2px solid red;
 }
 
-.durga-banner h2{
+.durga-icon{
+    font-size:55px;
+}
 
+.durga-banner h2{
     color:#ffc400;
 
     font-size:40px;
@@ -770,12 +692,11 @@ img{
 }
 
 
-/* =================================
+/* ================================
    FOOTER
-================================= */
+================================ */
 
 footer{
-
     background:#030303;
 
     border-top:2px solid red;
@@ -786,14 +707,12 @@ footer{
 }
 
 footer strong{
-
     color:#ffc400;
 
     font-size:20px;
 }
 
 footer p{
-
     color:#ddd;
 
     line-height:2;
@@ -802,303 +721,227 @@ footer p{
 }
 
 footer a{
-
     color:#ffe09a;
 }
 
 footer a:hover{
-
     color:#ff0000;
 }
 
 
-/* =================================
+/* ================================
    MOBILE
-================================= */
+================================ */
 
 @media(max-width:768px){
 
     .navbar{
-
         height:65px;
 
         justify-content:flex-start;
     }
 
     .nav-menu{
-
         gap:32px;
 
         justify-content:flex-start;
     }
 
     .nav-menu a{
-
         font-size:17px;
     }
 
 
-    /* HERO */
-
-    .hero img{
-
+    .hero-image{
         min-height:360px;
 
         object-fit:cover;
     }
 
     .hero-content{
-
-        bottom:28px;
+        bottom:30px;
     }
 
     .hero-content h1{
-
         font-size:30px;
     }
 
     .hero-content p{
-
         font-size:15px;
 
-        margin-bottom:10px;
+        margin:8px 15px 15px;
     }
-
-
-    /* WELCOME */
 
     .main-button{
-
         font-size:20px;
 
-        padding:13px 35px;
+        padding:12px 35px;
     }
 
-    .main-button:hover{
-
-        transform:scale(1.03);
-    }
-
-
-    /* EDITOR */
 
     .editor-section{
-
         padding:45px 15px 50px;
     }
 
     .editor-title{
-
         font-size:30px;
     }
 
     .editor-card{
-
         padding:25px 18px;
     }
 
-    .editor-card p{
+    .editor-card h3{
+        font-size:22px;
+    }
 
+    .editor-card p{
         font-size:15px;
 
         line-height:1.9;
     }
 
 
-    /* QUICK */
-
     .quick-section{
-
         grid-template-columns:repeat(2,1fr);
     }
 
     .quick-card{
-
         padding:25px 12px;
 
         border-bottom:1px solid #552000;
     }
 
-    .quick-card:nth-child(2){
-
+    .quick-card:nth-child(2),
+    .quick-card:nth-child(4){
         border-right:none;
     }
 
     .quick-card h3{
-
         font-size:19px;
     }
 
     .quick-card p{
-
         font-size:13px;
     }
 
 
-    /* COMMON */
-
     .section{
-
         padding:55px 15px;
     }
 
     .title{
-
         font-size:30px;
 
         margin-bottom:30px;
     }
 
 
-    /* CARDS */
-
     .grid{
-
         grid-template-columns:1fr;
     }
 
 
-    /* GALLERY */
-
     .gallery-grid{
-
         grid-template-columns:1fr;
     }
 
     .gallery-item{
-
-        min-height:250px;
-
-        height:auto;
-
-        padding:5px;
+        height:280px;
     }
 
-    .gallery-item img{
-
-        width:100%;
-
-        height:auto;
-
-        max-height:600px;
-
-        object-fit:contain;
-    }
-
-
-    /* LIGHTBOX */
 
     .gallery-lightbox{
-
-        padding:10px;
+        padding:8px;
     }
 
     .gallery-lightbox img{
-
         max-width:96vw;
-
-        max-height:88vh;
+        max-height:85vh;
     }
 
     .lightbox-close{
-
         top:8px;
-
         right:12px;
 
         font-size:40px;
     }
 
 
-    /* CONTACT */
-
     .contact-grid{
-
         grid-template-columns:1fr;
     }
 
 
-    /* DURGA */
-
     .durga-banner{
-
         padding:30px 15px;
     }
 
     .durga-banner h2{
-
         font-size:32px;
     }
 
 }
 
 
-/* =================================
+/* ================================
    SMALL MOBILE
-================================= */
+================================ */
 
 @media(max-width:420px){
 
     .nav-menu{
-
         gap:27px;
     }
 
     .nav-menu a{
-
         font-size:16px;
     }
 
-    .hero img{
-
+    .hero-image{
         min-height:330px;
     }
 
     .hero-content h1{
-
         font-size:27px;
     }
 
-    .main-button{
+    .hero-content p{
+        font-size:14px;
+    }
 
+    .main-button{
         font-size:19px;
 
-        padding:12px 32px;
+        padding:11px 32px;
     }
 
     .editor-title{
-
         font-size:27px;
     }
 
     .quick-icon{
-
         font-size:40px;
     }
 
     .gallery-item{
-
-        min-height:220px;
-
-        height:auto;
+        height:250px;
     }
 
 }
 
 
-/* =================================
+/* ================================
    REDUCED MOTION
-================================= */
+================================ */
 
 @media(prefers-reduced-motion:reduce){
 
     html{
-
         scroll-behavior:auto;
     }
 
     *{
-
         transition:none !important;
     }
 }
@@ -1111,42 +954,32 @@ footer a:hover{
 <body>
 
 
-<!-- =================================
+<!-- ================================
      NAVBAR
-================================= -->
+================================ -->
 
 <header class="navbar">
 
 <ul class="nav-menu">
 
 <li>
-<a href="index.html">
-HOME
-</a>
+<a href="index.html">HOME</a>
 </li>
 
 <li>
-<a href="about-us.html">
-ABOUT US
-</a>
+<a href="about-us.html">ABOUT US</a>
 </li>
 
 <li>
-<a href="#events">
-EVENTS
-</a>
+<a href="#events">EVENTS</a>
 </li>
 
 <li>
-<a href="#gallery">
-GALLERY
-</a>
+<a href="#gallery">GALLERY</a>
 </li>
 
 <li>
-<a href="#contact">
-CONTACT
-</a>
+<a href="#contact">CONTACT</a>
 </li>
 
 </ul>
@@ -1155,18 +988,18 @@ CONTACT
 
 
 
-<!-- =================================
+<!-- ================================
      HERO
-================================= -->
+================================ -->
 
 <section class="hero">
 
 <img
+class="hero-image"
 src="home-banner.png"
 alt="Budbud SANHATI">
 
 <div class="hero-overlay"></div>
-
 
 <div class="hero-content">
 
@@ -1178,19 +1011,14 @@ alt="Budbud SANHATI">
 একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
 </p>
 
-
-<!-- =================================
-     WELCOME BUTTON
-     সরাসরি EDITOR section-এ যাবে
-================================= -->
-
-<a
-href="#editor"
-class="main-button">
+<button
+type="button"
+class="main-button"
+id="welcomeButton">
 
 স্বাগতম
 
-</a>
+</button>
 
 </div>
 
@@ -1198,9 +1026,9 @@ class="main-button">
 
 
 
-<!-- =================================
-     EDITOR'S COLUMN
-================================= -->
+<!-- ================================
+     EDITOR
+================================ -->
 
 <section
 class="editor-section"
@@ -1208,14 +1036,11 @@ id="editor">
 
 <div class="editor-container">
 
-
 <h2 class="editor-title">
 সম্পাদকের কলমে
 </h2>
 
-
 <div class="editor-line"></div>
-
 
 <div class="editor-card">
 
@@ -1223,11 +1048,9 @@ id="editor">
 ✍️
 </div>
 
-
 <h3>
 একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
 </h3>
-
 
 <p>
 
@@ -1244,15 +1067,11 @@ id="editor">
 
 </p>
 
-
 <div class="editor-sign">
-
 — সম্পাদক, বুদবুদ সংহতি
-
 </div>
 
 </div>
-
 
 </div>
 
@@ -1260,9 +1079,9 @@ id="editor">
 
 
 
-<!-- =================================
+<!-- ================================
      QUICK MENU
-================================= -->
+================================ -->
 
 <section class="quick-section">
 
@@ -1287,7 +1106,6 @@ class="quick-card">
 </a>
 
 
-
 <a
 href="siksha-sohayota.html"
 class="quick-card">
@@ -1306,7 +1124,6 @@ class="quick-card">
 </p>
 
 </a>
-
 
 
 <a
@@ -1329,7 +1146,6 @@ class="quick-card">
 </a>
 
 
-
 <a
 href="about-us.html"
 class="quick-card">
@@ -1349,14 +1165,13 @@ Budbud SANHATI সম্পর্কে
 
 </a>
 
-
 </section>
 
 
 
-<!-- =================================
+<!-- ================================
      ABOUT
-================================= -->
+================================ -->
 
 <section class="section">
 
@@ -1366,13 +1181,11 @@ Budbud SANHATI সম্পর্কে
 আমাদের কথা
 </h2>
 
-
 <div class="card">
 
 <div class="card-icon">
 🤝
 </div>
-
 
 <p>
 
@@ -1392,9 +1205,9 @@ Budbud SANHATI সম্পর্কে
 
 
 
-<!-- =================================
+<!-- ================================
      EVENTS
-================================= -->
+================================ -->
 
 <section
 class="section"
@@ -1405,7 +1218,6 @@ id="events">
 <h2 class="title">
 আমাদের কার্যক্রম
 </h2>
-
 
 <div class="grid">
 
@@ -1429,7 +1241,7 @@ id="events">
 
 <a
 href="durga-puja.html"
-style="color:#ffc400;font-weight:700;">
+class="details-link">
 
 বিস্তারিত দেখুন →
 
@@ -1458,7 +1270,7 @@ style="color:#ffc400;font-weight:700;">
 
 <a
 href="siksha-sohayota.html"
-style="color:#ffc400;font-weight:700;">
+class="details-link">
 
 বিস্তারিত দেখুন →
 
@@ -1487,7 +1299,7 @@ style="color:#ffc400;font-weight:700;">
 
 <a
 href="roktodan.html"
-style="color:#ffc400;font-weight:700;">
+class="details-link">
 
 বিস্তারিত দেখুন →
 
@@ -1504,9 +1316,9 @@ style="color:#ffc400;font-weight:700;">
 
 
 
-<!-- =================================
+<!-- ================================
      GALLERY
-================================= -->
+================================ -->
 
 <section
 class="section"
@@ -1518,87 +1330,70 @@ id="gallery">
 গ্যালারি
 </h2>
 
-
 <div class="gallery-grid">
 
 
 <div class="gallery-item">
-
 <img
 src="durga1.jpg"
 alt="বুদবুদ সংহতি ছবি ১"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga2.jpg"
 alt="বুদবুদ সংহতি ছবি ২"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga3.jpg"
 alt="বুদবুদ সংহতি ছবি ৩"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga4.jpg"
 alt="বুদবুদ সংহতি ছবি ৪"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga5.jpg"
 alt="বুদবুদ সংহতি ছবি ৫"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga6.jpg"
 alt="বুদবুদ সংহতি ছবি ৬"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga7.jpg"
 alt="বুদবুদ সংহতি ছবি ৭"
 loading="lazy">
-
 </div>
 
 
 <div class="gallery-item">
-
 <img
 src="durga8.jpg"
 alt="বুদবুদ সংহতি ছবি ৮"
 loading="lazy">
-
 </div>
 
 
@@ -1610,9 +1405,9 @@ loading="lazy">
 
 
 
-<!-- =================================
+<!-- ================================
      CONTACT
-================================= -->
+================================ -->
 
 <section
 class="section"
@@ -1623,7 +1418,6 @@ id="contact">
 <h2 class="title">
 যোগাযোগ
 </h2>
-
 
 <div class="contact-grid">
 
@@ -1692,8 +1486,7 @@ West Bengal, India
 
 <p>
 
-<a
-href="mailto:budbudsanhati@gmail.com">
+<a href="mailto:budbudsanhati@gmail.com">
 
 budbudsanhati@gmail.com
 
@@ -1712,13 +1505,13 @@ budbudsanhati@gmail.com
 
 
 
-<!-- =================================
+<!-- ================================
      DURGA BANNER
-================================= -->
+================================ -->
 
 <section class="durga-banner">
 
-<div style="font-size:55px;">
+<div class="durga-icon">
 🔱
 </div>
 
@@ -1730,9 +1523,9 @@ budbudsanhati@gmail.com
 
 
 
-<!-- =================================
+<!-- ================================
      FOOTER
-================================= -->
+================================ -->
 
 <footer>
 
@@ -1752,7 +1545,6 @@ West Bengal, India
 <br>
 
 📞
-
 <a href="tel:9547222144">
 9547222144
 </a>
@@ -1760,7 +1552,6 @@ West Bengal, India
 <br>
 
 📞
-
 <a href="tel:+919563881523">
 +91 9563881523
 </a>
@@ -1768,29 +1559,24 @@ West Bengal, India
 <br>
 
 ✉️
-
 <a href="mailto:budbudsanhati@gmail.com">
-
 budbudsanhati@gmail.com
-
 </a>
 
 </p>
 
 <p>
-
 © 2024 Budbud SANHATI.
 All Rights Reserved.
-
 </p>
 
 </footer>
 
 
 
-<!-- =================================
+<!-- ================================
      GALLERY LIGHTBOX
-================================= -->
+================================ -->
 
 <div
 class="gallery-lightbox"
@@ -1799,11 +1585,8 @@ id="galleryLightbox">
 <span
 class="lightbox-close"
 id="lightboxClose">
-
 ×
-
 </span>
-
 
 <img
 id="lightboxImage"
@@ -1814,17 +1597,34 @@ alt="বুদবুদ সংহতি গ্যালারি">
 
 
 
-<!-- =================================
-     JAVASCRIPT
-================================= -->
-
 <script>
+
+/* =================================
+   WELCOME BUTTON
+================================= */
+
+const welcomeButton =
+document.getElementById("welcomeButton");
+
+const editorSection =
+document.getElementById("editor");
+
+welcomeButton.addEventListener("click", function(){
+
+    editorSection.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    });
+
+});
+
+
 
 /* =================================
    GALLERY LIGHTBOX
 ================================= */
 
-const galleryItems =
+const galleryImages =
 document.querySelectorAll(".gallery-item img");
 
 const galleryLightbox =
@@ -1837,13 +1637,9 @@ const lightboxClose =
 document.getElementById("lightboxClose");
 
 
-/* =================================
-   GALLERY IMAGE CLICK
-================================= */
+galleryImages.forEach(function(image){
 
-galleryItems.forEach(function(image){
-
-    image.addEventListener("click",function(){
+    image.addEventListener("click", function(){
 
         lightboxImage.src = this.src;
 
@@ -1858,38 +1654,6 @@ galleryItems.forEach(function(image){
 });
 
 
-/* =================================
-   CLOSE BUTTON
-================================= */
-
-lightboxClose.addEventListener("click",function(event){
-
-    event.stopPropagation();
-
-    closeGallery();
-
-});
-
-
-/* =================================
-   BACKGROUND CLICK
-================================= */
-
-galleryLightbox.addEventListener("click",function(event){
-
-    if(event.target === galleryLightbox){
-
-        closeGallery();
-
-    }
-
-});
-
-
-/* =================================
-   CLOSE FUNCTION
-================================= */
-
 function closeGallery(){
 
     galleryLightbox.classList.remove("active");
@@ -1901,11 +1665,27 @@ function closeGallery(){
 }
 
 
-/* =================================
-   ESC KEY
-================================= */
+lightboxClose.addEventListener("click", function(event){
 
-document.addEventListener("keydown",function(event){
+    event.stopPropagation();
+
+    closeGallery();
+
+});
+
+
+galleryLightbox.addEventListener("click", function(event){
+
+    if(event.target === galleryLightbox){
+
+        closeGallery();
+
+    }
+
+});
+
+
+document.addEventListener("keydown", function(event){
 
     if(event.key === "Escape"){
 
