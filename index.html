@@ -17,7 +17,7 @@ content="বুদবুদ সংহতি (Budbud SANHATI) একটি সা
       href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
-      href="https://fonts.gstatic.com"
+      href="https://fonts.googleapis.com"
       crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
@@ -38,6 +38,7 @@ content="বুদবুদ সংহতি (Budbud SANHATI) একটি সা
 
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:75px;
 }
 
 body{
@@ -219,10 +220,6 @@ img{
 
     font-weight:800;
 
-    position:relative;
-
-    top:-30px;
-
     cursor:pointer;
 
     box-shadow:
@@ -233,8 +230,6 @@ img{
 }
 
 .main-button:hover{
-
-    top:-30px;
 
     transform:scale(1.05);
 
@@ -564,7 +559,7 @@ img{
 
 .gallery-item{
 
-    height:280px;
+    min-height:280px;
 
     border:2px solid #702500;
 
@@ -572,7 +567,7 @@ img{
 
     overflow:hidden;
 
-    background:#100000;
+    background:#050000;
 
     box-shadow:
     0 0 15px rgba(255,60,0,.08);
@@ -580,22 +575,34 @@ img{
     cursor:pointer;
 
     position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:5px;
 }
 
 .gallery-item img{
 
     width:100%;
 
-    height:100%;
+    height:auto;
 
-    object-fit:cover;
+    max-height:500px;
+
+    object-fit:contain;
+
+    background:#000;
 
     transition:.3s;
 }
 
 .gallery-item:hover img{
 
-    transform:scale(1.03);
+    transform:scale(1.02);
 }
 
 
@@ -617,7 +624,7 @@ img{
 
     height:100%;
 
-    background:rgba(0,0,0,.94);
+    background:rgba(0,0,0,.96);
 
     align-items:center;
 
@@ -632,6 +639,8 @@ img{
 }
 
 .gallery-lightbox img{
+
+    display:block;
 
     max-width:95vw;
 
@@ -863,13 +872,9 @@ footer a:hover{
         font-size:20px;
 
         padding:13px 35px;
-
-        top:-30px;
     }
 
     .main-button:hover{
-
-        top:-30px;
 
         transform:scale(1.03);
     }
@@ -962,8 +967,24 @@ footer a:hover{
 
     .gallery-item{
 
-        height:280px;
+        min-height:250px;
+
+        height:auto;
+
+        padding:5px;
     }
+
+    .gallery-item img{
+
+        width:100%;
+
+        height:auto;
+
+        max-height:600px;
+
+        object-fit:contain;
+    }
+
 
     /* LIGHTBOX */
 
@@ -976,7 +997,7 @@ footer a:hover{
 
         max-width:96vw;
 
-        max-height:85vh;
+        max-height:88vh;
     }
 
     .lightbox-close{
@@ -1043,8 +1064,6 @@ footer a:hover{
         font-size:19px;
 
         padding:12px 32px;
-
-        top:-30px;
     }
 
     .editor-title{
@@ -1059,7 +1078,9 @@ footer a:hover{
 
     .gallery-item{
 
-        height:250px;
+        min-height:220px;
+
+        height:auto;
     }
 
 }
@@ -1158,16 +1179,18 @@ alt="Budbud SANHATI">
 </p>
 
 
-<!-- স্বাগতম -->
+<!-- =================================
+     WELCOME BUTTON
+     সরাসরি EDITOR section-এ যাবে
+================================= -->
 
-<button
-type="button"
-class="main-button"
-onclick="document.getElementById('editor').scrollIntoView({behavior:'smooth', block:'start'});">
+<a
+href="#editor"
+class="main-button">
 
 স্বাগতম
 
-</button>
+</a>
 
 </div>
 
@@ -1387,8 +1410,6 @@ id="events">
 <div class="grid">
 
 
-<!-- DURGA -->
-
 <div class="card">
 
 <div class="card-icon">
@@ -1418,8 +1439,6 @@ style="color:#ffc400;font-weight:700;">
 
 
 
-<!-- EDUCATION -->
-
 <div class="card">
 
 <div class="card-icon">
@@ -1448,8 +1467,6 @@ style="color:#ffc400;font-weight:700;">
 </div>
 
 
-
-<!-- BLOOD -->
 
 <div class="card">
 
@@ -1611,8 +1628,6 @@ id="contact">
 <div class="contact-grid">
 
 
-<!-- ADDRESS -->
-
 <div class="contact-card">
 
 <div class="card-icon">
@@ -1636,8 +1651,6 @@ West Bengal, India
 </div>
 
 
-
-<!-- PHONE -->
 
 <div class="contact-card">
 
@@ -1666,8 +1679,6 @@ West Bengal, India
 </div>
 
 
-
-<!-- EMAIL -->
 
 <div class="contact-card">
 
@@ -1725,16 +1736,13 @@ budbudsanhati@gmail.com
 
 <footer>
 
-
 <strong>
 Budbud SANHATI
 </strong>
 
-
 <p>
 একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
 </p>
-
 
 <p>
 
@@ -1742,7 +1750,6 @@ Budbud SANHATI
 West Bengal, India
 
 <br>
-
 
 📞
 
@@ -1752,7 +1759,6 @@ West Bengal, India
 
 <br>
 
-
 📞
 
 <a href="tel:+919563881523">
@@ -1760,7 +1766,6 @@ West Bengal, India
 </a>
 
 <br>
-
 
 ✉️
 
@@ -1772,14 +1777,12 @@ budbudsanhati@gmail.com
 
 </p>
 
-
 <p>
 
 © 2024 Budbud SANHATI.
 All Rights Reserved.
 
 </p>
-
 
 </footer>
 
@@ -1834,7 +1837,9 @@ const lightboxClose =
 document.getElementById("lightboxClose");
 
 
-/* ছবি Click */
+/* =================================
+   GALLERY IMAGE CLICK
+================================= */
 
 galleryItems.forEach(function(image){
 
@@ -1853,7 +1858,9 @@ galleryItems.forEach(function(image){
 });
 
 
-/* Close Button */
+/* =================================
+   CLOSE BUTTON
+================================= */
 
 lightboxClose.addEventListener("click",function(event){
 
@@ -1864,7 +1871,9 @@ lightboxClose.addEventListener("click",function(event){
 });
 
 
-/* Background Click */
+/* =================================
+   BACKGROUND CLICK
+================================= */
 
 galleryLightbox.addEventListener("click",function(event){
 
@@ -1877,7 +1886,9 @@ galleryLightbox.addEventListener("click",function(event){
 });
 
 
-/* Close Function */
+/* =================================
+   CLOSE FUNCTION
+================================= */
 
 function closeGallery(){
 
@@ -1890,7 +1901,9 @@ function closeGallery(){
 }
 
 
-/* ESC Button */
+/* =================================
+   ESC KEY
+================================= */
 
 document.addEventListener("keydown",function(event){
 
@@ -1901,7 +1914,6 @@ document.addEventListener("keydown",function(event){
     }
 
 });
-
 
 </script>
 
