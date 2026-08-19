@@ -4,835 +4,868 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>বুদবুদ সংহতি | Budbud Sanhati</title>
-
-<meta name="description"
-content="বুদবুদ সংহতি — একটি সংস্কৃতি, একটি পরিবার, একটি অঙ্গীকার।">
+<title>বুদবুদ সংহতি | Bud Bud Sanhati</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================
-   BASIC
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: "Noto Serif Bengali", serif;
-    background: #090000;
-    color: #f7e7bd;
-    overflow-x: hidden;
+body{
+    font-family:'Noto Serif Bengali',serif;
+    background:#090000;
+    color:#f8df9b;
+    overflow-x:hidden;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+img{
+    max-width:100%;
+    display:block;
 }
 
-button,
-a {
-    font-family: inherit;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+button{
+    font-family:inherit;
 }
-
 
 /* =========================
    HEADER
 ========================= */
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: #050505;
-
-    border-bottom: 2px solid #8f0000;
-
-    box-shadow:
-        0 3px 15px rgba(0,0,0,.7);
+header{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    background:#050505;
+    border-bottom:2px solid #b00000;
+    box-shadow:0 4px 20px rgba(0,0,0,.7);
 }
 
-.navbar {
-    width: 100%;
-    min-height: 75px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 10px 25px;
+.navbar{
+    width:100%;
+    max-width:1250px;
+    margin:auto;
+    min-height:78px;
+    padding:10px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    min-width: 190px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-width:190px;
 }
 
-.logo {
-    width: 52px;
-    height: 52px;
-
-    border-radius: 50%;
-
-    border: 2px solid #dca900;
-
-    object-fit: cover;
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+    border-radius:50%;
 }
 
-.logo-text {
-    color: #f0c65b;
-    font-size: 18px;
-    line-height: 1.1;
-    font-weight: 700;
+.logo-text{
+    color:#f4c44f;
+    font-size:20px;
+    line-height:1.05;
+    font-weight:800;
 }
 
-.logo-text span {
-    display: block;
+.nav-links{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:34px;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
-    list-style: none;
-}
-
-.nav-links a {
-    color: #ead59d;
-    font-size: 16px;
-    font-weight: 700;
-
-    padding: 10px 3px;
-
-    transition: .3s;
+.nav-links a{
+    color:#f3d58a;
+    font-size:16px;
+    font-weight:700;
+    position:relative;
+    padding:10px 0;
+    transition:.3s;
 }
 
 .nav-links a:hover,
-.nav-links a.active {
-    color: #ffcc36;
-
-    border-bottom: 3px solid #ff1a1a;
+.nav-links a.active{
+    color:#ffd000;
 }
 
-
-/* MOBILE MENU BUTTON */
-
-.menu-btn {
-    display: none;
-
-    background: transparent;
-    border: 1px solid #c99700;
-
-    color: #ffd23f;
-
-    font-size: 25px;
-
-    padding: 5px 10px;
-
-    border-radius: 6px;
+.nav-links a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:3px;
+    background:#ff1700;
+    box-shadow:0 0 8px #ff1700;
 }
 
+.menu-btn{
+    display:none;
+    width:58px;
+    height:58px;
+    border:1px solid #e7ae00;
+    border-radius:10px;
+    background:#090909;
+    color:#ffd000;
+    font-size:30px;
+    cursor:pointer;
+}
 
 /* =========================
    HERO
 ========================= */
 
-#home {
-    padding: 15px 12px 0;
+.hero{
+    padding:10px 12px 0;
+    background:#090000;
 }
 
-.hero {
-    position: relative;
-
-    width: 100%;
-    max-width: 1500px;
-
-    margin: auto;
-
-    border: 2px solid #c89400;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #3d0800,
-            #090000 75%
-        );
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-
-    min-height: 320px;
-
-    object-fit: cover;
-}
-
-.hero-content {
-    position: absolute;
-
-    left: 50%;
-    bottom: 30px;
-
-    transform: translateX(-50%);
-
-    text-align: center;
-
-    width: 100%;
-}
-
-.welcome-btn {
-    display: inline-block;
-
-    padding: 13px 45px;
-
-    background: linear-gradient(
-        180deg,
-        #ff2400,
-        #9e0000
-    );
-
-    color: white;
-
-    border: 2px solid #ffd33d;
-
-    border-radius: 30px;
-
-    font-size: 20px;
-    font-weight: 800;
-
-    cursor: pointer;
-
+.hero-image-wrap{
+    width:100%;
+    max-width:1250px;
+    margin:auto;
+    position:relative;
+    overflow:hidden;
+    border:2px solid #d99d00;
     box-shadow:
-        0 0 20px rgba(255,170,0,.7);
-
-    transition: .3s;
+        0 0 20px rgba(255,0,0,.25),
+        inset 0 0 30px rgba(0,0,0,.7);
 }
 
-.welcome-btn:hover {
-    transform: scale(1.06);
+.hero-image{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+}
 
+.hero-content{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+    padding-bottom:5%;
+}
+
+.welcome-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:220px;
+    min-height:62px;
+    padding:10px 35px;
+    border-radius:35px;
+    border:3px solid #ffd000;
+    background:linear-gradient(#ff2b00,#d90000);
+    color:#fff4bb;
+    font-size:25px;
+    font-weight:800;
+    cursor:pointer;
     box-shadow:
-        0 0 30px rgba(255,200,0,.9);
+        0 0 12px #ff3000,
+        0 0 28px rgba(255,160,0,.5);
+    transition:.3s;
 }
 
+.welcome-btn:hover{
+    transform:translateY(-3px) scale(1.03);
+}
 
 /* =========================
-   SECTION
+   COMMON SECTION
 ========================= */
 
-section {
-    padding: 75px 20px;
-
-    border-bottom: 1px solid #4d0808;
+section{
+    padding:80px 20px;
+    border-bottom:1px solid rgba(150,0,0,.5);
 }
 
-.section-container {
-    width: 100%;
-    max-width: 1100px;
-
-    margin: auto;
+.container{
+    width:100%;
+    max-width:1150px;
+    margin:auto;
 }
 
-.section-title {
-    text-align: center;
-
-    color: #f5c126;
-
-    font-size: 38px;
-
-    margin-bottom: 15px;
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
 }
 
-.section-line {
-    width: 100px;
-    height: 4px;
-
-    margin: 0 auto 45px;
-
-    background: #e60000;
-
-    border-radius: 5px;
+.section-title h2{
+    color:#ffc400;
+    font-size:42px;
+    font-weight:800;
+    line-height:1.3;
 }
 
+.section-title .line{
+    width:170px;
+    height:5px;
+    background:#ff1200;
+    margin:20px auto 0;
+    border-radius:10px;
+    box-shadow:0 0 12px rgba(255,0,0,.7);
+}
 
 /* =========================
    ABOUT
 ========================= */
 
-.about-box {
-    text-align: center;
-
-    padding: 25px;
+.about{
+    background:
+        radial-gradient(circle at center,rgba(120,0,0,.12),transparent 60%),
+        #0d0000;
 }
 
-.about-icon {
-    width: 100px;
-    height: 100px;
-
-    margin: 0 auto 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 3px solid #dba900;
-
-    border-radius: 50%;
-
-    font-size: 48px;
-
-    background: #130000;
+.about-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
 }
 
-.about-text {
-    max-width: 850px;
-
-    margin: auto;
-
-    color: #eadcbf;
-
-    font-size: 19px;
-
-    line-height: 2;
+.round-icon{
+    width:145px;
+    height:145px;
+    margin:0 auto 35px;
+    border:4px solid #e7ad00;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:65px;
+    background:#120000;
+    box-shadow:0 0 20px rgba(255,180,0,.15);
 }
 
+.about-box h3{
+    color:#ffc400;
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+.about-box p{
+    color:#eadbb9;
+    font-size:21px;
+    line-height:2;
+}
 
 /* =========================
-   EVENTS
+   FEATURE CARDS
 ========================= */
 
-.events-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 25px;
+.features{
+    background:#0b0000;
 }
 
-.event-card {
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:linear-gradient(145deg,#260000,#100000);
+    border:1px solid #750000;
+    border-radius:15px;
+    padding:30px 20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#e4a800;
+    box-shadow:0 10px 30px rgba(255,0,0,.2);
+}
+
+.card-icon{
+    width:90px;
+    height:90px;
+    border:3px solid #e7ad00;
+    border-radius:50%;
+    margin:0 auto 22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:42px;
+}
+
+.card h3{
+    color:#ffc400;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#e4d5b2;
+    line-height:1.9;
+    font-size:16px;
+}
+
+.card-btn{
+    margin-top:20px;
+    display:inline-block;
+    padding:9px 22px;
+    border:1px solid #e8ad00;
+    border-radius:25px;
+    color:#ffd34c;
+    background:#300000;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card-btn:hover{
+    background:#e00000;
+    color:white;
+}
+
+/* =========================
+   DURGA PUJA
+========================= */
+
+.durga-section{
     background:
-        linear-gradient(
-            145deg,
-            #300000,
-            #120000
-        );
-
-    border: 1px solid #7d1717;
-
-    border-radius: 15px;
-
-    overflow: hidden;
-
-    transition: .3s;
-
-    cursor: pointer;
+        radial-gradient(circle at 50% 20%,rgba(130,0,0,.25),transparent 45%),
+        #100000;
 }
 
-.event-card:hover {
-    transform: translateY(-7px);
-
-    border-color: #e0ad00;
-
-    box-shadow:
-        0 10px 30px rgba(255,0,0,.25);
+.durga-box{
+    background:linear-gradient(145deg,#260000,#0d0000);
+    border:1px solid #850000;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(100,0,0,.3);
 }
 
-.event-image {
-    width: 100%;
-    height: 230px;
-
-    object-fit: cover;
-
-    background:
-        radial-gradient(
-            circle,
-            #710000,
-            #170000
-        );
+.durga-image{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
 }
 
-.event-body {
-    padding: 22px;
-
-    text-align: center;
+.durga-content{
+    padding:40px;
+    text-align:center;
 }
 
-.event-body h3 {
-    color: #f2c338;
-
-    font-size: 25px;
-
-    margin-bottom: 10px;
+.durga-content h3{
+    color:#ffc400;
+    font-size:34px;
+    margin-bottom:20px;
 }
 
-.event-body p {
-    color: #e9d8b0;
-
-    line-height: 1.8;
+.durga-content p{
+    color:#eadbb9;
+    font-size:19px;
+    line-height:2;
+    max-width:850px;
+    margin:auto;
 }
 
-.event-button {
-    margin-top: 18px;
+/* =========================
+   BLOOD DONATION
+========================= */
 
-    padding: 9px 24px;
-
-    border: 1px solid #d8a900;
-
-    border-radius: 20px;
-
-    background: #450000;
-
-    color: #ffd548;
-
-    cursor: pointer;
+.blood-section{
+    background:#080000;
 }
 
+.blood-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    background:linear-gradient(145deg,#260000,#100000);
+    border:1px solid #820000;
+    border-radius:18px;
+    padding:50px 30px;
+}
+
+.blood-icon{
+    font-size:75px;
+    margin-bottom:20px;
+}
+
+.blood-box h3{
+    color:#ffcc00;
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.blood-box p{
+    color:#eadbb9;
+    font-size:19px;
+    line-height:2;
+}
 
 /* =========================
    GALLERY
 ========================= */
 
-.gallery-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 15px;
-}
-
-.gallery-item {
-    position: relative;
-
-    height: 250px;
-
-    overflow: hidden;
-
-    border: 1px solid #8f5c00;
-
-    border-radius: 10px;
-
-    background: #210000;
-
-    cursor: pointer;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: .4s;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.08);
-
-    filter: brightness(.75);
-}
-
-.gallery-caption {
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    padding: 12px;
-
-    text-align: center;
-
-    color: #ffd43c;
-
+.gallery{
     background:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,.9)
-        );
+        radial-gradient(circle at center,rgba(130,0,0,.15),transparent 55%),
+        #0c0000;
 }
 
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border:2px solid #7e0000;
+    border-radius:12px;
+    background:#120000;
+    cursor:pointer;
+    min-height:180px;
+}
+
+.gallery-item img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.07);
+}
+
+.gallery-caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:12px;
+    background:linear-gradient(transparent,rgba(0,0,0,.95));
+    color:#ffd34c;
+    text-align:center;
+    font-weight:700;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    z-index:10000;
+    background:rgba(0,0,0,.94);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.lightbox.show{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90vh;
+    object-fit:contain;
+    border:2px solid #dba600;
+}
+
+.lightbox-close{
+    position:absolute;
+    top:20px;
+    right:25px;
+    color:#fff;
+    font-size:45px;
+    cursor:pointer;
+}
+
+/* =========================
+   EVENTS
+========================= */
+
+.events{
+    background:#0c0000;
+}
+
+.events-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.event-card{
+    padding:30px;
+    border:1px solid #730000;
+    border-radius:15px;
+    background:linear-gradient(145deg,#260000,#100000);
+}
+
+.event-date{
+    color:#ffcc00;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.event-card h3{
+    color:#ffd000;
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.event-card p{
+    color:#e4d5b2;
+    line-height:1.9;
+}
 
 /* =========================
    CONTACT
 ========================= */
 
-.contact-box {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0,1fr));
-
-    gap: 20px;
+.contact{
+    background:
+        radial-gradient(circle at center,rgba(120,0,0,.15),transparent 55%),
+        #090000;
 }
 
-.contact-card {
-    text-align: center;
-
-    padding: 30px 15px;
-
-    background: #190000;
-
-    border: 1px solid #661010;
-
-    border-radius: 12px;
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.contact-icon {
-    font-size: 35px;
-
-    margin-bottom: 10px;
+.contact-card{
+    text-align:center;
+    padding:30px 20px;
+    border:1px solid #740000;
+    border-radius:15px;
+    background:#150000;
 }
 
-.contact-card h3 {
-    color: #f3c52f;
-
-    margin-bottom: 8px;
+.contact-card .icon{
+    font-size:42px;
+    margin-bottom:15px;
 }
 
-.contact-card p {
-    color: #ead8b6;
-
-    line-height: 1.7;
+.contact-card h3{
+    color:#ffc400;
+    margin-bottom:10px;
 }
 
+.contact-card p{
+    color:#e6d8b9;
+    line-height:1.7;
+}
 
 /* =========================
    FOOTER
 ========================= */
 
-footer {
-    padding: 30px 15px;
-
-    text-align: center;
-
-    background: #030303;
-
-    border-top: 2px solid #780000;
+footer{
+    background:#030303;
+    border-top:2px solid #800000;
+    padding:35px 20px;
+    text-align:center;
 }
 
-.footer-title {
-    color: #e8b725;
-
-    font-size: 28px;
-
-    margin-bottom: 8px;
+.footer-title{
+    color:#ffc400;
+    font-size:34px;
+    font-weight:800;
+    margin-bottom:15px;
 }
 
-footer p {
-    color: #bda97d;
-
-    font-size: 14px;
+.footer-sub{
+    color:#d7c7a5;
+    margin-bottom:20px;
 }
 
+.copyright{
+    padding-top:20px;
+    border-top:1px solid #420000;
+    color:#a99673;
+    font-size:14px;
+}
 
 /* =========================
    MODAL
 ========================= */
 
-.modal {
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 3000;
-
-    display: none;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 20px;
-
-    background:
-        rgba(0,0,0,.88);
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(0,0,0,.88);
 }
 
-.modal.show {
-    display: flex;
+.modal.show{
+    display:flex;
 }
 
-.modal-box {
-    position: relative;
-
-    width: 100%;
-    max-width: 850px;
-
-    max-height: 90vh;
-
-    overflow: auto;
-
-    padding: 25px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #300000,
-            #080000
-        );
-
-    border: 2px solid #d5a700;
-
-    border-radius: 15px;
-
-    text-align: center;
+.modal-box{
+    width:100%;
+    max-width:700px;
+    max-height:90vh;
+    overflow-y:auto;
+    background:#160000;
+    border:2px solid #d7a500;
+    border-radius:18px;
+    padding:35px;
+    position:relative;
 }
 
-.modal-box img {
-    width: 100%;
-
-    max-height: 65vh;
-
-    object-fit: contain;
-
-    margin: auto;
-
-    border-radius: 8px;
+.modal-box h2{
+    color:#ffc400;
+    text-align:center;
+    font-size:32px;
+    margin-bottom:25px;
 }
 
-.modal-title {
-    color: #ffd33b;
-
-    font-size: 30px;
-
-    margin: 15px 0 8px;
+.modal-box p{
+    color:#eadbb9;
+    font-size:18px;
+    line-height:2;
 }
 
-.modal-text {
-    color: #ead9b9;
-
-    line-height: 1.8;
+.modal-close{
+    position:absolute;
+    top:10px;
+    right:18px;
+    color:#fff;
+    font-size:35px;
+    cursor:pointer;
 }
-
-.close-modal {
-    position: absolute;
-
-    top: 8px;
-    right: 12px;
-
-    width: 40px;
-    height: 40px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: #a00000;
-
-    color: white;
-
-    font-size: 25px;
-
-    cursor: pointer;
-
-    z-index: 2;
-}
-
 
 /* =========================
-   IMAGE ERROR PLACEHOLDER
+   RESPONSIVE
 ========================= */
 
-.image-placeholder {
-    width: 100%;
-    height: 100%;
+@media(max-width:900px){
 
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 20px;
-
-    color: #d9b878;
-
-    background:
-        radial-gradient(
-            circle,
-            #450000,
-            #100000
-        );
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-    .navbar {
-        min-height: 65px;
-
-        padding: 8px 12px;
+    .navbar{
+        min-height:70px;
+        padding:8px 15px;
     }
 
-    .logo-area {
-        min-width: auto;
+    .logo{
+        min-width:0;
     }
 
-    .logo {
-        width: 43px;
-        height: 43px;
+    .logo-text{
+        font-size:17px;
     }
 
-    .logo-text {
-        font-size: 14px;
+    .logo img{
+        width:48px;
+        height:48px;
     }
 
-    .menu-btn {
-        display: block;
+    .menu-btn{
+        display:block;
     }
 
-    .nav-links {
-        position: absolute;
-
-        top: 65px;
-        left: 0;
-        right: 0;
-
-        display: none;
-
-        flex-direction: column;
-
-        gap: 0;
-
-        background: #050505;
-
-        border-bottom: 2px solid #870000;
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        right:0;
+        background:#050505;
+        border-bottom:2px solid #b00000;
+        padding:15px 20px 20px;
+        flex-direction:column;
+        gap:0;
+        align-items:stretch;
     }
 
-    .nav-links.show {
-        display: flex;
+    .nav-links.open{
+        display:flex;
     }
 
-    .nav-links li {
-        width: 100%;
+    .nav-links a{
+        text-align:center;
+        padding:15px;
+        border-bottom:1px solid #260000;
     }
 
-    .nav-links a {
-        display: block;
-
-        width: 100%;
-
-        padding: 15px;
-
-        text-align: center;
-
-        border-bottom: 1px solid #2c0909;
+    .nav-links a.active::after{
+        display:none;
     }
 
-    .hero {
-        border-width: 1px;
+    .cards{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .hero-image {
-        min-height: 220px;
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .hero-content {
-        bottom: 15px;
-    }
-
-    .welcome-btn {
-        padding: 9px 28px;
-
-        font-size: 16px;
-    }
-
-    section {
-        padding: 55px 15px;
-    }
-
-    .section-title {
-        font-size: 29px;
-    }
-
-    .about-text {
-        font-size: 16px;
-
-        line-height: 1.9;
-    }
-
-    .events-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid {
-        grid-template-columns:
-            repeat(2, minmax(0,1fr));
-    }
-
-    .gallery-item {
-        height: 180px;
-    }
-
-    .contact-box {
-        grid-template-columns: 1fr;
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 }
 
+@media(max-width:600px){
 
-/* SMALL MOBILE */
-
-@media (max-width: 450px) {
-
-    .logo-text {
-        display: none;
+    section{
+        padding:60px 15px;
     }
 
-    .gallery-grid {
-        grid-template-columns: 1fr;
+    .hero{
+        padding:8px 7px 0;
     }
 
-    .gallery-item {
-        height: 230px;
+    .hero-image-wrap{
+        border-width:1px;
     }
 
-    .event-image {
-        height: 200px;
+    .hero-content{
+        padding-bottom:4%;
     }
 
-    .section-title {
-        font-size: 26px;
+    .welcome-btn{
+        min-width:180px;
+        min-height:52px;
+        font-size:21px;
+        padding:7px 25px;
+        border-width:2px;
+    }
+
+    .section-title{
+        margin-bottom:40px;
+    }
+
+    .section-title h2{
+        font-size:31px;
+    }
+
+    .section-title .line{
+        width:130px;
+        height:4px;
+    }
+
+    .round-icon{
+        width:115px;
+        height:115px;
+        font-size:50px;
+        margin-bottom:25px;
+    }
+
+    .about-box h3{
+        font-size:28px;
+    }
+
+    .about-box p{
+        font-size:17px;
+        line-height:2;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:28px 18px;
+    }
+
+    .durga-content{
+        padding:25px 18px;
+    }
+
+    .durga-content h3{
+        font-size:28px;
+    }
+
+    .durga-content p,
+    .blood-box p{
+        font-size:17px;
+        line-height:1.9;
+    }
+
+    .blood-box{
+        padding:35px 18px;
+    }
+
+    .blood-box h3{
+        font-size:28px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item img{
+        height:auto;
+        max-height:350px;
+    }
+
+    .events-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-title{
+        font-size:27px;
     }
 }
 
+@media(max-width:380px){
+
+    .logo-text{
+        font-size:14px;
+    }
+
+    .logo img{
+        width:42px;
+        height:42px;
+    }
+
+    .menu-btn{
+        width:50px;
+        height:50px;
+        font-size:25px;
+    }
+
+    .welcome-btn{
+        min-width:150px;
+        min-height:46px;
+        font-size:18px;
+    }
+
+    .section-title h2{
+        font-size:27px;
+    }
+}
 </style>
 </head>
 
-
 <body>
-
 
 <!-- =========================
      HEADER
@@ -842,70 +875,29 @@ footer p {
 
 <nav class="navbar">
 
-    <a href="#home" class="logo-area">
-
-        <img
-            src="logo.png"
-            class="logo"
-            alt="Budbud Sanhati Logo"
-            onerror="this.style.display='none'"
-        >
-
+    <a href="#home" class="logo">
+        <img src="home-banner.png" alt="Bud Bud Sanhati Logo">
         <div class="logo-text">
-            <span>Budbud</span>
-            <span>SANHATI</span>
+            BUD BUD<br>
+            SANHATI
         </div>
-
     </a>
 
-
-    <button
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Menu"
-    >
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">
         ☰
     </button>
 
-
-    <ul class="nav-links" id="navLinks">
-
-        <li>
-            <a href="#home" class="nav-link active">
-                HOME
-            </a>
-        </li>
-
-        <li>
-            <a href="#about" class="nav-link">
-                ABOUT US
-            </a>
-        </li>
-
-        <li>
-            <a href="#events" class="nav-link">
-                EVENTS
-            </a>
-        </li>
-
-        <li>
-            <a href="#gallery" class="nav-link">
-                GALLERY
-            </a>
-        </li>
-
-        <li>
-            <a href="#contact" class="nav-link">
-                CONTACT
-            </a>
-        </li>
-
-    </ul>
+    <div class="nav-links" id="navLinks">
+        <a href="#home" class="active">HOME</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#events">EVENTS</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#contact">CONTACT</a>
+    </div>
 
 </nav>
 
 </header>
-
 
 
 <!-- =========================
@@ -914,61 +906,58 @@ footer p {
 
 <main>
 
-<section id="home">
+<section class="hero" id="home">
 
-<div class="hero">
+    <div class="hero-image-wrap">
 
-    <img
-        src="home-banner.png"
-        class="hero-image"
-        alt="Budbud Sanhati Banner"
-        onerror="showImageError(this,'home-banner.png')"
-    >
-
-    <div class="hero-content">
-
-        <a
-            href="#about"
-            class="welcome-btn"
+        <img
+            src="home-banner.png"
+            alt="Bud Bud Sanhati"
+            class="hero-image"
         >
-            স্বাগতম
-        </a>
+
+        <div class="hero-content">
+
+            <button
+                class="welcome-btn"
+                onclick="scrollToSection('about')"
+            >
+                স্বাগতম
+            </button>
+
+        </div>
 
     </div>
 
-</div>
-
 </section>
-
 
 
 <!-- =========================
      ABOUT
 ========================= -->
 
-<section id="about">
+<section class="about" id="about">
 
-<div class="section-container">
+<div class="container">
 
-    <h2 class="section-title">
-        আমাদের পরিচয়
-    </h2>
-
-    <div class="section-line"></div>
-
+    <div class="section-title">
+        <h2>আমাদের পরিচয়</h2>
+        <div class="line"></div>
+    </div>
 
     <div class="about-box">
 
-        <div class="about-icon">
+        <div class="round-icon">
             👥
         </div>
 
-        <p class="about-text">
+        <h3>বুদবুদ সংহতি</h3>
+
+        <p>
             বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
             আমরা একসাথে কাজ করি সমাজ ও মানুষের জন্য।
             আমাদের লক্ষ্য হলো সংস্কৃতি, মানবিকতা,
-            সামাজিক দায়বদ্ধতা এবং মানুষের মধ্যে
-            ঐক্য ও সহযোগিতার পরিবেশ তৈরি করা।
+            সামাজিক সচেতনতা এবং মানুষের পাশে দাঁড়ানো।
         </p>
 
     </div>
@@ -978,107 +967,112 @@ footer p {
 </section>
 
 
-
 <!-- =========================
-     EVENTS
+     FEATURES
 ========================= -->
 
-<section id="events">
+<section class="features">
 
-<div class="section-container">
+<div class="container">
 
-    <h2 class="section-title">
-        আমাদের কার্যক্রম
-    </h2>
+    <div class="section-title">
+        <h2>আমাদের কার্যক্রম</h2>
+        <div class="line"></div>
+    </div>
 
-    <div class="section-line"></div>
+    <div class="cards">
 
+        <div class="card">
 
-    <div class="events-grid">
-
-
-        <!-- DURGA PUJA -->
-
-        <div
-            class="event-card"
-            onclick="openEvent(
-                'দুর্গাপূজা',
-                'durgapuja.jpg',
-                'বুদবুদ সংহতির উদ্যোগে দুর্গাপূজা, সাংস্কৃতিক অনুষ্ঠান এবং বিভিন্ন সামাজিক কার্যক্রম।'
-            )"
-        >
-
-            <img
-                src="durgapuja.jpg"
-                class="event-image"
-                alt="দুর্গাপূজা"
-                onerror="showImageError(this,'durgapuja.jpg')"
-            >
-
-            <div class="event-body">
-
-                <h3>
-                    দুর্গাপূজা
-                </h3>
-
-                <p>
-                    পূজা, সাংস্কৃতিক অনুষ্ঠান,
-                    আনন্দ ও সম্প্রীতির মিলনমেলা।
-                </p>
-
-                <button
-                    class="event-button"
-                    type="button"
-                >
-                    বিস্তারিত দেখুন
-                </button>
-
+            <div class="card-icon">
+                👥
             </div>
+
+            <h3>আমাদের পরিচয়</h3>
+
+            <p>
+                বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
+                আমরা একসাথে কাজ করি সমাজ ও মানুষের জন্য।
+            </p>
+
+            <button
+                class="card-btn"
+                onclick="openModal('aboutModal')"
+            >
+                বিস্তারিত
+            </button>
 
         </div>
 
 
+        <div class="card">
 
-        <!-- BLOOD DONATION -->
-
-        <div
-            class="event-card"
-            onclick="openEvent(
-                'রক্তদান কর্মসূচি',
-                'roktodan.jpg',
-                'মানুষের জীবন বাঁচাতে বুদবুদ সংহতির উদ্যোগে স্বেচ্ছায় রক্তদান কর্মসূচি।'
-            )"
-        >
-
-            <img
-                src="roktodan.jpg"
-                class="event-image"
-                alt="রক্তদান কর্মসূচি"
-                onerror="showImageError(this,'roktodan.jpg')"
-            >
-
-            <div class="event-body">
-
-                <h3>
-                    রক্তদান কর্মসূচি
-                </h3>
-
-                <p>
-                    মানবতার জন্য স্বেচ্ছায়
-                    রক্তদান এবং সামাজিক সহযোগিতা।
-                </p>
-
-                <button
-                    class="event-button"
-                    type="button"
-                >
-                    বিস্তারিত দেখুন
-                </button>
-
+            <div class="card-icon">
+                📅
             </div>
+
+            <h3>আমাদের কার্যক্রম</h3>
+
+            <p>
+                দুর্গাপূজা, রক্তদান, শিক্ষা সহায়তা,
+                খেলাধুলা এবং বিভিন্ন সামাজিক অনুষ্ঠান
+                আমাদের নিয়মিত কার্যক্রম।
+            </p>
+
+            <button
+                class="card-btn"
+                onclick="scrollToSection('events')"
+            >
+                দেখুন
+            </button>
 
         </div>
 
+
+        <div class="card">
+
+            <div class="card-icon">
+                🖼️
+            </div>
+
+            <h3>গ্যালারি</h3>
+
+            <p>
+                আমাদের বিভিন্ন অনুষ্ঠান ও স্মৃতিময়
+                মুহূর্তের ছবি এখানে দেখতে পারবেন।
+            </p>
+
+            <button
+                class="card-btn"
+                onclick="scrollToSection('gallery')"
+            >
+                গ্যালারি
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🤝
+            </div>
+
+            <h3>যোগাযোগ করুন</h3>
+
+            <p>
+                আমাদের সঙ্গে যুক্ত হতে অথবা
+                যেকোনো সহযোগিতার জন্য যোগাযোগ করুন।
+            </p>
+
+            <button
+                class="card-btn"
+                onclick="scrollToSection('contact')"
+            >
+                যোগাযোগ
+            </button>
+
+        </div>
 
     </div>
 
@@ -1086,174 +1080,279 @@ footer p {
 
 </section>
 
+
+<!-- =========================
+     DURGA PUJA
+========================= -->
+
+<section class="durga-section" id="durga">
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>দুর্গাপূজা</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="durga-box">
+
+        <img
+            src="home-banner.png"
+            alt="দুর্গাপূজা"
+            class="durga-image"
+        >
+
+        <div class="durga-content">
+
+            <h3>শারদীয় দুর্গোৎসব</h3>
+
+            <p>
+                বুদবুদ সংহতির অন্যতম প্রধান সাংস্কৃতিক ও সামাজিক
+                আয়োজন হলো দুর্গাপূজা। সকলকে সঙ্গে নিয়ে
+                আনন্দ, সম্প্রীতি ও ঐক্যের মাধ্যমে আমরা
+                শারদীয় উৎসব উদযাপন করি।
+            </p>
+
+            <br>
+
+            <button
+                class="card-btn"
+                onclick="openModal('durgaModal')"
+            >
+                বিস্তারিত দেখুন
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BLOOD DONATION
+========================= -->
+
+<section class="blood-section" id="blood">
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>রক্তদান কর্মসূচি</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="blood-box">
+
+        <div class="blood-icon">
+            🩸
+        </div>
+
+        <h3>রক্তদান — জীবনদান</h3>
+
+        <p>
+            মানুষের প্রয়োজনে মানুষের পাশে দাঁড়ানোই আমাদের
+            অন্যতম লক্ষ্য। নিয়মিত রক্তদান কর্মসূচির মাধ্যমে
+            আমরা মানুষের জীবন রক্ষায় সহযোগিতা করার চেষ্টা করি।
+        </p>
+
+        <br>
+
+        <button
+            class="card-btn"
+            onclick="openModal('bloodModal')"
+        >
+            বিস্তারিত দেখুন
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EVENTS
+========================= -->
+
+<section class="events" id="events">
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>আমাদের অনুষ্ঠান</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="events-grid">
+
+        <div class="event-card">
+
+            <div class="event-date">
+                📅 শারদীয়া
+            </div>
+
+            <h3>দুর্গাপূজা</h3>
+
+            <p>
+                সাংস্কৃতিক অনুষ্ঠান, পূজা, প্রসাদ বিতরণ
+                এবং সকলের অংশগ্রহণে আনন্দ উদযাপন।
+            </p>
+
+        </div>
+
+
+        <div class="event-card">
+
+            <div class="event-date">
+                🩸 সামাজিক কর্মসূচি
+            </div>
+
+            <h3>রক্তদান শিবির</h3>
+
+            <p>
+                প্রয়োজনে মানুষের পাশে দাঁড়ানোর জন্য
+                স্বেচ্ছায় রক্তদান কর্মসূচি।
+            </p>
+
+        </div>
+
+
+        <div class="event-card">
+
+            <div class="event-date">
+                🎭 সাংস্কৃতিক
+            </div>
+
+            <h3>সাংস্কৃতিক অনুষ্ঠান</h3>
+
+            <p>
+                গান, আবৃত্তি, নৃত্য এবং বিভিন্ন সাংস্কৃতিক
+                কার্যক্রমের মাধ্যমে প্রতিভা বিকাশ।
+            </p>
+
+        </div>
+
+
+        <div class="event-card">
+
+            <div class="event-date">
+                🤝 সামাজিক
+            </div>
+
+            <h3>সামাজিক সহায়তা</h3>
+
+            <p>
+                সমাজের মানুষের প্রয়োজনে বিভিন্ন ধরনের
+                সহযোগিতা ও সচেতনতামূলক কার্যক্রম।
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
 
 
 <!-- =========================
      GALLERY
 ========================= -->
 
-<section id="gallery">
+<section class="gallery" id="gallery">
 
-<div class="section-container">
+<div class="container">
 
-    <h2 class="section-title">
-        গ্যালারি
-    </h2>
-
-    <div class="section-line"></div>
-
+    <div class="section-title">
+        <h2>গ্যালারি</h2>
+        <div class="line"></div>
+    </div>
 
     <div class="gallery-grid">
 
-
         <div
             class="gallery-item"
-            onclick="openGallery('gallery1.jpg')"
+            onclick="openLightbox('home-banner.png')"
         >
-
             <img
-                src="gallery1.jpg"
-                alt="Gallery Photo 1"
-                onerror="showImageError(this,'gallery1.jpg')"
+                src="home-banner.png"
+                alt="Bud Bud Sanhati"
             >
-
-            <div class="gallery-caption">
-                আমাদের অনুষ্ঠান
-            </div>
-
-        </div>
-
-
-
-        <div
-            class="gallery-item"
-            onclick="openGallery('gallery2.jpg')"
-        >
-
-            <img
-                src="gallery2.jpg"
-                alt="Gallery Photo 2"
-                onerror="showImageError(this,'gallery2.jpg')"
-            >
-
-            <div class="gallery-caption">
-                সাংস্কৃতিক অনুষ্ঠান
-            </div>
-
-        </div>
-
-
-
-        <div
-            class="gallery-item"
-            onclick="openGallery('gallery3.jpg')"
-        >
-
-            <img
-                src="gallery3.jpg"
-                alt="Gallery Photo 3"
-                onerror="showImageError(this,'gallery3.jpg')"
-            >
-
-            <div class="gallery-caption">
-                সামাজিক কার্যক্রম
-            </div>
-
-        </div>
-
-
-
-        <div
-            class="gallery-item"
-            onclick="openGallery('gallery4.jpg')"
-        >
-
-            <img
-                src="gallery4.jpg"
-                alt="Gallery Photo 4"
-                onerror="showImageError(this,'gallery4.jpg')"
-            >
-
-            <div class="gallery-caption">
-                দুর্গাপূজা
-            </div>
-
-        </div>
-
-
-
-        <div
-            class="gallery-item"
-            onclick="openGallery('gallery5.jpg')"
-        >
-
-            <img
-                src="gallery5.jpg"
-                alt="Gallery Photo 5"
-                onerror="showImageError(this,'gallery5.jpg')"
-            >
-
-            <div class="gallery-caption">
-                আমাদের স্মৃতি
-            </div>
-
-        </div>
-
-
-
-        <div
-            class="gallery-item"
-            onclick="openGallery('gallery6.jpg')"
-        >
-
-            <img
-                src="gallery6.jpg"
-                alt="Gallery Photo 6"
-                onerror="showImageError(this,'gallery6.jpg')"
-            >
-
             <div class="gallery-caption">
                 বুদবুদ সংহতি
             </div>
-
         </div>
 
 
+        <div
+            class="gallery-item"
+            onclick="openLightbox('home-banner.png')"
+        >
+            <img
+                src="home-banner.png"
+                alt="দুর্গাপূজা"
+            >
+            <div class="gallery-caption">
+                দুর্গাপূজা
+            </div>
+        </div>
+
+
+        <div
+            class="gallery-item"
+            onclick="openLightbox('home-banner.png')"
+        >
+            <img
+                src="home-banner.png"
+                alt="সাংস্কৃতিক অনুষ্ঠান"
+            >
+            <div class="gallery-caption">
+                সাংস্কৃতিক অনুষ্ঠান
+            </div>
+        </div>
+
     </div>
+
+    <p style="
+        text-align:center;
+        margin-top:30px;
+        color:#bcae91;
+        font-size:15px;
+    ">
+        নতুন ছবি যোগ করতে পরবর্তীতে gallery ছবি পরিবর্তন করা যাবে।
+    </p>
 
 </div>
 
 </section>
 
 
-
 <!-- =========================
      CONTACT
 ========================= -->
 
-<section id="contact">
+<section class="contact" id="contact">
 
-<div class="section-container">
+<div class="container">
 
-    <h2 class="section-title">
-        যোগাযোগ করুন
-    </h2>
+    <div class="section-title">
+        <h2>যোগাযোগ করুন</h2>
+        <div class="line"></div>
+    </div>
 
-    <div class="section-line"></div>
-
-
-    <div class="contact-box">
-
+    <div class="contact-grid">
 
         <div class="contact-card">
 
-            <div class="contact-icon">
+            <div class="icon">
                 📍
             </div>
 
-            <h3>
-                ঠিকানা
-            </h3>
+            <h3>ঠিকানা</h3>
 
             <p>
                 Budbud, Burdwan<br>
@@ -1263,16 +1362,13 @@ footer p {
         </div>
 
 
-
         <div class="contact-card">
 
-            <div class="contact-icon">
+            <div class="icon">
                 📞
             </div>
 
-            <h3>
-                ফোন
-            </h3>
+            <h3>ফোন</h3>
 
             <p>
                 +91 98765 43210
@@ -1281,23 +1377,19 @@ footer p {
         </div>
 
 
-
         <div class="contact-card">
 
-            <div class="contact-icon">
+            <div class="icon">
                 ✉️
             </div>
 
-            <h3>
-                Email
-            </h3>
+            <h3>ই-মেইল</h3>
 
             <p>
                 budbudsanhati@gmail.com
             </p>
 
         </div>
-
 
     </div>
 
@@ -1308,7 +1400,6 @@ footer p {
 </main>
 
 
-
 <!-- =========================
      FOOTER
 ========================= -->
@@ -1316,59 +1407,151 @@ footer p {
 <footer>
 
     <div class="footer-title">
-        জয় মা দুর্গা
+        🔱 জয় মা দুর্গা 🔱
     </div>
 
-    <p>
-        © 2026 Budbud Sanhati. All Rights Reserved.
-    </p>
+    <div class="footer-sub">
+        একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
+    </div>
+
+    <div class="copyright">
+        © 2026 Bud Bud Sanhati. All Rights Reserved.
+    </div>
 
 </footer>
 
 
-
 <!-- =========================
-     MODAL
+     LIGHTBOX
 ========================= -->
 
-<div
-    class="modal"
-    id="modal"
-    onclick="closeModal(event)"
->
+<div class="lightbox" id="lightbox">
 
-    <div
-        class="modal-box"
-        onclick="event.stopPropagation()"
+    <span
+        class="lightbox-close"
+        onclick="closeLightbox()"
+    >
+        ×
+    </span>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Gallery Image"
     >
 
-        <button
-            class="close-modal"
-            onclick="closeModal()"
+</div>
+
+
+<!-- =========================
+     ABOUT MODAL
+========================= -->
+
+<div class="modal" id="aboutModal">
+
+    <div class="modal-box">
+
+        <span
+            class="modal-close"
+            onclick="closeModal('aboutModal')"
         >
             ×
-        </button>
+        </span>
 
-        <img
-            id="modalImage"
-            src=""
-            alt=""
-        >
+        <h2>আমাদের পরিচয়</h2>
 
-        <h2
-            class="modal-title"
-            id="modalTitle"
-        ></h2>
+        <p>
+            বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
+            আমাদের উদ্দেশ্য হলো সমাজের মানুষের পাশে দাঁড়ানো,
+            সংস্কৃতিকে এগিয়ে নিয়ে যাওয়া এবং সকলকে নিয়ে
+            একটি সুন্দর ও সহযোগিতামূলক সমাজ গড়ে তোলা।
+        </p>
 
-        <p
-            class="modal-text"
-            id="modalText"
-        ></p>
+        <br>
+
+        <p>
+            বিভিন্ন সামাজিক ও সাংস্কৃতিক কর্মসূচির মাধ্যমে
+            আমরা মানুষের সঙ্গে মানুষের সম্পর্ক আরও শক্তিশালী
+            করার চেষ্টা করি।
+        </p>
 
     </div>
 
 </div>
 
+
+<!-- =========================
+     DURGA MODAL
+========================= -->
+
+<div class="modal" id="durgaModal">
+
+    <div class="modal-box">
+
+        <span
+            class="modal-close"
+            onclick="closeModal('durgaModal')"
+        >
+            ×
+        </span>
+
+        <h2>দুর্গাপূজা</h2>
+
+        <p>
+            শারদীয় দুর্গোৎসব আমাদের অন্যতম গুরুত্বপূর্ণ
+            সাংস্কৃতিক অনুষ্ঠান। পূজা, সাংস্কৃতিক অনুষ্ঠান,
+            প্রসাদ বিতরণ এবং বিভিন্ন সামাজিক কর্মকাণ্ডের
+            মাধ্যমে সকলকে নিয়ে আমরা এই উৎসব পালন করি।
+        </p>
+
+        <br>
+
+        <p>
+            আমাদের লক্ষ্য হলো ধর্ম-বর্ণ নির্বিশেষে সকলের
+            অংশগ্রহণে আনন্দ, সম্প্রীতি ও ভ্রাতৃত্বের পরিবেশ
+            তৈরি করা।
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     BLOOD MODAL
+========================= -->
+
+<div class="modal" id="bloodModal">
+
+    <div class="modal-box">
+
+        <span
+            class="modal-close"
+            onclick="closeModal('bloodModal')"
+        >
+            ×
+        </span>
+
+        <h2>রক্তদান কর্মসূচি</h2>
+
+        <p>
+            রক্তের প্রয়োজন এমন মানুষের পাশে দাঁড়ানো
+            আমাদের অন্যতম সামাজিক দায়িত্ব। স্বেচ্ছায়
+            রক্তদানের মাধ্যমে একজন মানুষ অন্য একজনের
+            জীবন বাঁচাতে পারেন।
+        </p>
+
+        <br>
+
+        <p>
+            আমাদের রক্তদান শিবির ও সামাজিক সচেতনতামূলক
+            কর্মসূচিতে সকল সুস্থ ও যোগ্য স্বেচ্ছাসেবীকে
+            অংশগ্রহণের জন্য উৎসাহিত করা হয়।
+        </p>
+
+    </div>
+
+</div>
 
 
 <script>
@@ -1377,72 +1560,209 @@ footer p {
    MOBILE MENU
 ========================= */
 
-const menuBtn =
-    document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-const navLinks =
-    document.getElementById("navLinks");
+menuBtn.addEventListener("click", function(){
 
+    navLinks.classList.toggle("open");
 
-menuBtn.addEventListener("click", function () {
-
-    navLinks.classList.toggle("show");
+    if(navLinks.classList.contains("open")){
+        menuBtn.innerHTML = "✕";
+    }else{
+        menuBtn.innerHTML = "☰";
+    }
 
 });
 
 
-/* CLOSE MOBILE MENU AFTER CLICK */
+/* =========================
+   CLOSE MOBILE MENU
+========================= */
 
-document.querySelectorAll(".nav-link")
-.forEach(function(link) {
+document.querySelectorAll(".nav-links a").forEach(function(link){
 
-    link.addEventListener("click", function() {
+    link.addEventListener("click", function(){
 
-        navLinks.classList.remove("show");
+        navLinks.classList.remove("open");
+        menuBtn.innerHTML = "☰";
 
     });
 
 });
 
+
+/* =========================
+   SCROLL FUNCTION
+========================= */
+
+function scrollToSection(id){
+
+    const section = document.getElementById(id);
+
+    if(section){
+
+        section.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    }
+
+}
+
+
+/* =========================
+   MODAL OPEN
+========================= */
+
+function openModal(id){
+
+    const modal = document.getElementById(id);
+
+    if(modal){
+        modal.classList.add("show");
+        document.body.style.overflow="hidden";
+    }
+
+}
+
+
+/* =========================
+   MODAL CLOSE
+========================= */
+
+function closeModal(id){
+
+    const modal = document.getElementById(id);
+
+    if(modal){
+        modal.classList.remove("show");
+        document.body.style.overflow="";
+    }
+
+}
+
+
+/* =========================
+   CLICK OUTSIDE MODAL
+========================= */
+
+document.querySelectorAll(".modal").forEach(function(modal){
+
+    modal.addEventListener("click",function(e){
+
+        if(e.target === modal){
+
+            modal.classList.remove("show");
+            document.body.style.overflow="";
+
+        }
+
+    });
+
+});
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+function openLightbox(src){
+
+    const lightbox = document.getElementById("lightbox");
+    const image = document.getElementById("lightboxImage");
+
+    image.src = src;
+
+    lightbox.classList.add("show");
+
+    document.body.style.overflow="hidden";
+
+}
+
+
+function closeLightbox(){
+
+    const lightbox = document.getElementById("lightbox");
+
+    lightbox.classList.remove("show");
+
+    document.body.style.overflow="";
+
+}
+
+
+/* =========================
+   CLOSE LIGHTBOX ON OUTSIDE
+========================= */
+
+document.getElementById("lightbox").addEventListener("click",function(e){
+
+    if(e.target === this){
+
+        closeLightbox();
+
+    }
+
+});
+
+
+/* =========================
+   ESC KEY
+========================= */
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key === "Escape"){
+
+        document.querySelectorAll(".modal.show").forEach(function(modal){
+
+            modal.classList.remove("show");
+
+        });
+
+        closeLightbox();
+
+        document.body.style.overflow="";
+
+    }
+
+});
 
 
 /* =========================
    ACTIVE NAVIGATION
 ========================= */
 
-const sections =
-    document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll("main section[id]");
+const navItems = document.querySelectorAll(".nav-links a");
 
-const links =
-    document.querySelectorAll(".nav-link");
-
-
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll",function(){
 
     let current = "";
 
-    sections.forEach(function(section) {
+    sections.forEach(function(section){
 
-        const sectionTop =
-            section.offsetTop - 120;
+        const sectionTop = section.offsetTop - 150;
 
-        if (window.scrollY >= sectionTop) {
+        if(window.scrollY >= sectionTop){
+
             current = section.getAttribute("id");
+
         }
 
     });
 
+    navItems.forEach(function(item){
 
-    links.forEach(function(link) {
+        item.classList.remove("active");
 
-        link.classList.remove("active");
+        const href = item.getAttribute("href");
 
-        if (
-            link.getAttribute("href")
-            === "#" + current
-        ) {
+        if(href === "#" + current){
 
-            link.classList.add("active");
+            item.classList.add("active");
 
         }
 
@@ -1450,140 +1770,7 @@ window.addEventListener("scroll", function() {
 
 });
 
-
-
-/* =========================
-   EVENT MODAL
-========================= */
-
-function openEvent(title, image, text) {
-
-    const modal =
-        document.getElementById("modal");
-
-    const modalImage =
-        document.getElementById("modalImage");
-
-    const modalTitle =
-        document.getElementById("modalTitle");
-
-    const modalText =
-        document.getElementById("modalText");
-
-
-    modalTitle.textContent = title;
-
-    modalText.textContent = text;
-
-    modalImage.src = image;
-
-    modalImage.alt = title;
-
-    modal.classList.add("show");
-
-}
-
-
-
-/* =========================
-   GALLERY MODAL
-========================= */
-
-function openGallery(image) {
-
-    const modal =
-        document.getElementById("modal");
-
-    const modalImage =
-        document.getElementById("modalImage");
-
-    const modalTitle =
-        document.getElementById("modalTitle");
-
-    const modalText =
-        document.getElementById("modalText");
-
-
-    modalImage.src = image;
-
-    modalTitle.textContent =
-        "Budbud Sanhati Gallery";
-
-    modalText.textContent =
-        "বুদবুদ সংহতির স্মৃতি ও কার্যক্রম।";
-
-    modal.classList.add("show");
-
-}
-
-
-
-/* =========================
-   CLOSE MODAL
-========================= */
-
-function closeModal(event) {
-
-    if (
-        event &&
-        event.target !==
-        document.getElementById("modal")
-    ) {
-        return;
-    }
-
-    document
-        .getElementById("modal")
-        .classList.remove("show");
-
-}
-
-
-
-/* ESC KEY */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (event.key === "Escape") {
-
-            document
-                .getElementById("modal")
-                .classList.remove("show");
-
-        }
-
-    }
-);
-
-
-
-/* =========================
-   MISSING IMAGE HANDLER
-========================= */
-
-function showImageError(image, fileName) {
-
-    const placeholder =
-        document.createElement("div");
-
-    placeholder.className =
-        "image-placeholder";
-
-    placeholder.innerHTML =
-        "📷<br><br>" +
-        "ছবিটি এখনো upload করা হয়নি<br>" +
-        "<small>" +
-        fileName +
-        "</small>";
-
-    image.replaceWith(placeholder);
-
-}
-
 </script>
-
 
 </body>
 </html>
