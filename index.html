@@ -11,10 +11,15 @@
 
 <meta name="description" content="বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।">
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 
 <style>
+
 
 *{
 margin:0;
@@ -22,43 +27,63 @@ padding:0;
 box-sizing:border-box;
 }
 
+
 html{
 scroll-behavior:smooth;
 }
 
+
 body{
+
 background:#050000;
+
 color:white;
+
 font-family:"Noto Serif Bengali",serif;
+
 overflow-x:hidden;
+
 }
+
 
 a{
+
 text-decoration:none;
+
 color:inherit;
+
 }
 
+
 img{
+
 max-width:100%;
+
 display:block;
+
 }
 
 
 /* NAVBAR */
 
+
 .navbar{
 
+position:sticky;
+
+top:0;
+
+z-index:999;
+
 height:70px;
+
 background:#050505;
+
 border-bottom:3px solid red;
 
 display:flex;
-align-items:center;
-justify-content:center;
 
-position:sticky;
-top:0;
-z-index:9999;
+align-items:center;
 
 overflow-x:auto;
 
@@ -68,9 +93,15 @@ overflow-x:auto;
 .nav-menu{
 
 display:flex;
+
 gap:45px;
+
 list-style:none;
-padding:0 30px;
+
+padding:0 35px;
+
+margin:auto;
+
 min-width:max-content;
 
 }
@@ -78,9 +109,14 @@ min-width:max-content;
 
 .nav-menu a{
 
-color:#f3d49a;
+font-family:Georgia,serif;
+
 font-size:20px;
-font-weight:700;
+
+font-weight:bold;
+
+color:#f3d49a;
+
 white-space:nowrap;
 
 }
@@ -92,7 +128,10 @@ white-space:nowrap;
 
 .hero{
 
-background:#000;
+width:100%;
+
+background:black;
+
 border-bottom:3px solid red;
 
 }
@@ -101,69 +140,10 @@ border-bottom:3px solid red;
 .hero img{
 
 width:100%;
+
 height:auto;
 
-}
-
-
-
-/* QUICK MENU */
-
-
-.quick-section{
-
-display:grid;
-grid-template-columns:repeat(4,1fr);
-
-background:#080000;
-
-}
-
-
-.quick-card{
-
-padding:30px 15px;
-
-text-align:center;
-
-border-right:1px solid #552000;
-
-}
-
-
-.quick-icon{
-
-width:65px;
-height:65px;
-
-margin:auto;
-margin-bottom:12px;
-
-border:2px solid #ffc400;
-border-radius:50%;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:35px;
-
-}
-
-
-.quick-card h3{
-
-color:#ffc400;
-font-size:21px;
-
-}
-
-
-.quick-card p{
-
-color:#ddd;
-font-size:14px;
-line-height:1.8;
+object-fit:contain;
 
 }
 
@@ -183,12 +163,17 @@ border-bottom:1px solid #401500;
 }
 
 
+
 .container{
 
-max-width:1050px;
+max-width:1100px;
+
+width:100%;
+
 margin:auto;
 
 }
+
 
 
 .title{
@@ -201,71 +186,87 @@ color:#ffc400;
 
 margin-bottom:40px;
 
+text-shadow:0 0 10px #7b5500;
+
 }
 
 
-/* EDITOR */
+
+/* QUICK */
 
 
-.editor-section{
+.quick-section{
 
-padding:65px 20px;
+display:grid;
 
-background:linear-gradient(#080000,#160000,#070000);
+grid-template-columns:repeat(4,1fr);
+
+background:#080000;
+
+border-bottom:2px solid #401500;
+
+}
+
+
+
+.quick-card{
+
+padding:30px 15px;
 
 text-align:center;
 
+border-right:1px solid #552000;
+
 }
 
 
-.editor-title{
+
+.quick-icon{
+
+height:70px;
+
+width:70px;
+
+border:2px solid #ffc400;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:35px;
+
+margin:auto auto 15px;
+
+}
+
+
+
+.quick-card h3{
 
 color:#ffc400;
-font-size:36px;
 
-margin-bottom:25px;
+font-size:22px;
 
-}
-
-
-.editor-card{
-
-max-width:900px;
-margin:auto;
-
-background:#160000;
-
-border:1px solid #702500;
-
-border-radius:15px;
-
-padding:30px;
+margin-bottom:10px;
 
 }
 
 
-.editor-card h3{
 
-color:#ffe09a;
-margin:15px 0;
+.quick-card p{
 
-}
+color:#ddd;
 
+font-size:15px;
 
-.editor-card p{
-
-line-height:2;
-color:#eee;
+line-height:1.8;
 
 }
 
-
-.editor-sign{
-
-color:#ffc400;
-margin-top:20px;
-
-}
 
 
 /* CARD */
@@ -274,15 +275,18 @@ margin-top:20px;
 .grid{
 
 display:grid;
+
 grid-template-columns:repeat(3,1fr);
+
 gap:25px;
 
 }
 
 
+
 .card{
 
-background:#120000;
+background:linear-gradient(145deg,#160000,#090000);
 
 border:1px solid #702500;
 
@@ -295,46 +299,170 @@ text-align:center;
 }
 
 
+
 .card-icon{
 
-font-size:50px;
+font-size:45px;
+
 margin-bottom:15px;
 
 }
+
 
 
 .card h3{
 
 color:#ffc400;
+
+font-size:24px;
+
 margin-bottom:15px;
 
 }
 
 
+
 .card p{
 
 color:#ddd;
+
+font-size:16px;
+
 line-height:1.8;
 
 }
 
 
-.card-link{
 
-display:block;
+/* GALLERY */
 
-margin-top:20px;
 
-color:#ffc400;
-font-weight:bold;
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
 
 }
 
 
-/* MOBILE */
+
+.gallery-item{
+
+border:2px solid #702500;
+
+border-radius:15px;
+
+overflow:hidden;
+
+background:#100000;
+
+cursor:pointer;
+
+}
+
+
+
+.gallery-item img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+transition:.3s;
+
+}
+
+
+
+.gallery-item img:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+/* IMAGE POPUP */
+
+
+.gallery-item img:active{
+
+position:fixed;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%) scale(1.8);
+
+z-index:9999;
+
+background:black;
+
+}
+
+
+
+/* CONTACT */
+
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+
+
+.contact-card{
+
+background:#110000;
+
+border:1px solid #702500;
+
+padding:25px;
+
+border-radius:15px;
+
+text-align:center;
+
+}
+
+
+.contact-card h3{
+
+color:#ffc400;
+
+}
+
 
 
 @media(max-width:768px){
+
+
+.nav-menu{
+
+gap:30px;
+
+margin:0;
+
+}
+
+
+.nav-menu a{
+
+font-size:17px;
+
+}
+
 
 .quick-section{
 
@@ -350,9 +478,16 @@ grid-template-columns:1fr;
 }
 
 
-.nav-menu{
+.gallery-grid{
 
-gap:30px;
+grid-template-columns:1fr;
+
+}
+
+
+.contact-grid{
+
+grid-template-columns:1fr;
 
 }
 
@@ -363,7 +498,17 @@ font-size:30px;
 
 }
 
+
+.gallery-item img{
+
+height:auto;
+
 }
+
+
+}
+
+
 
 </style>
 
@@ -379,7 +524,7 @@ font-size:30px;
 
 <li><a href="index.html">HOME</a></li>
 
-<li><a href="about-us.html">ABOUT US</a></li>
+<li><a href="#about">ABOUT US</a></li>
 
 <li><a href="#events">EVENTS</a></li>
 
@@ -394,7 +539,6 @@ font-size:30px;
 </header>
 
 
-
 <section class="hero">
 
 <img src="home-banner.png" alt="Budbud SANHATI">
@@ -405,7 +549,7 @@ font-size:30px;
 <section class="quick-section">
 
 
-<a href="about-us.html" class="quick-card">
+<a href="#about" class="quick-card">
 
 <div class="quick-icon">
 👥
@@ -416,12 +560,10 @@ font-size:30px;
 </h3>
 
 <p>
-বুদবুদ সংহতি একটি সামাজিক
-ও সাংস্কৃতিক সংগঠন।
+বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
 </p>
 
 </a>
-
 
 
 <a href="#events" class="quick-card">
@@ -435,12 +577,10 @@ font-size:30px;
 </h3>
 
 <p>
-দুর্গাপূজা, রক্তদান, শিক্ষা
-সহায়তা ও সামাজিক কাজ।
+দুর্গাপূজা, রক্তদান, শিক্ষা সহায়তা ও সামাজিক কাজ।
 </p>
 
 </a>
-
 
 
 <a href="#gallery" class="quick-card">
@@ -454,11 +594,10 @@ font-size:30px;
 </h3>
 
 <p>
-অনুষ্ঠানের ছবি দেখুন।
+অনুষ্ঠানের স্মরণীয় ছবি দেখুন।
 </p>
 
 </a>
-
 
 
 <a href="#contact" class="quick-card">
@@ -482,50 +621,10 @@ font-size:30px;
 
 
 
-<!-- EDITOR -->
-
-<section class="editor-section">
-
-<h2 class="editor-title">
-সম্পাদকের কলমে
-</h2>
-
-
-<div class="editor-card">
-
-<div class="editor-icon">
-✍️
-</div>
-
-<h3>
-একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
-</h3>
-
-<p>
-
-বুদবুদ সংহতি শুধু একটি সামাজিক ও সাংস্কৃতিক সংগঠনের নাম নয়,
-এটি মানুষের সঙ্গে মানুষের সম্পর্ককে আরও দৃঢ় করার একটি ছোট্ট
-প্রয়াস।
-
-সংস্কৃতি, শিক্ষা, রক্তদান এবং মানুষের প্রয়োজনে পাশে থাকার
-মাধ্যমে আমরা একটি সুন্দর সমাজ গড়ার স্বপ্ন দেখি।
-
-</p>
-
-<div class="editor-sign">
-— সম্পাদক, বুদবুদ সংহতি
-</div>
-
-</div>
-
-</section>
-
-
-
 
 <!-- ABOUT -->
 
-<section class="section">
+<section class="section" id="about">
 
 <div class="container">
 
@@ -543,11 +642,11 @@ font-size:30px;
 <p>
 <strong>Budbud SANHATI</strong>
 একটি সামাজিক ও সাংস্কৃতিক উদ্যোগ।
-মানুষের পাশে থাকাই আমাদের লক্ষ্য।
+সংস্কৃতি, শিক্ষা, রক্তদান এবং মানুষের পাশে
+থাকাই আমাদের লক্ষ্য।
 </p>
 
 </div>
-
 
 </div>
 
@@ -582,13 +681,8 @@ font-size:30px;
 </h3>
 
 <p>
-ভক্তি, ঐতিহ্য ও সংস্কৃতির মিলনে আমাদের দুর্গাপূজা।
+ঐতিহ্য ও সংস্কৃতির মিলনে আমাদের দুর্গাপূজা।
 </p>
-
-
-<a class="card-link" href="durga-puja.html">
-বিস্তারিত দেখুন →
-</a>
 
 </div>
 
@@ -599,7 +693,301 @@ font-size:30px;
 <div class="card-icon">
 📚
 </div>
-<!-- CONTACT -->
+
+<h3>
+শিক্ষা সহায়তা
+</h3>
+
+<p>
+শিক্ষার্থীদের সহযোগিতার উদ্যোগ।
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-icon">
+🩸
+</div>
+
+<h3>
+রক্তদান
+</h3>
+
+<p>
+জরুরি সময়ে মানুষের পাশে থাকা।
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- COMMITTEE 2026-27 -->
+
+<section class="section" id="committee">
+
+<div class="container">
+
+
+<h2 class="title">
+পরিচালন কমিটি ২০২৬-২৭
+</h2>
+
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-icon">
+👤
+</div>
+
+<h3>
+সভাপতি
+</h3>
+
+<p>
+নাম লিখুন
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+👤
+</div>
+
+<h3>
+সম্পাদক
+</h3>
+
+<p>
+নাম লিখুন
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+👤
+</div>
+
+<h3>
+কোষাধ্যক্ষ
+</h3>
+
+<p>
+নাম লিখুন
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+👤
+</div>
+
+<h3>
+সহ-সভাপতি
+</h3>
+
+<p>
+নাম লিখুন
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+👤
+</div>
+
+<h3>
+সহ সম্পাদক
+</h3>
+
+<p>
+নাম লিখুন
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+👥
+</div>
+
+<h3>
+সদস্যবৃন্দ
+</h3>
+
+<p>
+সদস্যদের নাম লিখুন
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- GALLERY -->
+
+<section class="section" id="gallery">
+
+<div class="container">
+
+<h2 class="title">
+গ্যালারি
+</h2>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+<img src="durga1.jpg">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga2.jpg">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga3.jpg">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga4.jpg">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga5.jpg">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga6.jpg">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga7.jpg">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga8.jpg">
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+<!-- =========================
+     GALLERY SECTION
+========================= -->
+
+<section class="section" id="gallery">
+
+<div class="container">
+
+<h2 class="title">
+গ্যালারি
+</h2>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+<img src="durga1.jpg" alt="ছবি ১">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga2.jpg" alt="ছবি ২">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga3.jpg" alt="ছবি ৩">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga4.jpg" alt="ছবি ৪">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga5.jpg" alt="ছবি ৫">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga6.jpg" alt="ছবি ৬">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga7.jpg" alt="ছবি ৭">
+</div>
+
+
+<div class="gallery-item">
+<img src="durga8.jpg" alt="ছবি ৮">
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT SECTION
+========================= -->
 
 <section class="section" id="contact">
 
@@ -615,17 +1003,12 @@ font-size:30px;
 
 <div class="contact-card">
 
-<div class="card-icon">
-📍
-</div>
+<div class="card-icon">📍</div>
 
-<h3>
-ঠিকানা
-</h3>
+<h3>ঠিকানা</h3>
 
 <p>
-Budbud, Burdwan
-<br>
+Budbud, Burdwan<br>
 West Bengal, India
 </p>
 
@@ -635,22 +1018,15 @@ West Bengal, India
 
 <div class="contact-card">
 
-<div class="card-icon">
-📞
-</div>
+<div class="card-icon">📞</div>
 
-<h3>
-ফোন
-</h3>
+<h3>ফোন</h3>
 
 <p>
-
 <a href="tel:9547222144">
 9547222144
 </a>
-
 <br>
-
 <a href="tel:+919563881523">
 +91 9563881523
 </a>
@@ -663,20 +1039,14 @@ West Bengal, India
 
 <div class="contact-card">
 
-<div class="card-icon">
-✉️
-</div>
+<div class="card-icon">✉️</div>
 
-<h3>
-ই-মেইল
-</h3>
+<h3>ই-মেইল</h3>
 
 <p>
-
 <a href="mailto:budbudsanhati@gmail.com">
 budbudsanhati@gmail.com
 </a>
-
 </p>
 
 </div>
@@ -690,8 +1060,9 @@ budbudsanhati@gmail.com
 
 
 
-
-<!-- DURGA BANNER -->
+<!-- =========================
+     DURGA BANNER
+========================= -->
 
 <section class="durga-banner">
 
@@ -707,16 +1078,15 @@ budbudsanhati@gmail.com
 
 
 
-
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-
 
 <strong>
 Budbud SANHATI
 </strong>
-
 
 <p>
 একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
@@ -724,30 +1094,17 @@ Budbud SANHATI
 
 
 <p>
-
 📍 Budbud, Burdwan,
 West Bengal, India
-
 <br>
 
-📞
-<a href="tel:9547222144">
-9547222144
-</a>
-
+📞 9547222144
 <br>
 
-📞
-<a href="tel:+919563881523">
-+91 9563881523
-</a>
-
+📞 +91 9563881523
 <br>
 
-✉️
-<a href="mailto:budbudsanhati@gmail.com">
-budbudsanhati@gmail.com
-</a>
+✉️ budbudsanhati@gmail.com
 
 </p>
 
@@ -761,109 +1118,23 @@ All Rights Reserved.
 </footer>
 
 
-
-
-
-<!-- IMAGE POPUP -->
-
-<div id="imagePopup"
-style="
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.95);
-z-index:99999;
-align-items:center;
-justify-content:center;
-padding:15px;
-">
-
-
-<span
-onclick="closeImage()"
-style="
-position:absolute;
-top:15px;
-right:25px;
-font-size:45px;
-color:white;
-cursor:pointer;
-">
-×
-</span>
-
-
-<img
-id="popupImg"
-style="
-max-width:95%;
-max-height:90%;
-border:2px solid #ffc400;
-border-radius:10px;
-">
-
-
-</div>
-
-
-
-
-
 <script>
 
+/* Gallery Click Big */
 
-function openImage(element){
-
-let img =
-element.querySelector("img").src;
-
-
-document.getElementById("popupImg").src=img;
+const galleryImages =
+document.querySelectorAll(".gallery-item img");
 
 
-document.getElementById("imagePopup")
-.style.display="flex";
+galleryImages.forEach(function(img){
 
+img.onclick=function(){
 
-document.body.style.overflow="hidden";
+window.open(this.src,"_blank");
 
 }
-
-
-
-function closeImage(){
-
-document.getElementById("imagePopup")
-.style.display="none";
-
-
-document.getElementById("popupImg")
-.src="";
-
-
-document.body.style.overflow="";
-
-}
-
-
-
-document
-.getElementById("imagePopup")
-.addEventListener("click",function(e){
-
-
-if(e.target.id==="imagePopup"){
-
-closeImage();
-
-}
-
 
 });
-
 
 
 </script>
