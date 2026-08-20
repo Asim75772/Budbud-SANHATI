@@ -629,7 +629,356 @@ gap:30px;
 </div>
 
 </section>
+<!-- ================= ORGANIZATION INFO ================= -->
 
+<section class="organization-info">
+
+    <div class="organization-box">
+
+        <div class="organization-title">
+            <span>✦</span>
+            <h2>সংগঠনের পরিচিতি</h2>
+            <span>✦</span>
+        </div>
+
+        <div class="organization-content">
+
+            <!-- Name -->
+            <div class="org-row">
+                <div class="org-icon">🏛️</div>
+
+                <div class="org-text">
+                    <h3>Bud Bud Sanhati</h3>
+                    <p class="estd">ESTD – 1973</p>
+                </div>
+            </div>
+
+
+            <!-- Registration -->
+            <div class="org-row">
+                <div class="org-icon">📜</div>
+
+                <div class="org-text">
+                    <p>
+                        <strong>Regd. No. –</strong>
+                        S/1L/65260
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Address -->
+            <div class="org-row">
+                <div class="org-icon">📍</div>
+
+                <div class="org-text">
+                    <p>
+                        Sukdal More, P.O. – Bud Bud,<br>
+                        Dist. – Burdwan (W.B.),<br>
+                        PIN – 713405
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* ================= ORGANIZATION INFO ================= */
+
+.organization-info {
+    width: 100%;
+    padding: 35px 20px;
+    box-sizing: border-box;
+    background: #050000;
+}
+
+.organization-box {
+
+    max-width: 1000px;
+    margin: auto;
+
+    padding: 28px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #160000,
+            #080000,
+            #160000
+        );
+
+    border: 2px solid #b51b0b;
+
+    border-radius: 22px;
+
+    position: relative;
+
+    box-shadow:
+        0 0 12px rgba(255, 0, 0, 0.20),
+        inset 0 0 25px rgba(150, 0, 0, 0.12);
+
+}
+
+
+/* Gold decorative border */
+
+.organization-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+
+    border: 1px solid #8f6500;
+
+    border-radius: 17px;
+
+    pointer-events: none;
+
+}
+
+
+/* Title */
+
+.organization-title {
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+.organization-title h2 {
+
+    margin: 0;
+
+    color: #ffbd00;
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 0 8px rgba(255, 170, 0, 0.25);
+
+}
+
+.organization-title span {
+
+    color: #ffbd00;
+
+    font-size: 22px;
+
+}
+
+
+/* Content */
+
+.organization-content {
+
+    position: relative;
+    z-index: 2;
+
+}
+
+
+/* Each row */
+
+.org-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 12px;
+
+    border-bottom: 1px solid
+        rgba(190, 20, 10, 0.65);
+
+}
+
+.org-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+/* Icon */
+
+.org-icon {
+
+    min-width: 62px;
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 2px solid #d21d0d;
+
+    background: #0b0000;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 0 8px rgba(255, 0, 0, 0.15);
+
+}
+
+
+/* Text */
+
+.org-text {
+
+    flex: 1;
+
+    color: #eeeeee;
+
+}
+
+.org-text h3 {
+
+    margin: 0 0 5px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+}
+
+.org-text p {
+
+    margin: 0;
+
+    color: #eeeeee;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+.org-text .estd {
+
+    color: #ffbd00;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .organization-info {
+
+        padding: 28px 15px;
+
+    }
+
+    .organization-box {
+
+        padding: 25px 15px;
+
+        border-radius: 18px;
+
+    }
+
+    .organization-title {
+
+        gap: 8px;
+
+        margin-bottom: 18px;
+
+    }
+
+    .organization-title h2 {
+
+        font-size: 24px;
+
+    }
+
+    .organization-title span {
+
+        font-size: 17px;
+
+    }
+
+    .org-row {
+
+        gap: 14px;
+
+        padding: 16px 6px;
+
+    }
+
+    .org-icon {
+
+        min-width: 52px;
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 23px;
+
+    }
+
+    .org-text h3 {
+
+        font-size: 20px;
+
+    }
+
+    .org-text p {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+    }
+
+    .org-text .estd {
+
+        font-size: 16px;
+
+    }
+
+}
+
+</style>
+
+<!-- ================= END ORGANIZATION INFO ================= -->
 
 
 <section class="section" id="committee">
