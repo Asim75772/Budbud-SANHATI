@@ -4,475 +4,1277 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>বুদবুদ সংহতি | Budbud SANHATI</title>
+<title>বুদবুদ সংহতি | Bud Bud SANHATI</title>
 
-<meta name="description" content="বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।">
+<meta name="description"
+content="বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 
 <style>
 
+/* =====================================================
+   RESET
+===================================================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#050000;
-color:#fff;
-font-family:"Noto Serif Bengali",serif;
-overflow-x:hidden;
+    background:#050000;
+    color:#fff;
+    font-family:"Noto Serif Bengali",serif;
+    overflow-x:hidden;
 }
 
 a{
-color:inherit;
-text-decoration:none;
+    color:inherit;
+    text-decoration:none;
 }
 
 img{
-max-width:100%;
-display:block;
+    max-width:100%;
+    display:block;
 }
 
 
-/* NAVBAR */
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 .navbar{
-position:sticky;
-top:0;
-z-index:9999;
-height:70px;
-background:#050505;
-border-bottom:3px solid #e00000;
-display:flex;
-align-items:center;
-overflow-x:auto;
+    position:sticky;
+    top:0;
+    z-index:9999;
+
+    min-height:68px;
+
+    background:#050505;
+
+    border-bottom:3px solid #e00000;
+
+    display:flex;
+    align-items:center;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+}
+
+.navbar::-webkit-scrollbar{
+    display:none;
 }
 
 .nav-menu{
-display:flex;
-gap:45px;
-list-style:none;
-padding:0 35px;
-margin:auto;
-min-width:max-content;
+    display:flex;
+    align-items:center;
+
+    gap:38px;
+
+    list-style:none;
+
+    padding:0 25px;
+
+    margin:auto;
+
+    min-width:max-content;
 }
 
 .nav-menu a{
-color:#f3d49a;
-font-family:Georgia,serif;
-font-size:20px;
-font-weight:700;
-white-space:nowrap;
+    color:#f3d49a;
+
+    font-family:Georgia,serif;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+    transition:.3s;
+}
+
+.nav-menu a:hover{
+    color:#ffc400;
 }
 
 
-/* HERO */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
-background:#000;
-border-bottom:3px solid #e00000;
+    width:100%;
+
+    background:#000;
+
+    border-bottom:3px solid #e00000;
 }
 
 .hero img{
-width:100%;
-height:auto;
+    width:100%;
+    height:auto;
 }
 
 
-/* QUICK */
+/* =====================================================
+   ORGANIZATION INFO
+===================================================== */
+
+.organization-section{
+    width:100%;
+
+    padding:55px 20px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #050000,
+        #100000,
+        #050000
+    );
+}
+
+.organization-card{
+
+    width:100%;
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:35px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #160000,
+        #080000,
+        #160000
+    );
+
+    border:1px solid #8d2b12;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 25px rgba(255,0,0,.12),
+    inset 0 0 30px rgba(150,0,0,.08);
+
+}
+
+.organization-title{
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    margin-bottom:30px;
+
+    text-align:center;
+}
+
+.organization-title h2{
+
+    color:#ffc400;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    text-shadow:
+    0 0 10px rgba(255,180,0,.25);
+
+}
+
+.organization-title span{
+
+    color:#ffc400;
+
+    font-size:24px;
+
+}
+
+.organization-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:20px 5px;
+
+    border-bottom:1px solid
+    rgba(150,40,20,.55);
+
+}
+
+.organization-item:last-child{
+    border-bottom:none;
+}
+
+.organization-icon{
+
+    width:62px;
+    min-width:62px;
+
+    height:62px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#090000;
+
+    border:2px solid #a52b12;
+
+    font-size:28px;
+
+    box-shadow:
+    0 0 12px rgba(255,0,0,.15);
+
+}
+
+.organization-text{
+    flex:1;
+}
+
+.organization-text h3{
+
+    color:#fff;
+
+    font-size:25px;
+
+    margin-bottom:5px;
+
+}
+
+.organization-text p{
+
+    color:#ddd;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+.organization-text .estd{
+
+    color:#ffc400;
+
+    font-weight:600;
+
+}
+
+
+/* =====================================================
+   QUICK MENU
+===================================================== */
 
 .quick-section{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-background:#080000;
-border-bottom:2px solid #401500;
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    background:#080000;
+
+    border-top:1px solid #401500;
+
+    border-bottom:1px solid #401500;
+
 }
 
 .quick-card{
-padding:28px 18px;
-text-align:center;
-border-right:1px solid #552000;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-right:1px solid #4b1b0b;
+
+    transition:.3s;
+
+}
+
+.quick-card:last-child{
+    border-right:none;
+}
+
+.quick-card:hover{
+
+    background:#130000;
+
+    transform:translateY(-3px);
+
 }
 
 .quick-icon{
-width:70px;
-height:70px;
-margin:auto auto 12px;
-border:2px solid #8c6500;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:36px;
+
+    width:72px;
+    height:72px;
+
+    margin:0 auto 15px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:2px solid #8c6500;
+
+    border-radius:50%;
+
+    background:#090000;
+
+    font-size:34px;
+
 }
 
 .quick-card h3{
-color:#ffc400;
-font-size:21px;
-margin-bottom:8px;
+
+    color:#ffc400;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
 }
 
 .quick-card p{
-color:#ddd;
-font-size:14px;
-line-height:1.8;
+
+    color:#ddd;
+
+    font-size:15px;
+
+    line-height:1.8;
+
 }
 
 
-/* EDITOR */
+/* =====================================================
+   EDITOR SECTION
+===================================================== */
 
 .editor-section{
-padding:65px 20px 70px;
-background:linear-gradient(180deg,#080000,#160000,#070000);
-border-bottom:2px solid #551000;
+
+    padding:70px 20px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #080000,
+        #160000,
+        #070000
+    );
+
+    border-bottom:1px solid #451000;
+
 }
 
 .editor-title{
-text-align:center;
-color:#ffc400;
-font-size:36px;
-margin-bottom:15px;
+
+    text-align:center;
+
+    color:#ffc400;
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
 }
 
 .editor-line{
-width:90px;
-height:3px;
-background:#e00000;
-margin:auto auto 30px;
+
+    width:90px;
+
+    height:3px;
+
+    background:#e00000;
+
+    margin:0 auto 30px;
+
 }
 
 .editor-card{
-max-width:900px;
-margin:auto;
-background:#120000;
-border:1px solid #702500;
-border-radius:16px;
-padding:30px;
-text-align:center;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:35px;
+
+    text-align:center;
+
+    background:#120000;
+
+    border:1px solid #702500;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 0 20px rgba(255,0,0,.08);
+
 }
 
 .editor-card h3{
-color:#ffe09a;
-font-size:24px;
-margin-bottom:15px;
+
+    color:#ffe09a;
+
+    font-size:25px;
+
+    margin-bottom:18px;
+
 }
 
 .editor-card p{
-color:#eee;
-font-size:16px;
-line-height:2;
+
+    color:#eee;
+
+    font-size:17px;
+
+    line-height:2;
+
 }
 
 .editor-sign{
-margin-top:20px;
-color:#ffc400;
-font-weight:bold;
+
+    margin-top:22px;
+
+    color:#ffc400;
+
+    font-weight:bold;
+
 }
 
 
-/* COMMON */
+/* =====================================================
+   COMMON SECTION
+===================================================== */
 
 .section{
-padding:70px 20px;
-background:#070000;
-border-bottom:1px solid #401500;
+
+    padding:75px 20px;
+
+    background:#070000;
+
+    border-bottom:1px solid #401500;
+
 }
 
 .container{
-max-width:1050px;
-margin:auto;
+
+    width:100%;
+
+    max-width:1050px;
+
+    margin:auto;
+
 }
 
 .title{
-text-align:center;
-color:#ffc400;
-font-size:36px;
-margin-bottom:40px;
+
+    text-align:center;
+
+    color:#ffc400;
+
+    font-size:36px;
+
+    margin-bottom:45px;
+
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
 }
 
+
+/* =====================================================
+   GENERAL CARD
+===================================================== */
+
 .card{
-background:#120000;
-border:1px solid #702500;
-border-radius:15px;
-padding:30px 20px;
-text-align:center;
+
+    background:
+    linear-gradient(
+        145deg,
+        #150000,
+        #0c0000
+    );
+
+    border:1px solid #702500;
+
+    border-radius:16px;
+
+    padding:32px 22px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#b53b16;
+
+    box-shadow:
+    0 8px 25px rgba(255,0,0,.12);
+
 }
 
 .card-icon{
-font-size:48px;
-margin-bottom:15px;
+
+    font-size:50px;
+
+    margin-bottom:15px;
+
 }
 
 .card h3{
-color:#ffc400;
-font-size:23px;
-margin-bottom:15px;
+
+    color:#ffc400;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
 }
 
 .card p{
-color:#ddd;
-line-height:1.8;
+
+    color:#ddd;
+
+    line-height:1.9;
+
+    font-size:15px;
+
 }
 
 .card-link{
-display:inline-block;
-margin-top:20px;
-color:#ffc400;
-font-weight:bold;
-}
- <style>
 
-/* EVENTS */
+    display:inline-block;
 
-.events-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
+    margin-top:22px;
+
+    color:#ffc400;
+
+    font-weight:bold;
+
+    transition:.3s;
+
 }
 
+.card-link:hover{
+    color:#fff;
+}
 
-/* COMMITTEE */
+
+/* =====================================================
+   COMMITTEE
+===================================================== */
 
 .committee-card{
 
-background:#120000;
-border:1px solid #702500;
-border-radius:15px;
-padding:30px;
-text-align:center;
+    max-width:850px;
+
+    margin:auto;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        145deg,
+        #150000,
+        #080000
+    );
+
+    border:1px solid #702500;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 0 25px rgba(255,0,0,.08);
 
 }
 
 .committee-card h3{
 
-color:#ffc400;
-font-size:25px;
-margin-bottom:20px;
+    color:#ffc400;
+
+    font-size:28px;
+
+    margin-bottom:30px;
 
 }
 
 .committee-list{
 
-color:#ddd;
-font-size:17px;
-line-height:2;
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:0;
+
+    text-align:left;
 
 }
 
-.committee-add{
+.member{
 
-margin-top:20px;
-color:#ffe09a;
+    padding:18px 15px;
+
+    border-bottom:1px solid
+    rgba(150,40,20,.5);
+
+    color:#eee;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+.member strong{
+
+    color:#ffc400;
 
 }
 
 
-/* GALLERY */
+/* =====================================================
+   GALLERY
+===================================================== */
 
 .gallery-grid{
 
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:25px;
 
 }
-
 
 .gallery-item{
 
-background:#100000;
-border:2px solid #702500;
-border-radius:15px;
-overflow:hidden;
-cursor:pointer;
+    overflow:hidden;
+
+    background:#100000;
+
+    border:2px solid #702500;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
 
 }
 
+.gallery-item:hover{
+
+    transform:scale(1.02);
+
+    border-color:#ffc400;
+
+    box-shadow:
+    0 0 20px rgba(255,180,0,.15);
+
+}
 
 .gallery-item img{
 
-width:100%;
-height:180px;
-object-fit:cover;
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    transition:.4s;
 
 }
 
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
 
-/* CONTACT */
+
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact-grid{
 
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
 
 }
-
 
 .contact-card{
 
-background:#120000;
-border:1px solid #702500;
-border-radius:15px;
-padding:25px;
-text-align:center;
+    padding:30px 20px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        145deg,
+        #150000,
+        #080000
+    );
+
+    border:1px solid #702500;
+
+    border-radius:16px;
 
 }
 
+.contact-icon{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
 
 .contact-card h3{
 
-color:#ffc400;
-margin-bottom:10px;
+    color:#ffc400;
+
+    font-size:23px;
+
+    margin-bottom:12px;
 
 }
-
 
 .contact-card p{
 
-color:#ddd;
-line-height:1.8;
+    color:#ddd;
+
+    line-height:1.9;
+
+    font-size:15px;
 
 }
-
 
 .contact-card a{
 
-color:#ffe09a;
+    color:#ffe09a;
+
+}
+
+.contact-card a:hover{
+
+    color:#ffc400;
 
 }
 
 
-/* POPUP */
+/* =====================================================
+   IMAGE POPUP
+===================================================== */
 
 #imagePopup{
 
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.95);
-z-index:99999;
-align-items:center;
-justify-content:center;
-padding:20px;
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.96);
+
+    z-index:99999;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
 
 }
-
 
 #imagePopup img{
 
-max-width:95%;
-max-height:90%;
-border:2px solid #ffc400;
-border-radius:10px;
+    max-width:95%;
+
+    max-height:88%;
+
+    object-fit:contain;
+
+    border:2px solid #ffc400;
+
+    border-radius:10px;
+
+    box-shadow:
+    0 0 30px rgba(255,190,0,.15);
 
 }
-
 
 .close-btn{
 
-position:absolute;
-top:15px;
-right:25px;
-font-size:45px;
-color:white;
+    position:absolute;
+
+    top:10px;
+    right:20px;
+
+    font-size:48px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    line-height:1;
 
 }
 
 
-/* FOOTER */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
 
-background:#030303;
-border-top:2px solid red;
-padding:25px;
-text-align:center;
+    background:#030303;
+
+    border-top:2px solid #e00000;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+}
+
+footer h3{
+
+    color:#ffc400;
+
+    font-size:22px;
+
+    margin-bottom:8px;
 
 }
 
 footer p{
 
-color:#ddd;
+    color:#aaa;
+
+    font-size:14px;
+
+    line-height:1.8;
 
 }
 
 
-/* MOBILE */
+/* =====================================================
+   MOBILE
+===================================================== */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-.quick-section{
-grid-template-columns:repeat(2,1fr);
+    .quick-section{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .contact-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .committee-list{
+
+        grid-template-columns:1fr;
+
+    }
+
 }
 
-.grid,
-.events-grid,
-.contact-grid{
 
-grid-template-columns:1fr;
+@media(max-width:600px){
+
+    .navbar{
+
+        min-height:60px;
+
+    }
+
+    .nav-menu{
+
+        gap:25px;
+
+        padding:0 18px;
+
+    }
+
+    .nav-menu a{
+
+        font-size:15px;
+
+    }
+
+
+    /* Hero */
+
+    .hero img{
+
+        width:100%;
+
+    }
+
+
+    /* Organization */
+
+    .organization-section{
+
+        padding:35px 12px;
+
+    }
+
+    .organization-card{
+
+        padding:25px 15px;
+
+        border-radius:15px;
+
+    }
+
+    .organization-title{
+
+        gap:6px;
+
+        margin-bottom:20px;
+
+    }
+
+    .organization-title h2{
+
+        font-size:23px;
+
+    }
+
+    .organization-title span{
+
+        font-size:17px;
+
+    }
+
+    .organization-item{
+
+        gap:12px;
+
+        padding:16px 2px;
+
+        align-items:flex-start;
+
+    }
+
+    .organization-icon{
+
+        width:48px;
+
+        min-width:48px;
+
+        height:48px;
+
+        font-size:22px;
+
+    }
+
+    .organization-text h3{
+
+        font-size:19px;
+
+    }
+
+    .organization-text p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+
+    /* Quick */
+
+    .quick-section{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .quick-card{
+
+        padding:28px 20px;
+
+        border-right:none;
+
+        border-bottom:1px solid #4b1b0b;
+
+    }
+
+    .quick-card:last-child{
+
+        border-bottom:none;
+
+    }
+
+
+    /* Editor */
+
+    .editor-section{
+
+        padding:50px 15px;
+
+    }
+
+    .editor-title{
+
+        font-size:28px;
+
+    }
+
+    .editor-card{
+
+        padding:25px 18px;
+
+    }
+
+    .editor-card h3{
+
+        font-size:20px;
+
+    }
+
+    .editor-card p{
+
+        font-size:15px;
+
+        line-height:1.9;
+
+    }
+
+
+    /* Common */
+
+    .section{
+
+        padding:55px 15px;
+
+    }
+
+    .title{
+
+        font-size:28px;
+
+        margin-bottom:30px;
+
+    }
+
+
+    /* Cards */
+
+    .grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card{
+
+        padding:28px 18px;
+
+    }
+
+
+    /* Committee */
+
+    .committee-card{
+
+        padding:25px 15px;
+
+    }
+
+    .committee-card h3{
+
+        font-size:24px;
+
+    }
+
+    .member{
+
+        font-size:15px;
+
+        padding:15px 5px;
+
+    }
+
+
+    /* Gallery */
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+    .gallery-item img{
+
+        height:auto;
+
+        max-height:400px;
+
+        object-fit:cover;
+
+    }
+
+
+    /* Contact */
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
 
 }
 
-.gallery-grid{
 
-grid-template-columns:1fr;
+/* =====================================================
+   EXTRA SMALL
+===================================================== */
 
-}
+@media(max-width:380px){
 
-.nav-menu{
+    .nav-menu{
 
-gap:30px;
+        gap:20px;
 
-}
+    }
+
+    .nav-menu a{
+
+        font-size:14px;
+
+    }
+
+    .organization-title h2{
+
+        font-size:20px;
+
+    }
+
+    .title{
+
+        font-size:25px;
+
+    }
 
 }
 
 </style>
 
-
-
 </head>
+
 
 <body>
 
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
 <header class="navbar">
 
 <ul class="nav-menu">
 
-<li><a href="index.html">HOME</a></li>
+<li>
+<a href="index.html">HOME</a>
+</li>
 
-<li><a href="about-us.html">ABOUT US</a></li>
+<li>
+<a href="about-us.html">ABOUT US</a>
+</li>
 
-<li><a href="#events">EVENTS</a></li>
+<li>
+<a href="#events">EVENTS</a>
+</li>
 
-<li><a href="#committee">COMMITTEE</a></li>
+<li>
+<a href="#committee">COMMITTEE</a>
+</li>
 
-<li><a href="#gallery">GALLERY</a></li>
+<li>
+<a href="#gallery">GALLERY</a>
+</li>
 
-<li><a href="#contact">CONTACT</a></li>
+<li>
+<a href="#contact">CONTACT</a>
+</li>
 
 </ul>
 
@@ -480,103 +1282,198 @@ gap:30px;
 
 
 
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <section class="hero">
 
-<img src="home-banner.png" alt="Budbud SANHATI">
+<img
+src="home-banner.png"
+alt="Bud Bud SANHATI">
 
 </section>
-</section>
 
 
-<!-- সংগঠনের পরিচিতি -->
+
+<!-- =====================================================
+     ORGANIZATION INFO
+===================================================== -->
+
 <section class="organization-section">
 
-    <div class="organization-card">
-
-        <h2>✦ সংগঠনের পরিচিতি ✦</h2>
-
-        <div class="organization-item">
-            <div class="organization-icon">🏛️</div>
-            <div>
-                <h3>Bud Bud Sanhati</h3>
-                <p>ESTD – 1973</p>
-            </div>
-        </div>
-
-        <div class="organization-item">
-            <div class="organization-icon">📜</div>
-            <div>
-                <p><strong>Regd. No. –</strong> S/1L/65260</p>
-            </div>
-        </div>
-
-        <div class="organization-item">
-            <div class="organization-icon">📍</div>
-            <div>
-                <p>Sukdal More, P.O. – Bud Bud,<br>
-                Dist. – Burdwan (W.B.),<br>
-                PIN – 713405</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
+<div class="organization-card">
 
 
-<section class="quick-section">
+<div class="organization-title">
 
-    <a href="about-us.html" class="quick-card">
+<span>✦</span>
 
+<h2>সংগঠনের পরিচিতি</h2>
 
-<section class="quick-section">
+<span>✦</span>
 
-<a href="about-us.html" class="quick-card">
-
-<div class="quick-icon">👥</div>
-
-<h3>আমাদের পরিচয়</h3>
-
-<p>বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।</p>
-
-</a>
+</div>
 
 
-<a href="#events" class="quick-card">
 
-<div class="quick-icon">📅</div>
+<div class="organization-item">
 
-<h3>আমাদের কার্যক্রম</h3>
+<div class="organization-icon">
+🏛️
+</div>
 
-<p>দুর্গাপূজা, রক্তদান, শিক্ষা সহায়তা ও সামাজিক কাজ।</p>
+<div class="organization-text">
 
-</a>
+<h3>Bud Bud Sanhati</h3>
 
+<p class="estd">
+ESTD – 1973
+</p>
 
-<a href="#gallery" class="quick-card">
+</div>
 
-<div class="quick-icon">🖼️</div>
-
-<h3>গ্যালারি</h3>
-
-<p>অনুষ্ঠানের ছবি দেখুন।</p>
-
-</a>
+</div>
 
 
-<a href="#contact" class="quick-card">
 
-<div class="quick-icon">🤝</div>
+<div class="organization-item">
 
-<h3>যোগাযোগ</h3>
+<div class="organization-icon">
+📜
+</div>
 
-<p>আমাদের সঙ্গে যুক্ত হন।</p>
+<div class="organization-text">
 
-</a>
+<p>
+<strong>Regd. No. –</strong>
+S/1L/65260
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="organization-item">
+
+<div class="organization-icon">
+📍
+</div>
+
+<div class="organization-text">
+
+<p>
+Sukdal More, P.O. – Bud Bud,<br>
+Dist. – Burdwan (W.B.),<br>
+PIN – 713405
+</p>
+
+</div>
+
+</div>
+
+
+</div>
 
 </section>
 
 
+
+<!-- =====================================================
+     QUICK MENU
+===================================================== -->
+
+<section class="quick-section">
+
+
+<a
+href="about-us.html"
+class="quick-card">
+
+<div class="quick-icon">
+👥
+</div>
+
+<h3>
+আমাদের পরিচয়
+</h3>
+
+<p>
+বুদবুদ সংহতি একটি সামাজিক ও সাংস্কৃতিক সংগঠন।
+</p>
+
+</a>
+
+
+
+<a
+href="#events"
+class="quick-card">
+
+<div class="quick-icon">
+📅
+</div>
+
+<h3>
+আমাদের কার্যক্রম
+</h3>
+
+<p>
+দুর্গাপূজা, রক্তদান, শিক্ষা সহায়তা ও সামাজিক কাজ।
+</p>
+
+</a>
+
+
+
+<a
+href="#gallery"
+class="quick-card">
+
+<div class="quick-icon">
+🖼️
+</div>
+
+<h3>
+গ্যালারি
+</h3>
+
+<p>
+অনুষ্ঠানের ছবি দেখুন।
+</p>
+
+</a>
+
+
+
+<a
+href="#contact"
+class="quick-card">
+
+<div class="quick-icon">
+🤝
+</div>
+
+<h3>
+যোগাযোগ
+</h3>
+
+<p>
+আমাদের সঙ্গে যুক্ত হন।
+</p>
+
+</a>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     EDITOR
+===================================================== -->
 
 <section class="editor-section">
 
@@ -585,6 +1482,7 @@ gap:30px;
 </h2>
 
 <div class="editor-line"></div>
+
 
 <div class="editor-card">
 
@@ -608,7 +1506,13 @@ gap:30px;
 
 
 
-<section class="section" id="events">
+<!-- =====================================================
+     EVENTS
+===================================================== -->
+
+<section
+class="section"
+id="events">
 
 <div class="container">
 
@@ -620,46 +1524,87 @@ gap:30px;
 <div class="grid">
 
 
+<!-- DURGA PUJA -->
+
 <div class="card">
 
-<div class="card-icon">🔱</div>
+<div class="card-icon">
+🔱
+</div>
 
-<h3>দুর্গাপূজা</h3>
+<h3>
+দুর্গাপূজা
+</h3>
 
-<p>ভক্তি, ঐতিহ্য ও সংস্কৃতির মিলনে আমাদের দুর্গাপূজা।</p>
+<p>
+ভক্তি, ঐতিহ্য ও সংস্কৃতির মিলনে
+আমাদের দুর্গাপূজা।
+</p>
 
-<a href="durga-puja.html" class="card-link">
+<a
+href="durga-puja.html"
+class="card-link">
+
 বিস্তারিত দেখুন →
+
 </a>
 
 </div>
 
 
+
+<!-- EDUCATION -->
+
 <div class="card">
 
-<div class="card-icon">📚</div>
+<div class="card-icon">
+📚
+</div>
 
-<h3>শিক্ষা সহায়তা</h3>
+<h3>
+শিক্ষা সহায়তা
+</h3>
 
-<p>শিক্ষার্থীদের পড়াশোনার জন্য সহযোগিতা করার চেষ্টা।</p>
+<p>
+শিক্ষার্থীদের পড়াশোনার জন্য
+সহযোগিতা করার চেষ্টা।
+</p>
 
-<a href="siksha-sohayota.html" class="card-link">
+<a
+href="siksha-sohayota.html"
+class="card-link">
+
 বিস্তারিত দেখুন →
+
 </a>
 
 </div>
 
 
+
+<!-- BLOOD -->
+
 <div class="card">
 
-<div class="card-icon">🩸</div>
+<div class="card-icon">
+🩸
+</div>
 
-<h3>রক্তদান</h3>
+<h3>
+রক্তদান
+</h3>
 
-<p>জরুরি সময়ে রক্তদানের মাধ্যমে মানুষের পাশে থাকা।</p>
+<p>
+জরুরি সময়ে রক্তদানের মাধ্যমে
+মানুষের পাশে থাকা।
+</p>
 
-<a href="roktodan.html" class="card-link">
+<a
+href="roktodan.html"
+class="card-link">
+
 বিস্তারিত দেখুন →
+
 </a>
 
 </div>
@@ -670,436 +1615,133 @@ gap:30px;
 </div>
 
 </section>
-<!-- ================= ORGANIZATION INFO ================= -->
 
 
-   
 
-   
-           
-            
-         
-       
+<!-- =====================================================
+     COMMITTEE
+===================================================== -->
 
-
-
-            
-          
-           
-
-                
-           
-                
-            
-           
-
-
-        
-            
-              
-
-       
-                
-                  
-        
-                    
-               
-           
-
-
-           
-            
-       
-
-
-
-
-
-<style>
-
-/* ================= ORGANIZATION INFO ================= */
-
-.organization-info {
-    width: 100%;
-    padding: 35px 20px;
-    box-sizing: border-box;
-    background: #050000;
-}
-
-.organization-box {
-
-    max-width: 1000px;
-    margin: auto;
-
-    padding: 28px 25px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #160000,
-            #080000,
-            #160000
-        );
-
-    border: 2px solid #b51b0b;
-
-    border-radius: 22px;
-
-    position: relative;
-
-    box-shadow:
-        0 0 12px rgba(255, 0, 0, 0.20),
-        inset 0 0 25px rgba(150, 0, 0, 0.12);
-
-}
-
-
-/* Gold decorative border */
-
-.organization-box::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 8px;
-    left: 8px;
-    right: 8px;
-    bottom: 8px;
-
-    border: 1px solid #8f6500;
-
-    border-radius: 17px;
-
-    pointer-events: none;
-
-}
-
-
-/* Title */
-
-.organization-title {
-
-    position: relative;
-    z-index: 2;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 14px;
-
-    margin-bottom: 25px;
-
-    text-align: center;
-}
-
-.organization-title h2 {
-
-    margin: 0;
-
-    color: #ffbd00;
-
-    font-size: 29px;
-
-    font-weight: 700;
-
-    text-shadow:
-        0 0 8px rgba(255, 170, 0, 0.25);
-
-}
-
-.organization-title span {
-
-    color: #ffbd00;
-
-    font-size: 22px;
-
-}
-
-
-/* Content */
-
-.organization-content {
-
-    position: relative;
-    z-index: 2;
-
-}
-
-
-/* Each row */
-
-.org-row {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-
-    padding: 18px 12px;
-
-    border-bottom: 1px solid
-        rgba(190, 20, 10, 0.65);
-
-}
-
-.org-row:last-child {
-
-    border-bottom: none;
-
-}
-
-
-/* Icon */
-
-.org-icon {
-
-    min-width: 62px;
-
-    width: 62px;
-    height: 62px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    border: 2px solid #d21d0d;
-
-    background: #0b0000;
-
-    font-size: 28px;
-
-    box-shadow:
-        0 0 8px rgba(255, 0, 0, 0.15);
-
-}
-
-
-/* Text */
-
-.org-text {
-
-    flex: 1;
-
-    color: #eeeeee;
-
-}
-
-.org-text h3 {
-
-    margin: 0 0 5px;
-
-    color: #ffffff;
-
-    font-size: 24px;
-
-}
-
-.org-text p {
-
-    margin: 0;
-
-    color: #eeeeee;
-
-    font-size: 17px;
-
-    line-height: 1.7;
-
-}
-
-.org-text .estd {
-
-    color: #ffbd00;
-
-    font-size: 18px;
-
-    font-weight: 600;
-
-}
-
-
-/* Mobile */
-
-@media (max-width: 600px) {
-
-    .organization-info {
-
-        padding: 28px 15px;
-
-    }
-
-    .organization-box {
-
-        padding: 25px 15px;
-
-        border-radius: 18px;
-
-    }
-
-    .organization-title {
-
-        gap: 8px;
-
-        margin-bottom: 18px;
-
-    }
-
-    .organization-title h2 {
-
-        font-size: 24px;
-
-    }
-
-    .organization-title span {
-
-        font-size: 17px;
-
-    }
-
-    .org-row {
-
-        gap: 14px;
-
-        padding: 16px 6px;
-
-    }
-
-    .org-icon {
-
-        min-width: 52px;
-
-        width: 52px;
-
-        height: 52px;
-
-        font-size: 23px;
-
-    }
-
-    .org-text h3 {
-
-        font-size: 20px;
-
-    }
-
-    .org-text p {
-
-        font-size: 14px;
-
-        line-height: 1.6;
-
-    }
-
-    .org-text .estd {
-
-        font-size: 16px;
-
-    }
-
-}
-
-</style>
-
-<!-- ================= END ORGANIZATION INFO ================= -->
-
-
-<section class="section" id="committee">
+<section
+class="section"
+id="committee">
 
 <div class="container">
+
 
 <h2 class="title">
 পরিচালন কমিটি ২০২৬-২৭
 </h2>
 
+
 <div class="committee-card">
 
-    <h3>বুদবুদ সংহতি</h3>
+<h3>
+বুদবুদ সংহতি
+</h3>
 
-    <div class="committee-list">
 
-        সভাপতি : Ram Pada Gagrai<br><br>
+<div class="committee-list">
 
-        সহ-সভাপতি : Tapas Roy<br><br>
 
-        সম্পাদক : Asim Kanjilal<br><br>
-
-        যুগ্ম সম্পাদক : Rampraasad Kar<br><br>
-
-        কোষাধ্যক্ষ : Asim Bag<br><br>
-
-        অডিটর : Milan Kumar Ghosh<br><br>
-
-        সাংস্কৃতিক সম্পাদক : Suman Banik<br><br>
-
-        ক্রীড়া সম্পাদক : Amit Kumar Gagrai<br><br>
-
-        সদস্য : Nirmal Laha<br><br>
-
-        সদস্য : Sushanta Mohanti<br><br>
-
-        সদস্য : Soumen Thakur<br><br>
-
-        সদস্য : Bikas Mukherjee<br><br>
-
-        সদস্য : Sukdev Pal
-
-    </div>
-
+<div class="member">
+<strong>সভাপতি :</strong>
+Ram Pada Gagrai
 </div>
 
 
+<div class="member">
+<strong>সহ-সভাপতি :</strong>
+Tapas Roy
+</div>
+
+
+<div class="member">
+<strong>সম্পাদক :</strong>
+Asim Kanjilal
+</div>
+
+
+<div class="member">
+<strong>যুগ্ম সম্পাদক :</strong>
+Rampraasad Kar
+</div>
+
+
+<div class="member">
+<strong>কোষাধ্যক্ষ :</strong>
+Asim Bag
+</div>
+
+
+<div class="member">
+<strong>অডিটর :</strong>
+Milan Kumar Ghosh
+</div>
+
+
+<div class="member">
+<strong>সাংস্কৃতিক সম্পাদক :</strong>
+Suman Banik
+</div>
+
+
+<div class="member">
+<strong>ক্রীড়া সম্পাদক :</strong>
+Amit Kumar Gagrai
+</div>
+
+
+<div class="member">
+<strong>সদস্য :</strong>
+Nirmal Laha
+</div>
+
+
+<div class="member">
+<strong>সদস্য :</strong>
+Sushanta Mohanti
+</div>
+
+
+<div class="member">
+<strong>সদস্য :</strong>
+Soumen Thakur
+</div>
+
+
+<div class="member">
+<strong>সদস্য :</strong>
+Bikas Mukherjee
+</div>
+
+
+<div class="member">
+<strong>সদস্য :</strong>
+Sukdev Pal
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 
 
+<!-- =====================================================
+     GALLERY
+===================================================== -->
 
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-<section class="section" id="gallery">
+<section
+class="section"
+id="gallery">
 
 <div class="container">
+
 
 <h2 class="title">
 গ্যালারি
@@ -1110,22 +1752,45 @@ gap:30px;
 
 
 <div class="gallery-item">
-<img src="durga1.jpg" onclick="openImage(this.src)">
+
+<img
+src="durga1.jpg"
+alt="বুদবুদ সংহতি দুর্গাপূজা"
+onclick="openImage(this.src)">
+
 </div>
 
 
+
 <div class="gallery-item">
-<img src="durga2.jpg" onclick="openImage(this.src)">
+
+<img
+src="durga2.jpg"
+alt="বুদবুদ সংহতি অনুষ্ঠান"
+onclick="openImage(this.src)">
+
 </div>
 
 
+
 <div class="gallery-item">
-<img src="durga3.jpg" onclick="openImage(this.src)">
+
+<img
+src="durga3.jpg"
+alt="বুদবুদ সংহতি দুর্গাপূজা"
+onclick="openImage(this.src)">
+
 </div>
 
 
+
 <div class="gallery-item">
-<img src="durga4.jpg" onclick="openImage(this.src)">
+
+<img
+src="durga4.jpg"
+alt="বুদবুদ সংহতি পূজা মণ্ডপ"
+onclick="openImage(this.src)">
+
 </div>
 
 
@@ -1134,3 +1799,196 @@ gap:30px;
 </div>
 
 </section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+class="section"
+id="contact">
+
+<div class="container">
+
+
+<h2 class="title">
+যোগাযোগ
+</h2>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+📍
+</div>
+
+<h3>
+ঠিকানা
+</h3>
+
+<p>
+Sukdal More,<br>
+P.O. – Bud Bud,<br>
+Dist. – Burdwan (W.B.),<br>
+PIN – 713405
+</p>
+
+</div>
+
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+📞
+</div>
+
+<h3>
+ফোন
+</h3>
+
+<p>
+আমাদের সঙ্গে যোগাযোগের জন্য
+সংগঠনের প্রতিনিধির সঙ্গে যোগাযোগ করুন।
+</p>
+
+</div>
+
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+🤝
+</div>
+
+<h3>
+আমাদের সঙ্গে যুক্ত হন
+</h3>
+
+<p>
+সামাজিক ও সাংস্কৃতিক কাজে
+আমাদের সঙ্গে যুক্ত থাকুন।
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     IMAGE POPUP
+===================================================== -->
+
+<div
+id="imagePopup"
+onclick="closeImage()">
+
+
+<span
+class="close-btn"
+onclick="closeImage()">
+
+&times;
+
+</span>
+
+
+<img
+id="popupImage"
+src=""
+alt="Gallery Image"
+onclick="event.stopPropagation()">
+
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<h3>
+বুদবুদ সংহতি
+</h3>
+
+<p>
+একটি সংস্কৃতি • একটি পরিবার • একটি অঙ্গীকার
+</p>
+
+<p>
+© 2026 Bud Bud Sanhati. All Rights Reserved.
+</p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+function openImage(src){
+
+    const popup =
+    document.getElementById("imagePopup");
+
+    const image =
+    document.getElementById("popupImage");
+
+    image.src = src;
+
+    popup.style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeImage(){
+
+    const popup =
+    document.getElementById("imagePopup");
+
+    popup.style.display = "none";
+
+    document.body.style.overflow = "";
+
+}
+
+
+document.addEventListener(
+"keydown",
+function(event){
+
+    if(event.key === "Escape"){
+
+        closeImage();
+
+    }
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
